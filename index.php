@@ -136,7 +136,7 @@
 
 <!-- footer -->
 <?php
-include("Footer/footer.php");
+include("footer/footer.php");
 ?>
 </body>
 </html>
