@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Roboto:wght@300&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-family: Roboto;
+}
+
+body{
+    background: #45d100;
+    background: linear-gradient(93deg, #f8f8f8 50%, #45d100 100%);
+}
+
+
+
+
+header{
+    background-color: #f8f8f8;
+    height: 80px;
+    position: sticky;
+    border-bottom: 20px;
+    border-style: solid;
+    border-color: #45d100;
+}
+
+header img {
+    height: 60px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.contenedor{
+    background-color:none;
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.card{
+    background-color: #f8f8f8;
+    width: 300px;
+    height: 400px;
+    padding: 10px;
+}
+
+h1{
+    color: #45d100;
+    text-align: center;
+    font-weight: 2000;
+}
+
+form{
+    margin: 20px;
+    font-size: 20px;
+}
+
+
+.documento{
+    margin-bottom: 50px;
+}
+
+.contrasena, .documento{
+    width: 100%;
+    height: 60px;
+    border: 0px;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: rgb(167, 167, 167);  
+    font-weight: 2000;  
+}
+
+.contrasena::placeholder, .documento::placeholder{
+    left: 20px;
+    font-size: 10px;
+    text-align:left;
+}
+
+
+.enviar{
+    background: transparent;
+    border: 4px solid #26253a;
+    border-radius: 0px;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    padding: 14px 46px;
+    transition: all 0.4s ease-in-out;
+    margin-top: 32px;
+    margin-left: 20px;
+}
+
+.enviar:hover{
+    background-color: #45d100;
+    border-color: #45d100;
+    color: #ffffff;
+}
+
+
