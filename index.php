@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
@@ -16,14 +17,13 @@
 <div class="navbar navbar-default navbar-fixed-top sticky-navigation" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
-			
-			<a href="#" class="navbar-brand"><img src="img/LogoSena.png" height="60px" alt=""></a>
+			<a href="#" class="navbar-brand"><img src="img/LogoSena.png"  alt="logoSena"></a>
 		</div>
 			<ul class="nav navbar-nav navbar-right main-navigation">
-				<li><a href="#inicio" >Inicio</a></li>
-				<li><a href="#brigadista" >Brigadistas</a></li>
-				<li><a href="" >Reglamento</a></li>
-				<li><a href="#price" >Reportar</a></li>
+				<li><a href="#overview" >Inicio</a></li>
+				<li><a href="#trainer" >Brigadistas</a></li>
+				<li><a href="php/login.php" >Reglamento</a></li>
+				<li><a href="#newsletter" >Reportar</a></li>
 				<li><a href="#testimonial" >Noticias</a></li>
 			</ul>
 		</div>
@@ -34,8 +34,8 @@
 <section id="overview" >
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 col-sm-12">
-				<img src="img/LogoSena.png" height=200px class="img-responsive" alt="sst">
+			<div class="col-md-8 col-sm-12">
+				<img src="img/LogoSena.png"  class="img-fluid w-100" alt="sst">
 			</div>
 			<div class="wow fadeInUp col-md-4 col-sm-12" data-wow-delay="1s">
 				<div class="overview-detail">
@@ -56,7 +56,7 @@
 		<div class="row">
 
 			<div class="wow fadeInUp col-md-12 col-sm-12" >
-				<h2>Nuestro Brigradistas</h2>
+				<h2>Nuestros Brigradistas</h2>
 				<p>Nuestros brigadistas siempre están a tu disposición, asegurando la seguridad en todo momento.</p>
 			</div>
 
@@ -69,29 +69,29 @@
 							</div>
 						</div>
 				</div>
-				<p>Siempre contaran con un chaleco naranja con el escudo</p>
+				<p>Siempre contaran con un chaleco naranja</p>
 			</div>
 			<div class="wow fadeInUp col-md-4 col-sm-6" >
 				<div class="trainer-thumb">
-					<img src="img/brigadita.jpg" class="img-responsive" alt="Brigadista">
+					<img src="img/disponibilidad.png" class="img-responsive" alt="Brigadista">
 						<div class="trainer-overlay">
 							<div class="trainer-des">
-								<h2>Chaleco Naranja</h2>
+								<h2>Siempre a tu disposición</h2>
 							</div>
 						</div>
 				</div>
-				<p>Siempre contaran con un chaleco naranja con el escudo</p>
+				<p>Siempre estaran disponibles ante cualquier situación</p>
 			</div>
 			<div class="wow fadeInUp col-md-4 col-sm-6" >
 				<div class="trainer-thumb">
-					<img src="img/brigadita.jpg" class="img-responsive" alt="Brigadista">
+					<img src="img/capacitacion.jpg"  class="img-responsive" alt="Brigadista">
 						<div class="trainer-overlay">
 							<div class="trainer-des">
-								<h2>Chaleco Naranja</h2>
+								<h2>Capacitados</h2>
 							</div>
 						</div>
 				</div>
-				<p>Siempre contaran con un chaleco naranja con el escudo</p>
+				<p>Se encuentran capacitados para actuar ante cualquier situación</p>
 			</div>
 		</div>
 	</div>
@@ -106,7 +106,7 @@
 		<div class="row">
 			<div class=" col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10" >
 				<h2>Ayuda a tu seguridad</h2>
-				<h4>Resporta los posibles riesgos para tu seguridad y salud</h4>
+				<h4>Reporta los posibles riesgos para tu seguridad y salud</h4>
 				<button type="button" class="btn btn-primary" onclick="window.location.href='php/login.php'">Reportar riesgo</button>
 			</div>
 		</div>
@@ -125,10 +125,6 @@
 	<div class="container">
 		<div class="row">
 			<h1>Noticias y eventos</h1>
-			<p>				Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
-				facere cupiditate libero corporis placeat quis quas ad aliquid sint
-				perferendis odio consequatur vel sed velit cumque iure ex nam veniam.</p>
-
 		</div>
 	</div>
 </section>

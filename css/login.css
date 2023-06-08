@@ -8,12 +8,16 @@
     font-family: Roboto;
 }
 
+
+
+
 body{
-    background: #45d100;
-    background: linear-gradient(93deg, #f8f8f8 50%, #45d100 100%);
+    background-image: url(../img/login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
-
-
 
 
 header{
@@ -32,7 +36,7 @@ header img {
 }
 
 .contenedor{
-    background-color:none;
+    background-color:transparent;
     margin-top: 50px;
     width: 100%;
     height: auto;

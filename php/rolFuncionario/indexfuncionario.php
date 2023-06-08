@@ -5,8 +5,10 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <link rel="stylesheet" href="../../css/bootstrap.min.css">
 <link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/footer.css">
 </head>
 
 
@@ -17,13 +19,13 @@
 	<div class="container">
 		<div class="navbar-header">
 			
-			<a href="#" class="navbar-brand"><img src="../../img/LogoSena.png" height="60px" alt="logoSena"></a>
+			<a href="#" class="navbar-brand"><img src="../../img/LogoSena.png"  alt="logoSena"></a>
 		</div>
 			<ul class="nav navbar-nav navbar-right main-navigation">
 				<li><a onclick="window.location.href='../../index.php'" >Inicio</a></li>
 				<li><a  onclick="window.location.href='../../inventarios/index.php'">Inventarios</a></li>
 				<li><a onclick="window.location.href='../../administrador/index.php'" >Administrador de usuarios</a></li>
-				<li><a href="#testimonial">Usuario</a></li>
+				<li><a onclick="window.location.href='../cerrarSesion.php'" ><span class="material-symbols-outlined">logout</span></a></li>
 			</ul>
 		</div>
 	</div>
@@ -33,7 +35,9 @@
 <section id="overview" >
 	<div class="container">
 		<div class="row">
-
+			<div class="col-md-8 col-sm-12">
+				<img src="../../img/LogoSena.png"  class="img-fluid w-100" alt="sst">
+			</div>
 			<div class="wow fadeInUp col-md-4 col-sm-12" data-wow-delay="1s">
 				<div class="overview-detail">
 					<h2>SENASST</h2>

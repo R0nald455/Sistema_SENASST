@@ -14,8 +14,8 @@
       <div class="card">
         <h1>SENASST</h1>
         <form action="iniciarSesion.php" method="POST" autocomplete="off">
-          <label for="documento">No de documento</label>
-          <input type="text" name="documento" class="documento"   placeholder="No de documento" required>
+          <label for="documento">Usuario</label>
+          <input type="text" name="documento" class="documento"   placeholder="Usuario" required>
           <label for="contrasena">Contraseña</label>
           <input type="password" name="contrasena" class="contrasena"  placeholder="Password" required>
           <input type="submit" class="enviar" value="Ingresar">

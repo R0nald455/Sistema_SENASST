@@ -6,9 +6,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Reglamento del aprendiz </title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <link href="css/bootstrap.min.css" rel="stylesheet"> 
+  <link rel="stylesheet" href="../css/footer.css">
 
+</head>
 <body>
 <div class="container">
   <h4 class="mt-5">Reglamento del Aprendiz</h4>
@@ -66,8 +67,8 @@
                     $cons="SELECT definicion FROM significados where palabra='$texto[$x]'";
                     $significado=mysqli_query($conex,$cons);
                     while($fila = mysqli_fetch_assoc($significado)) {
-                        echo '<div class="tooltip">'.$texto[$x].
-                        '<span class="tooltiptext">'.$fila['definicion'].'</span></div>';
+                        echo '<a href="#" data-mdb-toggle="tooltip" title="'.$fila['definicion'].'">'.$texto[$x].
+                        '</a>';
                     }
                     $x++;
                   }else{
@@ -85,10 +86,13 @@
           echo "<br>Resultados encontrados: Ninguno";
       }
   }
-  
-  ?>
+
+  ;?>
   </div>
   </div>
 </div>
+<?php
+include("../Footer/footer.php");
+?>
     </body>
 </html>
