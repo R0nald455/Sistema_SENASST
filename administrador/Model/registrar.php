@@ -1,5 +1,5 @@
 <?php
-$conexion = mysqli_connect("localhost:3307","root","","inventarios");
+require_once ("../../db/conexion.php");
 
 if(isset($_POST['registrar'])){
 

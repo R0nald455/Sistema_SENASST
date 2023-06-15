@@ -1,19 +1,22 @@
 <?php
     $documento = $_POST["documento"];
     $contrasena = $_POST["contrasena"];
+    
     // conexión
-    $servername = "localhost:3307";
-    $username = "root";
-    $password = "";
-    $dbname = "inventarios";
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    if ($conn->connect_error) {
-        die("Error de conexión: " . $conn->connect_error);
-    }
+    // $servername = "localhost:3307";
+    // $username = "root";
+    // $password = "";
+    // $dbname = "SSTCBA";
+    // $conn = new mysqli($servername, $username, $password, $dbname);
+    // if ($conn->connect_error) {
+    //     die("Error de conexión: " . $conn->connect_error);
+    // }
+
+    include_once("../db/conexion.php");
 
     // Consulta
     $query = "SELECT * FROM user WHERE nombre = '$documento' AND password = '$contrasena'";
-    $result = $conn->query($query);
+    $result = $conexion->query($query);
 
     if ($result->num_rows == 1) {
         // Obtener el rol del usuario
@@ -29,5 +32,5 @@
     } else {
         echo "Credenciales incorrectas. Por favor, intenta nuevamente.";
     }
-    $conn->close();
+    $conexion->close();
 ?>

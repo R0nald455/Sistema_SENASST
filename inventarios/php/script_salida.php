@@ -1,6 +1,10 @@
 <?php
 
-include '../db/conexion.php';
+include '../../db/conexion.php';
+
+$tablaImplementos = "TblImplementos";
+$tablaEntradas = "TblEntradas";
+$tablaSalidas = "TblSalidas";
 
 if(isset($_POST['btn_consultar']))
 {
@@ -15,7 +19,7 @@ if(isset($_POST['btn_consultar']))
     } 
     else {
         echo "Presiono el boton consultar <br>";
-    $resultados = mysqli_query($conex, "SELECT id_salidas, id_implementos, fecha, cantidad FROM $tablaSalidas WHERE id_salidas = '$id_salidas'");
+    $resultados = mysqli_query($conexion, "SELECT id_salidas, id_implementos, fecha, cantidad FROM $tablaSalidas WHERE id_salidas = '$id_salidas'");
         while ($consulta = mysqli_fetch_array($resultados))
         {
             echo $consulta['id_salidas']."<br>";
@@ -49,12 +53,12 @@ if(isset($_POST['btn_registrar']))
 
         echo "Presiono el boton registrar <br>";
         
-        mysqli_query($conex, "INSERT INTO $tablaSalidas (id_salidas, id_implementos, fecha, cantidad, id_empleado) values ('$id_salidas', '$id_implementos', '$fecha', '$cantidad', $id_empleado);");
-        $sql = "UPDATE $tablaImplementos SET cantidad = cantidad - $cantidad";
-        if ($conex->query($sql) === TRUE) {
+        mysqli_query($conexion, "INSERT INTO $tablaSalidas (id_salidas, id_implementos, fecha, cantidad, id_empleado) values ('$id_salidas', '$id_implementos', '$fecha', '$cantidad', $id_empleado);");
+        $sql = "UPDATE $tablaImplementos SET cantidad = cantidad - $cantidad WHERE id_implementos = $id_implementos";
+        if ($conexion->query($sql) === TRUE) {
             echo "El valor de cantidad se ha restado correctamente.";
         } else {
-            echo "Error al actualizar el valor: " . $conex->error;
+            echo "Error al actualizar el valor: " . $conexion->error;
         }
     }
 }
@@ -75,7 +79,7 @@ if(isset($_POST['btn_actualizar']))
     } 
     else { 
         $existe = 0;
-        $resultados = mysqli_query($conex, "SELECT * FROM $tablaSalidas WHERE id_salidas = '$id_salidas'");
+        $resultados = mysqli_query($conexion, "SELECT * FROM $tablaSalidas WHERE id_salidas = '$id_salidas'");
         while ($consulta = mysqli_fetch_array($resultados))
         {
             $existe++;
@@ -85,13 +89,13 @@ if(isset($_POST['btn_actualizar']))
             echo "El ID no exite, por favor ingrese uno que si exista";
         } else {
             $_UPDATE_SQL = "UPDATE $tablaSalidas SET id_salidas = '$id_salidas', id_implementos = '$id_implementos', fecha = '$fecha', cantidad = '$cantidad', id_empleado = '$id_empleado' WHERE id_salidas = '$id_salidas' ";
-            mysqli_query($conex, $_UPDATE_SQL);
+            mysqli_query($conexion, $_UPDATE_SQL);
 
-            $sql = "UPDATE $tablaImplementos SET cantidad = cantidad - $cantidad";
-            if ($conex->query($sql) === TRUE) {
+            $sql = "UPDATE $tablaImplementos SET cantidad = cantidad - $cantidad WHERE id_implementos = $id_implementos";
+            if ($conexion->query($sql) === TRUE) {
                 echo "El valor de cantidad se ha restado correctamente. <br>";
             } else {
-                echo "Error al actualizar el valor: " . $conex->error;
+                echo "Error al actualizar el valor: " . $conexion->error;
             }
             echo "Actualizacion correcta";
         }
@@ -113,7 +117,7 @@ if(isset($_POST['btn_eliminar']))
         echo "El id esta vacio, por favor escriba un id";
     }
     else {
-    $resultados = mysqli_query($conex, "SELECT * FROM $tablaSalidas WHERE id_salidas = '$id_salidas'");
+    $resultados = mysqli_query($conexion, "SELECT * FROM $tablaSalidas WHERE id_salidas = '$id_salidas'");
         while ($consulta = mysqli_fetch_array($resultados))
         {
             $existe++;
@@ -124,7 +128,7 @@ if(isset($_POST['btn_eliminar']))
 
         } else {
             $_DELETE_SQL = "DELETE FROM $tablaSalidas WHERE id_salidas = '$id_salidas'";
-            mysqli_query($conex, $_DELETE_SQL);
+            mysqli_query($conexion, $_DELETE_SQL);
         }
     }
 }

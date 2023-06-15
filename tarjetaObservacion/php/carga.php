@@ -1,5 +1,5 @@
 <?php
-    include "../db/db.php";
+    include "../../db/conexion.php";
     $regional=$_POST['regional'];
     $centro=$_POST['centro'];
     $direccion=$_POST['direccion'];
@@ -12,7 +12,7 @@
     $descripcion=$_POST['descripcion'];
     $consul="INSERT INTO `registros`(`id`, `regional`, `centro`, `direccion`, `lugar`, `fecha`, `nombre`, `cargo`, `tipo`, `descripcion`) 
                 VALUES ('$regional','$centro','$direccion','$ciudad','$lugar','$fecha','$remitente','$cargo','$tipo','$descripcion') ";
-    $resultado = mysqli_query($conex,$consul);
+    $resultado = mysqli_query($conexion,$consul);
     if ($resultado) {
         ?>
         <h3 class="ok">se ha registrado correctamente</h3>

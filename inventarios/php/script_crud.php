@@ -1,6 +1,10 @@
 <?php
 
-include '../db/conexion.php';
+include '../../db/conexion.php';
+
+$tablaImplementos = "TblImplementos";
+$tablaEntradas = "TblEntradas";
+$tablaSalidas = "TblSalidas";
 
 if(isset($_POST['btn_consultar']))
 {
@@ -15,7 +19,7 @@ if(isset($_POST['btn_consultar']))
     } 
     else {
         echo "Presiono el boton consultar <br>";
-    $resultados = mysqli_query($conex, "SELECT id_implementos, nombre, descripcion, categoria, cantidad, ubicacion FROM $tablaImplementos WHERE id_implementos = '$id_implementos'");
+    $resultados = mysqli_query($conexion, "SELECT id_implementos, nombre, descripcion, categoria, cantidad, ubicacion FROM $tablaImplementos WHERE id_implementos = '$id_implementos'");
         while ($consulta = mysqli_fetch_array($resultados))
         {
             echo $consulta['id_implementos']."<br>";
@@ -51,7 +55,7 @@ if(isset($_POST['btn_registrar']))
     else {
         echo "Presiono el boton registrar <br>";
         
-        mysqli_query($conex, "INSERT INTO $tablaImplementos (id_implementos, nombre, descripcion, categoria, cantidad, ubicacion) values ('$id_implementos', '$nombre', '$descripcion', '$categoria', '$cantidad', '$ubicacion')");
+        mysqli_query($conexion, "INSERT INTO $tablaImplementos (id_implementos, nombre, descripcion, categoria, cantidad, ubicacion) values ('$id_implementos', '$nombre', '$descripcion', '$categoria', '$cantidad', '$ubicacion')");
        
     }
 }
@@ -73,7 +77,7 @@ if(isset($_POST['btn_actualizar']))
     } 
     else { 
         $existe = 0;
-        $resultados = mysqli_query($conex, "SELECT * FROM $tablaImplementos WHERE ID_Implementos = '$id_implementos'");
+        $resultados = mysqli_query($conexion, "SELECT * FROM $tablaImplementos WHERE ID_Implementos = '$id_implementos'");
         while ($consulta = mysqli_fetch_array($resultados))
         {
             $existe++;
@@ -83,7 +87,7 @@ if(isset($_POST['btn_actualizar']))
             echo "El ID no exite, por favor ingrese uno que si exista";
         } else {
             $_UPDATE_SQL = "UPDATE $tablaImplementos SET ID_Implementos = '$id_implementos', Nombre = '$nombre', Descripcion = '$descripcion', Categoria = '$categoria', Cantidad = '$cantidad', Ubicacion = '$ubicacion' WHERE ID_Implementos = '$id_implementos' ";
-            mysqli_query($conex, $_UPDATE_SQL);
+            mysqli_query($conexion, $_UPDATE_SQL);
             echo "Actualizacion correcta";
         }
 
@@ -104,7 +108,7 @@ if(isset($_POST['btn_eliminar']))
         echo "El id esta vacio, por favor escriba un id";
     } 
     else {
-    $resultados = mysqli_query($conex, "SELECT id_implementos, nombre, descripcion, categoria, cantidad, ubicacion FROM $tablaImplementos WHERE id_implementos = '$id_implementos'");
+    $resultados = mysqli_query($conexion, "SELECT id_implementos, nombre, descripcion, categoria, cantidad, ubicacion FROM $tablaImplementos WHERE id_implementos = '$id_implementos'");
         while ($consulta = mysqli_fetch_array($resultados))
         {
             $existe++;
@@ -115,7 +119,7 @@ if(isset($_POST['btn_eliminar']))
 
         } else {
             $_DELETE_SQL = "DELETE FROM $tablaImplementos WHERE id_implementos = '$id_implementos'";
-            mysqli_query($conex, $_DELETE_SQL);
+            mysqli_query($conexion, $_DELETE_SQL);
         }
     }
 }

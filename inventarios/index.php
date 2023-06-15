@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio | Inventarios Seguridad y Salud en el Trabajo</title>
-    <link rel="icon" href="../img/Sena_Colombia_logo.ico">
+    <link rel="icon" href="../../img/LogoSena.png">
     <script src="https://kit.fontawesome.com/27e58a102f.js" crosssorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/styles_inventarios.css">
 </head>
@@ -43,15 +43,15 @@
                         </label>
             <nav>
                 <ul>
-                    <li><a href="#" id="selected">Inicio</a></li>
+                    <li><a href="../index.php" id="selected">Inicio</a></li>
                     <li><a href="#">Modulos</a>
                         <ul> <b>
-                            <li><a href="../inventarios/crud.php">Administrar implementos</a></li>
-                            <li><a href="../inventarios/entrada.php">Entrada de implementos</a></li>
-                            <li><a href="../inventarios/salida.php">Salida de implementos</a></li>
+                            <li><a href="../inventarios/modulos/crud.php">Administrar implementos</a></li>
+                            <li><a href="../inventarios/modulos/entrada.php">Entrada de implementos</a></li>
+                            <li><a href="../inventarios/modulos/salida.php">Salida de implementos</a></li>
                         </ul> </b>
                     </li>
-                    <li><a href="#">¿Quienes somos?</a></li>
+                    <li><a href="../inventarios/modulos/quienes_somos.php">¿Quienes somos?</a></li>
                     <li><a href="#">Ayuda y Soporte</a></li>
                 </ul>
             </nav>

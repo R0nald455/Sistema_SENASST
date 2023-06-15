@@ -1,6 +1,6 @@
 <?php
 
-require_once ("conexion.php");
+require_once ("../../db/conexion.php");
 
 if(isset($_POST['funcion'])){
     switch ($_POST['funcion']){
@@ -21,7 +21,6 @@ if(isset($_POST['funcion'])){
 }
 
 function editar_registro(){
-    $conexion = mysqli_connect("localhost:3307","root","","inventarios");
     extract($_POST);
     $consulta = "UPDATE user SET nombre = '$nombre', correo = '$correo',
     telefono = '$telefono', password = '$password', rol = '$rol' WHERE id = '$id'";
@@ -32,8 +31,8 @@ function editar_registro(){
 }
 
 function eliminar_registro(){
-    $conexion = mysqli_connect("localhost:3307","root","","inventarios");
-        extract($_POST);
+    
+    extract($_POST);
     $id = $_POST['id'];
     $consulta = "DELETE FROM user WHERE id = $id";
 
@@ -43,13 +42,17 @@ function eliminar_registro(){
 }
 
 function acceso_user(){
+
     $nombre=$_POST['nombre'];
     $password=$_POST['password'];
+
     session_start();
+
     $_SESSION ['nombre']=$nombre;
 
-    $conexion = mysqli_connect("localhost:3307","root","","inventarios");
-        $consulta = "SELECT * FROM user WHERE nombre = '$nombre' AND password = '$password'";
+
+    $conexion=new mysqli("localhost:3307", "root", "", "SSTCBA");
+    $consulta = "SELECT * FROM user WHERE nombre = '$nombre' AND password = '$password'";
     $resultado = mysqli_query($conexion , $consulta);
 
     $filas = mysqli_fetch_array($resultado);

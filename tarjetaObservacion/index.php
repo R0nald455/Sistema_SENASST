@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="../css/style_TO.css">
         <title>Tarjeta de Observación</title>
     </head>  
     <body>

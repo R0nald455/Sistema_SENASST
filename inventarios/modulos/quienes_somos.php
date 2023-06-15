@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¿Quienes somos? | Inventarios Seguridad y Salud en el Trabajo</title>
-    <link rel="icon" href="../img/Sena_Colombia_logo.ico">
+    <link rel="icon" href="../../img/LogoSena.png">
     <script src="https://kit.fontawesome.com/27e58a102f.js" crosssorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/styles_inventarios.css">
+    <link rel="stylesheet" href="../../css/styles_inventarios.css">
 </head>
 <body>
     <header>
         <div class="header__superior">
 
             <div class="logo">
-                <img src="../img/LogoSena.png" alt="">
+                <img src="../../img/LogoSena.png" alt="">
             </div>
 
             <div class="tittle"><b>Inventarios Seguridad y Salud en el Trabajo</b><br> Centro de Biotecnologia <br> Agropecuaria </div>
@@ -22,7 +22,7 @@
             <div class="search">
 
                 <input type="search" placeholder="¿Que deseas buscar?">
-                <a href="https://www.mintrabajo.gov.co/web/guest" target="_blank"> <img src="../img/MinTrabajo.png" class="MinTrabajo"> </a> <img>
+                <a href="https://www.mintrabajo.gov.co/web/guest" target="_blank"> <img src="../../img/MinTrabajo.png" class="MinTrabajo"> </a> <img>
 
             </div>
 
@@ -43,7 +43,7 @@
                         </label>
             <nav>
                 <ul>
-                    <li><a href="#" id="selected">Inicio</a></li>
+                    <li><a href="../index.php" id="selected">Inicio</a></li>
                     <li><a href="#">Modulos</a>
                         <ul> <b>
                             <li><a href="../inventarios/crud.php">Administrar implementos</a></li>
@@ -58,12 +58,22 @@
         </div>
     </div>
 
-        <div class="carrusel">
+<div class="informacion">
 
-            <img class="carrusel__image" src="../img/carrusel.jpg">
-            <div class="carrusel__text"></div>
-    
-        </div>
+    <h1 class="titulo">¿Quienes somos?</h1>
+
+    <p>
+        En el Centro de Biotecnologia Agropecuaria, nos enorgullece presentar a nuestro dedicado equipo de seguridad y salud en el trabajo. Estamos comprometidos con la promoción de entornos laborales seguros y saludables para nuestros empleados y colaboradores.
+        Nuestro equipo está conformado por profesionales altamente capacitados y apasionados por la seguridad y el bienestar de las personas. Nuestra amplia experiencia en el campo de la seguridad laboral nos permite brindar soluciones efectivas y personalizadas que se adaptan a las necesidades de cada empresa y sector.
+        En cada proyecto, nos enfocamos en la prevención de accidentes y enfermedades laborales, así como en la promoción de prácticas de trabajo seguras. Trabajamos en estrecha colaboración con empleadores y empleados para identificar riesgos potenciales, evaluarlos y desarrollar estrategias para minimizarlos.
+        Nuestra filosofía se basa en la creencia de que un ambiente laboral seguro y saludable no solo protege a los trabajadores, sino que también contribuye a un mejor desempeño y productividad en general. Estamos comprometidos en fomentar una cultura de seguridad en todas las organizaciones con las que trabajamos, promoviendo la conciencia, el entrenamiento y la participación activa de todos los miembros del equipo.
+        Nuestros servicios abarcan desde la elaboración de políticas y programas de seguridad hasta la implementación de sistemas de gestión de seguridad laboral. Ofrecemos capacitación especializada, auditorías de seguridad, evaluaciones de riesgos, asesoramiento y seguimiento continuo para garantizar el cumplimiento de las normativas y estándares más actualizados.
+        En el Centro de Biotecnologia Agropecuaria, nuestro mayor compromiso es la seguridad y salud de las personas. Trabajamos incansablemente para crear entornos laborales seguros, promoviendo una cultura de seguridad y fomentando la protección y bienestar de todos los trabajadores.
+        Si desea obtener más información sobre nuestros servicios o desea colaborar con nuestro equipo de seguridad y salud en el trabajo, no dude en contactarnos. Estaremos encantados de ayudarle a alcanzar sus objetivos de seguridad y salud laboral."
+    </p>
+
+</div>
+
     
         <div class="social-media__container">
     
@@ -73,9 +83,7 @@
             <a href="https://www.instagram.com/senacomunica/?hl=es" target="_blank"><div class="social-media__item"><img src="../img/instagram.png" alt=""></div></a>
     
         </div>
-    
-         
-    
+        
         <footer>
             Servicio Nacional de Aprendizaje SENA - Centro de Biotecnología Agropecuaria - Regional Cundinamarca <br>
             Dirección: Kilómetro 7 vía Mosquera-Bogotá - Telefono: 5462323 Ext. 17963

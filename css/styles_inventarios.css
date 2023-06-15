@@ -349,6 +349,17 @@ nav ul li ul li a:hover{
     z-index: 200px;
 }
 
+.informacion{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    background-color: #9e0000; 
+}
+
 /* Redes Sociales */
 
 .social-media__container{
@@ -733,6 +744,7 @@ marquee{
     font-size: 15px;
     width: 200px;
   }
+
   .registra{
     background-color: #00519E;
     padding: 15px;
@@ -742,6 +754,7 @@ marquee{
     font-size: 15px;
     width: 200px;
   }
+
   .actualiza{
     background-color: #5271FF;
     padding: 15px;
@@ -751,6 +764,7 @@ marquee{
     font-size: 15px;
     width: 200px;
   }
+
   .elimina{
     background-color: #9e0000;
     padding: 15px;
@@ -771,6 +785,7 @@ marquee{
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
     transform: scale(1.1);
   }
+
   .registra:hover{
     background-color: #92caff;
     padding: 15px;
@@ -781,6 +796,7 @@ marquee{
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
     transform: scale(1.1);
   }
+
   .actualiza:hover{
     background-color: #c9d3ff;
     padding: 15px;
@@ -802,4 +818,3 @@ marquee{
     transform: scale(1.1);
     font-size: 15px;
   }
-

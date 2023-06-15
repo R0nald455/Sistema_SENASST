@@ -1,4 +1,4 @@
-<?php include 'db/conexion.php';?>
+<?php include '../db/conexion.php';?>
 
 <!doctype html>
 <html >
@@ -6,8 +6,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Reglamento del aprendiz </title>
-  <link href="css/bootstrap.min.css" rel="stylesheet"> 
-  <link rel="stylesheet" href="../css/footer.css">
+  <link href="../css/bootstrap.min.css" rel="stylesheet"> 
+  <link rel="stylesheet" href="../footer/footer.php">
 
 </head>
 <body>
@@ -45,7 +45,7 @@
               $query .= " OR descripcion like '%" . $aKeyword[$i] . "%'";
           }
         }
-      $result = $conex->query($query);
+      $result = $conexion->query($query);
 
 
       if(mysqli_num_rows($result) > 0) {
@@ -55,7 +55,7 @@
           While($row = $result->fetch_assoc()) {   
               $palabra=['integral'];
               $conPalabras="SELECT  palabra from significados";
-              $significado=mysqli_query($conex,$conPalabras);
+              $significado=mysqli_query($conexion,$conPalabras);
               while($fila = mysqli_fetch_assoc($significado)) {
                   $palabra[]=$fila['palabra'];
               }
@@ -65,7 +65,7 @@
               while($x<count($texto)){
                   if(in_array($texto[$x],$palabra)){
                     $cons="SELECT definicion FROM significados where palabra='$texto[$x]'";
-                    $significado=mysqli_query($conex,$cons);
+                    $significado=mysqli_query($conexion,$cons);
                     while($fila = mysqli_fetch_assoc($significado)) {
                         echo '<a href="#" data-mdb-toggle="tooltip" title="'.$fila['definicion'].'">'.$texto[$x].
                         '</a>';
@@ -92,7 +92,7 @@
   </div>
 </div>
 <?php
-include("../Footer/footer.php");
+include("../footer/footer.php");
 ?>
     </body>
 </html>

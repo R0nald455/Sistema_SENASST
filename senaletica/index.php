@@ -47,31 +47,31 @@
     $senalesSST = array(
         "Salida de Emergencia" => array(
             "descripcion" => "Una salida de emergencia es una estructura de salida <br> especial para emergencias tales como un temblor.",
-            "imagen" => "emerg.jpg"
+            "imagen" => "../img/emerg.jpg"
         ),
         "Extintor " => array(
             "descripcion" => "Esta señal indica que en esa zona se encuentra un extintor <br> para usarse en caso de una emergencia como un incendio.",
-            "imagen" => "extin.jpg"
+            "imagen" => "../img/extin.jpg"
         ),
         "Riesgo Electrico" => array(
             "descripcion" => "Esta señal indica que se puede generar una lesión <br> en el cuerpo provocada por el contacto <br> directo con una fuente de alta tensión.",
-            "imagen" => "elec.jpg"
+            "imagen" => "../img/elec.jpg"
         ),
         "Camilla de Emergencia" => array(
             "descripcion" => "Esta señal indica que en esa zona se encuentra una camilla <br> que podemos usar en caso de que necesitemos <br> mover a la persona herida.",
-            "imagen" => "camilla.jpg"
+            "imagen" => "../img/camilla.jpg"
         ),
         "Botiquin" => array(
             "descripcion" => "Esta señal indica que en esa zona se encuentra un <br> Botiquin para usarlo en caso de que se necesite.",
-            "imagen" => "botiquin.jpg"
+            "imagen" => "../img/botiquin.jpg"
         ),
         "Enfermeria" => array(
             "descripcion" => "Esta señal indica que en esa zona spodemos encontrar una <br> enfermeria donde remitir a la persona herida para <br> que le presten los auxilios que necesita",
-            "imagen" => "enfermeria.jpg"
+            "imagen" => "../img/enfermeria.jpg"
         ),
         "Precaucion en la Escalera" => array(
             "descripcion" => "Esta señal nos indica que debemos tener cuidado <br> en las escaleras en especial si hay una emergencia para <br> no provocar un accidente.",
-            "imagen" => "escaleras.jpg"
+            "imagen" => "../img/escaleras.jpg"
         ),
     );
     

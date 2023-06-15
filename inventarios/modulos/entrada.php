@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <title>Entrada | Inventarios</title>
 </head>
 <body>
 <center>
-            <form action="php/script_entrada.php" method="post" class="container">
+            <form action="../php/script_entrada.php" method="post" class="container">
 
             <center> <a href="index.php"><img src="../img/LogoSena.png" alt="" style="width: 90px; margin-top: 20px; "></a> </center> 
 
