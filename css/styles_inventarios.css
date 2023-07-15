@@ -312,34 +312,15 @@ nav ul li ul li a:hover{
         top: 10px;
     }
 
-
-    /* -------------------------------- MODULO DE LAS 5s - MOBILE ------------------------------------ */
-
-    .formulario-5s{
-        width: 100%;
-        height: 200px;
-    }
-
-    .footer-5s{
-        background-color: var(--color-sena) ;
-        padding: 50px;
-        text-align: center;
-        color: var(--color-blanco);
-        position: relative;
-        top: 409px;
-        left: 0px;
-    }
-
 }
 
 /* --------------------------------- Apartado del Carrusel - GLOBAL ---------------------------------------- */
 
 .carrusel{
+    display: flex;
     width: 100%;
     height: 500px;
     position: relative;
-    top: 100px;
-    z-index: -200;
 }
 
 .carrusel__image{
@@ -347,17 +328,6 @@ nav ul li ul li a:hover{
     height: 100%;
     object-fit: contain;
     z-index: 200px;
-}
-
-.informacion{
-    width: 100%;
-    height: auto;
-    position: relative;
-    display: flex;
-    padding: 10px;
-    text-align: center;
-    align-items: center;
-    background-color: #9e0000; 
 }
 
 /* Redes Sociales */
@@ -378,142 +348,14 @@ nav ul li ul li a:hover{
     z-index: 300;
 }
 
-/* ------------------------- MODULO DE INVENTARIOS ------------------------------ */
 
-.salud{
-    background-color: #00519E;
-    color: var(--color-blanco);
-    text-align: center;
-    font-size: 30px;
-    position: relative;
-    top: 200px;
-    padding: 30px;
-    z-index: -1000;
-}
+/* -------------------------------- LANDING PAGE CONTENT ------------------------------------------ */
 
-.salud__content{
-    background-color: #5271FF;
-    color: var(--color-blanco);
-    text-align: center;
-    font-size: 30px;
-    position: relative;
-    top: 200px;
-    padding: 50px;
-    z-index: -1000;
-}
-
-.seguridad{
-    background-color: #009e1a;
-    color: var(--color-blanco);
-    text-align: center;
-    font-size: 30px;
-    position: relative;
-    top: 200px;
-    padding: 20px;
-    z-index: -1000;
-}
-
-.seguridad__content{
-    background-color: #55ff52;
-    color: var(--color-blanco);
-    text-align: center;
-    font-size: 30px;
-    position: relative;
-    top: 200px;
-    padding: 50px;
-    z-index: -1000;
-}
-
-.emergencia{
-    background-color: #9e0000;
-    color: var(--color-blanco);
-    text-align: center;
-    font-size: 30px;
-    position: relative;
-    top: 200px;
-    padding: 20px;
-    z-index: -1000;
-}
-
-.emergencia__content{
-    background-color: #ff5252;
-    color: var(--color-blanco);
-    text-align: center;
-    font-size: 30px;
-    position: relative;
-    top: 200px;
-    padding: 50px;
-    z-index: -1000;
-
-}
-
-/* ---------------------------- Apartado de los videos relacionados - GLOBAL ------------------------------------------ */
-
-.videos-relacionados{
-    background-color: var(--color-sena);
-    color: var(--color-blanco);
-    text-align: center;
-    font-size: 30px;
-    position: relative;
-    top: 220px;
-    padding: 20px;
-    z-index: -1000;
-
-}
-
-.videos-relacionados__container{
-    display: flex; 
-    flex-wrap: wrap;
-    justify-content: center;
+.info_container{
+    display: flex;
     width: 100%;
-    height: 700px;
     position: relative;
-    top: 280px;
-    background-color: red;
-    z-index: -1000;
 }
-
-.videos-relacionados__item1{
-    width: 100%;
-    height: 100%;
-    z-index: -1000;
-
-}
-
-.videos-relacionados__item2{
-    width: 100%;
-    height: 100%;
-    z-index: -3000;
-
-}
-
-.videos-relacionados__item3{
-    width: 100%;
-    height: 100%;
-    z-index: -1000;
-}
-
-/* ----------------------------- Apartado para editar el footer - GLOBAL --------------------------------- */
-
-footer{
-    background-color: var(--color-sena) ;
-    padding: 50px;
-    text-align: center;
-    color: var(--color-blanco);
-    position: relative;
-    top:1700px;
-    left: 0px;
-}
-
-.incontec{
-    position: relative;
-    top: 40px;
-    flex-direction: column;
-    object-fit: contain;
-    max-width: 250px;
-}
-
-/* -------------------------------- LANDING PAGE ------------------------------------------ */
 
 .sst{
     background-color: rgb(252,115,35);
@@ -521,7 +363,6 @@ footer{
     text-align: center;
     font-size: 30px;
     position: relative;
-    top: 200px;
     padding: 30px;
     z-index: -10;
 }
@@ -532,7 +373,6 @@ footer{
     text-align: center;
     font-size: 30px;
     position: relative;
-    top: 200px;
     padding: 50px;
     z-index: -10;
 }
@@ -551,7 +391,6 @@ footer{
     text-align: center;
     font-size: 30px;
     position: relative;
-    top: 200px;
     padding: 20px;
     z-index: -10;
 
@@ -563,7 +402,6 @@ footer{
     text-align: center;
     font-size: 30px;
     position: relative;
-    top: 200px;
     padding: 50px;
     z-index: -10;
 
@@ -577,244 +415,79 @@ footer{
     z-index: -10;
 }
 
-/* --------------------------------- MODULO DE LAS 5s ------------------------------ */
+/* ---------------------------- Apartado de los videos relacionados - GLOBAL ------------------------------------------ */
 
-.formulario-5s{
-    width: 100%;
-    height: 200PX;
+.videos-relacionados{
+    background-color: var(--color-sena);
+    color: var(--color-blanco);
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+    padding: 20px;
 }
 
-.footer-5s{
-    background-color: var(--color-sena) ;
+.videos-relacionados__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    z-index: -1000;
+    align-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.videos-relacionados__item1{
+    flex: 1 0 33%;
+    height: 20em;
+}
+
+.videos-relacionados__item2{
+    flex: 1 0 33%;
+    height: 20em;
+}
+
+.videos-relacionados__item3{
+    flex: 1 0 33%;
+    height: 20em;
+}
+
+/* ----------------------------- Apartado para editar el footer - GLOBAL --------------------------------- */
+
+footer{
+    background-color: var(--color-sena);
     padding: 50px;
     text-align: center;
     color: var(--color-blanco);
     position: relative;
-    top:269px;
-    left: 0px;
 }
 
-marquee{
-    margin-top: 20px;
-    z-index: 10;
-    font-size: 22px;
-    color: var(--color-sena);
-}
-
-.titulo__5s{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-size: 60px;
-    color:var(--color-sena);
-}
-
-.custom-btn {
-    width: 130px;
-    height: 40px;
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px 25px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.incontec{
     position: relative;
-    display: inline-block;
-     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-     7px 7px 20px 0px rgba(0,0,0,.1),
-     4px 4px 5px 0px rgba(0,0,0,.1);
-    outline: none;
-  }
+    top: 40px;
+    flex-direction: column;
+    object-fit: contain;
+    max-width: 250px;
+}
 
-.btn-4 {
-    background-color: var(--color-sena);
-  background-image: linear-gradient(315deg, var(--color-sena) 0%, #e4c096 74%);
-    line-height: 42px;
-    padding: 0;
-    border: none;
-  }
-  .btn-4:hover{
-    background-color: #e4c096;
-  background-image: linear-gradient(315deg, #e4c096 0%, var(--color-sena) 74%);
-  }
-  .btn-4 span {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-  .btn-4:before,
-  .btn-4:after {
-    position: absolute;
-    content: "";
-    right: 0;
-    top: 0;
-     box-shadow:  4px 4px 6px 0 rgba(255,255,255,.9),
-                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-      inset -4px -4px 6px 0 rgba(255,255,255,.9),
-      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
-    transition: all 0.3s ease;
-  }
-  .btn-4:before {
-    height: 0%;
-    width: .1px;
-  }
-  .btn-4:after {
-    width: 0%;
-    height: .1px;
-  }
-  .btn-4:hover:before {
-    height: 100%;
-  }
-  .btn-4:hover:after {
-    width: 100%;
-  }
-  .btn-4 span:before,
-  .btn-4 span:after {
-    position: absolute;
-    content: "";
-    left: 0;
-    bottom: 0;
-    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.9),
-                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-      inset -4px -4px 6px 0 rgba(255,255,255,.9),
-      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
-    transition: all 0.3s ease;
-  }
-  .btn-4 span:before {
-    width: .1px;
-    height: 0%;
-  }
-  .btn-4 span:after {
-    width: 0%;
-    height: .1px;
-  }
-  .btn-4 span:hover:before {
-    height: 100%;
-  }
-  .btn-4 span:hover:after {
-    width: 100%;
-  }
+/*-------------------- MODULO QUIENES SOMOS ---------------------------*/
 
-  select{
-    width: 70%;
-    height: 50px;
-    font-size: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    background-color: var(--color-sena);
-    color: white;
-  }
-  
-  /*-------------------- MODULO DE CLASIFICACION 5s ---------------------------*/
-
-  .form-group{
-    margin: 50px;
-    font-size: 20px;
-    color: var(--color-sena);
-  }
-
-  .form-control{
+.informacion{
     width: 100%;
-    height: 50px;
-    font-size: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    background-color: var(--color-sena);
-    color: white;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
-    border-color: white;
-  }
+    text-align: center;
+    align-items: center;
+}
 
-  .form-control::placeholder{
-    color: white;
-  }
+.titulo_quienes{
+    margin: 10px 0px 10px 0px;
+    font-size: 50px;
+}
 
-  .consulta{
-    background-color: #009e1a;
-    padding: 15px;
-    margin: 10px 30px;
-    border: white;
-    color: white;
-    font-size: 15px;
-    width: 200px;
-  }
-
-  .registra{
-    background-color: #00519E;
-    padding: 15px;
-    margin: 0px 30px;
-    border: white;
-    color: white;
-    font-size: 15px;
-    width: 200px;
-  }
-
-  .actualiza{
-    background-color: #5271FF;
-    padding: 15px;
-    margin: 10px 30px;
-    border: white;
-    color: white;
-    font-size: 15px;
-    width: 200px;
-  }
-
-  .elimina{
-    background-color: #9e0000;
-    padding: 15px;
-    margin: 10px 30px;
-    border: white;
-    color: white;
-    font-size: 15px;
-    width: 200px;
-  }
-
-  .consulta:hover{
-    background-color: #7eff94;
-    padding: 15px;
-    margin: 10px 30px;
-    border: white;
-    color: white;
-    font-size: 15px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-    transform: scale(1.1);
-  }
-
-  .registra:hover{
-    background-color: #92caff;
-    padding: 15px;
-    margin: 10px 30px;
-    border: white;
-    color: white;
-    font-size: 15px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-    transform: scale(1.1);
-  }
-
-  .actualiza:hover{
-    background-color: #c9d3ff;
-    padding: 15px;
-    margin: 10px 30px;
-    border: white;
-    color: white;
-    font-size: 15px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-    transform: scale(1.1);
-  }
-  
-  .elimina:hover{
-    background-color: #ff6262;
-    padding: 15px;
-    margin: 10px 30px;
-    border: white;
-    color: white;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-    transform: scale(1.1);
-    font-size: 15px;
-  }
+.contenido_quienes{
+    font-size: 20px;
+}

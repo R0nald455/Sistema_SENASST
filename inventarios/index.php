@@ -73,18 +73,24 @@
             <a href="https://www.instagram.com/senacomunica/?hl=es" target="_blank"><div class="social-media__item"><img src="../img/instagram.png" alt=""></div></a>
     
         </div>
-    
-        <div class="sst"><b>¿Que es el sistema de seguridad y salud en el trabajo?</b> </div>
-    
-        <div class="sst__content">Consiste en el desarrollo de un proceso lógico y por etapas, basado en la mejora continua, lo cual incluye la política, la organización, la planificación, la aplicación, la evaluación, la auditoría y las acciones de mejora con el objetivo de anticipar, reconocer, evaluar y controlar los riesgos que puedan afectar la seguridad y la salud en los espacios laborales.  <br>
-                <img class="sst__image" src="../img/seguridad.jpg" alt="">
+
+        <div class="info-container">
+
+            <div class="sst"><b>¿Que es el sistema de seguridad y salud en el trabajo?</b> </div>
+        
+            <div class="sst__content">Consiste en el desarrollo de un proceso lógico y por etapas, basado en la mejora continua, lo cual incluye la política, la organización, la planificación, la aplicación, la evaluación, la auditoría y las acciones de mejora con el objetivo de anticipar, reconocer, evaluar y controlar los riesgos que puedan afectar la seguridad y la salud en los espacios laborales.  <br>
+                    <img class="sst__image" src="../img/seguridad.jpg" alt="">
+            </div>
+        
+            <div class="objetivo"><b>Objetivo general</b></div>
+        
+            <div class="objetivo__content">Se diseñó con el fin de dar a conocer a los visitantes del Sena la ubicación exacta de todas y cada una de las áreas. Orientar a todo público en caso de Emergencia a donde acudir y como se debe llevar acabo un protocolo de Emergencia, además de esto también contamos con un sistema de denuncia pública puesto a que nuestra institución cuenta con una basta cantidad de terreno existen ciertos puntos en los que se podrían presentar diferentes inconvenientes como por ejemplo un inminente accidente. <br>
+                <img class="objetivo__image" src="../img/casco.png" alt="">
+            </div>
+
         </div>
     
-        <div class="objetivo"><b>Objetivo general</b></div>
-    
-        <div class="objetivo__content">Se diseñó con el fin de dar a conocer a los visitantes del Sena la ubicación exacta de todas y cada una de las áreas. Orientar a todo público en caso de Emergencia a donde acudir y como se debe llevar acabo un protocolo de Emergencia, además de esto también contamos con un sistema de denuncia pública puesto a que nuestra institución cuenta con una basta cantidad de terreno existen ciertos puntos en los que se podrían presentar diferentes inconvenientes como por ejemplo un inminente accidente. <br>
-            <img class="objetivo__image" src="../img/casco.png" alt="">
-        </div>
+        
     
         <div class="videos-relacionados">Videos <b>Relacionados</b></div>
     

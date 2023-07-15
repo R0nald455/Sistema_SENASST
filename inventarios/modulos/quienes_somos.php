@@ -28,7 +28,6 @@
 
         </div>
 
-       
     </header>
 
     <div class="container__menu">
@@ -37,18 +36,18 @@
 
                         <input type="checkbox" id="check__menu">
                         <label for="check__menu" class="lbl-menu">
-                               <span id="spn1"></span>
-                               <span id="spn2"></span>
-                               <span id="spn3"></span>
+                            <span id="spn1"></span>
+                            <span id="spn2"></span>
+                            <span id="spn3"></span>
                         </label>
             <nav>
                 <ul>
                     <li><a href="../index.php" id="selected">Inicio</a></li>
                     <li><a href="#">Modulos</a>
                         <ul> <b>
-                            <li><a href="../inventarios/crud.php">Administrar implementos</a></li>
-                            <li><a href="../inventarios/entrada.php">Entrada de implementos</a></li>
-                            <li><a href="../inventarios/salida.php">Salida de implementos</a></li>
+                            <li><a href="../modulos/crud.php">Administrar implementos</a></li>
+                            <li><a href="../modulos/entrada.php">Entrada de implementos</a></li>
+                            <li><a href="../modulos/salida.php">Salida de implementos</a></li>
                         </ul> </b>
                     </li>
                     <li><a href="#">¿Quienes somos?</a></li>
@@ -58,18 +57,18 @@
         </div>
     </div>
 
-<div class="informacion">
+<div class="informacion"> 
 
-    <h1 class="titulo">¿Quienes somos?</h1>
+    <h1 class="titulo_quienes">¿Quienes somos?</h1>
 
-    <p>
-        En el Centro de Biotecnologia Agropecuaria, nos enorgullece presentar a nuestro dedicado equipo de seguridad y salud en el trabajo. Estamos comprometidos con la promoción de entornos laborales seguros y saludables para nuestros empleados y colaboradores.
-        Nuestro equipo está conformado por profesionales altamente capacitados y apasionados por la seguridad y el bienestar de las personas. Nuestra amplia experiencia en el campo de la seguridad laboral nos permite brindar soluciones efectivas y personalizadas que se adaptan a las necesidades de cada empresa y sector.
-        En cada proyecto, nos enfocamos en la prevención de accidentes y enfermedades laborales, así como en la promoción de prácticas de trabajo seguras. Trabajamos en estrecha colaboración con empleadores y empleados para identificar riesgos potenciales, evaluarlos y desarrollar estrategias para minimizarlos.
-        Nuestra filosofía se basa en la creencia de que un ambiente laboral seguro y saludable no solo protege a los trabajadores, sino que también contribuye a un mejor desempeño y productividad en general. Estamos comprometidos en fomentar una cultura de seguridad en todas las organizaciones con las que trabajamos, promoviendo la conciencia, el entrenamiento y la participación activa de todos los miembros del equipo.
+    <p class="contenido_quienes">
+        En el Centro de Biotecnologia Agropecuaria, nos enorgullece presentar a nuestro dedicado equipo de seguridad y salud en el trabajo. Estamos comprometidos con la promoción de entornos laborales seguros y saludables para nuestros empleados y colaboradores. <br><br>
+        Nuestro equipo está conformado por profesionales altamente capacitados y apasionados por la seguridad y el bienestar de las personas. Nuestra amplia experiencia en el campo de la seguridad laboral nos permite brindar soluciones efectivas y personalizadas que se adaptan a las necesidades de cada empresa y sector. <br><br>
+        En cada proyecto, nos enfocamos en la prevención de accidentes y enfermedades laborales, así como en la promoción de prácticas de trabajo seguras. Trabajamos en estrecha colaboración con empleadores y empleados para identificar riesgos potenciales, evaluarlos y desarrollar estrategias para minimizarlos. <br><br>
+        Nuestra filosofía se basa en la creencia de que un ambiente laboral seguro y saludable no solo protege a los trabajadores, sino que también contribuye a un mejor desempeño y productividad en general. Estamos comprometidos en fomentar una cultura de seguridad en todas las organizaciones con las que trabajamos, promoviendo la conciencia, el entrenamiento y la participación activa de todos los miembros del equipo. <br><br>
         Nuestros servicios abarcan desde la elaboración de políticas y programas de seguridad hasta la implementación de sistemas de gestión de seguridad laboral. Ofrecemos capacitación especializada, auditorías de seguridad, evaluaciones de riesgos, asesoramiento y seguimiento continuo para garantizar el cumplimiento de las normativas y estándares más actualizados.
-        En el Centro de Biotecnologia Agropecuaria, nuestro mayor compromiso es la seguridad y salud de las personas. Trabajamos incansablemente para crear entornos laborales seguros, promoviendo una cultura de seguridad y fomentando la protección y bienestar de todos los trabajadores.
-        Si desea obtener más información sobre nuestros servicios o desea colaborar con nuestro equipo de seguridad y salud en el trabajo, no dude en contactarnos. Estaremos encantados de ayudarle a alcanzar sus objetivos de seguridad y salud laboral."
+        En el Centro de Biotecnologia Agropecuaria, nuestro mayor compromiso es la seguridad y salud de las personas. Trabajamos incansablemente para crear entornos laborales seguros, promoviendo una cultura de seguridad y fomentando la protección y bienestar de todos los trabajadores. <br><br>
+        Si desea obtener más información sobre nuestros servicios o desea colaborar con nuestro equipo de seguridad y salud en el trabajo, no dude en contactarnos. Estaremos encantados de ayudarle a alcanzar sus objetivos de seguridad y salud laboral." <br><br>
     </p>
 
 </div>
@@ -78,8 +77,11 @@
         <div class="social-media__container">
     
             <a href="https://www.youtube.com/channel/UCt5y885UFplu2okY39TBwCg" target="_blank"><div class="social-media__item"><img src="../img/youtube.png" alt=""></div></a>
+
             <a href="https://twitter.com/SENAComunica?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><div class="social-media__item"><img src="../img/gorjeo.png" alt=""></div></a>
+
             <a href="https://es-la.facebook.com/SENA/" target="_blank"><div class="social-media__item"><img src="../img/facebook.png" alt=""></div></a>
+            
             <a href="https://www.instagram.com/senacomunica/?hl=es" target="_blank"><div class="social-media__item"><img src="../img/instagram.png" alt=""></div></a>
     
         </div>
