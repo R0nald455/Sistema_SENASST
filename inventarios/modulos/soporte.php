@@ -64,13 +64,13 @@
     </div>
 
     <div class="contenido_container">
-        <p class="contenido_quienes contenido_quienes--1">En el Centro de Biotecnologia Agropecuaria, nos enorgullece presentar a nuestro dedicado equipo de seguridad y salud en el trabajo. Estamos comprometidos con la promoción de entornos laborales seguros y saludables para nuestros empleados y colaboradores. <br><br></p>
-        <p class="contenido_quienes contenido_quienes--2">Nuestro equipo está conformado por profesionales altamente capacitados y apasionados por la seguridad y el bienestar de las personas. Nuestra amplia experiencia en el campo de la seguridad laboral nos permite brindar soluciones efectivas y personalizadas que se adaptan a las necesidades de cada empresa y sector. <br><br></p>
-        <p class="contenido_quienes contenido_quienes--3">En cada proyecto, nos enfocamos en la prevención de accidentes y enfermedades laborales, así como en la promoción de prácticas de trabajo seguras. Trabajamos en estrecha colaboración con empleadores y empleados para identificar riesgos potenciales, evaluarlos y desarrollar estrategias para minimizarlos. <br><br></p>
+        <p class="contenido_quienes">
+            En el Centro de Biotecnologia Agropecuaria, nos enorgullece presentar a nuestro dedicado equipo de seguridad y salud en el trabajo. Estamos comprometidos con la promoción de entornos laborales seguros y saludables para nuestros empleados y colaboradores. <br><br>
+            Nuestro equipo está conformado por profesionales altamente capacitados y apasionados por la seguridad y el bienestar de las personas. Nuestra amplia experiencia en el campo de la seguridad laboral nos permite brindar soluciones efectivas y personalizadas que se adaptan a las necesidades de cada empresa y sector. <br><br>
+            En cada proyecto, nos enfocamos en la prevención de accidentes y enfermedades laborales, así como en la promoción de prácticas de trabajo seguras. Trabajamos en estrecha colaboración con empleadores y empleados para identificar riesgos potenciales, evaluarlos y desarrollar estrategias para minimizarlos. <br><br>
+        </p>
 
-        <div class="img-container">
-            <img src="../../img/quienes_somos.png" alt="">
-        </div>
+        <img src="../../img/quienes_somos.png" alt="">
     </div>
 </div>
 
