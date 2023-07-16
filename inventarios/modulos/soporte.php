@@ -56,24 +56,24 @@
             </nav>
         </div>
     </div>
-
-<div class="informacion"> 
-
-    <div class="titulo_container">
-        <h1 class="titulo_quienes">¿Quienes somos?</h1>
-    </div>
-
-    <div class="contenido_container">
-        <p class="contenido_quienes">
-            En el Centro de Biotecnologia Agropecuaria, nos enorgullece presentar a nuestro dedicado equipo de seguridad y salud en el trabajo. Estamos comprometidos con la promoción de entornos laborales seguros y saludables para nuestros empleados y colaboradores. <br><br>
-            Nuestro equipo está conformado por profesionales altamente capacitados y apasionados por la seguridad y el bienestar de las personas. Nuestra amplia experiencia en el campo de la seguridad laboral nos permite brindar soluciones efectivas y personalizadas que se adaptan a las necesidades de cada empresa y sector. <br><br>
-            En cada proyecto, nos enfocamos en la prevención de accidentes y enfermedades laborales, así como en la promoción de prácticas de trabajo seguras. Trabajamos en estrecha colaboración con empleadores y empleados para identificar riesgos potenciales, evaluarlos y desarrollar estrategias para minimizarlos. <br><br>
-        </p>
-
-        <img src="../../img/quienes_somos.png" alt="">
-    </div>
 </div>
 
+        <h1 class="titulo-soporte">Contacto de Ayuda y Soporte</h1>
+        <form class="form-soporte" id="contact-form" action="../php/script_soporte.php" method="POST">
+            <label class="label-soporte" for="name">Nombre:</label>
+            <input class="input-soporte" type="text" id="name" name="name" required>
+
+            <label class="label-soporte" for="email">Correo electrónico:</label>
+            <input class="input-soporte" type="email" id="email" name="email" required>
+
+            <label class="label-soporte" for="asunto">Asunto:</label>
+            <input class="input-soporte" type="text" id="asunto" name="asunto" required>
+
+            <label class="label-soporte" for="message">Mensaje:</label>
+            <textarea class="textarea-soporte" id="message" name="message" col="6" required></textarea>
+
+            <input class="submit-soporte" type="submit" value="Enviar">
+        </form>
     
         <div class="social-media__container">
     
@@ -99,5 +99,6 @@
             <img class="incontec" src="https://sciudadanos.sena.edu.co/Resources/icontec2.png" >
     
         </footer>
+        <script src="../js/script_soporte.js"></script>
 </body>
 </html>

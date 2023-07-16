@@ -542,3 +542,35 @@ footer{
     flex: 1 0 25;
 }
 
+/*-------------------- MODULO AYUDA Y SOPORTE ---------------------------*/
+
+.titulo-soporte{
+    text-align: center;
+}
+
+.form-soporte {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.label-soporte {
+    display: block;
+    margin-top: 10px;
+}
+
+.input-soporte,
+.textarea-soporte {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    resize: vertical;
+}
+
+.submit-soporte{
+    width: auto;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+

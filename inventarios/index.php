@@ -37,9 +37,9 @@
 
                         <input type="checkbox" id="check__menu">
                         <label for="check__menu" class="lbl-menu">
-                               <span id="spn1"></span>
-                               <span id="spn2"></span>
-                               <span id="spn3"></span>
+                            <span id="spn1"></span>
+                            <span id="spn2"></span>
+                            <span id="spn3"></span>
                         </label>
             <nav>
                 <ul>
@@ -52,7 +52,7 @@
                         </ul> </b>
                     </li>
                     <li><a href="../inventarios/modulos/quienes_somos.php">¿Quienes somos?</a></li>
-                    <li><a href="#">Ayuda y Soporte</a></li>
+                    <li><a href="../inventarios/modulos/soporte.php">Ayuda y Soporte</a></li>
                 </ul>
             </nav>
         </div>
