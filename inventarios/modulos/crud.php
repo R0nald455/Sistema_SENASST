@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../../css/styles_inventarios.css">
     <title>Administracion | Inventarios</title>
 </head>
     <body>
@@ -27,36 +27,43 @@
                 <h1>Administracion de implementos.</h1>
 
                 <div class="form-group">
-                    <label for="id_implementos">ID: </label>
-                    <input type="text" name="id_implementos" class="form-control" id="id_implementos" placeholder="Ingrese el ID del implemento...">
+                    <label for="id_implementos">ID: <input type="text" name="id_implementos" class="form-control campos" id="id_implementos" placeholder="Ingrese el ID del implemento..."></label>
                 </div>
 
                 <div class="form-group">
-                    <label for="nombre">Nombre: </label>
-                    <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Ingrese el nombre del implemento... ">
+                    <label for="nombre">Nombre: <input type="text" name="nombre" class="form-control campos" id="nombre" placeholder="Ingrese el nombre del implemento... "></label>   
                 </div>
 
                 <div class="form-group">
-                    <label for="descripcion" class="form-label">Descripción:</label>
-                    <textarea name="descripcion" id="descripcion" class="form-control" style="min-height:50px; max-height:200px; resize: vertical;" placeholder="Ingrese la descripcion del implemento... " ></textarea>
+                    <label for="descripcion" class="form-label">Descripción: <textarea name="descripcion" id="descripcion" class="form-control campos" style="min-height:50px; max-height:200px; resize: vertical;" placeholder="Ingrese la descripcion del implemento... " ></textarea></label>
                 </div>
 
                 <div class="form-group">
-                    <label for="categoria">Categoria: </label>
-                    <input type="text" name="categoria" class="form-control" id="categoria" placeholder="Ingrese a que categoria pertenece el implemento...">
+                    <label for="categoria">Categoria:
+                    <select name="categoria" class="form-control campos" id="categoria">
+                        <option value="Seguridad" selected>Seguridad</option>
+                        <option value="Salud">Salud</option>
+                        <option value="Herramienta">Herramienta</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </label>
                 </div>
 
                 <div class="form-group">
-                    <label for="cantidad">Cantidad: </label>
-                    <input type="number" name="cantidad" class="form-control" id="cantidad" placeholder="Ingrese la cantidad de implementos...">
+                    <label for="cantidad">Cantidad: <input type="number" name="cantidad" class="form-control campos" id="cantidad" placeholder="Ingrese la cantidad de implementos..."></label>
                 </div>
 
                 <div class="form-group">
-                    <label for="ubicacion">Ubicacion: </label>
-                    <input type="text" name="ubicacion" class="form-control" id="ubicacion" placeholder="Ingrese la ubicacion del implemento...">
+                    <label for="ubicacion">Ubicacion:
+                        <select name="ubicacion" class="form-control campos" id="ubicacion">
+                            <option value="Almacen" selected>Almacen</option>
+                            <option value="Auditorio">Auditorio</option>
+                            <option value="Enfermeria">Enfermeria</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </label>
                 </div>
 
-                    <input type="submit" value="Consultar" class="btn btn-primary" name="btn_consultar">
                     <input type="submit" value="Registrar" class="btn btn-success" name="btn_registrar">
                     <input type="submit" value="Actualizar" class="btn btn-info" name="btn_actualizar">
                     <input type="submit" value="Eliminar" class="btn btn-danger" name="btn_eliminar">

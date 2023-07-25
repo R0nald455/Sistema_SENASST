@@ -330,7 +330,7 @@ nav ul li ul li a:hover{
     z-index: 200px;
 }
 
-/* Redes Sociales */
+/* ------------------------------------------Redes Sociales ---------------------------------------------------*/
 
 .social-media__container{
     width:20px;
@@ -492,4 +492,40 @@ footer{
 .contenido_quienes{
     font-size: 20px;
     background-color: antiquewhite;
+}
+
+/*---------------------------Modulo Administracion de Usuarios-------------------------*/
+
+.container_administracion{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 4em;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container_form{
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 50%;
+    margin: auto;
+    text-align: center; 
+}
+
+.container_tabla{
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 50%;
+    text-align: center;
+    margin: 12px;
+}
+
+[type="submit"]{
+    margin: 10px;
+}
+
+.campos{
+    width: 40rem;
 }
