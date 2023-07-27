@@ -12,8 +12,6 @@ if( $validar == null || $validar == ""){
 
 }
 
-require_once ("../../db/conexion.php");
-
 ?>
 
 <!DOCTYPE html>
@@ -22,8 +20,8 @@ require_once ("../../db/conexion.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../Css/estilo.css">
     <title>Usuarios</title>
 </head>
 
@@ -32,7 +30,7 @@ require_once ("../../db/conexion.php");
     <h1>Bienvenido Usuario <?php echo $_SESSION['nombre']; ?></h1>
     <br>
     <br>
-    <h1>Lista de usuarios</h1>
+    <h1>Oficina de Datos</h1>
     <br>
     <br>
     <div>
@@ -53,9 +51,10 @@ require_once ("../../db/conexion.php");
         </thead>
         <tbody>
             <?php
+            $conexion = mysqli_connect("localhost","root","","admin_db");
             $SQL = "SELECT user.id, user.nombre, user.correo, user.password, user.telefono,
             user.fecha, permisos.rol FROM user LEFT JOIN permisos 
-            ON user.rol = permisos.id";
+            ON user.rol = permisos.id WHERE user.nombre = 'Ronald'";
             $dato = mysqli_query($conexion, $SQL);
 
             if($dato -> num_rows >=0){

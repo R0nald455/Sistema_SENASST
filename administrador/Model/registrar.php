@@ -1,5 +1,5 @@
 <?php
-require_once ("../../db/conexion.php");
+$conexion = mysqli_connect("localhost","root","","admin_db");
 
 if(isset($_POST['registrar'])){
 

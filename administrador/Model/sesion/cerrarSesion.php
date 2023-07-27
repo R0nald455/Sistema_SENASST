@@ -2,6 +2,7 @@
 
 session_start();
 session_destroy();
-header("Location:../Model/login.php")
+
+header("Location: ../Model/login.php");
 
 ?>
