@@ -11,8 +11,8 @@
 
         <br>
 
-    <link rel="stylesheet" href="../Css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="../Css/estilo.css">
+    <link rel="stylesheet" href="../css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 
 </head>
 

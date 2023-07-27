@@ -1,7 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 5.1.1
--- https://www.phpmyadmin.net/
---
 -- Servidor: localhost:3307
 -- Tiempo de generación: 05-06-2023 a las 17:46:24
 -- Versión del servidor: 10.4.21-MariaDB
@@ -10,7 +6,6 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
-
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -97,14 +92,6 @@ CREATE TABLE `tblempleados` (
   `Telefono` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Volcado de datos para la tabla `tblempleados`
---
-
-INSERT INTO `tblempleados` (`ID_Empleado`, `Nombre`, `Cargo`, `Departamento`, `Email`, `Telefono`) VALUES
-(1, 'Jesus', 'Operario', 'SST', 'Jesus@gmail.com', '3124567896'),
-(2, 'Ronald', 'Programador', 'IT', 'Ronald@gmail.com', '3297485937');
-
 -- --------------------------------------------------------
 
 --
@@ -117,14 +104,6 @@ CREATE TABLE `tblentradas` (
   `Fecha` varchar(50) NOT NULL,
   `Cantidad` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `tblentradas`
---
-
-INSERT INTO `tblentradas` (`ID_Entradas`, `ID_Implementos`, `Fecha`, `Cantidad`) VALUES
-(1, 1, '2023-06-29', 60),
-(2, 2, '2023-06-01', 10);
 
 -- --------------------------------------------------------
 
@@ -141,14 +120,6 @@ CREATE TABLE `tblimplementos` (
   `Ubicacion` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Volcado de datos para la tabla `tblimplementos`
---
-
-INSERT INTO `tblimplementos` (`ID_Implementos`, `Nombre`, `Descripcion`, `Categoria`, `Cantidad`, `Ubicacion`) VALUES
-(1, 'Casco', 'Para cuidar la cabeza', 'Seguridad', 60, 'Almacen'),
-(2, 'Chaleco', 'Para el pecho', 'Seguridad', 55, 'Auditorio');
-
 -- --------------------------------------------------------
 
 --
@@ -162,36 +133,6 @@ CREATE TABLE `tblsalidas` (
   `Cantidad` int(11) NOT NULL,
   `ID_Empleado` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `tblsalidas`
---
-
-INSERT INTO `tblsalidas` (`ID_Salidas`, `ID_Implementos`, `Fecha`, `Cantidad`, `ID_Empleado`) VALUES
-(1, 1, '2023-06-16', 20, 1),
-(2, 1, '2023-06-01', 10, 2);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `tblusuarios`
---
-
-CREATE TABLE `tblusuarios` (
-  `ID_Usuario` int(11) NOT NULL,
-  `ID_Empleado` int(11) NOT NULL,
-  `Usuario` varchar(50) NOT NULL,
-  `Contraseña` varchar(50) NOT NULL,
-  `rol` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `tblusuarios`
---
-
-INSERT INTO `tblusuarios` (`ID_Usuario`, `ID_Empleado`, `Usuario`, `Contraseña`, `rol`) VALUES
-(3, 1, 'admin', 'admin', 'funcionario'),
-(4, 2, 'persona', 'persona', 'persona');
 
 -- --------------------------------------------------------
 
@@ -207,19 +148,47 @@ CREATE TABLE `user` (
   `password` varchar(50) NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `rol` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Volcado de datos para la tabla `user`
 --
 
 INSERT INTO `user` (`id`, `nombre`, `correo`, `telefono`, `password`, `fecha`, `rol`) VALUES
-(3, 'fabio', 'fabio@gmail.com', '9900258789', '12345', '2023-06-05 13:20:16', 1),
-(4, 'jesus', 'jesus@gmail.com.mx', '9911165670', '12345', '2023-06-05 13:20:31', 1),
-(10, 'juan', 'juan@gmail.com', '54948151', '12345', '2023-06-05 13:20:57', 1),
-(11, 'yeisson', 'yeisson@gmail.com', '9975201478', '12345', '2023-06-05 13:21:14', 2),
-(12, 'Coca', 'jonathan@gmail.com', '3134657483', '12345', '2023-06-05 13:41:19', 2);
+(1, 'Ronald', 'ronald@gmail.com', '3234567894', '12345', '2023-07-26 01:35:41', 2),
+(2, 'Jesus', 'jesus@gmail.com', '3112345678', '12345', '2023-07-26 01:36:27', 1);
 
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `permisos` (`rol`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `user`
+--
+ALTER TABLE `user`
+  ADD CONSTRAINT `permisos` FOREIGN KEY (`rol`) REFERENCES `permisos` (`id`);
+COMMIT;
 --
 -- Índices para tablas volcadas
 --
@@ -270,13 +239,6 @@ ALTER TABLE `tblsalidas`
   ADD KEY `ID_Empleado` (`ID_Empleado`);
 
 --
--- Indices de la tabla `tblusuarios`
---
-ALTER TABLE `tblusuarios`
-  ADD PRIMARY KEY (`ID_Usuario`),
-  ADD KEY `ID_Empleado` (`ID_Empleado`);
-
---
 -- Indices de la tabla `user`
 --
 ALTER TABLE `user`
@@ -324,12 +286,6 @@ ALTER TABLE `tblsalidas`
   MODIFY `ID_Salidas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `tblusuarios`
---
-ALTER TABLE `tblusuarios`
-  MODIFY `ID_Usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
 -- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
@@ -351,12 +307,6 @@ ALTER TABLE `tblentradas`
 ALTER TABLE `tblsalidas`
   ADD CONSTRAINT `tblsalidas_ibfk_1` FOREIGN KEY (`ID_Implementos`) REFERENCES `tblimplementos` (`ID_Implementos`),
   ADD CONSTRAINT `tblsalidas_ibfk_2` FOREIGN KEY (`ID_Empleado`) REFERENCES `tblempleados` (`ID_Empleado`);
-
---
--- Filtros para la tabla `tblusuarios`
---
-ALTER TABLE `tblusuarios`
-  ADD CONSTRAINT `tblusuarios_ibfk_1` FOREIGN KEY (`ID_Empleado`) REFERENCES `tblempleados` (`ID_Empleado`);
 
 --
 -- Filtros para la tabla `user`

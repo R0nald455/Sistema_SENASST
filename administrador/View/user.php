@@ -19,8 +19,10 @@ if( $validar == null || $validar == ""){
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../Css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="../../css/fontawesome-all.min.css">
   <link rel="stylesheet" href="../Css/estilo.css">
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+
   <title>Usuarios</title>
 </head>
 
@@ -34,8 +36,7 @@ if( $validar == null || $validar == ""){
         <br>
         <div>
           
-          <a class="btn btn-warning" href="../Model/sesion/cerrarSesion.php">Cesion Cerrada
-          <i class="fa fa-power-off" aria-hidden="true"></i></a> 
+          <a class="btn btn-warning" href="../Model/sesion/cerrarSesion.php">Cesion Cerrada</a> 
         </div>
         <br>
         <br>
@@ -54,7 +55,7 @@ if( $validar == null || $validar == ""){
             </thead>
             <tbody>
               <?php
-              $conexion = mysqli_connect("localhost","root","","admin_db");
+              require_once ("../../db/conexion.php");
               $SQL = "SELECT user.id, user.nombre, user.correo, user.password, user.telefono,
               user.fecha, permisos.rol FROM user LEFT JOIN permisos 
               ON user.rol = permisos.id";
@@ -73,10 +74,10 @@ if( $validar == null || $validar == ""){
               
               <td>
                 <a class="btn btn-warning" href="editarUsuario.php?id=<?php echo $fila['id']?> ">
-                <i class="fas fa-wrench"></i> </a>
+                Actualizar </a>
 
                 <a class="btn btn-danger" href="eliminarUsuario.php?id=<?php echo $fila['id']?>">
-                <i class="fa fa-trash"></i></a>
+                Borrar</a>
               </td>              
               </tr>
 

@@ -3,6 +3,8 @@
 session_start();
 error_reporting(0);
 
+require_once ("../../db/conexion.php");
+
 $validar = $_SESSION['nombre'];
 
 if( $validar == null || $validar = ''){
@@ -13,7 +15,6 @@ if( $validar == null || $validar = ''){
 }
 
 $id = $_GET['id'];
-$conexion = mysqli_connect("localhost","root","","admin_db");
 $consulta = "SELECT * FROM user WHERE id = $id";
 $resultado = mysqli_query($conexion, $consulta);
 $usuario = mysqli_fetch_assoc($resultado);
@@ -28,7 +29,8 @@ $usuario = mysqli_fetch_assoc($resultado);
     <title>Registros</title>
 
     <link rel="stylesheet" href="../Css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="../Css/estilo.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
 </head>
 
 <body id="page-top">
