@@ -1,13 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Señales de SST</title>
+
     <style>
+
+        *{
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
         }
         
+        
+        header{
+        width:100%;
+        background-color: #ffffff;
+        height: 120px;
+        position: sticky;
+        border:0px;
+        border-bottom: 20px;
+        border-style: solid;
+        border-color: #45d100;
+        }
+
+        header img {
+        height: 70px;
+        margin-left: 20px;
+        margin-top: 10px;
+        }
+
+        header h1 {
+        float: right;
+
+        font-weight: bold;
+        font-size: 30px;
+        margin-top: 10px;
+        margin-right: 5%;
+        }
         h1 {
             text-align: center;
             color: #333;
@@ -41,8 +74,10 @@
     </style>
 </head>
 <body>
+    <header>
+    <a href="../php/rolPersona/indexPersona.php"><img src="../img/LogoSena.png" alt="logosena"></a>
     <h1>Señales de Seguridad</h1>
-    
+    </header>
     <?php
     $senalesSST = array(
         "Salida de Emergencia" => array(

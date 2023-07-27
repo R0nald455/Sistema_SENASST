@@ -241,6 +241,36 @@ a {
   
 }
 
+
+.UbicarBrigadista{
+  background-color:#45d100 ;
+  color: white;
+  padding: 20px 20px;
+  border: 0px;
+  margin-top: 40%;
+  margin-bottom: 40%;
+  box-shadow: #505050;
+}
+
+.UbicarBrigadista a{
+  font-size: 40px;
+  color: white;
+  text-decoration: double;
+}
+
+
+.UbicarBrigadista:hover{
+  background-color:#59ee0e ;
+  color: white;
+
+}
+
+#imagenCapacitacion{
+  height: 407px;
+}
+
+
+
 #trainer .trainer-thumb {
   position: relative;
   margin-top: 72px;
@@ -299,10 +329,31 @@ a {
 
 }
 
-#reportar{
-  background-color: #45d100;
-  font-size: 20px;
+#newsletter h2{
+  font-size: 50px;
 }
+
+.botonReportar{
+  background-color: white;
+  color: #45d100;
+  margin-top: 1rem;
+  font-size: 24px;
+  padding: 20px 40px ;
+  border: 0px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.botonReportar:hover{
+  background-color: #45d100;
+  color: rgb(0, 0, 0);
+  border: 3px;
+  border-color: #000;
+  border-style: solid;
+  font-weight: bold;
+}
+
+
 
 #newsletter .newsletter_detail {
   padding-top: 3rem;
@@ -331,6 +382,34 @@ a {
   letter-spacing: 1px;
 }
 
+#testimonial span{
+  color: #45d100;
+  font-size: 30px;
+  text-align: justify;
+  font-weight: 900;
+}
+
+#testimonial p{
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+
+#testimonial .fecha{
+  font-size: 8px;
+}
+
+#testimonial img{
+  height: 500px;
+  width: auto;
+}
+
+#testimonial hr {
+color: black;
+border-color: #000;
+border-width: 2px;
+}
 
 
 

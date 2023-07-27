@@ -64,13 +64,39 @@
     Seccion noticias y eventos proximos
 ============================== -->
 <section id="testimonial">
-	<div class="container">
-		<div class="row">
-			<h1>Noticias y eventos</h1>
-			<p>				Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
-				facere cupiditate libero corporis placeat quis quas ad aliquid sint
-				perferendis odio consequatur vel sed velit cumque iure ex nam veniam.</p>
+		<div class="container">
+			<div class="row">
+				<h1>Noticias y eventos</h1>
+			</div>
+			<div class="col-md-12">	
+			<?php
+				include_once '../../db/conexion.php';
 
+				$result = $conexion->query("SELECT id,titulo,descripcion,creado FROM publicaciones ");
+
+				while($fila=$result->fetch_assoc()){
+					$fecha=new DateTime($fila['creado']);
+					$fechaPublicacion=$fecha->format('Y-m-d');
+					echo" 
+					<div class='card'>
+					<div class='mb-12'>
+					<span>".$fila['titulo']."</span>
+					<h5 class='fecha'>Publicado el: ".$fechaPublicacion." </h5>
+					
+					</div>
+					</div>
+					<center>
+					<img src='http://localhost/Sistema_SENASST/php/consultarImagen.php?id=".$fila['id']."'  class='img-responsive'  alt='Imagen'>
+					</center><br>
+
+					<div class='mb-3'>
+					<p>".$fila['descripcion']."</p>
+					</div>
+					<hr>
+					";
+				}
+			?>
+			
 		</div>
 	</div>
 </section>

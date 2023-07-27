@@ -17,7 +17,7 @@
 <div class="navbar navbar-default navbar-fixed-top sticky-navigation" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
-			<a href="#" class="navbar-brand"><img src="img/LogoSena.png"  alt="logoSena"></a>
+			<a href="#" class="navbar-brand"><img src="img/LogoSena.png"  width="50px" alt="logoSena"></a>
 		</div>
 			<ul class="nav navbar-nav navbar-right main-navigation">
 				<li><a href="#overview" >Inicio</a></li>
@@ -69,22 +69,16 @@
 							</div>
 						</div>
 				</div>
-				<p>Siempre contaran con un chaleco naranja</p>
+				<p>Identificalos ellos siempre contaran con un chaleco naranja</p>
 			</div>
 			<div class="wow fadeInUp col-md-4 col-sm-6" >
 				<div class="trainer-thumb">
-					<img src="img/disponibilidad.png" class="img-responsive" alt="Brigadista">
-						<div class="trainer-overlay">
-							<div class="trainer-des">
-								<h2>Siempre a tu disposición</h2>
-							</div>
-						</div>
+				<button class="UbicarBrigadista"><a onclick="window.location.href='php/login.php'">Alerta a un Brigadista</a></button>
 				</div>
-				<p>Siempre estaran disponibles ante cualquier situación</p>
 			</div>
 			<div class="wow fadeInUp col-md-4 col-sm-6" >
 				<div class="trainer-thumb">
-					<img src="img/capacitacion.jpg"  class="img-responsive" alt="Brigadista">
+					<img src="img/capacitacion.jpg" id="imagenCapacitacion"  class="img-responsive" alt="Brigadista">
 						<div class="trainer-overlay">
 							<div class="trainer-des">
 								<h2>Capacitados</h2>
@@ -105,9 +99,9 @@
 	<div class="container">
 		<div class="row">
 			<div class=" col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10" >
-				<h2>Ayuda a tu seguridad</h2>
+				<h2>!Contribuye a hacer de un sena más seguro!</h2>
 				<h4>Reporta los posibles riesgos para tu seguridad y salud</h4>
-				<button type="button" class="btn btn-primary" onclick="window.location.href='php/login.php'">Reportar riesgo</button>
+				<button class="botonReportar" onclick="window.location.href='php/login.php'"><b>Reportar riesgo</b></button>
 			</div>
 		</div>
 	</div>
@@ -121,10 +115,40 @@
 <!-- =========================
     Seccion noticias y eventos proximos
 ============================== -->
-<section id="testimonial">
-	<div class="container">
-		<div class="row">
-			<h1>Noticias y eventos</h1>
+	<section id="testimonial">
+		<div class="container">
+			<div class="row">
+				<h1>Noticias y eventos</h1>
+			</div>
+			<div class="col-md-12">	
+			<?php
+				include_once 'db/conexion.php';
+
+				$result = $conexion->query("SELECT id,titulo,descripcion,creado FROM publicaciones ");
+
+				while($fila=$result->fetch_assoc()){
+					$fecha=new DateTime($fila['creado']);
+					$fechaPublicacion=$fecha->format('Y-m-d');
+					echo" 
+					<div class='card'>
+					<div class='mb-12'>
+					<span>".$fila['titulo']."</span>
+					<h5 class='fecha'>Publicado el: ".$fechaPublicacion." </h5>
+					
+					</div>
+					</div>
+					<center>
+					<img src='http://localhost/Sistema_SENASST/php/consultarImagen.php?id=".$fila['id']."'  class='img-responsive'  alt='Imagen'>
+					</center><br>
+
+					<div class='mb-3'>
+					<p>".$fila['descripcion']."</p>
+					</div>
+					<hr>
+					";
+				}
+			?>
+			
 		</div>
 	</div>
 </section>

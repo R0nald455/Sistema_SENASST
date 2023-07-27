@@ -24,7 +24,8 @@
 			<ul class="nav navbar-nav navbar-right main-navigation">
 				<li><a onclick="window.location.href='../../index.php'" >Inicio</a></li>
 				<li><a  onclick="window.location.href='../../inventarios/index.php'">Inventarios</a></li>
-				<li><a onclick="window.location.href='../../administrador/index.php'" >Administrador de usuarios</a></li>
+				<li><a onclick="window.location.href='../../contenidos/index.php'" >Administrar contenidos</a></li>
+				<li><a onclick="window.location.href='../../administrador/index.php'" >Administrar usuarios</a></li>
 				<li><a onclick="window.location.href='../cerrarSesion.php'" ><span class="material-symbols-outlined">logout</span></a></li>
 			</ul>
 		</div>
