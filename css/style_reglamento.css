@@ -1,6 +1,43 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+  background-color: #ffffff;
+  height: 120px;
+  position: sticky;
+  border-bottom: 20px;
+  border-style: solid;
+  border-color: #45d100;
+}
+
+header img {
+  height: 70px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+header h1 {
+  float: right;
+
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-right: 5%;
+}
 
 
-
+.container button{
+  background-color: #45d100;
+  color: #fff;
+  padding: 20px 40px;
+  font-weight: 900;
+  font-size: 20px;
+  border-radius: 5px;
+}
 .tooltip {
     position: relative;
     display: inline-block;
@@ -16,8 +53,6 @@
     text-align: center;
     padding: 5px 0;
     border-radius: 6px;
-   
-
     position: absolute;
     z-index: 1;
   }

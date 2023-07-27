@@ -4,15 +4,24 @@
 <html >
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Reglamento del aprendiz </title>
   <link href="../css/bootstrap.min.css" rel="stylesheet"> 
   <link rel="stylesheet" href="../footer/footer.php">
+  <link rel="stylesheet" href="../css/style_reglamento.css">
 
 </head>
 <body>
+
+
+<header>
+<a href="../php/rolPersona/indexPersona.php"><img src="../img/LogoSena.png" alt="logosena"></a>
+<h1>Reglamento del Aprendiz</h1>
+</header>
+
 <div class="container">
-  <h4 class="mt-5">Reglamento del Aprendiz</h4>
   <hr>
   <div class="row">
     <div class="col-12 col-md-12">  
@@ -22,12 +31,11 @@
             <div class="form-row align-items-center">
               <div class="col-auto">
                 <label class="sr-only" for="inlineFormInput">Curso</label>
-                <input required name="PalabraClave" type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Ingrese palabra clave">  
+                <input required name="PalabraClave" type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Ingrese palabra clave"><br>
                 <input name="buscar" type="hidden" class="form-control mb-2" id="inlineFormInput" value="v">
               </div>
               <div class="col-auto">
-                <button type="submit" class="btn btn-primary mb-2">Buscar</button>
-
+                <button type="submit" >Buscar</button>
               </div>
             </div>
           </form>

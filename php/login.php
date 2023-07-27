@@ -8,7 +8,8 @@
   </head>
   <body>
     <header>
-      <img src="../img/LogoSena.png" alt="logosena">
+      <a href="../index.php"><img src="../img/LogoSena.png" alt="logosena"></a>
+      
     </header>
     <div class="contenedor">
       <div class="card">
