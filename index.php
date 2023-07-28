@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/styles_soporte.css">
 </head>
 
 <body>
@@ -153,9 +154,10 @@
 	</div>
 </section>
 
-
 <!-- footer -->
 <?php
+include("soporte/soporte.php");
+
 include("footer/footer.php");
 ?>
 </body>

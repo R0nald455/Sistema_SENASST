@@ -12,8 +12,6 @@ if( $validar == null || $validar == ""){
 
 }
 
-require_once ("../../db/conexion.php");
-
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +22,7 @@ require_once ("../../db/conexion.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/fontawesome-all.min.css">
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
+
     <title>Usuarios</title>
 </head>
 
@@ -32,7 +31,7 @@ require_once ("../../db/conexion.php");
     <h1>Bienvenido Usuario <?php echo $_SESSION['nombre']; ?></h1>
     <br>
     <br>
-    <h1>Lista de usuarios</h1>
+    <h1>Oficina de Datos</h1>
     <br>
     <br>
     <div>
@@ -53,9 +52,10 @@ require_once ("../../db/conexion.php");
         </thead>
         <tbody>
             <?php
+            require_once ("../../db/conexion.php");
             $SQL = "SELECT user.id, user.nombre, user.correo, user.password, user.telefono,
             user.fecha, permisos.rol FROM user LEFT JOIN permisos 
-            ON user.rol = permisos.id";
+            ON user.rol = permisos.id WHERE user.nombre = 'Ronald'";
             $dato = mysqli_query($conexion, $SQL);
 
             if($dato -> num_rows >=0){
@@ -85,6 +85,7 @@ require_once ("../../db/conexion.php");
         </tbody>
     </table>
 </div>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
 <script src="../js/user.js"></script>

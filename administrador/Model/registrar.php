@@ -1,4 +1,5 @@
 <?php
+
 require_once ("../../db/conexion.php");
 
 if(isset($_POST['registrar'])){

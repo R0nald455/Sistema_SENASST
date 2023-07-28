@@ -7,8 +7,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registros</title>
+    <center>
 
+        <br>
+
+    <link rel="stylesheet" href="../css/fontawesome-all.min.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 
 </head>
@@ -23,7 +26,7 @@
                         <div id="login-box" class="col-md-12">
                             <br>
                             <br>
-                            <h3 class="text-center">Nuevo Registro</h3>
+                            <h1 class="text-center">Nuevo Registro</h1>
                             <div class="form-group">
                                 <label for="nombre" class="form-label">Nombre *</label>
                                 <br>
@@ -41,10 +44,12 @@
                             </div>
                             <div class="form-group">
                                 <label for="telefono" class="form-label">Telefono *</label>
+                                <br>
                                 <input type="tel" id="telefono" name="telefono" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="rol" class="form-label">Rol de usuario *</label>
+                                <br>
                                 <input type="number" id="rol" name="rol" class="form-control" placeholder="Escribe el rol: 1 admin, 2 lector">
                             </div>
                             <br>
@@ -68,6 +73,6 @@
 
 
     </form>
-    
+</center>
 </body>
 </html>

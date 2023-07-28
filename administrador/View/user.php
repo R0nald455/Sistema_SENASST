@@ -12,8 +12,6 @@ if( $validar == null || $validar == ""){
 
 }
 
-require_once ("../../db/conexion.php");
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +20,9 @@ require_once ("../../db/conexion.php");
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="../Css/estilo.css">
   <link rel="stylesheet" href="../../css/bootstrap.min.css">
+
   <title>Usuarios</title>
 </head>
 
@@ -36,8 +36,7 @@ require_once ("../../db/conexion.php");
         <br>
         <div>
           
-          <a class="btn btn-success" href="../Model/sesion/cerrarSesion.php">Cesion Cerrada
-          <i class="fa fa-power-off" aria-hidden="true"></i></a> 
+          <a class="btn btn-warning" href="../Model/sesion/cerrarSesion.php">Cesion Cerrada</a> 
         </div>
         <br>
         <br>
@@ -56,7 +55,7 @@ require_once ("../../db/conexion.php");
             </thead>
             <tbody>
               <?php
-              // $conexion = mysqli_connect("localhost:3307","root","","SSTCBA");
+              require_once ("../../db/conexion.php");
               $SQL = "SELECT user.id, user.nombre, user.correo, user.password, user.telefono,
               user.fecha, permisos.rol FROM user LEFT JOIN permisos 
               ON user.rol = permisos.id";
@@ -74,11 +73,11 @@ require_once ("../../db/conexion.php");
                 <td><?php echo $fila['rol']; ?>     </td>
               
               <td>
-                <a class="btn btn-success" href="editar_user.php?id=<?php echo $fila['id']?> ">
-                <i class="fa fa-edit"></i> </a>
+                <a class="btn btn-warning" href="editarUsuario.php?id=<?php echo $fila['id']?> ">
+                Actualizar </a>
 
-                <a class="btn btn-danger" href="eliminar_user.php?id=<?php echo $fila['id']?>">
-                <i class="fa fa-trash"></i></a>
+                <a class="btn btn-danger" href="eliminarUsuario.php?id=<?php echo $fila['id']?>">
+                Borrar</a>
               </td>              
               </tr>
 
