@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Roboto:wght@300&display=swap');
 
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
     background: #ffffff;
     font-family: Roboto;
@@ -9,7 +15,7 @@ body {
 
 html,body {
       width: 100%;
-     overflow-x: hidden;
+      overflow-x: hidden;
   }
 
 
@@ -360,7 +366,58 @@ a {
 }
 
 
+/*---------------------------------------
+    Soporte section              
+-----------------------------------------*/
 
+#soporte{
+  width: 100%;
+  position: relative;
+}
+
+#container-soporte{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+#titulo-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1 0 50%;
+}
+
+img[src="img/soporte.jpg"]{
+  width: 100%;
+  min-width: 300px;
+  border-radius: 100%;
+  border: 5px solid #45d100;
+  -webkit-box-shadow: -3px 7px 33px -4px rgba(0,0,0,0.52);
+  -moz-box-shadow: -3px 7px 33px -4px rgba(0,0,0,0.52);
+  box-shadow: -3px 7px 33px -4px rgba(0,0,0,0.52);
+}
+
+#contact-form{
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  padding: 50px;
+  flex: 1 0 50%;
+}
+
+label{
+  width: 100%;
+}
+
+.submit-soporte{
+  margin: 10px;
+}
 
 
 /*---------------------------------------
@@ -410,14 +467,6 @@ color: black;
 border-color: #000;
 border-width: 2px;
 }
-
-
-
-
-
-
-
-
 
 /*---------------------------------------
    Responsive styles            

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<title>Seguridad SENA</title>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/footer.css">
-</head>
+	<head>
+		<title>Seguridad SENA</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/footer.css">
+	</head>
 
 <body>
 
@@ -109,8 +109,64 @@
 
 
 
+<!-- =========================
+    Seccion soporte
+============================== -->
 
+<section id="soporte">
+	<div id="container-soporte">
+		<div id="titulo-container">
+			<h2 class="titulo-soporte">Ayuda y Soporte</h2>
+			<img src="img/soporte.jpg" alt="soporte">
+		</div>
 
+		<form class="form-soporte" id="contact-form" action="soporte/script_soporte.php" method="POST">
+
+		<div class="row">
+
+			<div class="items form-group col-md-6">
+				<label class="label-soporte" for="nombre">Nombre:
+					<input class="input-soporte form-control" type="text" id="nombre" name="nombre" required autocapitalize="words">
+				</label>
+			</div>
+
+			<div class="items form-group col-md-6">
+				<label class="label-soporte" for="apellido">Apellido:
+					<input class="input-soporte form-control" type="text" id="apellido" name="apellido" required autocapitalize="words">
+				</label>
+			</div>
+
+		</div>
+
+			<div class="items form-group">
+				<label class="label-soporte" for="email">Correo electrónico:
+					<input class="input-soporte form-control" type="email" id="email" name="email" required>
+				</label>
+			</div>
+
+			<div class="items form-group">
+
+				<label class="label-soporte" for="asunto">Asunto:
+					<select name="asunto" id="asunto" class="form-control">
+						<option value="Comentario">Comentario</option>
+						<option value="Sugerencia">Sugerencia</option>
+						<option value="Reclamo">Reclamo</option>
+					</select>
+				</label>
+
+			</div>
+
+			<div class="items form-group">
+				<label class="label-soporte" for="mensaje">Mensaje:
+					<textarea class="textarea-soporte form-control" id="mensaje" name="mensaje" style="resize: none; height: 100px;" required></textarea>
+				</label>
+			</div>
+
+			<button class="submit-soporte btn btn-success" type="submit" value="Enviar">Enviar</button>
+		</form>
+	</div>
+			
+    </section>
 
 <!-- =========================
     Seccion noticias y eventos proximos
@@ -152,7 +208,6 @@
 		</div>
 	</div>
 </section>
-
 
 <!-- footer -->
 <?php
