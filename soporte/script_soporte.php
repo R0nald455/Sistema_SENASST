@@ -22,7 +22,7 @@ try {
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
     $mail->Username   = 'cbasst1957@gmail.com';                     //SMTP username
-    $mail->Password   = '';                               //SMTP password
+    $mail->Password   = 'ateycqubweafmdok';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
@@ -40,10 +40,12 @@ try {
     $mail->Body    = $body;
 
     $mail->send();
-    echo '<script>
-    alert("Correo enviado exitosamente");
-    window.history.go(-1);
-    </script>';
+    echo "
+    <script>
+        window.history.go(-1);
+    </script>
+    "
+    ;
     
 } catch (Exception $e) {
     echo "Ha ocurrido un error al enviar el mensaje: {$mail->ErrorInfo}";
