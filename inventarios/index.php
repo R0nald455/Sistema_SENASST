@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="../css/styles_inventarios.css">
 </head>
 <body>
+
+    <?php
+        
+        session_start();
+        error_reporting(0);
+
+    ?>
+
     <header>
         <div class="header__superior">
 

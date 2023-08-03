@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../css/styles_inventarios.css">
+    <link rel="stylesheet" href="../../css/styles_modulos_inventario.css">
     <title>Administracion | Inventarios</title>
 </head>
     <body>
@@ -19,12 +19,21 @@
 
         ?>
 
-        <div class="container_administracion">
+        <header id="header-administrador">
+            <a href="../index.php"><img src="../../img/LogoSena.png" alt="logosena"></a>
+            <h1>Administracion de implementos</h1>
+        </header>
+
+        
+        <ul class="vertical-nav">
+            <li><a href="default.asp">Home</a></li>
+            <li><a href="news.asp">News</a></li>
+            <li><a href="contact.asp">Contact</a></li>
+            <li><a href="about.asp">About</a></li>
+        </ul>
+
+        <div class="container-form-table">
                 <form action="../php/script_crud.php" method="post" class="container_form">
-
-                <a href="index.php"><img src="../img/LogoSena.png" alt="" style="width: 90px; margin-top: 20px; "></a>
-
-                <h1>Administracion de implementos.</h1>
 
                 <div class="form-group">
                     <label for="id_implementos">ID: <input type="text" name="id_implementos" class="form-control campos" id="id_implementos" placeholder="Ingrese el ID del implemento..."></label>
@@ -115,8 +124,6 @@
                     </tbody>
                 </table>
             </div>
-
-           
         </div>
     </body>
 </html>
