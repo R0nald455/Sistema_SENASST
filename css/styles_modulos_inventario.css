@@ -17,8 +17,8 @@
 
 body{
     display: flex;
-    flex-wrap: wrap; 
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
     align-items: stretch;
 }
 
@@ -26,12 +26,14 @@ body{
     display: flex;
     justify-content: space-between;
     padding: 20px 0px 20px 0px;
-    flex: 1 0 100%;
+    width: 100%;
+    text-align: end;
     background-color: #ffffff;
-    position: sticky;
-    border-bottom: 10px;
+    position: fixed;
+    border-bottom: 5px;
     border-style: solid;
-    border-color: #45d100;
+    border-color: var(--color-sena);
+    z-index: 100;
   }
   
   #header-administrador img {
@@ -51,16 +53,18 @@ body{
 .container-form-table{
     display: flex;
     flex-direction: row;
-    flex: 1 0 60%;
+    flex: 1 0 90%;
     flex-wrap: wrap;
     padding: 4em;
     justify-content: space-evenly;
     align-items: center;
+    position: relative;
+    top: 100px;
 }
 
 .container-form{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex: 1 0 50%;
     flex-wrap: wrap;
     padding: 4em;
@@ -85,15 +89,16 @@ body{
 
 /*-------------------------nav vertical-------------------------*/
 
-.vertical-nav {
+.vertical-nav{
     display: flex;
-    flex: 1 0 40%;
-    flex-direction: row;
+    flex: 1 0 10%;
+    flex-direction: column;
     justify-content: space-around;
     list-style-type: none;
     padding: 0;
     background-color: #f1f1f1;
-    position: relative;
+    position: fixed;
+    top: 200px;
     overflow: auto;
   }
   

@@ -9,16 +9,6 @@
     <title>Administracion | Inventarios</title>
 </head>
     <body>
-
-        <?php
-        
-         session_start();
-         error_reporting(0);
-
-         require_once ("../../db/conexion.php");
-
-        ?>
-
         <header id="header-administrador">
             <a href="../index.php"><img src="../../img/LogoSena.png" alt="logosena"></a>
             <h1>Administracion de implementos</h1>
