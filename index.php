@@ -16,19 +16,28 @@
 
 
 <!-- Menu de navegacion-->
-<div class="navbar navbar-default navbar-fixed-top sticky-navigation" role="navigation">
-	<div class="container">
-		<div class="navbar-header">
-			<a href="#" class="navbar-brand"><img src="img/LogoSena.png"  width="50px" alt="logoSena"></a>
-		</div>
-			<ul class="nav navbar-nav navbar-right main-navigation">
-				<li><a href="#overview" >Inicio</a></li>
-				<li><a href="#trainer" >Brigadistas</a></li>
-				<li><a href="php/login.php" >Reglamento</a></li>
-				<li><a href="#newsletter" >Reportar</a></li>
-				<li><a href="#testimonial" >Noticias</a></li>
+
+<div class="container__menu">
+
+	<div class="menu">
+
+		<input type="checkbox" id="check__menu">
+		<label for="check__menu" class="lbl-menu">
+			<span id="spn1"></span>
+			<span id="spn2"></span>
+			<span id="spn3"></span>
+		</label>
+
+		<nav>
+			<ul>
+				<li><img src="img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></li>
+				<li><a href="#overview" id="selected">Inicio</a></li>
+				<li><a href="#trainer">Brigadistas</a></li>
+				<li><a href="php/login.php">Reglamento</a></li>
+				<li><a href="#newsletter">Reportar</a></li>
+				<li><a href="#testimonial">Noticias</a></li>
 			</ul>
-		</div>
+		</nav>
 	</div>
 </div>
 

@@ -70,16 +70,6 @@ header{
     min-width: 300px;
 }
 
-.MinTrabajo{
-    position: absolute;
-    width: 100%;
-    min-width: 280px;
-    height: 50%;
-    object-fit: contain;
-    margin-top: 20px;
-    z-index: 2000;
-}
-
 /* ------------------------------- Barra menu - GLOBAL -----------------------------------*/
 
 .container__menu{
