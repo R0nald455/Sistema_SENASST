@@ -1,8 +1,9 @@
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Administrador de implementos</title>
+        <title>Entrada de implementos</title>
         <!-- css table datatables/dataTables -->
-        <link rel="stylesheet" href="../../datatables/dataTables.bootstrap.css"/>
+	    <link rel="stylesheet" href="datatables/dataTables.bootstrap.css"/>
+    
         <link type="text/css" href="../../css/bootstrap.css" rel="stylesheet">
         <link type="text/css" href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
         <link type="text/css" href="../../bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">

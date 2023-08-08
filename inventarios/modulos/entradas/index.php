@@ -6,48 +6,45 @@
 		<?php include("head.php");?>
     </head>
     <body>
-
             <div class="container">
                 <div class="row">
                     <div class="span12">
                         <div class="content">
             <?php
                 if(isset($_GET['action']) == 'delete'){
-                    $id_delete = intval($_GET['ID_Implementos']);
-                    $query = mysqli_query($conexion, "SELECT * FROM tblimplementos WHERE ID_Implementos='$id_delete'");
+                    $id_delete = intval($_GET['ID_Entradas']);
+                    $query = mysqli_query($conexion, "SELECT * FROM tblentradas WHERE ID_Entradas='$id_delete'");
                     if(mysqli_num_rows($query) == 0){
                         echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> No se encontraron datos.</div>';
                     }else{
-                        $delete = mysqli_query($conexion, "DELETE FROM tblimplementos WHERE ID_Implementos='$id_delete'");
+                        $delete = mysqli_query($conexion, "DELETE FROM tblentradas WHERE ID_Entradas='$id_delete'");
                         if($delete){
-                            echo '<div class="alert alert-primary alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>  Bien hecho, los datos han sido eliminados correctamente.</div>';
+                            echo '<div class="alert alert-primary alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>  Bien hecho, la entrada ha sido eliminada correctamente.</div>';
                         }else{
-                            echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Error, no se pudo eliminar los datos.</div>';
+                            echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Error, no se pudo eliminar la entrada.</div>';
                         }
                     }
                 }
 			?>
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                        <h3 class="panel-title"><i class="icon-user"></i> DataTables procesando datos del lado del servidor</h3> 
+                        <h3 class="panel-title"><i class="icon-user"></i> Administrador de entradas</h3> 
                         </div>
 						
                         <div class="panel-body">
 							<div class="pull-right">
-								<a href="registro.php" class="btn btn-sm btn-primary">Nuevo implemento</a>
+								<a href="registro.php" class="btn btn-sm btn-primary">Nueva entrada de implementos</a>
 							</div><br>
 							<hr>
                                     <table id="lookup" class="table table-bordered table-hover">  
 	                                    <thead bgcolor="#eeeeee" align="center">
                                         <tr>
 	  
-                                        <th>ID de los implementos</th>
-	                                    <th>Nombre </th>
-                                        <th>Descripcion </th>
-                                        <th>Categoria</th>
-                                        <th>Cantidad </th>
-	                                    <th>Ubicacion</th>
-                                        <th>Fecha de registro</th>
+                                        <th>ID de la entrada</th>
+	                                    <th>ID del implemento</th>
+                                        <th>Cantidad</th>
+                                        <th>Descripcion</th>
+                                        <th>Fecha de entrada</th>
 	                                    <th class="text-center"> Acciones </th> 
 	  
                                         </tr>
@@ -107,7 +104,7 @@
 						type: "post",  // method  , by default get
 						error: function(){  // error handling
 							$(".lookup-error").html("");
-							$("#lookup").append('<tbody class="employee-grid-error"><tr><th colspan="3">No data found in the server</th></tr></tbody>');
+							$("#lookup").append('<tbody class="employee-grid-error"><tr><th colspan="3">No se encontraron datos en el servidor</th></tr></tbody>');
 							$("#lookup_processing").css("display","none");
 							
 						}
@@ -116,3 +113,4 @@
 			} );
         </script>
     </body>
+
