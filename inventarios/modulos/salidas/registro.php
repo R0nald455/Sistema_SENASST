@@ -5,15 +5,7 @@
         <?php include("head.php");?>
     </head>
     <body>
-    <div class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
-                        <i class="icon-reorder shaded"></i></a><a class="brand" href="http://obedalvarado.pw/" target="_blank">Administrador de salidas</a>
-                </div>
-            </div>
-            <!-- /navbar-inner -->
-        </div><br />
+		<br>
 
             <div class="container">
                 <div class="row">

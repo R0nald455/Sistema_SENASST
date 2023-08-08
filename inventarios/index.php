@@ -30,7 +30,6 @@
             <div class="search">
 
                 <input type="search" placeholder="¿Que deseas buscar?">
-                <a href="https://www.mintrabajo.gov.co/web/guest" target="_blank"> <img src="../img/MinTrabajo.png" class="MinTrabajo"> </a> <img>
 
             </div>
 
@@ -54,13 +53,14 @@
                     <li><a href="../index.php" id="selected">Inicio</a></li>
                     <li><a href="#">Modulos</a>
                         <ul> <b>
-                            <li><a href="../inventarios/modulos/crud.php">Administrar implementos</a></li>
-                            <li><a href="../inventarios/modulos/entrada.php">Entrada de implementos</a></li>
-                            <li><a href="../inventarios/modulos/salida.php">Salida de implementos</a></li>
+                            <li><a href="../inventarios/modulos/implementos/index.php">Administrar implementos</a></li>
+                            <li><a href="../inventarios/modulos/entradas/index.php">Entrada de implementos</a></li>
+                            <li><a href="../inventarios/modulos/salidas/index.php">Salida de implementos</a></li>
                         </ul> </b>
                     </li>
-                    <li><a href="../inventarios/modulos/quienes_somos.php">¿Quienes somos?</a></li>
                     <li><a href="#">Ayuda y Soporte</a></li>
+                    <li><a href="#">Acerca de inventarios</a></li>
+
                 </ul>
             </nav>
         </div>

@@ -5,6 +5,8 @@
         <?php include("head.php");?>
     </head>
     <body>
+	<br>
+
             <div class="container">
                 <div class="row">
                     <div class="span12">

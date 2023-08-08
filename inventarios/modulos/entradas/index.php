@@ -6,6 +6,7 @@
 		<?php include("head.php");?>
     </head>
     <body>
+    <br>
             <div class="container">
                 <div class="row">
                     <div class="span12">
@@ -33,7 +34,7 @@
 						
                         <div class="panel-body">
 							<div class="pull-right">
-								<a href="registro.php" class="btn btn-sm btn-primary">Nueva entrada de implementos</a>
+								<a href="registro.php" class="btn btn-sm btn-success">Nueva entrada de implementos</a>
 							</div><br>
 							<hr>
                                     <table id="lookup" class="table table-bordered table-hover">  

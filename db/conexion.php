@@ -3,7 +3,7 @@
 $server="localhost:3307";
 $usuario="root";
 $password="";
-$database="SSTCBA";
+$database="sstcba";
 $conexion=new mysqli($server, $usuario, $password, $database);
 
 if(mysqli_connect_error()){

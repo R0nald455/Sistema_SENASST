@@ -1,4 +1,5 @@
 <?php include "../../../db/conexion.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
 		<?php include("head.php");?>
     </head>
     <body>
-
+    <br>
             <div class="container">
                 <div class="row">
                     <div class="span12">
@@ -29,12 +30,12 @@
 			?>
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                        <h3 class="panel-title"><i class="icon-user"></i> DataTables procesando datos del lado del servidor</h3> 
+                        <h3 class="panel-title"><i class="icon-user"></i> Administrador de implementos</h3> 
                         </div>
 						
                         <div class="panel-body">
 							<div class="pull-right">
-								<a href="registro.php" class="btn btn-sm btn-primary">Nuevo implemento</a>
+								<a href="registro.php" class="btn btn-sm btn-success">Nuevo implemento</a>
 							</div><br>
 							<hr>
                                     <table id="lookup" class="table table-bordered table-hover">  

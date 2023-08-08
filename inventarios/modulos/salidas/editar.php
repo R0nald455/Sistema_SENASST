@@ -6,6 +6,7 @@
       <?php include("head.php");?>
     </head>
     <body>
+	<br>
 
             <div class="container">
                 <div class="row">
@@ -50,7 +51,7 @@
 										<div class="control-group">
 											<label class="control-label" for="basicinput">Cantidad: </label>
 											<div class="controls">
-												<input name="cantidad" id="cantidad" value="<?php echo $row['cantidad']; ?>" class="form-control span8 tip" type="text"  required />
+												<input name="cantidad" id="cantidad" value="<?php echo $row['cantidad']; ?>" class="form-control span8 tip" type="text"  readonly="readonly"/>
 											</div>
 										</div>
 

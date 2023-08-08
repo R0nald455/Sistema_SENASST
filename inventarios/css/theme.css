@@ -8,10 +8,11 @@ All Rights Reserved.
 
 body {
 	font-size: 13px;
-	font-family: 'Open Sans', Arial, sans-serif;
 	background: #fff;
-	color: #777
+	color: #777;
+	margin-top: 50px;
 }
+
 h1, h2, h3, h4, h5, h6 {
 	color: #333;
 	margin-top: 0
