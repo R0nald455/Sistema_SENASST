@@ -1,7 +1,11 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
 -- Servidor: localhost:3307
--- Tiempo de generación: 27-07-2023 a las 07:05:44
--- Versión del servidor: 10.4.27-MariaDB
--- Versión de PHP: 8.1.12
+-- Tiempo de generación: 08-08-2023 a las 05:37:40
+-- Versión del servidor: 10.4.24-MariaDB
+-- Versión de PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -70,8 +74,7 @@ CREATE TABLE `publicaciones` (
   `descripcion` text DEFAULT NULL,
   `imagen` longblob DEFAULT NULL,
   `creado` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -95,30 +98,16 @@ INSERT INTO `significados` (`ID_Significado`, `Palabra`, `Definicion`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblempleados`
---
-
-CREATE TABLE `tblempleados` (
-  `ID_Empleado` int(11) NOT NULL,
-  `Nombre` varchar(30) NOT NULL,
-  `Cargo` varchar(50) NOT NULL,
-  `Departamento` varchar(50) NOT NULL,
-  `Email` varchar(50) NOT NULL,
-  `Telefono` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `tblentradas`
 --
 
 CREATE TABLE `tblentradas` (
   `ID_Entradas` int(11) NOT NULL,
   `ID_Implementos` int(11) NOT NULL,
-  `Fecha` varchar(50) NOT NULL,
-  `Cantidad` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `Cantidad` int(11) NOT NULL,
+  `Descripcion` varchar(200) NOT NULL,
+  `Fecha` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -132,8 +121,9 @@ CREATE TABLE `tblimplementos` (
   `Descripcion` varchar(300) NOT NULL,
   `Categoria` varchar(50) NOT NULL,
   `Cantidad` int(11) NOT NULL,
-  `Ubicacion` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `Ubicacion` varchar(50) NOT NULL,
+  `Fecha` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -144,40 +134,11 @@ CREATE TABLE `tblimplementos` (
 CREATE TABLE `tblsalidas` (
   `ID_Salidas` int(11) NOT NULL,
   `ID_Implementos` int(11) NOT NULL,
-  `Fecha` varchar(50) NOT NULL,
-  `Cantidad` int(11) NOT NULL,
-  `ID_Empleado` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `tblsalidas`
---
-
-INSERT INTO `tblsalidas` (`ID_Salidas`, `ID_Implementos`, `Fecha`, `Cantidad`, `ID_Empleado`) VALUES
-(1, 1, '2023-06-16', 20, 1),
-(2, 1, '2023-06-01', 10, 2);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `tblusuarios`
---
-
-CREATE TABLE `tblusuarios` (
-  `ID_Usuario` int(11) NOT NULL,
   `ID_Empleado` int(11) NOT NULL,
-  `Usuario` varchar(50) NOT NULL,
-  `Contraseña` varchar(50) NOT NULL,
-  `rol` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `tblusuarios`
---
-
-INSERT INTO `tblusuarios` (`ID_Usuario`, `ID_Empleado`, `Usuario`, `Contraseña`, `rol`) VALUES
-(3, 1, 'admin', 'admin', 'funcionario'),
-(4, 2, 'persona', 'persona', 'persona');
+  `Cantidad` int(11) NOT NULL,
+  `Descripcion` varchar(200) NOT NULL,
+  `Fecha` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -263,12 +224,6 @@ ALTER TABLE `significados`
   ADD PRIMARY KEY (`ID_Significado`);
 
 --
--- Indices de la tabla `tblempleados`
---
-ALTER TABLE `tblempleados`
-  ADD PRIMARY KEY (`ID_Empleado`);
-
---
 -- Indices de la tabla `tblentradas`
 --
 ALTER TABLE `tblentradas`
@@ -310,7 +265,7 @@ ALTER TABLE `permisos`
 -- AUTO_INCREMENT de la tabla `publicaciones`
 --
 ALTER TABLE `publicaciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `significados`
@@ -319,28 +274,22 @@ ALTER TABLE `significados`
   MODIFY `ID_Significado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `tblempleados`
---
-ALTER TABLE `tblempleados`
-  MODIFY `ID_Empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
 -- AUTO_INCREMENT de la tabla `tblentradas`
 --
 ALTER TABLE `tblentradas`
-  MODIFY `ID_Entradas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID_Entradas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `tblimplementos`
 --
 ALTER TABLE `tblimplementos`
-  MODIFY `ID_Implementos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID_Implementos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `tblsalidas`
 --
 ALTER TABLE `tblsalidas`
-  MODIFY `ID_Salidas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID_Salidas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `user`
@@ -357,13 +306,6 @@ ALTER TABLE `user`
 --
 ALTER TABLE `tblentradas`
   ADD CONSTRAINT `tblentradas_ibfk_1` FOREIGN KEY (`ID_Implementos`) REFERENCES `tblimplementos` (`ID_Implementos`);
-
---
--- Filtros para la tabla `tblsalidas`
---
-ALTER TABLE `tblsalidas`
-  ADD CONSTRAINT `tblsalidas_ibfk_1` FOREIGN KEY (`ID_Implementos`) REFERENCES `tblimplementos` (`ID_Implementos`),
-  ADD CONSTRAINT `tblsalidas_ibfk_2` FOREIGN KEY (`ID_Empleado`) REFERENCES `tblempleados` (`ID_Empleado`);
 
 --
 -- Filtros para la tabla `user`
