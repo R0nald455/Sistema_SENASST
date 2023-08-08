@@ -13,6 +13,7 @@
                         <div class="content">
                             <?php
 			if(isset($_POST['input'])){
+				$id_salidas	= mysqli_real_escape_string($conexion,(strip_tags($_POST['ID_Salidas'], ENT_QUOTES)));
                 $id_implementos	= mysqli_real_escape_string($conexion,(strip_tags($_POST['ID_Implementos'], ENT_QUOTES)));
                 $id_empleado	= mysqli_real_escape_string($conexion,(strip_tags($_POST['ID_Empleado'], ENT_QUOTES)));
 				$cantidad	= mysqli_real_escape_string($conexion,(strip_tags($_POST['cantidad'], ENT_QUOTES)));
@@ -20,8 +21,8 @@
                 $fecha = date("Y-m-d H:i:s");
 		
 				$insert = mysqli_query($conexion, "INSERT INTO tblsalidas(ID_Salidas, ID_Implementos, ID_Empleado, Cantidad, Descripcion, Fecha)
-															VALUES(NULL, '$id_implementos', '$id_empleado', '$cantidad', '$descripcion', '$fecha')") or die(mysqli_error());
-				$actualizar_cantidad = mysqli_query($conexion, "UPDATE tblimplementos SET cantidad = cantidad - $cantidad WHERE ID_Implementos = $id_implementos") or die(mysqli_error()); 
+															VALUES('$id_salidas', '$id_implementos', '$id_empleado', '$cantidad', '$descripcion', '$fecha')") or die(mysqli_error($conexion));
+				$actualizar_cantidad = mysqli_query($conexion, "UPDATE tblimplementos SET cantidad = cantidad - $cantidad WHERE ID_Implementos = $id_implementos") or die(mysqli_error($conexion)); 
 						
                 if($insert && $actualizar_cantidad){
 							echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Bien hecho, la entrada ha sido ingresada correctamente.</div>';
@@ -36,6 +37,14 @@
             Agregar salida
             </blockquote>
                         <form name="form1" id="form1" class="form-horizontal row-fluid" action="registro.php" method="POST">
+										
+										<div class="control-group">
+											<label class="control-label" for="ID_Salidas">ID de las salidas: </label>
+											<div class="controls">
+												<input type="text" name="ID_Salidas" id="ID_Salidas" placeholder="" class="form-control span8 tip" required>
+											</div>
+										</div>
+						
 										<div class="control-group">
 											<label class="control-label" for="ID_Implementos">Implementos: </label>
 											<div class="controls">

@@ -13,6 +13,7 @@
                         <div class="content">
                             <?php
 			if(isset($_POST['input'])){
+				$id_implementos	= mysqli_real_escape_string($conexion,(strip_tags($_POST['ID_Implementos'], ENT_QUOTES)));
 				$nombre	= mysqli_real_escape_string($conexion,(strip_tags($_POST['nombre'], ENT_QUOTES)));
 				$descripcion  	= mysqli_real_escape_string($conexion,(strip_tags($_POST['descripcion'], ENT_QUOTES)));
 				$categoria 	= mysqli_real_escape_string($conexion,(strip_tags($_POST['categoria'], ENT_QUOTES)));
@@ -21,7 +22,7 @@
                 $fecha = date("Y-m-d H:i:s");
 		
 				$insert = mysqli_query($conexion, "INSERT INTO tblimplementos(ID_Implementos, Nombre, Descripcion, Categoria, Cantidad, Ubicacion, Fecha)
-															VALUES(NULL,'$nombre', '$descripcion', '$categoria', '$cantidad', '$ubicacion', '$fecha')") or die(mysqli_error());
+															VALUES('$id_implementos','$nombre', '$descripcion', '$categoria', '$cantidad', '$ubicacion', '$fecha')") or die(mysqli_error($conexion));
 						if($insert){
 							echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Bien hecho, los datos han sido agregados correctamente.</div>';
 						}else{
@@ -35,6 +36,14 @@
             Agregar cliente
             </blockquote>
                         <form name="form1" id="form1" class="form-horizontal row-fluid" action="registro.php" method="POST">
+										
+										<div class="control-group">
+											<label class="control-label" for="nombre">ID del implemento:</label>
+											<div class="controls">
+												<input type="text" name="ID_Implementos" id="id_implementos" placeholder="Ingrese el ID del implemento" class="form-control span8 tip" required>
+											</div>
+										</div>
+						
 										<div class="control-group">
 											<label class="control-label" for="nombre">Nombre:</label>
 											<div class="controls">
