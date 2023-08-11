@@ -74,7 +74,7 @@
 			<div class=" col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10" >
 				<h2>Ayuda a tu seguridad</h2>
 				<h4>Resporta los posibles riesgos para tu seguridad y salud</h4>
-				<button type="button" class="btn btn-primary" onclick="window.location.href='../../tarjetaObservacion/index.php'" >Reportar riesgo</button>
+				<button type="button" class="botonReportar" onclick="window.location.href='../../tarjetaObservacion/index.php'" >Reportar riesgo</button>
 			</div>
 		</div>
 	</div>
