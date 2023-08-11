@@ -125,6 +125,10 @@ a {
   height: 100%;
 }
 
+.menu #logoResponsive{
+  display: none;
+}
+
 nav{
   height: 100%;
   display: flex;
@@ -252,6 +256,14 @@ nav ul li ul li a:hover{
       top: 15px;
   }
 
+  .menu #logoResponsive{
+    display: block;
+    position: relative;
+    top: -55px;
+    left: 90%;
+    width: 80px;
+  }
+
   nav > ul {
       flex-direction: column;
       background-color: var(--color-sena);
@@ -289,7 +301,7 @@ nav ul li ul li a:hover{
   }
 
   nav>ul>li>img{
-    display: none;
+      display: none;
   }
 
   nav > ul > li:first-child a {
@@ -323,7 +335,7 @@ nav ul li ul li a:hover{
   }
 
   #check__menu:checked ~ nav > ul {
-      height: 300px;
+      height: 370px;
       visibility: visible;
       opacity: 1;
   }
@@ -341,7 +353,6 @@ nav ul li ul li a:hover{
       transform: rotate(-140deg);
       top: 10px;
   }
-
 }
 
 

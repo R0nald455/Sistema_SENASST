@@ -27,6 +27,9 @@
 			<span id="spn3"></span>
 		</label>
 
+		<img id="logoResponsive" src="../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena">
+
+
 		<nav>
 			<ul>
 				<li><img src="../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></li>
