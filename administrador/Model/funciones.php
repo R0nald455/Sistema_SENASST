@@ -47,7 +47,7 @@ function acceso_user(){
     $_SESSION ['nombre']=$nombre;
 
 
-    $conexion=new mysqli("localhost:3306", "root", "", "SSTCBA");
+    $conexion=new mysqli("localhost:3307", "root", "", "SSTCBA");
     $consulta = "SELECT * FROM user WHERE nombre = '$nombre' AND password = '$password'";
     $resultado = mysqli_query($conexion , $consulta);
 

@@ -22,9 +22,9 @@
                             <br>
                             <h1 class="text-center">Nuevo Registro</h1>
                             <div class="form-group">
-                                <label for="nombre" class="form-label">Nombre *</label>
+                                <label for="nombre">Nombre:</label>
                                 <br>
-                                <input type="text" id="nombre" name="nombre" class="form_control" required>
+                                <input type="text" id="nombre" name="nombre" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="username">Correo:</label>
