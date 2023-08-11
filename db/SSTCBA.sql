@@ -1,15 +1,16 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost:3307
--- Tiempo de generación: 08-08-2023 a las 05:37:40
--- Versión del servidor: 10.4.24-MariaDB
--- Versión de PHP: 8.1.6
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 10-08-2023 a las 17:53:33
+-- Versión del servidor: 10.4.21-MariaDB
+-- Versión de PHP: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -30,7 +31,7 @@ CREATE TABLE `articulos` (
   `id` int(11) NOT NULL,
   `articulo` varchar(2000) NOT NULL,
   `descripcion` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci COMMENT='Tabla articulos' ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Tabla articulos' ROW_FORMAT=COMPACT;
 
 --
 -- Volcado de datos para la tabla `articulos`
@@ -52,7 +53,7 @@ INSERT INTO `articulos` (`id`, `articulo`, `descripcion`) VALUES
 CREATE TABLE `permisos` (
   `id` int(11) NOT NULL,
   `rol` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `permisos`
@@ -86,7 +87,7 @@ CREATE TABLE `significados` (
   `ID_Significado` int(11) NOT NULL,
   `Palabra` varchar(30) NOT NULL,
   `Definicion` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `significados`
@@ -125,6 +126,14 @@ CREATE TABLE `tblimplementos` (
   `Fecha` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `tblimplementos`
+--
+
+INSERT INTO `tblimplementos` (`ID_Implementos`, `Nombre`, `Descripcion`, `Categoria`, `Cantidad`, `Ubicacion`, `Fecha`) VALUES
+(1, 'Guantes', 'OOOOOOOOO', 'Seguridad', 13, 'Almacen', '2023-08-16'),
+(2, 'Casco', 'OOOOOOOOOO', 'Seguridad', 12, 'Almacen', '2023-08-10');
+
 -- --------------------------------------------------------
 
 --
@@ -154,7 +163,7 @@ CREATE TABLE `user` (
   `password` varchar(50) NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `rol` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `user`
@@ -164,37 +173,6 @@ INSERT INTO `user` (`id`, `nombre`, `correo`, `telefono`, `password`, `fecha`, `
 (1, 'Ronald', 'ronald@gmail.com', '3234567894', '12345', '2023-07-26 01:35:41', 2),
 (2, 'Jesus', 'jesus@gmail.com', '3112345678', '12345', '2023-07-26 01:36:27', 1);
 
---
--- Índices para tablas volcadas
---
-
---
--- Indices de la tabla `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `permisos` (`rol`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `user`
---
-ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `user`
---
-ALTER TABLE `user`
-  ADD CONSTRAINT `permisos` FOREIGN KEY (`rol`) REFERENCES `permisos` (`id`);
-COMMIT;
 --
 -- Índices para tablas volcadas
 --
@@ -241,8 +219,8 @@ ALTER TABLE `tblimplementos`
 --
 ALTER TABLE `tblsalidas`
   ADD PRIMARY KEY (`ID_Salidas`),
-  ADD KEY `ID_Implementos` (`ID_Implementos`),
-  ADD KEY `ID_Empleado` (`ID_Empleado`);
+  ADD KEY `ID_Empleado` (`ID_Empleado`),
+  ADD KEY `ID_Implementos` (`ID_Implementos`);
 
 --
 -- Indices de la tabla `user`
@@ -256,6 +234,12 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `articulos`
+--
+ALTER TABLE `articulos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT de la tabla `permisos`
 --
 ALTER TABLE `permisos`
@@ -265,7 +249,7 @@ ALTER TABLE `permisos`
 -- AUTO_INCREMENT de la tabla `publicaciones`
 --
 ALTER TABLE `publicaciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `significados`
@@ -277,25 +261,25 @@ ALTER TABLE `significados`
 -- AUTO_INCREMENT de la tabla `tblentradas`
 --
 ALTER TABLE `tblentradas`
-  MODIFY `ID_Entradas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `ID_Entradas` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `tblimplementos`
 --
 ALTER TABLE `tblimplementos`
-  MODIFY `ID_Implementos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `ID_Implementos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `tblsalidas`
 --
 ALTER TABLE `tblsalidas`
-  MODIFY `ID_Salidas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID_Salidas` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Restricciones para tablas volcadas
@@ -305,13 +289,20 @@ ALTER TABLE `user`
 -- Filtros para la tabla `tblentradas`
 --
 ALTER TABLE `tblentradas`
-  ADD CONSTRAINT `tblentradas_ibfk_1` FOREIGN KEY (`ID_Implementos`) REFERENCES `tblimplementos` (`ID_Implementos`);
+  ADD CONSTRAINT `tblentradas_ibfk_1` FOREIGN KEY (`ID_Implementos`) REFERENCES `tblimplementos` (`ID_Implementos`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `tblsalidas`
+--
+ALTER TABLE `tblsalidas`
+  ADD CONSTRAINT `tblsalidas_ibfk_1` FOREIGN KEY (`ID_Empleado`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `tblsalidas_ibfk_2` FOREIGN KEY (`ID_Implementos`) REFERENCES `tblimplementos` (`ID_Implementos`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `user`
 --
 ALTER TABLE `user`
-  ADD CONSTRAINT `permisos` FOREIGN KEY (`rol`) REFERENCES `permisos` (`id`);
+  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`rol`) REFERENCES `permisos` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

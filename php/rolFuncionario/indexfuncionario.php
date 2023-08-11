@@ -15,20 +15,35 @@
 <body>
 
 <!-- Menu de navegacion-->
-<div class="navbar navbar-default navbar-fixed-top sticky-navigation" role="navigation">
-	<div class="container">
-		<div class="navbar-header">
-			
-		<a href="#" class="navbar-brand"><img src="../../img/LogoSena.png" id="logoSena"  alt="logoSena"></a>
-		</div>
-			<ul class="nav navbar-nav navbar-right main-navigation">
-				<li><a onclick="window.location.href='../../index.php'" >Inicio</a></li>
-				<li><a  onclick="window.location.href='../../inventarios/index.php'">Inventarios</a></li>
-				<li><a onclick="window.location.href='../../administrador/index.php'" >Administrador de usuarios</a></li>
-				<li><a onclick="window.location.href='../../administrador/view/user.php'" >Visualizar usuarios</a></li>
-				<li><a onclick="window.location.href='../cerrarSesion.php'" ><span class="material-symbols-outlined">logout</span></a></li>
+
+<div class="container__menu">
+
+	<div class="menu">
+
+		<input type="checkbox" id="check__menu">
+		<label for="check__menu" class="lbl-menu">
+			<span id="spn1"></span>
+			<span id="spn2"></span>
+			<span id="spn3"></span>
+		</label>
+
+		<img id="logoResponsive" src="../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena">
+
+
+		<nav>
+			<ul>
+				<li><img src="../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></li>
+				<li><a href="#overview" id="selected">Inicio</a></li>
+				<li><a href="#">Modulos administrativos</a>
+                        <ul> <b>
+                            <li><a onclick="window.location.href='../../inventarios/index.php'">Administrar inventarios</a></li>
+                            <li><a onclick="window.location.href='../../administrador/index.php'">Administrar usuarios</a></li>
+                            <li><a onclick="window.location.href='../../administrador/view/user.php'">Visualizar usuarios</a></li>
+                        </ul> </b>
+                    </li>
+					<li><a onclick="window.location.href='../cerrarSesion.php'"><span class="material-symbols-outlined">logout</span></a></li>
 			</ul>
-		</div>
+		</nav>
 	</div>
 </div>
 
