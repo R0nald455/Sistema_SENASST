@@ -1,3 +1,9 @@
+<?php
+session_start();
+error_reporting(0);
+require_once ("../db/conexion.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,12 +17,7 @@
 </head>
 <body>
 
-    <?php
-        
-        session_start();
-        error_reporting(0);
-
-    ?>
+<?php if(isset($_SESSION["id"]) ): ?>
 
     <header>
         <div class="header__superior">
@@ -122,5 +123,12 @@
             <img class="incontec" src="https://sciudadanos.sena.edu.co/Resources/icontec2.png" >
     
         </footer>
+
+<?php else:?>
+
+    <h1>No has iniciado sesion.</h1>
+
+<?php endif; ?>
+
 </body>
 </html>

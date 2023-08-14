@@ -1,18 +1,26 @@
+<?php
+session_start();
+error_reporting(0);
+require_once ("../../db/conexion.php");
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <title>Seguridad SENA</title>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-<link rel="stylesheet" href="../../css/bootstrap.min.css">
-<link rel="stylesheet" href="../../css/style.css">
-<link rel="stylesheet" href="../../css/footer.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/style.css">
+	<link rel="stylesheet" href="../../css/footer.css">
 </head>
 
 
 <body>
+
+	<?php if(isset($_SESSION["id"]) ): ?>
 
 <!-- Menu de navegacion-->
 
@@ -53,22 +61,13 @@
 			<div class="wow fadeInUp col-md-4 col-sm-12" data-wow-delay="1s">
 				<div class="overview-detail">
 					<h2>SENASST</h2>
-					<p>Nuestro sistema  de seguridad SENASST te permite consultar 
+					<p>Hola!, <b><?= $_SESSION["documento"] ?> </b> te contamos que nuestro sistema  de seguridad SENASST te permite consultar 
 						y de manera eficiente elementos de seguridad y ubicación, garantizando un entorno seguro y protegido para nuestros aprendices, intructores y funcionarios.</p>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
-
-
-
-
-
-
-
-
-
 
 <!-- =========================
     Seccion noticias y eventos proximos
@@ -110,11 +109,16 @@
 		</div>
 	</div>
 </section>
-
-
 <!-- footer -->
 <?php
 include("../../footer/footer.php");
 ?>
+
+<?php else:?>
+
+	<h1>No has iniciado sesion.</h1>
+
+<?php endif; ?>
+
 </body>
 </html>

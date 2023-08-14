@@ -20,6 +20,7 @@ $resultado = mysqli_query($conexion, $consulta);
 $usuario = mysqli_fetch_assoc($resultado);
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

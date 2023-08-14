@@ -1,4 +1,8 @@
-<?php include '../db/conexion.php';?>
+<?php
+session_start();
+error_reporting(0);
+require_once ("../db/conexion.php");
+?>
 
 <!doctype html>
 <html >
@@ -14,7 +18,7 @@
 
 </head>
 <body>
-
+<?php if(isset($_SESSION["id"]) ): ?>
 
 <header>
 <a href="../php/rolPersona/indexPersona.php"><img src="../img/LogoSena.png" alt="logosena"></a>
@@ -102,5 +106,11 @@
 <?php
 include("../footer/footer.php");
 ?>
+
+  <?php else:?>
+
+  <h1>No has iniciado sesion.</h1>
+
+  <?php endif; ?>
     </body>
 </html>

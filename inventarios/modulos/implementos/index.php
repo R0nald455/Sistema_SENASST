@@ -1,4 +1,8 @@
-<?php include "../../../db/conexion.php"; ?>
+<?php
+session_start();
+error_reporting(0);
+require_once ("../../../db/conexion.php");
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,6 +11,9 @@
 		<?php include("head.php");?>
     </head>
     <body>
+
+    <?php if(isset($_SESSION["id"]) ): ?>
+
     <br>
             <div class="container">
                 <div class="row">
@@ -116,4 +123,11 @@
 				} );
 			} );
         </script>
-    </body>
+
+    <?php else:?>
+
+        <h1>No has iniciado sesion.</h1>
+
+    <?php endif; ?>
+
+</body>
