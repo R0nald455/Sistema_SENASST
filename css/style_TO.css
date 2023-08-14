@@ -1,45 +1,8 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-  }
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-}
-
-
-
-header{
-    background-color: #ffffff;
-    height: 120px;
-    position: sticky;
-    border-bottom: 20px;
-    border-style: solid;
-    border-color: #45d100;
-  }
-  
-  header img {
-    height: 70px;
-    margin-left: 20px;
-    margin-top: 10px;
-  }
-  
-  header h1 {
-    float: right;
-  
-    font-weight: bold;
-    font-size: 30px;
-    margin-top: 10px;
-    margin-right: 5%;
-  }
-
-
-.contenedor {
-    max-width: 800px;
+.contenedorTO {
+    max-width: 850px;
     margin: 0 auto;
+    position: relative;
+    top: 100px;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -50,27 +13,6 @@ h1 {
     text-align: center;
 }
 
-
-.Enviar{
-    margin-top: 2rem;
-    background-color: #45d100;
-    color: #ffffff;
-    border-radius: 5px;
-    padding: 20px 40px;
-    font-weight: bold;
-  }
-
-textarea{
-    border: 1px;
-    border-color: rgb(161, 161, 161);
-    border-style: solid;
-}
-
-input{
-    border-bottom: 1px;
-    border-style: solid;
-    border-color: rgb(161, 161, 161) ;
-}
 .seccion {
     margin-bottom: 20px;
 }
@@ -109,6 +51,25 @@ label {
     margin-right: 10px;
 }
 
-.submit-button {
+.submitBoton {
     text-align: center;
 }
+
+#submit{
+    background-color: #45d100;
+    padding: 15px 10px ;
+    border: 0px;
+    border-radius: 5px;
+    color: #f5f5f5;
+    font-size: 15px;
+    font-weight: 700;   
+}
+
+#submit:hover{
+    background-color: #5ac425;
+    padding: 18px 12px ;
+    color: #f5f5f5;
+    font-size: 18px;
+    font-weight: 700;   
+}
+

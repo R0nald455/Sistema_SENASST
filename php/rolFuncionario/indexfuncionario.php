@@ -39,6 +39,7 @@
                             <li><a onclick="window.location.href='../../inventarios/index.php'">Administrar inventarios</a></li>
                             <li><a onclick="window.location.href='../../administrador/index.php'">Administrar usuarios</a></li>
                             <li><a onclick="window.location.href='../../administrador/view/user.php'">Visualizar usuarios</a></li>
+							<li><a onclick="window.location.href='../../contenidos/index.php'">Administrar Contenidos</a></li>
                         </ul> </b>
                     </li>
 					<li><a onclick="window.location.href='../cerrarSesion.php'"><span class="material-symbols-outlined">logout</span></a></li>
