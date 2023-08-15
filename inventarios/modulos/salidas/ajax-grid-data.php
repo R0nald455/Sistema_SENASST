@@ -64,8 +64,8 @@ while( $row=mysqli_fetch_array($query) ) {  // preparing an array
 	$nestedData[] = $row["descripcion"];
     $nestedData[] = date("d/m/Y", strtotime($row["fecha"]));
     $nestedData[] = '<td><center>
-                    <a href="editar.php?ID_Salidas='.$row['ID_Salidas'].'"  data-toggle="tooltip" title="Editar datos" class="btn btn-sm btn-info"> <i class="menu-icon icon-pencil"></i> </a>
-                    <a href="index.php?action=delete&ID_Salidas='.$row['ID_Salidas'].'"  data-toggle="tooltip" title="Eliminar" class="btn btn-sm btn-danger"> <i class="menu-icon icon-trash"></i> </a>
+                    <a href="editar.php?ID_Salidas='.$row['ID_Salidas'].'"  data-toggle="tooltip" title="Editar datos" class="btn btn-sm btn-info"> <i class="fa-solid fa-pen-to-square" style="color: #f2eded;"></i> </a>
+                    <a href="index.php?action=delete&ID_Salidas='.$row['ID_Salidas'].'"  data-toggle="tooltip" title="Eliminar" class="btn btn-sm btn-danger"> <i class="fa-solid fa-trash-can" style="color: #f2eded;"></i> </a>
                     </center></td>';		
 	
 	$data[] = $nestedData;

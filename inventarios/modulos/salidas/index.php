@@ -30,12 +30,12 @@
 			?>
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                        <h3 class="panel-title"><i class="icon-user"></i> Administrador de salidas</h3> 
+                        <h3 class="panel-title" style="color: #f63c3c"><i class="fa-solid fa-down-long" style="color: #c81414;"></i> Administrador de salidas</h3> 
                         </div>
 						
                         <div class="panel-body">
 							<div class="pull-right">
-								<a href="registro.php" class="btn btn-sm btn-success">Nueva salida de implementos</a>
+								<a href="registro.php" class="btn btn-sm btn-warning">Nueva salida de implementos</a>
 							</div><br>
 							<hr>
                                     <table id="lookup" class="table table-bordered table-hover">  

@@ -27,9 +27,9 @@
                     }
                 }
 			?>
-                    <div class="panel panel-default">
+                    <div class="panel panel-default">   
                         <div class="panel-heading">
-                        <h3 class="panel-title"><i class="icon-user"></i> Administrador de entradas</h3> 
+                        <h3 class="panel-title" style="color:#3fc13f;"><i class="fa-solid fa-up-long" style="color: #49bd1f;"></i></i> Administrador de entradas</h3> 
                         </div>
 						
                         <div class="panel-body">

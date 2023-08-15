@@ -5,7 +5,7 @@
 	    <link rel="stylesheet" href="datatables/dataTables.bootstrap.css"/>
     
         <link type="text/css" href="../../css/bootstrap.css" rel="stylesheet">
-        <link type="text/css" href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
+        <link type="text/css" href="../../../css/bootstrap.min.css" rel="stylesheet"> 
         <link type="text/css" href="../../bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
         <link type="text/css" href="../../css/theme.css" rel="stylesheet">
         <link type="text/css" href="../../images/icons/css/font-awesome.css" rel="stylesheet">
@@ -13,3 +13,4 @@
 
         <script src="../../scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
         <script src="../../scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+        <script src="https://kit.fontawesome.com/27e58a102f.js" crossorigin="anonymous"></script>

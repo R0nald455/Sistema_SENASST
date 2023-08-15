@@ -8,7 +8,7 @@
     </head>
     <body>
     <br>
-            <div class="container">
+            <div class="container table-responsive">
                 <div class="row">
                     <div class="span12">
                         <div class="content">
@@ -30,7 +30,7 @@
 			?>
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                        <h3 class="panel-title"><i class="icon-user"></i> Administrador de implementos</h3> 
+                        <h3 class="panel-title"><i class="fa-solid fa-screwdriver-wrench" style="color: #1b1c1d;"></i> Administrador de implementos</h3> 
                         </div>
 						
                         <div class="panel-body">
@@ -59,7 +59,6 @@
                             
                                 </div>
                             </div>
-                            
                         </div>
                         <!--/.content-->
                     </div>
