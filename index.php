@@ -114,7 +114,7 @@
 			<div class=" col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10" >
 				<h2>!Contribuye a hacer de un sena más seguro!</h2>
 				<h4>Reporta los posibles riesgos para tu seguridad y salud</h4>
-				<button class="botonReportar" onclick="window.location.href='php/login.php'"><b>Reportar riesgo</b></button>
+				<button class="botonReportar" onclick="window.location.href='tarjetaObservacion/index.php'"><b>Reportar riesgo</b></button>
 			</div>
 		</div>
 	</div>
