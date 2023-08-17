@@ -348,7 +348,7 @@ nav ul li ul li a:hover{
 }
 
 .sst{
-    background-color: rgb(252,115,35);
+    background-color: var(--color-sena);
     color: var(--color-blanco);
     text-align: center;
     font-size: 30px;
@@ -358,7 +358,7 @@ nav ul li ul li a:hover{
 }
 
 .sst__content{
-    background-color: rgb(255, 169, 120);
+    background-color: rgb(135, 254, 88);
     color: var(--color-blanco);
     text-align: center;
     font-size: 30px;

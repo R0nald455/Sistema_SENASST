@@ -1,3 +1,8 @@
+<?php
+session_start();
+error_reporting(0);
+require_once ("../db/conexion.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +13,7 @@
     <title>Administrador de contenidos</title>
 </head>
 <body>
+    <?php if(isset($_SESSION["id"]) ): ?>
     <header>
     <a href="../php/rolPersona/indexPersona.php"><img src="../img/LogoSena.png" alt="logosena"></a>
     <h1>Administrador de contenidos</h1>
@@ -38,5 +44,12 @@
 <?php
 include '../Footer/footer.php';
 ?>
+
+<?php else:?>
+
+<h1>No has iniciado sesion.</h1>
+
+<?php endif; ?>
+
 </body>
 </html>

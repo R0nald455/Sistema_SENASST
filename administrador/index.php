@@ -1,3 +1,8 @@
+<?php
+session_start();
+error_reporting(0);
+require_once ("../db/conexion.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +16,8 @@
 </head>
 
 <body id="page-top">
+<?php if(isset($_SESSION["id"]) ): ?>
+
 
     <form action="./Model/registrar.php" method="POST">
         <div id="login">
@@ -68,5 +75,11 @@
 
     </form>
 </center>
+
+<?php else:?>
+
+<h1>No has iniciado sesion.</h1>
+
+<?php endif; ?>
 </body>
 </html>

@@ -1,16 +1,9 @@
 <?php
+
+    session_start();
+
     $documento = $_POST["documento"];
     $contrasena = $_POST["contrasena"];
-    
-    // conexión
-    // $servername = "localhost:3307";
-    // $username = "root";
-    // $password = "";
-    // $dbname = "SSTCBA";
-    // $conn = new mysqli($servername, $username, $password, $dbname);
-    // if ($conn->connect_error) {
-    //     die("Error de conexión: " . $conn->connect_error);
-    // }
 
     include_once("../db/conexion.php");
 
@@ -20,6 +13,12 @@
 
     if ($result->num_rows == 1) {
         // Obtener el rol del usuario
+
+        $user = $_GET["documento"] ?? "";
+
+        $_SESSION["id"] = $user;
+        $_SESSION["documento"] = $documento;
+
         $row = $result->fetch_assoc();
         $rol = $row["rol"];
 
@@ -32,5 +31,6 @@
     } else {
         echo "Credenciales incorrectas. Por favor, intenta nuevamente.";
     }
+
     $conexion->close();
 ?>

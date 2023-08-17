@@ -1,4 +1,9 @@
-<?php include "../../../db/conexion.php"; ?>
+<?php
+session_start();
+error_reporting(0);
+require_once ("../../../db/conexion.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,9 +11,10 @@
       <?php include("head.php");?>
     </head>
     <body>
+
+	<?php if(isset($_SESSION["id"]) ): ?>
+
 	<br>
-
-
             <div class="container">
                 <div class="row">
                     <div class="span12">
@@ -93,4 +99,10 @@
             <!--/.container-->
 
         <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+		<?php else:?>
+
+		<h1>No has iniciado sesion.</h1>
+
+		<?php endif; ?>
     </body>

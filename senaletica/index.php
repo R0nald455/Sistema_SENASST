@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -74,6 +75,7 @@
     </style>
 </head>
 <body>
+
     <header>
     <a href="../php/rolPersona/indexPersona.php"><img src="../img/LogoSena.png" alt="logosena"></a>
     <h1>Señales de Seguridad</h1>
@@ -123,5 +125,6 @@
         echo "</div>";
     }
     ?>
+
 </body>
 </html>    

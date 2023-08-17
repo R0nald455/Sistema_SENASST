@@ -39,7 +39,7 @@
                                     <br>
                                     <br>       
                                     <div>
-                                    <a class="btn btn-success" href="../index.php">Nuevo usuario 
+                                    <a class="btn btn-warning" href="../index.php">Nuevo usuario 
                                     <i class="fa fa-plus"></i> </a>
                                     </div>
                                     </center>

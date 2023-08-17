@@ -7,21 +7,20 @@ if(isset($_POST['funcion'])){
         //Tipos de registros
         case 'editar_registro';
             editar_registro();
-            break;
+        break;
 
-            case 'eliminar_registro';
-                eliminar_registro();
-                break;
+        case 'eliminar_registro';
+            eliminar_registro();
+        break;
 
-                case 'acceso_user';
-                    acceso_user();
-                    break;
-
+        case 'acceso_user';
+            acceso_user();
+        break;
     }
 }
 
 function editar_registro(){
-    $conexion = mysqli_connect("localhost:3307","root","","sstcba");
+    require_once ("../../db/conexion.php");
     extract($_POST);
     $consulta = "UPDATE user SET nombre = '$nombre', correo = '$correo',
     telefono = '$telefono', password = '$password', rol = '$rol' WHERE id = '$id'";
@@ -32,7 +31,7 @@ function editar_registro(){
 }
 
 function eliminar_registro(){
-    $conexion = mysqli_connect("localhost:3307","root","","sstcba");
+    require_once ("../../db/conexion.php");
     extract($_POST);
     $id = $_POST['id'];
     $consulta = "DELETE FROM user WHERE id = $id";
@@ -41,13 +40,16 @@ function eliminar_registro(){
 }
 
 function acceso_user(){
+
     $nombre=$_POST['nombre'];
     $password=$_POST['password'];
+
     session_start();
-    $_SESSION ['nombre']=$nombre;
 
+    $_SESSION ['nombre']= $nombre;
 
-    $conexion=new mysqli("localhost:3307", "root", "", "SSTCBA");
+    $conexion=new mysqli("localhost:3307", "root", "", "sstcba");
+
     $consulta = "SELECT * FROM user WHERE nombre = '$nombre' AND password = '$password'";
     $resultado = mysqli_query($conexion , $consulta);
 

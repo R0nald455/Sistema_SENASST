@@ -1,3 +1,8 @@
+<?php
+session_start();
+error_reporting(0);
+require_once ("../db/conexion.php");
+?>
 <!doctype html>
 <html lang="es">
   <head>
@@ -15,6 +20,8 @@
     <link rel="stylesheet" type="text/css" href="../css/footer.css">
   </head>
   <body>
+  <?php if(isset($_SESSION["id"]) ): ?>
+
       <div class="container-fluid">
           <div class="row">
               <div class="col-md">
@@ -89,3 +96,12 @@
 </div>
 
 <?php include '../Footer/footer.php' ?>
+
+    <?php else:?>
+
+    <h1>No has iniciado sesion.</h1>
+
+    <?php endif; ?>
+
+        </body>
+</html>
