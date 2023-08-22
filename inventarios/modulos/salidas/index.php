@@ -25,7 +25,7 @@ require_once ("../../../db/conexion.php");
         <nav>
             <ul>
                 <li><img src="../../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></li>
-                <li><a href="#overview" id="selected">Inicio</a></li>
+                <li><a href="../../index.php" id="selected">Inicio</a></li>
                 <li><a href="../implementos/index.php">Administrar implementos</a></li>
                 <li><a href="../entradas/index.php">Administrar entradas</a></li>
                 <li><a href="#newsletter">Administrar movimientos</a></li>
