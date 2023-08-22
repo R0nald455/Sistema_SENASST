@@ -27,6 +27,10 @@
             header("Location: rolFuncionario/indexfuncionario.php");
         } elseif ($rol == 2) {
             header("Location: rolPersona/indexpersona.php");
+        }elseif ($rol == 3) {
+            header("Location: rolPersona/indexbrigadista.php");
+        }elseif ($rol == 4) {
+            header("Location: rolFuncionario/indexadministrador.php");
         }
     } else {
         echo "Credenciales incorrectas. Por favor, intenta nuevamente.";
