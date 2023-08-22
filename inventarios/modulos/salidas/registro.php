@@ -38,43 +38,33 @@ require_once ("../../../db/conexion.php");
 			}
 			?>
             
-            <blockquote>
-            Agregar salida
-            </blockquote>
                         <form name="form1" id="form1" class="form-horizontal row-fluid" action="registro.php" method="POST">
-										
-										<div class="control-group">
-											<label class="control-label" for="ID_Salidas">ID de las salidas: </label>
-											<div class="controls">
-												<input type="text" name="ID_Salidas" id="ID_Salidas" placeholder="" class="form-control span8 tip" required>
-											</div>
-										</div>
+
+										<blockquote>
+											Registrar salida 🚩
+										</blockquote>
 						
 										<div class="control-group">
-											<label class="control-label" for="ID_Implementos">Implementos: </label>
 											<div class="controls">
-												<input type="text" name="ID_Implementos" id="ID_Implementos" placeholder="" class="form-control span8 tip" required>
+												<label class="control-label" for="ID_Implementos">Implementos: <input type="text" name="ID_Implementos" id="ID_Implementos" placeholder="" class="form-control" required></label>
 											</div>
 										</div>
 
                                         <div class="control-group">
-											<label class="control-label" for="ID_Empleado">Empleados: </label>
 											<div class="controls">
-												<input type="text" name="ID_Empleado" id="ID_Empleado" placeholder="" class="form-control span8 tip" required>
+												<label class="control-label" for="ID_Empleado">Empleados: <input type="text" name="ID_Empleado" id="ID_Empleado" placeholder="" class="form-control span8 tip" required></label>
 											</div>
 										</div>
 
 										<div class="control-group">
-											<label class="control-label" for="cantidad">Cantidad: </label>
 											<div class="controls">
-												<input type="text" name="cantidad" id="cantidad" placeholder="Ingrese la cantidad de implementos" class="form-control span8 tip" required>
+												<label class="control-label" for="cantidad">Cantidad: <input type="text" name="cantidad" id="cantidad" placeholder="Ingrese la cantidad de implementos" class="form-control span8 tip" required></label>
 											</div>
 										</div>
 
 										<div class="control-group">
-											<label class="control-label" for="descripcion">Descripcion: </label>
 											<div class="controls">
-												<input name="descripcion" id="descripcion" class="form-control span8 tip" type="text" placeholder="Descripcion del estado de los implementos"  required />
+												<label class="control-label" for="descripcion">Descripcion: <input name="descripcion" id="descripcion" class="form-control span8 tip" type="text" placeholder="Descripcion del estado de los implementos"  required /></label>
 											</div>
 										</div>
 

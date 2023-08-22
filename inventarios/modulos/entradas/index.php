@@ -14,6 +14,32 @@ require_once ("../../../db/conexion.php");
     <?php if(isset($_SESSION["id"]) ): ?>
 
     <br>
+    <div class="container__menu">
+    <div class="menu">
+
+        <input type="checkbox" id="check__menu">
+        <label for="check__menu" class="lbl-menu">
+            <span id="spn1"></span>
+            <span id="spn2"></span>
+            <span id="spn3"></span>
+        </label>
+
+        <nav>
+            <ul>
+                <li><img src="../../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></li>
+                <li><a href="../../index.php" id="selected">Inicio</a></li>
+                <li><a href="../implementos/index.php">Administrar implementos</a></li>
+                <li><a href="../salidas/index.php">Administrar salidas</a></li>
+                <li><a href="#newsletter">Administrar movimientos</a></li>
+            </ul>
+        </nav>
+
+        <div class="responsive-container">
+            <img id="logoResponsive" src="../../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena">
+        </div>
+    </div>
+</div>
+<br>
             <div class="container">
                 <div class="row">
                     <div class="span12">
@@ -34,9 +60,9 @@ require_once ("../../../db/conexion.php");
                     }
                 }
 			?>
-                    <div class="panel panel-default">
+                    <div class="panel panel-default">   
                         <div class="panel-heading">
-                        <h3 class="panel-title"><i class="icon-user"></i> Administrador de entradas</h3> 
+                        <h3 class="panel-title" style="color:#3fc13f;"><i class="fa-solid fa-up-long" style="color: #49bd1f;"></i></i> Administrador de entradas</h3> 
                         </div>
 						
                         <div class="panel-body">
@@ -44,8 +70,9 @@ require_once ("../../../db/conexion.php");
 								<a href="registro.php" class="btn btn-sm btn-success">Nueva entrada de implementos</a>
 							</div><br>
 							<hr>
-                                    <table id="lookup" class="table table-bordered table-hover">  
-	                                    <thead bgcolor="#eeeeee" align="center">
+                                <div class="table-container table-responsive">
+                                        <table id="lookup" class="table table-hover">  
+	                                    <thead bgcolor="rgb(57,168,1)" align="center">
                                         <tr>
 	  
                                         <th>ID de la entrada</th>
@@ -60,6 +87,8 @@ require_once ("../../../db/conexion.php");
                                         <tbody>
                                         </tbody>
                                     </table>
+                                </div>
+
                             
                                 </div>
                             </div>
@@ -71,7 +100,6 @@ require_once ("../../../db/conexion.php");
                 </div>
             </div>
             <!--/.container-->
-        
         <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../../datatables/jquery.dataTables.js"></script>
         <script src="../../datatables/dataTables.bootstrap.js"></script>
@@ -96,8 +124,8 @@ require_once ("../../../db/conexion.php");
 					"oPaginate": {
 						"sFirst":    "Primero",
 						"sLast":     "Último",
-						"sNext":     "Siguiente",
-						"sPrevious": "Anterior"
+						"sNext":     "Siguiente -->",
+						"sPrevious": "<-- Anterior"
 					},
 					"oAria": {
 						"sSortAscending":  ": Activar para ordenar la columna de manera ascendente",

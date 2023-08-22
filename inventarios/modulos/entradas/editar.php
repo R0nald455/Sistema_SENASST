@@ -27,48 +27,43 @@ require_once ("../../../db/conexion.php");
 				$row = mysqli_fetch_assoc($sql);
 			}
 			?>
-            
-            <blockquote>
-                Actualizar entrada de implementos
-            </blockquote>
-
                         <form name="form1" id="form1" class="form-horizontal row-fluid" action="update-edit.php" method="POST" >
+										
+										<blockquote>
+											Editar entradas 🖋️
+										</blockquote>
+										
 										<div class="control-group">
-											<label class="control-label" for="basicinput">Identificador de la entrada: </label>
 											<div class="controls">
-												<input type="text" name="ID_Entradas" id="ID_Entradas" value="<?php echo $row['ID_Entradas']; ?>" placeholder="" class="form-control span8 tip" readonly="readonly">
+												<label class="control-label" for="basicinput">Identificador de la entrada: <input type="text" name="ID_Entradas" id="ID_Entradas" value="<?php echo $row['ID_Entradas']; ?>" placeholder="" class="form-control span8 tip" readonly="readonly"></label>
 											</div>
 										</div>
 
                                         <div class="control-group">
-											<label class="control-label" for="basicinput">Identificador del implemento: </label>
 											<div class="controls">
-												<input type="text" name="ID_Implementos" id="ID_Implementos" value="<?php echo $row['ID_Implementos']; ?>" placeholder="" class="form-control span8 tip" readonly="readonly">
+												<label class="control-label" for="basicinput">Identificador del implemento: <input type="text" name="ID_Implementos" id="ID_Implementos" value="<?php echo $row['ID_Implementos']; ?>" placeholder="" class="form-control span8 tip" readonly="readonly"></label>
 											</div>
 										</div>
 
 										<div class="control-group">
-											<label class="control-label" for="basicinput">Cantidad: </label>
 											<div class="controls">
-												<input name="cantidad" id="cantidad" value="<?php echo $row['cantidad']; ?>" class="form-control span8 tip" type="text"  readonly="readonly" />
+												<label class="control-label" for="basicinput">Cantidad: <input name="cantidad" id="cantidad" value="<?php echo $row['cantidad']; ?>" class="form-control span8 tip" type="text"  readonly="readonly" /></label>
 											</div>
 										</div>
 
 										<div class="control-group">
-											<label class="control-label" for="basicinput">Descripcion: </label>
 											<div class="controls">
-												<input type="text" name="descripcion" id="descripcion" value="<?php echo $row['descripcion']; ?>" placeholder="" class="form-control span8 tip" required>
+												<label class="control-label" for="basicinput">Descripcion: <input type="text" name="descripcion" id="descripcion" value="<?php echo $row['descripcion']; ?>" placeholder="" class="form-control span8 tip" required></label>
 											</div>
 										</div>
                                         
                                         <div class="control-group">
-											<label class="control-label" for="basicinput">Fecha de entrada: </label>
 											<div class="controls">
-												<input name="notelp" id="notelp" value="<?php echo $row['fecha']; ?>" class=" form-control span8 tip" type="text" disabled  />
+												<label class="control-label" for="basicinput">Fecha de entrada: <input name="notelp" id="notelp" value="<?php echo $row['fecha']; ?>" class=" form-control" type="text" disabled/></label>
 											</div>
 										</div>
 
-										<div class="control-group">
+										<div class="control-group buttons-container">
 											<div class="controls">
 												<input type="submit" name="update" id="update" value="Actualizar" class="btn btn-sm btn-primary"/>
                                                 <a href="index.php" class="btn btn-sm btn-danger">Cancelar</a>

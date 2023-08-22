@@ -37,55 +37,43 @@ require_once ("../../../db/conexion.php");
 				
 			}
 			?>
-            
-            <blockquote>
-            Agregar cliente
-            </blockquote>
                         <form name="form1" id="form1" class="form-horizontal row-fluid" action="registro.php" method="POST">
-										
-										<div class="control-group">
-											<label class="control-label" for="nombre">ID del implemento:</label>
-											<div class="controls">
-												<input type="text" name="ID_Implementos" id="id_implementos" placeholder="Ingrese el ID del implemento" class="form-control span8 tip" required>
-											</div>
-										</div>
+
+										<blockquote>
+											Registrar implementos ✅
+										</blockquote>
 						
 										<div class="control-group">
-											<label class="control-label" for="nombre">Nombre:</label>
 											<div class="controls">
-												<input type="text" name="nombre" id="nombre" placeholder="Nombre del implemento" class="form-control span8 tip" required>
+												<label class="control-label" for="nombre">Nombre: <input type="text" name="nombre" id="nombre" placeholder="Nombre del implemento" class="form-control" required></label>
 											</div>
 										</div>
 
 										<div class="control-group">
-											<label class="control-label" for="descripcion">Descripcion</label>
 											<div class="controls">
-												<input type="text" name="descripcion" id="descripcion" placeholder="Descripcion del implemento" class="form-control span8 tip" required>
+												<label class="control-label" for="descripcion">Descripcion: <input type="text" name="descripcion" id="descripcion" placeholder="Descripcion del implemento" class="form-control" required></label>
 											</div>
 										</div>
 
 										<div class="control-group">
-											<label class="control-label" for="categoria">Categoria: </label>
 											<div class="controls">
-												<input name="categoria" id="categoria" class="form-control span8 tip" type="text" placeholder="Ingrese a que categoria pertenece el producto"  required />
+												<label class="control-label" for="categoria">Categoria: <input name="categoria" id="categoria" class="form-control" type="text" placeholder="Ingrese a que categoria pertenece el producto"  required /></label>
 											</div>
 										</div>
 
 										<div class="control-group">
-											<label class="control-label" for="cantidad">Cantidad: </label>
 											<div class="controls">
-												<input name="cantidad" id="cantidad" class=" form-control span8 tip" type="text" placeholder="Ingrese la cantidad" required />
+												<label class="control-label" for="cantidad">Cantidad: <input name="cantidad" id="cantidad" class=" form-control" type="text" placeholder="Ingrese la cantidad" required /></label>
 											</div>
 										</div>
 
                                         <div class="control-group">
-											<label class="control-label" for="ubicacion">Ubicacion: </label>
 											<div class="controls">
-												<input name="ubicacion" id="ubicacion" class=" form-control span8 tip" type="text" placeholder="Ingrese la ubicacion" required />
+												<label class="control-label" for="ubicacion">Ubicacion: <input name="ubicacion" id="ubicacion" class=" form-control" type="text" placeholder="Ingrese la ubicacion" required /></label>
 											</div>
 										</div>
 
-										<div class="control-group">
+										<div class="control-group buttons-container">
 											<div class="controls">
 												<button type="submit" name="input" id="input" class="btn btn-sm btn-primary">Registrar</button>
                                                 <a href="index.php" class="btn btn-sm btn-danger">Cancelar</a>

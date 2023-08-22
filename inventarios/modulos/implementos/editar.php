@@ -28,62 +28,56 @@ require_once ("../../../db/conexion.php");
 				$row = mysqli_fetch_assoc($sql);
 			}
 			?>
-            
-            <blockquote>
-            Actualizar datos del cliente
-            </blockquote>
 
                         <form name="form1" id="form1" class="form-horizontal row-fluid" action="update-edit.php" method="POST" >
+
+										<blockquote>
+											Editar implementos 🖋️
+										</blockquote>
+
 										<div class="control-group">
-											<label class="control-label" for="basicinput">ID_Implementos: </label>
 											<div class="controls">
-												<input type="text" name="ID_Implementos" id="ID_Implementos" value="<?php echo $row['ID_Implementos']; ?>" placeholder="" class="form-control span8 tip" readonly="readonly">
+												<label class="control-label" for="basicinput">ID_Implementos: <input type="text" name="ID_Implementos" id="ID_Implementos" value="<?php echo $row['ID_Implementos']; ?>" placeholder="" class="form-control" readonly="readonly"></label>
 											</div>
 										</div>
 
 										<div class="control-group">
-											<label class="control-label" for="basicinput">Nombre: </label>
 											<div class="controls">
-												<input type="text" name="nombre" id="nombre" value="<?php echo $row['nombre'];?>" placeholder="" class="form-control span8 tip" required>
+												<label class="control-label" for="basicinput">Nombre: <input type="text" name="nombre" id="nombre" value="<?php echo $row['nombre'];?>" placeholder="" class="form-control" required></label>
 											</div>
 										</div>
 
 										<div class="control-group">
-											<label class="control-label" for="basicinput">Descripcion: </label>
 											<div class="controls">
-												<input type="text" name="descripcion" id="descripcion" value="<?php echo $row['descripcion']; ?>" placeholder="" class="form-control span8 tip" required>
+												<label class="control-label" for="basicinput">Descripcion: <input type="text" name="descripcion" id="descripcion" value="<?php echo $row['descripcion']; ?>" placeholder="" class="form-control" required></label>
 											</div>
 										</div>
 
 										<div class="control-group">
-											<label class="control-label" for="basicinput">Categoria: </label>
 											<div class="controls">
-												<input name="categoria" id="categoria" value="<?php echo $row['categoria']; ?>" class="form-control span8 tip" type="text"  required />
+												<label class="control-label" for="basicinput">Categoria: <input name="categoria" id="categoria" value="<?php echo $row['categoria']; ?>" class="form-control" type="text"  required /></label>
 											</div>
 										</div>
 
 										<div class="control-group">
-											<label class="control-label" for="basicinput">Cantidad: </label>
 											<div class="controls">
-												<input name="cantidad" id="cantidad" value="<?php echo $row['cantidad']; ?>" class="form-control span8 tip" type="text"  required />
+												<label class="control-label" for="basicinput">Cantidad: <input name="cantidad" id="cantidad" value="<?php echo $row['cantidad']; ?>" class="form-control" type="text"  required /></label>
 											</div>
 										</div>
 
                                         <div class="control-group">
-											<label class="control-label" for="basicinput">Ubicacion: </label>
 											<div class="controls">
-												<input name="ubicacion" id="ubicacion" value="<?php echo $row['ubicacion']; ?>" class="form-control span8 tip" type="text"  required />
+												<label class="control-label" for="basicinput">Ubicacion: <input name="ubicacion" id="ubicacion" value="<?php echo $row['ubicacion']; ?>" class="form-control" type="text"  required /></label>
 											</div>
 										</div>
                                         
                                         <div class="control-group">
-											<label class="control-label" for="basicinput">Fecha de registro: </label>
 											<div class="controls">
-												<input name="notelp" id="notelp" value="<?php echo $row['fecha']; ?>" class=" form-control span8 tip" type="text" disabled  />
+												<label class="control-label" for="basicinput">Fecha de registro: <input name="notelp" id="notelp" value="<?php echo $row['fecha']; ?>" class=" form-control" type="text" disabled  /></label>
 											</div>
 										</div>
 
-										<div class="control-group">
+										<div class="control-group buttons-container">
 											<div class="controls">
 												<input type="submit" name="update" id="update" value="Actualizar" class="btn btn-sm btn-primary"/>
                                                 <a href="index.php" class="btn btn-sm btn-danger">Cancelar</a>

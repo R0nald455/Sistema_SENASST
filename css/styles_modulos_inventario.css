@@ -13,108 +13,48 @@
     --color-blanco: white;
 }
 
-/*---------------------------Modulo Administracion de Usuarios-------------------------*/
-
-body{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: stretch;
+.content{
+    margin-top: 70px;
 }
 
-#header-administrador{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 0px 20px 0px;
-    width: 100%;
-    text-align: end;
-    background-color: #ffffff;
-    position: fixed;
-    border-bottom: 5px;
-    border-style: solid;
-    border-color: var(--color-sena);
-    z-index: 100;
-  }
-  
-  #header-administrador img {
-    height: 70px;
-    margin-left: 20px;
-    margin-top: 10px;
-  }
-  
-  #header-administrador h1 {
-    font-weight: bold;
-    font-size: 30px;
-    margin-top: 10px;
-    margin-right: 5%;
-  }
-
-
-.container-form-table{
-    display: flex;
-    flex-direction: row;
-    flex: 1 0 90%;
-    flex-wrap: wrap;
-    padding: 4em;
-    justify-content: space-evenly;
-    align-items: center;
-    position: relative;
-    top: 100px;
+.table-container table thead{
+    color: var(--color-sena);
 }
 
-.container-form{
+.table-container table thead tr th{
+    color: white;
+}
+
+form[id="form1"]{
     display: flex;
     flex-direction: column;
-    flex: 1 0 50%;
-    flex-wrap: wrap;
-    padding: 4em;
-    justify-content: space-around;
     align-items: center;
 }
 
-.container_tabla{
-    display: flex;
-    flex: 1 0 50%;
-    text-align: center;
-    margin: 12px;
+form[id="form1"] .control-group{
+    width: 100%;
 }
 
-[type="submit"]{
+form[id="form1"] .control-group .controls{
+    width: 100%;
     margin: 10px;
 }
 
-.campos{
-    width: 40rem;
+form[id="form1"] .control-group .controls label{
+    width: 100%;
 }
 
-/*-------------------------nav vertical-------------------------*/
+form[id="form1"] .control-group .controls label input{
+    width: 100%;
+    border-color: rgb(57,168,1);
+}
 
-.vertical-nav{
+form[id="form1"] .buttons-container .controls{
     display: flex;
-    flex: 1 0 10%;
-    flex-direction: column;
-    justify-content: space-around;
-    list-style-type: none;
-    padding: 0;
-    background-color: #f1f1f1;
-    position: fixed;
-    top: 200px;
-    overflow: auto;
-  }
-  
-  .vertical-nav li a {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
-    text-decoration: none;
-  }
-  
-  .vertical-nav li a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
-  
-  .vertical-nav li a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-  }
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+blockquote{
+    font-size: 30px;
+}

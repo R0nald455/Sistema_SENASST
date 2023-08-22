@@ -101,6 +101,9 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 	font-size: 13px;
 	font-family: 'Open Sans', Tahoma, Arial, sans-serif
 }
+
+
+
 .input-append input, .input-prepend input, .input-append select, .input-prepend select, .input-append .uneditable-input, .input-prepend .uneditable-input {
 	-webkit-border-radius: 0 3px 3px 0;
 	-moz-border-radius: 0 3px 3px 0;
