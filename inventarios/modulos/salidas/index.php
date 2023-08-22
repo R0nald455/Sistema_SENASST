@@ -38,8 +38,9 @@
 								<a href="registro.php" class="btn btn-sm btn-warning">Nueva salida de implementos</a>
 							</div><br>
 							<hr>
-                                    <table id="lookup" class="table table-bordered table-hover">  
-	                                    <thead bgcolor="#eeeeee" align="center">
+                            <div class="table-container table-responsive">
+                                    <table id="lookup" class="table table-hover">  
+	                                    <thead bgcolor="rgb(57,168,1)" align="center">
                                         <tr>
 
                                         <th>ID de la salida</th>
@@ -66,6 +67,7 @@
                 </div>
             </div>
             <!--/.container-->
+            </div>
         
         <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../../datatables/jquery.dataTables.js"></script>
@@ -91,8 +93,8 @@
 					"oPaginate": {
 						"sFirst":    "Primero",
 						"sLast":     "Último",
-						"sNext":     "Siguiente",
-						"sPrevious": "Anterior"
+						"sNext":     "Siguiente -->",
+						"sPrevious": "<-- Anterior"
 					},
 					"oAria": {
 						"sSortAscending":  ": Activar para ordenar la columna de manera ascendente",

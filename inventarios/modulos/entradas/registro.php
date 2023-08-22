@@ -32,40 +32,32 @@
 			}
 			?>
             
-            <blockquote>
-            Agregar entrada
-            </blockquote>
                         <form name="form1" id="form1" class="form-horizontal row-fluid" action="registro.php" method="POST">
-										
-										<div class="control-group">
-											<label class="control-label" for="ID_Entradas">ID de las entradas: </label>
-											<div class="controls">
-												<input type="text" name="ID_Entradas" id="ID_Entradas" placeholder="" class="form-control span8 tip" required>
-											</div>
-										</div>
+
+										<blockquote>
+										Registrar entradas ✅
+										</blockquote>
 						
 										<div class="control-group">
-											<label class="control-label" for="ID_Implementos">Implementos: </label>
 											<div class="controls">
-												<input type="text" name="ID_Implementos" id="ID_Implementos" placeholder="" class="form-control span8 tip" required>
+												<label class="control-label" for="ID_Implementos">Implementos: <input type="text" name="ID_Implementos" id="ID_Implementos" placeholder="" class="form-control span8 tip" required></label>
 											</div>
 										</div>
 
 										<div class="control-group">
-											<label class="control-label" for="cantidad">Cantidad: </label>
 											<div class="controls">
-												<input type="text" name="cantidad" id="cantidad" placeholder="Ingrese la cantidad de implementos" class="form-control span8 tip" required>
+												<label class="control-label" for="cantidad">Cantidad: <input type="text" name="cantidad" id="cantidad" placeholder="Ingrese la cantidad de implementos" class="form-control span8 tip" required></label>
 											</div>
 										</div>
 
 										<div class="control-group">
-											<label class="control-label" for="descripcion">Descripcion: </label>
+											
 											<div class="controls">
-												<input name="descripcion" id="descripcion" class="form-control span8 tip" type="text" placeholder="Descripcion del estado de los implementos"  required />
+												<label class="control-label" for="descripcion">Descripcion: <input name="descripcion" id="descripcion" class="form-control span8 tip" type="text" placeholder="Descripcion del estado de los implementos"  required /></label>
 											</div>
 										</div>
 
-										<div class="control-group">
+										<div class="control-group buttons-container">
 											<div class="controls">
 												<button type="submit" name="input" id="input" class="btn btn-sm btn-primary">Registrar</button>
                                                 <a href="index.php" class="btn btn-sm btn-danger">Cancelar</a>

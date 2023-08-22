@@ -19,14 +19,14 @@ $.extend($.fn.dataTableExt.oStdClasses, {
 if ($.fn.dataTable.Api) {
     $.fn.dataTable.defaults.renderer = 'bootstrap';
     $.fn.dataTable.ext.renderer.pageButton.bootstrap = function(settings, host, idx, buttons, page, pages) {
-        var api = new $.fn.dataTable.Api(settings);
-        var classes = settings.oClasses;
-        var lang = settings.oLanguage.oPaginate;
-        var btnDisplay, btnClass;
+        let api = new $.fn.dataTable.Api(settings);
+        let classes = settings.oClasses;
+        let lang = settings.oLanguage.oPaginate;
+        let btnDisplay, btnClass;
 
-        var attach = function(container, buttons) {
-            var i, ien, node, button;
-            var clickHandler = function(e) {
+        let attach = function(container, buttons) {
+            let i, ien, node, button;
+            let clickHandler = function(e) {
                 e.preventDefault();
                 if (e.data.action !== 'ellipsis') {
                     api.page(e.data.action).draw(false);
@@ -129,8 +129,8 @@ if ($.fn.dataTable.Api) {
     $.extend($.fn.dataTableExt.oPagination, {
         "bootstrap": {
             "fnInit": function(oSettings, nPaging, fnDraw) {
-                var oLang = oSettings.oLanguage.oPaginate;
-                var fnClickHandler = function(e) {
+                let oLang = oSettings.oLanguage.oPaginate;
+                let fnClickHandler = function(e) {
                     e.preventDefault();
                     if (oSettings.oApi._fnPageChange(oSettings, e.data.action)) {
                         fnDraw(oSettings);
@@ -143,7 +143,7 @@ if ($.fn.dataTable.Api) {
                     '<li class="next disabled"><a href="#">' + oLang.sNext + ' &rarr; </a></li>' +
                     '</ul>'
                 );
-                var els = $('a', nPaging);
+                let els = $('a', nPaging);
                 $(els[0]).bind('click.DT', {
                     action: "previous"
                 }, fnClickHandler);
@@ -153,10 +153,10 @@ if ($.fn.dataTable.Api) {
             },
 
             "fnUpdate": function(oSettings, fnDraw) {
-                var iListLength = 5;
-                var oPaging = oSettings.oInstance.fnPagingInfo();
-                var an = oSettings.aanFeatures.p;
-                var i, ien, j, sClass, iStart, iEnd, iHalf = Math.floor(iListLength / 2);
+                let iListLength = 5;
+                let oPaging = oSettings.oInstance.fnPagingInfo();
+                let an = oSettings.aanFeatures.p;
+                let i, ien, j, sClass, iStart, iEnd, iHalf = Math.floor(iListLength / 2);
 
                 if (oPaging.iTotalPages < iListLength) {
                     iStart = 1;
