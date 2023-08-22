@@ -6,7 +6,7 @@
     box-sizing: border-box;
     font-family:'Roboto', sans-serif;
     text-decoration: none;
-  }
+}
 
 
 /*---------------------------------------
@@ -15,7 +15,8 @@
 :root{
     --color-sena: rgb(57,168,1);
     --color-blanco: white;
-  }
+}
+
 .container__menu{
     position: fixed;
     top: 0;
@@ -25,20 +26,16 @@
     padding: 0px 20px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
     z-index: 20;
-  }
-  
-  .menu {
+}
+
+.menu {
     position: relative;
-    top: -48px;
     max-width: 1200px;
     margin: auto;
     height: 100%;
-  }
-  
+}
 
-
-
-  .menu #logoResponsive{
+.menu #logoResponsive{
     display: none;
   }
   
@@ -46,6 +43,7 @@
     height: 100%;
     display: flex;
     justify-content: space-evenly;
+    align-items: stretch;
   }
   
   nav>ul{
@@ -56,8 +54,6 @@
   nav ul li{
     height: 100%;
     list-style: none;
-    position: relative;
-    top: 48px;
   }
   
   nav>ul>li>a{
@@ -79,13 +75,10 @@
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   }
 
-  nav>ul>li>a>img{
-
-    margin-right: 100px ;
-    height: 70px;
+  nav>ul>li>img[alt="logoSena"]{
     width: 70px;
+    margin-right: 20px;
   }
-
 
 /* --------------------------- Sub-Menu - GLOBAL ---------------------------------------*/
 
@@ -169,25 +162,31 @@ nav ul li ul{
   }
   
   
-  @media screen and (max-width: 1350px){
+  @media screen and (max-width: 1000px){
   
     .menu{
+        display: flex;
         position: relative;
-        top: 15px;
+        justify-content: space-between;
+        align-items: center;
     }
-  
 
     .menu nav ul  li:nth-child(1){
         visibility: hidden;
         height: 0px;
     }
-      
-   .menu #logoResponsive{
+
+    .responsive-container{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+   .menu .responsive-container #logoResponsive{
       display: block;
-      position: relative;
-      top: -55px;
-      left: 80%;
-      width: 80px;
+      width: 70px;
     }
   
     nav > ul {
@@ -253,8 +252,9 @@ nav ul li ul{
     }
   
     #check__menu:checked ~ nav > ul {
-        height: 370px;
+        height: 400px;
         visibility: visible;
+        padding: 0;
         opacity: 1;
     }
   
@@ -270,5 +270,13 @@ nav ul li ul{
     #check__menu:checked ~ .lbl-menu #spn3{
         transform: rotate(-140deg);
         top: 10px;
+    }
+  }
+
+  @media screen and (max-width: 767px){
+    div.container__menu{
+      position: relative;
+      width: 110%;
+      left: -20px;
     }
   }

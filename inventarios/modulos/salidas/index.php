@@ -6,6 +6,31 @@
 		<?php include("head.php");?>
     </head>
     <body>
+    <div class="container__menu">
+    <div class="menu">
+
+        <input type="checkbox" id="check__menu">
+        <label for="check__menu" class="lbl-menu">
+            <span id="spn1"></span>
+            <span id="spn2"></span>
+            <span id="spn3"></span>
+        </label>
+
+        <nav>
+            <ul>
+                <li><img src="../../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></li>
+                <li><a href="#overview" id="selected">Inicio</a></li>
+                <li><a href="../implementos/index.php">Administrar implementos</a></li>
+                <li><a href="../entradas/index.php">Administrar entradas</a></li>
+                <li><a href="#newsletter">Administrar movimientos</a></li>
+            </ul>
+        </nav>
+
+        <div class="responsive-container">
+            <img id="logoResponsive" src="../../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena">
+        </div>
+    </div>
+</div>
     <br>
 
             <div class="container">

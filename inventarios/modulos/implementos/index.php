@@ -9,32 +9,31 @@
     <body>
         <!-- Menu de navegacion-->
 
-        <div class="container__menu">
+<div class="container__menu">
+    <div class="menu">
 
-            <div class="menu">
+        <input type="checkbox" id="check__menu">
+        <label for="check__menu" class="lbl-menu">
+            <span id="spn1"></span>
+            <span id="spn2"></span>
+            <span id="spn3"></span>
+        </label>
 
-                <input type="checkbox" id="check__menu">
-                <label for="check__menu" class="lbl-menu">
-                    <span id="spn1"></span>
-                    <span id="spn2"></span>
-                    <span id="spn3"></span>
-                </label>
+        <nav>
+            <ul>
+                <li><img src="../../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></li>
+                <li><a href="../../index.php" id="selected">Inicio</a></li>
+                <li><a href="../entradas/index.php">Administrar entradas</a></li>
+                <li><a href="../salidas">Administrar salidas</a></li>
+                <li><a href="#newsletter">Administrar movimientos</a></li>
+            </ul>
+        </nav>
 
-                <a href="../../index.php"><img id="logoResponsive" src="../../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></a>
-                
-                <nav>
-                    <ul>
-                        
-                        <li><a href="../../index.php"><img src="../../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></a></li>
-                        <li><a href="#overview" id="selected">Inicio</a></li>
-                        <li><a href="#trainer">Brigadistas</a></li>
-                        <li><a href="php/login.php">Reglamento</a></li>
-                        <li><a href="#newsletter">Reportar</a></li>
-                        <li><a href="#testimonial">Noticias</a></li>
-                    </ul>
-                </nav>
-            </div>
+        <div class="responsive-container">
+            <img id="logoResponsive" src="../../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena">
         </div>
+    </div>
+</div>
     <br>
             <div class="container">
                 <div class="row">
