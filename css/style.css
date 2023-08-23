@@ -609,6 +609,56 @@ label{
   margin: 10px;
 }
 
+/*---------------------------------------
+   simuladores section              
+-----------------------------------------*/
+
+
+#simuladores {
+  background: rgb(69,209,0);
+  background: linear-gradient(93deg, rgba(69,209,0,1) 50%, rgba(46,112,12,1) 100%);
+  background-size: cover;
+  background-position: center center;
+  color: #ffffff;
+  padding-top: 12rem;
+  padding-bottom: 8rem;
+
+}
+#simuladores .container{
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+#simuladores h2{
+font-size: 50px;
+}
+
+.botonReportar{
+background-color: white;
+color: #45d100;
+margin-top: 1rem;
+font-size: 24px;
+padding: 20px 40px ;
+border: 0px;
+border-radius: 5px;
+font-weight: bold;
+}
+
+.botonReportar:hover{
+background-color: #45d100;
+color: rgb(0, 0, 0);
+border-color: #000;
+border-style: solid;
+}
+
+
+
+#newsletter .newsletter_detail {
+padding-top: 3rem;
+}
+
+
 
 /*---------------------------------------
     Testimonial section              

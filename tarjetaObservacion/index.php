@@ -1,3 +1,8 @@
+<?php
+session_start();
+error_reporting(0);
+?>
+    
     <!DOCTYPE html>
     <html>
     <head>
@@ -27,6 +32,7 @@
                 <ul>
                     
                     <li><a href="../php/rolPersona/indexPersona.php"><img src="../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></a></li>
+
                     <li><a href="#overview" id="selected">Inicio</a></li>
                     <li><a href="#trainer">Brigadistas</a></li>
                     <li><a href="php/login.php">Reglamento</a></li>
@@ -45,7 +51,8 @@
                 <div class="seccion">
                     <h2>TIPO DE SITUACIÓN</h2>
                     <ul>
-                        <li><b>Acto inseguro:</b> Acciones y decisiones humanas, que pueden causar una situación insegura, accidente o enfermedad,
+                        <li><b>
+                        <?= var_dump($_SESSION["id"]);  ?>Acto inseguro:</b> Acciones y decisiones humanas, que pueden causar una situación insegura, accidente o enfermedad,
                             con consecuencias para el trabajador, la producción, el medio ambiente y/u otras personas.</li>
                         <li><b>Condición insegura:</b> Es todo un equipo, materia prima, herramientas, máquinas, instalaciones o el medio ambiente
                             que se convierte en un peligro para las personas, los bienes, la operación que bajo determinadas condiciones puede generar un accidente o una enfermedad.</li>

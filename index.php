@@ -37,6 +37,7 @@
 				<li><a href="#trainer">Brigadistas</a></li>
 				<li><a href="php/login.php">Reglamento</a></li>
 				<li><a href="#newsletter">Reportar</a></li>
+				<li><a href="#simuladores">Simuladores</a></li>
 				<li><a href="#testimonial">Noticias</a></li>
 			</ul>
 		</nav>
@@ -180,6 +181,24 @@
 	</div>
 			
     </section>
+
+
+<!-- =========================
+    Seccion simuladores
+============================== -->
+<section id="simuladores" >
+	<div class="container">
+		<div class="row">
+			<div class=" col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10" >
+				<h2>!Descubre nuestros simuladores!</h2>
+				<h4>Juega y diviértete</h4>
+				<button class="botonReportar" onclick="window.location.href='tarjetaObservacion/index.php'"><b>Ingresa</b></button>
+			</div>
+		</div>
+	</div>
+</section>
+
+
 
 <!-- =========================
     Seccion noticias y eventos proximos
