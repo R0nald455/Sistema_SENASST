@@ -15,7 +15,7 @@ require_once ("../db/conexion.php");
 <body>
     <?php if(isset($_SESSION["id"]) ): ?>
     <header>
-    <a href="../php/rolPersona/indexPersona.php"><img src="../img/LogoSena.png" alt="logosena"></a>
+    <a href="../php/rolFuncionario/indexAdministrador.php"><img src="../img/LogoSena.png" alt="logosena"></a>
     <h1>Administrador de contenidos</h1>
     </header>
 

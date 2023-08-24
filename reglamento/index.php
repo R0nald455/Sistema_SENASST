@@ -13,6 +13,7 @@ require_once ("../db/conexion.php");
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Reglamento del aprendiz </title>
   <link href="../css/bootstrap.min.css" rel="stylesheet"> 
+  <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="../footer/footer.php">
   <link rel="stylesheet" href="../css/style_reglamento.css">
 
@@ -20,10 +21,36 @@ require_once ("../db/conexion.php");
 <body>
 <?php if(isset($_SESSION["id"]) ): ?>
 
-<header>
-<a href="../php/rolPersona/indexPersona.php"><img src="../img/LogoSena.png" alt="logosena"></a>
-<h1>Reglamento del Aprendiz</h1>
-</header>
+<!-- Menu de navegacion-->
+
+<div class="container__menu">
+
+<div class="menu">
+
+    <input type="checkbox" id="check__menu">
+    <label for="check__menu" class="lbl-menu">
+        <span id="spn1"></span>
+        <span id="spn2"></span>
+        <span id="spn3"></span>
+    </label>
+
+    <a href="../php/rolPersona/indexPersona.php"><img id="logoResponsive" src="../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></a>
+    
+
+    <nav>
+        <ul>
+            
+            <li><a href="../php/rolPersona/indexPersona.php"><img src="../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></a></li>
+
+            <li><a href="#overview" id="selected">Inicio</a></li>
+            <li><a href="#trainer">Brigadistas</a></li>
+            <li><a href="php/login.php">Reglamento</a></li>
+            <li><a href="#newsletter">Reportar</a></li>
+            <li><a href="#testimonial">Noticias</a></li>
+        </ul>
+    </nav>
+</div>
+</div>
 
 <div class="container">
   <hr>
@@ -88,8 +115,14 @@ require_once ("../db/conexion.php");
                       $x++;
                   }
               }
-              echo "</td></tr>";
-
+              echo " 
+              <div class='card-content'>
+              <p>Contenido de la card...</p>
+              </div>
+              
+              
+              </td></tr>";
+              /* <td><a class='expand-button' href='#card-content'>▼</a></td> */
 
           }
           echo "</table>";

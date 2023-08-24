@@ -48,7 +48,7 @@ require_once ("../../db/conexion.php");
                             <li><a onclick="window.location.href='../../inventarios/index.php'">Administrar inventarios</a></li>
 							<li><a onclick="window.location.href='../../inventarios/index.php'">Administrar Dotacion</a></li>
 							<li><a onclick="window.location.href='../../inventarios/index.php'">Administrar Brigadistas</a></li>
-							<li><a onclick="window.location.href='../../inventarios/index.php'">Administrar Riesgos</a></li>
+							<li><a onclick="window.location.href='../../admiRiesgos/index.php'">Administrar Riesgos</a></li>
                         </ul> </b>
                     </li>
 					<li><a onclick="window.location.href='../cerrarSesion.php'"><span class="material-symbols-outlined">logout</span></a></li>
