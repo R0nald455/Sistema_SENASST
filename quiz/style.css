@@ -1,0 +1,354 @@
+/* This CSS was created using SCSS/SASS */
+/* Github source for project creation: https://github.com/nrcoover/quizapalooza-web-app */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+  border-style: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+html, body {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  min-width: 100%;
+  width: 100%;
+}
+
+footer {
+  background-color: #5eb319;
+  bottom: 0;
+  box-shadow: -2px -2px 5px rgba(18, 18, 18, 0.3);
+  width: 100%;
+}
+
+#Start-Button-Wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#Quiz-Button-Wrap, #Retry-Button-Wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#Start-Button, #Next-Button, #Retry-Button, #Quit-Button, .container-timer {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  margin: 0 0;
+  padding: 0 0;
+  background-color: #018786;
+  box-shadow: 0 0 5px rgba(18, 18, 18, 0.3);
+  border-radius: 5px;
+  color: #FFFFFF;
+  font-weight: 700;
+  height: 3.5rem;
+  text-align: center;
+  text-decoration: none;
+  width: 8rem;
+}
+
+#Timer-Title {
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+}
+
+.container-timer {
+  margin: 0 0;
+  padding: 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  color: black;
+  height: 3.5rem;
+}
+
+.footer-content-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  margin: 0 auto;
+  max-width: 40rem;
+  padding: 2rem 2rem 3rem;
+  width: 100%;
+}
+
+header {
+  background-color: #5eb319;
+  box-shadow: 2px 2px 5px rgba(18, 18, 18, 0.3);
+  color: #FFFFFF;
+  width: 100%;
+}
+
+.header-content-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  min-height: 100vh;
+  min-width: 330px;
+}
+
+main {
+  height: auto;
+  max-width: 40rem;
+  padding: 2rem;
+  width: 100%;
+}
+
+article {
+  position: relative;
+}
+
+h1, h2, h3, h4, p, label {
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  font-size: 3.4rem;
+  line-height: 3.6rem;
+  margin-bottom: 0.35em;
+}
+
+h2 {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 0.4em;
+}
+
+h3 {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  margin: 0 auto;
+  max-width: 45ch;
+}
+
+input, label {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  font-family: "Lato", sans-serif;
+  margin-left: 1.2rem;
+  margin-bottom: 1.2rem;
+  max-width: 45ch;
+}
+
+input[type=radio] {
+  appearance: none;
+  min-width: 1rem;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #5eb319;
+  border-radius: 100%;
+}
+
+input[type=radio]:checked {
+  background-color: #5eb319;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  padding: 7px;
+  transform: translate(-2px, -2px);
+}
+
+input:hover {
+  cursor: pointer;
+}
+
+label {
+  margin-left: 0.5rem;
+}
+
+#Shadow-Panel {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  min-width: 330px;
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+}
+
+#Start-Menu, #Nothing-Selected-Notice, #Failed-Menu-Answer, #Failed-Menu-Time, #Quitting-Pug {
+  background-color: #FFFFFF;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 0 5px rgba(18, 18, 18, 0.3);
+}
+#Start-Menu p, #Nothing-Selected-Notice p, #Failed-Menu-Answer p, #Failed-Menu-Time p, #Quitting-Pug p {
+  text-align: justify;
+}
+
+#Nothing-Selected-Notice {
+  position: absolute;
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  max-width: 80%;
+  width: 100%;
+  z-index: 10;
+}
+#Nothing-Selected-Notice .menu-content-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#Nothing-Selected-Notice input {
+  margin: 0 0;
+  padding: 0 0;
+  background-color: #018786;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(18, 18, 18, 0.3);
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+#Failed-Menu-Answer, #Failed-Menu-Time {
+  background-color: rgba(176, 0, 32, 0.4);
+}
+#Failed-Menu-Answer .menu-content-wrap, #Failed-Menu-Time .menu-content-wrap {
+  border: 3px solid #B00020;
+  background-color: rgba(176, 0, 32, 0.4);
+  color: #FFFFFF;
+}
+
+#Quitting-Pug {
+  position: relative;
+  padding-top: 2rem;
+}
+#Quitting-Pug .menu-content-wrap {
+  margin: 0 0;
+  padding: 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+#Quitting-Pug #It-Me-Paragraph {
+  position: absolute;
+  top: 12.5%;
+}
+#Quitting-Pug img {
+  border: 3px solid #B00020;
+  border-radius: 8px;
+  max-height: 40rem;
+  max-width: 100%;
+}
+#Quitting-Pug .small-paragraph {
+  margin-top: 0.5rem;
+}
+
+#Menu-h3 {
+  text-align: center;
+}
+
+.small-paragraph {
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
+
+.radio-button-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-content-wrap {
+  background-color: #FFFFFF;
+  padding: 1.5rem;
+  border: 3px solid #018786;
+  border-radius: 8px;
+}
+
+.quiz-title {
+  font-size: 2rem;
+  line-height: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 0.8em;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.active-panel {
+  display: block;
+}
+
+.winner-panel {
+  text-align: center;
+}
+
+.winner-panel img {
+  border-radius: 15px;
+  box-shadow: 2px 2px 8px rgba(18, 18, 18, 0.3);
+  margin: 1rem auto;
+  width: 100%;
+}
+
+.failure-background-color {
+  background-color: #B00020;
+}
+
+/* MEDIA QUERY TEMPLATE FROM https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 460px) {
+  html, body {
+    background-color: #bdbdbd;
+  }
+
+  .question, .winner-panel {
+    background-color: #FFFFFF;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(18, 18, 18, 0.3);
+    accent-color: #5eb319;
+    background: linear-gradient(#FFFFFF, #FFFFFF) padding-box, linear-gradient(to bottom, #6200EE, #3700B3) border-box;
+    border: 20px solid transparent;
+    border-radius: 25px;
+    padding: clamp(2rem, 1rem + 10vw, 3rem);
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body {
+    background-image: linear-gradient(to right, #FFFFFF, #bdbdbd, #bdbdbd, #bdbdbd, #bdbdbd, #bdbdbd, #FFFFFF);
+  }
+}
