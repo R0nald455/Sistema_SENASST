@@ -1,0 +1,53 @@
+.container{
+    position: relative;
+    top: 100px;
+    width: 70vh;
+    padding: 50px;
+}
+
+.container input{
+    width: 100%;
+    min-height: 50px;
+    border: 0px;
+    border-bottom: 2px;
+    border-color: gray;
+    border-style: solid;
+}
+
+form{
+    border: 2px;
+    border-color: #000000;
+    border-style:solid;
+    padding: 50px;
+
+}
+label{
+    font-size: 15px;
+    font-weight: bold;
+}
+.btnEnviar{
+    margin-top: 2rem;
+    background-color: #45d100;
+    color: #000000;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px 40px;
+
+}
+
+.btnEnviar:hover{
+    background-color: #abf387;
+}
+.btnCancelar{
+    background-color: red;
+    color: #ffffff;
+    border-radius: 3px;
+    padding: 22px 30px;
+    border: 0px;
+    margin-left: 2%;
+}
+
+.btnCancelar:hover{
+    background-color: rgb(245, 101, 101);
+}
+

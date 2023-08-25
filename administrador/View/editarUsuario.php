@@ -5,14 +5,16 @@ error_reporting(0);
 
 require_once ("../../db/conexion.php");
 
-$validar = $_SESSION['nombre'];
+/* $validar = $_SESSION['nombre'];
 
 if( $validar == null || $validar = ''){
 
     header("Location: ../Model/login.php");
     die();
 
-}
+} */
+
+//solucion para verificar el login
 
 $id = $_GET['id'];
 $consulta = "SELECT * FROM user WHERE id = $id";
@@ -28,20 +30,48 @@ $usuario = mysqli_fetch_assoc($resultado);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registros</title>
-
-    <link rel="stylesheet" href="../Css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/usuarios.css">
+    
 </head>
 
-<body id="page-top">
+<body >
 
+
+<!-- Menu de navegacion-->
+
+<div class="container__menu">
+
+<div class="menu">
+
+  <input type="checkbox" id="check__menu">
+  <label for="check__menu" class="lbl-menu">
+    <span id="spn1"></span>
+    <span id="spn2"></span>
+    <span id="spn3"></span>
+  </label>
+
+  <img id="logoResponsive" src="../../img/LogoSenaBlanco.png"  width="70px" alt="logoSena">
+
+
+  <nav>
+    <ul>
+      <li><img src="../../img/LogoSenaBlanco.png"  width="70px" alt="logoSena"></li>
+      <li><a href="user.php" id="selected">Inicio</a></li>
+      <li><a onclick="window.location.href='../../php/rolFuncionario/indexadministrador.php'"><span class="material-symbols-outlined">Salir</span></a></li>
+    </ul>
+  </nav>
+</div>
+</div>
+
+<div class="container">
     <form action="../Model/funciones.php" method="POST">
-        <div id="login">
-            <div class="container">
+            
                 <div id="login-row" class="row justify-content-center align-items-center">
-                    <div id="login-column" class="col-md-6">
-                        <div id="login-box" class="col-md-12">
+                    <div id="login-column" >
+                        <div id="login-box" >
                             <br>
                             <br>
                             <h3 class="text-center">Editar Usuario</h3>
@@ -77,16 +107,15 @@ $usuario = mysqli_fetch_assoc($resultado);
 
                             <div class="mb-3">
 
-                                <button type="submit" class="btn btn-success">Editar</button>
-                                <a href="user.php" class="btn btn-danger">Cancelar</a>
+                                <button type="submit" class="btnEnviar">Editar</button>
+                                <a href="user.php" class="btnCancelar">Cancelar</a>
                             </div>
                         </div>
                     </div>
                 </form>
-            </div>
-        </div>
+        
     </div>
     </form>
-    
+    </div>   
 </body>
 </html>

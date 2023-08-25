@@ -21,8 +21,8 @@
           <input type="text" name="documento" class="documento"   placeholder="Usuario" required>
           <label for="contrasena">Contraseña</label>
           <input type="password" name="contrasena" class="contrasena"  placeholder="Password" required>
-          <a href="">has olvidado la contraseña?</a>
-          <a href="">Registrate</a>
+          <!-- <a href="">has olvidado la contraseña?</a> -->
+          <a href="registro.php">Regístrate</a>
           <input type="submit" class="enviar" value="Ingresar">
         </form>
       </div>
