@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Roboto:wght@300&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-family: Roboto;
+}
+
+
+
+
+body{
+    background-image: url(../img/login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+header{
+    background-color: #f8f8f8;
+    height: 80px;
+    position: sticky;
+    border-bottom: 20px;
+    border-style: solid;
+    border-color: #45d100;
+}
+
+header img {
+    height: 60px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.contenedor{
+    background-color:transparent;
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.card{
+    background-color: #f8f8f8;
+    width: 80vh;
+    height: auto;
+    padding: 10px;
+}
+
+
+.alerta{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: rgb(248, 109, 109);
+    margin-bottom: 50px;
+    margin-top: 50px;
+    
+}
+
+h1{
+    color: #45d100;
+    text-align: center;
+    font-weight: 2000;
+}
+
+form{
+    margin: 20px;
+    font-size: 20px;
+}
+
+
+input{
+    margin-bottom: 50px;
+}
+
+.contrasena, input{
+    width: 100%;
+    height: 60px;
+    border: 0px;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: rgb(167, 167, 167);  
+    font-weight: 2000;  
+}
+
+.contrasena::placeholder, .input::placeholder{
+    left: 20px;
+    font-size: 12px;
+    text-align:left;
+}
+
+label{
+    font-weight: bold;
+}
+
+a{
+    font-size: 12px;
+}
+
+.botonEnviar{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.enviar{
+    background: transparent;
+    border: 4px solid #26253a;
+    border-radius: 0px;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    padding: 14px 46px;
+    transition: all 0.4s ease-in-out;
+    
+}
+
+.enviar:hover{
+    background-color: #45d100;
+    border-color: #45d100;
+    color: #ffffff;
+}
+
+

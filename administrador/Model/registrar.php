@@ -19,6 +19,6 @@ if(isset($_POST['registrar'])){
         mysqli_query($conexion, $consulta);
         mysqli_close($conexion);
 
-        header('Location: login.php');
+        header('Location: ../View/user.php');
     }
 }

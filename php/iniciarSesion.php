@@ -21,7 +21,7 @@
 
         $row = $result->fetch_assoc();
         $rol = $row["rol"];
-
+        
         // redireccion
         if ($rol == 1) {
             header("Location: rolFuncionario/indexfuncionario.php");

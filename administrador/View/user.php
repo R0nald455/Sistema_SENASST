@@ -3,14 +3,6 @@
   session_start();
   error_reporting(0);
 
-  $validar = $_SESSION['nombre'];
-
-  if( $validar == null || $validar == ""){
-
-    header("Location: ../Model/login.php");
-    die();
-
-  }
 
   require_once ("../../db/conexion.php");
 
@@ -24,13 +16,40 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="../../css/fontawesome-all.min.css">
       <link rel="stylesheet" href="../../css/bootstrap.min.css">
+      <link rel="stylesheet" href="../../css/header.css">
       <title>Usuarios</title>
       
     </head>
 
+
+          <!-- Menu de navegacion-->
+
+      <div class="container__menu">
+
+      <div class="menu">
+
+        <input type="checkbox" id="check__menu">
+        <label for="check__menu" class="lbl-menu">
+          <span id="spn1"></span>
+          <span id="spn2"></span>
+          <span id="spn3"></span>
+        </label>
+
+        <img id="logoResponsive" src="../../img/LogoSenaBlanco.png"  width="70px" alt="logoSena">
+
+
+        <nav>
+          <ul>
+            <li><img src="../../img/LogoSenaBlanco.png"  width="70px" alt="logoSena"></li>
+            <li><a href="../../php/rolFuncionario/indexadministrador.php" id="selected">Inicio</a></li>
+            <li><a onclick="window.location.href='../../php/rolFuncionario/indexadministrador.php'"><span class="material-symbols-outlined">Salir</span></a></li>
+          </ul>
+        </nav>
+      </div>
+      </div>
       <div class="container is-fluid">
           <div class="col-xs-12">
-            <h1>Bienvenido Administrador <?php echo $_SESSION['nombre']; ?> </h1>
+            <h1>Bienvenido</h1>
             <br>
             <br>
             <h1>Lista de Usuarios</h1>
@@ -38,7 +57,7 @@
             <br>
             <div>
               
-              <a class="btn btn-success" href="../Model/sesion/cerrarSesion.php">Cesion Cerrada
+              <a class="btn btn-success" href="../index.php">Agregar Nuevo
               <i class="fa fa-power-off" aria-hidden="true"></i></a> 
             </div>
             <br>
@@ -76,10 +95,10 @@
                     <td><?php echo $fila['rol']; ?>     </td>
                   
                   <td>
-                    <a class="btn btn-success" href="editar_user.php?id=<?php echo $fila['id']?> ">
+                    <a class="btn btn-success" href="editarUsuario.php?id=<?php echo $fila['id']?> ">
                     <i class="fa fa-edit"></i> </a>
 
-                    <a class="btn btn-danger" href="eliminar_user.php?id=<?php echo $fila['id']?>">
+                    <a class="btn btn-danger" href="../Model/eliminar.php?id=<?php echo $fila['id']?>">
                     <i class="fa fa-trash"></i></a>
                   </td>              
                   </tr>
