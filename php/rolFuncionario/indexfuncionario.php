@@ -45,7 +45,7 @@ require_once ("../../db/conexion.php");
 				<li><a href="#overview" id="selected">Inicio</a></li>
 				<li><a href="#">Modulos administrativos</a>
                         <ul> <b>
-                            <li><a onclick="window.location.href='../../inventarios/index.php'">Administrar inventarios</a></li>
+                            <li><a onclick="window.location.href='../../inventarios/index.php'">Administrar inventario de extintores</a></li>
 							<li><a onclick="window.location.href='../../inventarios/index.php'">Administrar Dotacion</a></li>
 							<li><a onclick="window.location.href='../../inventarios/index.php'">Administrar Brigadistas</a></li>
 							<li><a onclick="window.location.href='../../admiRiesgos/index.php'">Administrar Riesgos</a></li>
