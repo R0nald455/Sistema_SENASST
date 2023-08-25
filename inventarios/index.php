@@ -10,10 +10,10 @@ require_once ("../db/conexion.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio | Inventarios Seguridad y Salud en el Trabajo</title>
+    <title>Inicio | Sistema de inventario para extintores</title>
     <link rel="icon" href="../../img/LogoSena.png">
     <script src="https://kit.fontawesome.com/27e58a102f.js" crosssorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/styles_inventarios.css">
+    <link rel="stylesheet" href="../css/styles_inventario_extintores.css">
 </head>
 <body>
 
@@ -21,28 +21,15 @@ require_once ("../db/conexion.php");
 
     <header>
         <div class="header__superior">
-
             <div class="logo">
                 <img src="../img/LogoSena.png" alt="">
             </div>
-
-            <div class="tittle"><b>Inventarios Seguridad y Salud en el Trabajo</b><br> Centro de Biotecnologia <br> Agropecuaria </div>
-
-            <div class="search">
-
-                <input type="search" placeholder="¿Que deseas buscar?">
-
-            </div>
-
+            <div class="tittle"><b>Sistema de inventario para extintores</b><br> Centro de Biotecnologia <br> Agropecuaria </div>
         </div>
-
-       
     </header>
 
     <div class="container__menu">
-
         <div class="menu">
-
                         <input type="checkbox" id="check__menu">
                         <label for="check__menu" class="lbl-menu">
                             <span id="spn1"></span>
@@ -54,47 +41,44 @@ require_once ("../db/conexion.php");
                     <li><a href="../index.php" id="selected">Inicio</a></li>
                     <li><a href="#">Modulos</a>
                         <ul> <b>
-                            <li><a href="../inventarios/modulos/implementos/index.php">Administrar implementos</a></li>
-                            <li><a href="../inventarios/modulos/entradas/index.php">Entrada de implementos</a></li>
-                            <li><a href="../inventarios/modulos/salidas/index.php">Salida de implementos</a></li>
+                            <li><a href="../inventarios/modulos/extintores/index.php">Administrar extintores</a></li>
+                            <li><a href="../inventarios/modulos/recarga/index.php">Extintores con revisiones pendientes</a></li>
                         </ul> </b>
                     </li>
                     <li><a href="#">Ayuda y Soporte</a></li>
                     <li><a href="#">Acerca de inventarios</a></li>
-
                 </ul>
             </nav>
         </div>
     </div>
 
-        <div class="carrusel">
+    <div class="social-media__container">
+    
+        <a href="https://www.youtube.com/channel/UCt5y885UFplu2okY39TBwCg" target="_blank"><div class="social-media__item"><img src="https://i.imgur.com/y0pAMPe.png" alt=""></div></a>
+        <a href="https://twitter.com/SENAComunica?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><div class="social-media__item"><img src="https://i.imgur.com/0RAoGAx.jpg" alt=""></div></a>
+        <a href="https://es-la.facebook.com/SENA/" target="_blank"><div class="social-media__item"><img src="https://i.imgur.com/afIj2Mw.png" alt=""></div></a>
+        <a href="https://www.instagram.com/senacomunica/?hl=es" target="_blank"><div class="social-media__item"><img src="https://i.imgur.com/FV76U6t.png" alt=""></div></a>
 
-            <img class="carrusel__image" src="../img/carrusel.jpg">
-            <div class="carrusel__text"></div>
-    
-        </div>
-    
-        <div class="social-media__container">
-    
-            <a href="https://www.youtube.com/channel/UCt5y885UFplu2okY39TBwCg" target="_blank"><div class="social-media__item"><img src="../img/youtube.png" alt=""></div></a>
-            <a href="https://twitter.com/SENAComunica?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><div class="social-media__item"><img src="../img/gorjeo.png" alt=""></div></a>
-            <a href="https://es-la.facebook.com/SENA/" target="_blank"><div class="social-media__item"><img src="../img/facebook.png" alt=""></div></a>
-            <a href="https://www.instagram.com/senacomunica/?hl=es" target="_blank"><div class="social-media__item"><img src="../img/instagram.png" alt=""></div></a>
-    
+    </div>
+
+        <div class="contenedor-etiqueta">
+            <img class="contenedor-etiqueta__image" src="https://i.imgur.com/8hl42hq.jpg">
         </div>
 
-        <div class="info-container">
+        <div class="info-extintor-container">
 
-            <div class="sst"><b>¿Que es el sistema de seguridad y salud en el trabajo?</b> </div>
-        
-            <div class="sst__content">Consiste en el desarrollo de un proceso lógico y por etapas, basado en la mejora continua, lo cual incluye la política, la organización, la planificación, la aplicación, la evaluación, la auditoría y las acciones de mejora con el objetivo de anticipar, reconocer, evaluar y controlar los riesgos que puedan afectar la seguridad y la salud en los espacios laborales.  <br>
-                    <img class="sst__image" src="../img/seguridad.jpg" alt="">
+            <div class="info1-container">
+                <div class="info1"><b>¿Que puedes hacer con el sistema de inventario para extintores?</b> </div>
+                <div class="info1__content">El Sistema de inventario para extintores te permitirá mantener un registro preciso de todos tus extintores, garantizar que estén en condiciones óptimas para su uso y cumplir con las regulaciones de seguridad. Esto contribuirá a mejorar la preparación para situaciones de emergencia y a mantener un ambiente seguro para empleados y visitantes.  <br>
+                        <img class="info1__image" src="https://i.imgur.com/eOKfrpo.jpg" alt="">
+                </div>
             </div>
-        
-            <div class="objetivo"><b>Objetivo general</b></div>
-        
-            <div class="objetivo__content">Se diseñó con el fin de dar a conocer a los visitantes del Sena la ubicación exacta de todas y cada una de las áreas. Orientar a todo público en caso de Emergencia a donde acudir y como se debe llevar acabo un protocolo de Emergencia, además de esto también contamos con un sistema de denuncia pública puesto a que nuestra institución cuenta con una basta cantidad de terreno existen ciertos puntos en los que se podrían presentar diferentes inconvenientes como por ejemplo un inminente accidente. <br>
-                <img class="objetivo__image" src="../img/casco.png" alt="">
+
+            <div class="info2-container">
+                <div class="info2"><b>Objetivo general</b></div>
+                <div class="info2__content">El objetivo general de un sistema de inventario para extintores es mejorar la seguridad, la eficiencia y el cumplimiento normativo en relación con los extintores, garantizando que estén listos y en buen estado para su uso en caso de emergencia. <br>
+                    <img class="info2__image" src="https://i.imgur.com/XMG1mVU.gif" alt="">
+                </div>
             </div>
 
         </div>
@@ -105,8 +89,8 @@ require_once ("../db/conexion.php");
     
         <div class="videos-relacionados__container">
     
-            <iframe class="videos-relacionados__item1"  src="https://www.youtube.com/embed/5CF3HZdu6Bc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe class="videos-relacionados__item2"  src="https://www.youtube.com/embed/EwQst1F9X4s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="videos-relacionados__item1" width="560" height="315" src="https://www.youtube.com/embed/i6rJQFOKuMI?si=OiEXnTljeCTftJ9w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe class="videos-relacionados__item2" width="560" height="315" src="https://www.youtube.com/embed/UPe2Uyue418?si=Tko13R7mXI2WBd9S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <iframe class="videos-relacionados__item3"  src="https://www.youtube.com/embed/87fQFljT7OQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     
         </div>
@@ -118,10 +102,7 @@ require_once ("../db/conexion.php");
             PQRS: https://sciudadanos.sena.edu.co - servicioalciudadano@sena.edu.co <br>
             Atención al ciudadano: Bogotá (57 1) 3430111 - Línea gratuita y resto del país 018000 910270 <br>
             Atención al empresario: Bogotá (57 1) 3430101 - Línea gratuita y resto del país 018000 910682 <br>
-            Notificaciones judiciales: judicialcundinamarca@sena.edu.co <br>
-    
-            <img class="incontec" src="https://sciudadanos.sena.edu.co/Resources/icontec2.png" >
-    
+            Notificaciones judiciales: judicialcundinamarca@sena.edu.co <br>    
         </footer>
 
 <?php else:?>
