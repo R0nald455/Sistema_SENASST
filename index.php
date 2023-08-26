@@ -54,8 +54,8 @@
 			<div class="wow fadeInUp col-md-4 col-sm-12" data-wow-delay="1s">
 				<div class="overview-detail">
 					<h2>SENASST</h2>
-					<p>Nuestro sistema  de seguridad SENASST te permite consultar 
-						y de manera eficiente elementos de seguridad y ubicación, garantizando un entorno seguro y protegido para nuestros aprendices, intructores y funcionarios.</p>
+					<p class="parrafo-landing">El sistema de seguridad y salud en el trabajo (SENASST) te permite consultar 
+					 de manera eficiente elementos de seguridad y salud, garantizando un entorno seguro y protegido para nuestros aprendices, intructores y funcionarios.</p>
 					<a onclick="window.location.href='php/login.php'" class="btn btn-default smoothScroll">Iniciar Sesion</a>
 				</div>
 			</div>

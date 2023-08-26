@@ -61,8 +61,8 @@ require_once ("../../db/conexion.php");
 			<div class="wow fadeInUp col-md-4 col-sm-12" data-wow-delay="1s">
 				<div class="overview-detail">
 					<h2>SENASST</h2>
-					<p>Hola!, <b><?= $_SESSION["documento"] ?> </b> te contamos que nuestro sistema  de seguridad SENASST te permite consultar 
-						y de manera eficiente elementos de seguridad y ubicación, garantizando un entorno seguro y protegido para nuestros aprendices, intructores y funcionarios.</p>
+					<p class="parrafo-landing">Hola!, <b><?= $_SESSION["documento"] ?> </b> te contamos que el sistema de seguridad y salud en el trabajo (SENASST) te permite consultar 
+					 de manera eficiente elementos de seguridad y salud, garantizando un entorno seguro y protegido para nuestros aprendices, intructores y funcionarios.</p>
 				</div>
 			</div>
 		</div>
