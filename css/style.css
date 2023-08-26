@@ -360,7 +360,7 @@ nav ul li ul li a:hover{
    Overview  section              
 -----------------------------------------*/
 #overview {
-  background-image:url(../img/inicio.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://i.imgur.com/77Vr36q.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

@@ -33,7 +33,8 @@
             header("Location: rolFuncionario/indexadministrador.php");
         }
     } else {
-        echo "Credenciales incorrectas. Por favor, intenta nuevamente.";
+        echo '<script>alert("Credenciales incorrectas. Por favor, intenta nuevamente.");</script>';
+        echo '<script>window.location.href = "login.php";</script>';
     }
 
     $conexion->close();
