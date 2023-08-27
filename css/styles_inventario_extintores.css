@@ -320,7 +320,7 @@ nav ul li ul li a:hover{
     display: flex;
     width: 100%;
     position: relative;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: stretch;
 }
@@ -328,7 +328,7 @@ nav ul li ul li a:hover{
 .info-extintor-container .info1-container{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
 }
 
 .info1{
@@ -361,8 +361,7 @@ nav ul li ul li a:hover{
 .info-extintor-container .info2-container{
     display: flex;
     flex-direction: column;
-    width: 50%;
-    height: 100%;
+    width: 100%;
 }
 
 .info2{
