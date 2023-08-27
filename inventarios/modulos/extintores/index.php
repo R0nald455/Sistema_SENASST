@@ -70,7 +70,7 @@ require_once ("../../../db/conexion.php");
 
                                     <div class="pull-right">
                                         <a href="registro.php" class="btn btn-sm btn-success">Nuevo extintor</a>
-                                        <a href="alertas/config.php" class="btn btn-sm btn-info">Alerta para extintores con revisiones/recargas pendientes</a>
+                                        <a id="button-alert" href="alertas/config.php" class="btn btn-sm btn-info">Alerta para extintores con revisiones/recargas pendientes</a>
                                     </div><br>
                                     <h6><i>"Al alertar te llega un correo electronico con la informacion del extintor"</i></h6>
                                     <hr>
@@ -112,6 +112,22 @@ require_once ("../../../db/conexion.php");
         <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../../datatables/jquery.dataTables.js"></script>
         <script src="../../datatables/dataTables.bootstrap.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+        <?php
+            session_start();
+            if (isset($_SESSION['email_sent']) && $_SESSION['email_sent']) {
+                echo '<script>
+                        Swal.fire({
+                            icon: "success",
+                            title: "¡Correo enviado!",
+                            text: "Se te ha enviado la informacion completa del extintor a revisar.",
+                        });
+                    </script>';
+                $_SESSION['email_sent'] = false; // Reinicia la variable de sesión
+            }
+        ?>
 
         <script>
         $(document).ready(function() {
