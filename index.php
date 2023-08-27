@@ -8,8 +8,6 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/footer.css">
-		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 	</head>
 
 <body>
@@ -176,7 +174,7 @@
 				</label>
 			</div>
 
-			<button class="submit-soporte btn btn-success" type="submit" value="Enviar" onclick="alerta()">Enviar</button>
+			<button class="submit-soporte btn btn-success" type="submit" value="Enviar">Enviar</button>
 		</form>
 	</div>
 			
@@ -245,15 +243,7 @@
 <?php
 include("footer/footer.php");
 ?>
-
-<script>
-	function alerta(){
-		Swal.fire(
-			"Excelente!",
-			"El correo se ha enviado exitosamente!",
-			"success"
-		);
-	}
-</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="soporte/js/alert.js"></script>
 </body>
 </html>

@@ -1,17 +1,17 @@
 <?php
-$nombre = $_POST["nombre"];
-$email = $_POST["email"];
-$asunto = $_POST["asunto"];
-$mensaje = $_POST["mensaje"];
-
-$body = "Nombre: " . $nombre . "<br>Correo: " . $email . "<br>Asunto: " . $asunto . "<br>Mensaje: " . $mensaje;
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
+
+$nombre = $_POST["nombre"];
+$email = $_POST["email"];
+$asunto = $_POST["asunto"];
+$mensaje = $_POST["mensaje"];
+
+$body = "Nombre: " . $nombre . "<br>Correo: " . $email . "<br>Asunto: " . $asunto . "<br>Mensaje: " . $mensaje;
 
 $mail = new PHPMailer(true);
 
@@ -28,6 +28,7 @@ try {
 
     //Recipients
     $mail->setFrom($email, $nombre);
+    $mail->addAddress($email, $nombre);
     $mail->addAddress('cbasst1957@gmail.com');
 
     // //Attachments
@@ -38,15 +39,9 @@ try {
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = $asunto;
     $mail->Body    = $body;
-
-    $mail->send();
-    echo "
-    <script>
-        window.history.go(-1);
-    </script>
-    "
-    ;
     
+    $mail->send();
+    echo json_encode('exito');
 } catch (Exception $e) {
-    echo "Ha ocurrido un error al enviar el mensaje: {$mail->ErrorInfo}";
+    echo json_encode('error');
 }
