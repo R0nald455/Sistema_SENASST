@@ -49,7 +49,7 @@ require_once ("../../db/conexion.php");
 							<li><a onclick="window.location.href='../../inventarios/index.php'">Administrar Dotacion</a></li>
                         </ul> </b>
                     </li>
-					<li><a onclick="window.location.href='../cerrarSesion.php'"><span class="material-symbols-outlined">logout</span></a></li>
+					<li><a id="cerrar-sesion"><span class="material-symbols-outlined">logout</span></a></li>
 			</ul>
 		</nav>
 	</div>
@@ -97,9 +97,12 @@ include("../../footer/footer.php");
 
 <?php else:?>
 
-<h1>No has iniciado sesion.</h1>
+<script>
+	alert("No has iniciado sesión, por favor inicia a continuación.");
+	window.location.href = "../login.php";
+</script>
 
 <?php endif; ?>
-
+<script src="../js/confirmacion.js"></script>
 </body>
 </html>

@@ -37,7 +37,9 @@ $usuario = mysqli_fetch_assoc($resultado);
     
 </head>
 
-<body >
+<body>
+<?php if(isset($_SESSION["id"]) ): ?>
+
 
 
 <!-- Menu de navegacion-->
@@ -117,5 +119,14 @@ $usuario = mysqli_fetch_assoc($resultado);
     </div>
     </form>
     </div>   
+<?php else:?>
+
+<script>
+    alert("No has iniciado sesión, por favor inicia a continuación.");
+    window.location.href = "../../../php/login.php";
+</script>
+
+<?php endif; ?>
+
 </body>
 </html>

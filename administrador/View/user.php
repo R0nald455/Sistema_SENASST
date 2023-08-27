@@ -1,12 +1,8 @@
 <?php
-
-  session_start();
-  error_reporting(0);
-
-
-  require_once ("../../db/conexion.php");
-
-  ?>
+session_start();
+error_reporting(0);
+require_once ("../../db/conexion.php");
+?>
   <!DOCTYPE html>
   <html lang="en">
     <head>
@@ -21,6 +17,7 @@
       
     </head>
 
+    <?php if(isset($_SESSION["id"]) ): ?>
 
           <!-- Menu de navegacion-->
 
@@ -115,6 +112,14 @@
                     ?>
                 </tbody>
             </table>
+
+<?php else:?>
+  <script>
+      alert("No has iniciado sesión, por favor inicia a continuación.");
+      window.location.href = "../../../php/login.php";
+  </script>
+<?php endif; ?>
+
             <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
             <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
             <script src="../js/user.js"></script>

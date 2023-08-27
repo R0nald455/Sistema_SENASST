@@ -154,8 +154,10 @@ require_once ("../../../db/conexion.php");
 
     <?php else:?>
 
-        <h1>No has iniciado sesion.</h1>
-
+<script>
+    alert("No has iniciado sesión, por favor inicia a continuación.");
+    window.location.href = "../../../php/login.php";
+</script>
     <?php endif; ?>
 
 </body>
