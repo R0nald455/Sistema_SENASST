@@ -37,7 +37,7 @@ require_once ("../../../db/conexion.php");
 
 										<div class="control-group">
 											<div class="controls">
-												<label class="control-label" for="basicinput">Identificador del extintor: <input type="text" name="ExtintorID" id="ExtintorID" value="<?php echo $row['ExtintorID']; ?>" placeholder="" class="form-control" readonly="readonly" disabled></label>
+												<label class="control-label" for="basicinput">Identificador del extintor: <input type="text" name="ExtintorID" id="ExtintorID" value="<?php echo $row['ExtintorID']; ?>" placeholder="" class="form-control" readonly="readonly"></label>
 											</div>
 										</div>
 

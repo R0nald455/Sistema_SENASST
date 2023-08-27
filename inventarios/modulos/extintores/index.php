@@ -67,9 +67,12 @@ require_once ("../../../db/conexion.php");
                                 </div>
 						
                                 <div class="panel-body">
+
                                     <div class="pull-right">
                                         <a href="registro.php" class="btn btn-sm btn-success">Nuevo extintor</a>
+                                        <a href="alertas/config.php" class="btn btn-sm btn-info">Alerta para extintores con revisiones/recargas pendientes</a>
                                     </div><br>
+                                    <h6><i>"Al alertar te llega un correo electronico con la informacion del extintor"</i></h6>
                                     <hr>
 
                                     <div class="table-container table-responsive">
