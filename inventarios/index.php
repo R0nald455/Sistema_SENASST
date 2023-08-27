@@ -14,7 +14,7 @@ require_once ("../db/conexion.php");
     <link rel="icon" href="../../img/LogoSena.png">
     <script src="https://kit.fontawesome.com/27e58a102f.js" crosssorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/styles_inventario_extintores.css">
-</head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></head>
 <body>
 
 <?php if(isset($_SESSION["id"]) ): ?>
@@ -61,9 +61,32 @@ require_once ("../db/conexion.php");
 
     </div>
 
-        <div class="contenedor-etiqueta">
-            <img class="contenedor-etiqueta__image" src="https://i.imgur.com/8hl42hq.jpg">
-        </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://i.imgur.com/SO9wpwu.jpg" class="d-block w-100" alt="imagen1">
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.imgur.com/zSV1f3a.jpg" class="d-block w-100" alt="imagen2">
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.imgur.com/Nr55LIC.jpg" class="d-block w-100" alt="imagen3">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
         <div class="info-extintor-container">
 
@@ -91,8 +114,7 @@ require_once ("../db/conexion.php");
     
             <iframe class="videos-relacionados__item1" width="560" height="315" src="https://www.youtube.com/embed/i6rJQFOKuMI?si=OiEXnTljeCTftJ9w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <iframe class="videos-relacionados__item2" width="560" height="315" src="https://www.youtube.com/embed/UPe2Uyue418?si=Tko13R7mXI2WBd9S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <iframe class="videos-relacionados__item3"  src="https://www.youtube.com/embed/87fQFljT7OQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    
+            <iframe class="videos-relacionados__item3" width="560" height="315" src="https://www.youtube.com/embed/n8NkEB1T-fw?si=1mJvsv_MQvKoipmi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
         </div>
     
         <footer>
@@ -113,6 +135,9 @@ require_once ("../db/conexion.php");
 </script>
 
 <?php endif; ?>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
 </body>
 </html>

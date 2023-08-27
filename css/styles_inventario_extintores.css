@@ -95,6 +95,7 @@ nav>ul>li>a{
     text-transform: uppercase;
     font-size: 23px;
     transition: all 300ms ease;
+    text-decoration: none;
 }
 
 nav>ul>li>a:hover{
@@ -157,6 +158,7 @@ nav ul li ul li a{
     transition: all 300ms ease;
     position: relative;
     top: -50px;
+    text-decoration: none;
 }
 
 nav ul li ul li a:hover{
