@@ -70,7 +70,7 @@
 		<div class="row">
 
 			<div class="wow fadeInUp col-md-12 col-sm-12" >
-				<h2>Nuestros Brigradistas</h2>
+				<h2>Nuestros Brigadistas</h2>
 				<p>Nuestros brigadistas siempre están a tu disposición, asegurando la seguridad en todo momento.</p>
 			</div>
 
