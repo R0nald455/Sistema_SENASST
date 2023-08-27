@@ -95,6 +95,7 @@ nav>ul>li>a{
     text-transform: uppercase;
     font-size: 23px;
     transition: all 300ms ease;
+    text-decoration: none;
 }
 
 nav>ul>li>a:hover{
@@ -157,6 +158,7 @@ nav ul li ul li a{
     transition: all 300ms ease;
     position: relative;
     top: -50px;
+    text-decoration: none;
 }
 
 nav ul li ul li a:hover{
@@ -320,7 +322,7 @@ nav ul li ul li a:hover{
     display: flex;
     width: 100%;
     position: relative;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: stretch;
 }
@@ -328,7 +330,7 @@ nav ul li ul li a:hover{
 .info-extintor-container .info1-container{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
 }
 
 .info1{
@@ -361,8 +363,7 @@ nav ul li ul li a:hover{
 .info-extintor-container .info2-container{
     display: flex;
     flex-direction: column;
-    width: 50%;
-    height: 100%;
+    width: 100%;
 }
 
 .info2{
