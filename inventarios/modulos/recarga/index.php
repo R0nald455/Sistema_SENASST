@@ -2,16 +2,6 @@
 session_start();
 error_reporting(0);
 require_once ("../../../db/conexion.php");
-require 'alertas/config.php';
-
-$extintoresNecesarios = obtenerExtintoresNecesarios();
-
-foreach ($extintoresNecesarios as $extintor) {
-    $mensaje = "El extintor con número de serie {$extintor['NumeroDeSerie']} necesita recarga o mantenimiento.";
-}
-
-enviarRecordatorio($extintor['ExtintorID'], 'cbasst1957@gmail.com', $mensaje);
-
 ?>
 
 <!DOCTYPE html>
@@ -74,7 +64,6 @@ enviarRecordatorio($extintor['ExtintorID'], 'cbasst1957@gmail.com', $mensaje);
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h3 class="panel-title"><i class="fa-solid fa-fire-extinguisher" style="color: #39a801;"></i> Extintores necesitados de recarga/mantenimiento </h3> 
-                                    <i><h6>"Se te ha enviado un correo notificando que extintores necesitan recarga/mantenimiento."</h6></i>
                                 </div>
 						
                                 <div class="panel-body">

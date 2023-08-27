@@ -2,9 +2,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'phpmailer/PHPMailer.php';
-require 'phpmailer/SMTP.php';
-require 'phpmailer/Exception.php';
+require '../../../../phpmailer/PHPMailer.php';
+require '../../../../phpmailer/SMTP.php';
+require '../../../../phpmailer/Exception.php';
 
 // Enviar recordatorio por correo electrónico
 function enviarRecordatorio($extintorID, $correo, $mensaje) {
@@ -29,9 +29,11 @@ function enviarRecordatorio($extintorID, $correo, $mensaje) {
         $mail->Body = $mensaje;
 
         $mail->send();
-        return true;
+        
+        session_start();
+        $_SESSION['email_sent'] = true;
     } catch (Exception $e) {
-        return false;
+        echo "Error al enviar el correo: {$mail->ErrorInfo}";   
     }
 }
 

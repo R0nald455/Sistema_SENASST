@@ -57,15 +57,15 @@ require_once ("../../../db/conexion.php");
 											<div class="controls">
 												<label class="control-label" for="TipoDeExtintor">Tipo de extintor: 
 													<select name="TipoDeExtintor" class="form-control">
-														<option value="Agua">Extintor de agua</option>
-														<option value="Agua pulverizada">Extintor de agua pulverizada</option>
-														<option value="Espuma">Extintor de espuma</option>
-														<option value="Polvo químico seco">Extintor de polvo químico seco</option>
-														<option value="Dioxido de carbono (CO2)">Extintor de dioxido de carbono (CO2)</option>
-														<option value="Polvo químico especializado (por ejemplo, para metales)">Extintor de polvo químico especializado</option>
-														<option value="Halón">Extintor de halón</option>
-														<option value="Aerosol de extinción">Extintor de aerosol de extinción</option>
-														<option value="Acetato potásico">Extintor de acetato potásico</option>
+														<option value="Extintor de agua">Extintor de agua</option>
+														<option value="Extintor de agua pulverizada">Extintor de agua pulverizada</option>
+														<option value="Extintor de espuma">Extintor de espuma</option>
+														<option value="Extintor de polvo químico seco">Extintor de polvo químico seco</option>
+														<option value="Extintor de dioxido de carbono (CO2)">Extintor de dioxido de carbono (CO2)</option>
+														<option value="Extintor de polvo químico especializado (por ejemplo, para metales)">Extintor de polvo químico especializado</option>
+														<option value="Extintor de halón">Extintor de halón</option>
+														<option value="Extintor de aerosol de extinción">Extintor de aerosol de extinción</option>
+														<option value="Extintor de acetato potásico">Extintor de acetato potásico</option>
 													</select>
 												</label>
 											</div>
