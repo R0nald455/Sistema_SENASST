@@ -39,7 +39,7 @@ require_once ("../../../db/conexion.php");
 
                                         <div class="control-group">
 											<div class="controls">
-												<label class="control-label" for="basicinput">Identificador del implemento: <input type="text" name="ID_Implementos" id="ID_Implementos" value="<?php echo $row['ID_Implementos']; ?>" placeholder="" class="form-control" readonly="readonly"></label>
+												<label class="control-label" for="basicinput">Identificador del EPP: <input type="text" name="ID_Implementos" id="ID_Implementos" value="<?php echo $row['ID_Implementos']; ?>" placeholder="" class="form-control" readonly="readonly"></label>
 											</div>
 										</div>
 

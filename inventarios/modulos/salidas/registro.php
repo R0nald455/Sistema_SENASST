@@ -46,7 +46,7 @@ require_once ("../../../db/conexion.php");
 						
 										<div class="control-group">
 											<div class="controls">
-												<label class="control-label" for="ID_Implementos">Implementos: <input type="text" name="ID_Implementos" id="ID_Implementos" placeholder="" class="form-control" required></label>
+												<label class="control-label" for="ID_Implementos">Elementos de Proteccion Personal: <input type="text" name="ID_Implementos" id="ID_Implementos" placeholder="" class="form-control" required></label>
 											</div>
 										</div>
 

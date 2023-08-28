@@ -27,10 +27,9 @@ require_once ("../../../db/conexion.php");
         <nav>
             <ul>
                 <li><img src="../../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></li>
-                <li><a href="../../index.php" id="selected">Inicio</a></li>
+                <li><a href="../../../php/rolFuncionario/indexadministrador.php" id="selected">Inicio</a></li>
                 <li><a href="../implementos/index.php">Administrar implementos</a></li>
                 <li><a href="../salidas/index.php">Administrar salidas</a></li>
-                <li><a href="#newsletter">Administrar movimientos</a></li>
             </ul>
         </nav>
 
@@ -67,7 +66,7 @@ require_once ("../../../db/conexion.php");
 						
                         <div class="panel-body">
 							<div class="pull-right">
-								<a href="registro.php" class="btn btn-sm btn-success">Nueva entrada de implementos</a>
+								<a href="registro.php" class="btn btn-sm btn-success">Nueva entrada de EPP</a>
 							</div><br>
 							<hr>
                                 <div class="table-container table-responsive">
@@ -76,7 +75,7 @@ require_once ("../../../db/conexion.php");
                                         <tr>
 	  
                                         <th>ID de la entrada</th>
-	                                    <th>ID del implemento</th>
+	                                    <th>ID del EPP</th>
                                         <th>Cantidad</th>
                                         <th>Descripcion</th>
                                         <th>Fecha de entrada</th>

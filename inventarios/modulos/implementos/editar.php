@@ -32,7 +32,7 @@ require_once ("../../../db/conexion.php");
                         <form name="form1" id="form1" class="form-horizontal row-fluid" action="update-edit.php" method="POST" >
 
 										<blockquote>
-											Editar implementos 🖋️
+											Editar Elementos de Proteccion Personal 🖋️
 										</blockquote>
 
 										<div class="control-group">

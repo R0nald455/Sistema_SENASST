@@ -45,8 +45,6 @@ require_once ("../../db/conexion.php");
 				<li><a href="#overview" id="selected">Inicio</a></li>
 				<li><a href="#">Modulos administrativos</a>
                         <ul> <b>
-                            <li><a onclick="window.location.href='../../inventarios/index.php'">Administrar inventario de extintores</a></li>
-							<li><a onclick="window.location.href='../../inventarios/index.php'">Administrar Dotacion</a></li>
 							<li><a onclick="window.location.href='../../inventarios/index.php'">Administrar Brigadistas</a></li>
 							<li><a onclick="window.location.href='../../admiRiesgos/index.php'">Administrar Riesgos</a></li>
                         </ul> </b>
@@ -68,7 +66,7 @@ require_once ("../../db/conexion.php");
 				<div class="overview-detail">
 					<h2>SENASST</h2>
 					<p class="parrafo-landing">Hola!, <b><?= $_SESSION["documento"] ?> </b> te contamos que nuestro sistema  de seguridad SENASST te permite consultar 
-					 de manera eficiente elementos de seguridad y salud, garantizando un entorno seguro y protegido para nuestros aprendices, intructores y funcionarios.</p>
+					de manera eficiente elementos de seguridad y salud, garantizando un entorno seguro y protegido para nuestros aprendices, intructores y funcionarios.</p>
 				</div>
 			</div>
 		</div>

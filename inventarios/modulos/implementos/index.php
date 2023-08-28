@@ -29,10 +29,9 @@ require_once ("../../../db/conexion.php");
         <nav>
             <ul>
                 <li><img src="../../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></li>
-                <li><a href="../../index.php" id="selected">Inicio</a></li>
+                <li><a href="../../../php/rolFuncionario/indexadministrador.php" id="selected">Inicio</a></li>
                 <li><a href="../entradas/index.php">Administrar entradas</a></li>
                 <li><a href="../salidas">Administrar salidas</a></li>
-                <li><a href="#newsletter">Administrar movimientos</a></li>
             </ul>
         </nav>
 
@@ -64,12 +63,12 @@ require_once ("../../../db/conexion.php");
 			?>
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title"><i class="fa-solid fa-screwdriver-wrench" style="color: #1b1c1d;"></i> Administrador de implementos</h3> 
+                                    <h3 class="panel-title"><i class="fa-solid fa-screwdriver-wrench" style="color: #1b1c1d;"></i> Administrador de Elementos de Proteccion Personal</h3> 
                                 </div>
 						
                                 <div class="panel-body">
                                     <div class="pull-right">
-                                        <a href="registro.php" class="btn btn-sm btn-success">Nuevo implemento</a>
+                                        <a href="registro.php" class="btn btn-sm btn-success">Nuevo EPP</a>
                                     </div><br>
                                     <hr>
 
@@ -78,7 +77,7 @@ require_once ("../../../db/conexion.php");
                                             <thead bgcolor="rgb(57,168,1)" align="center">
                                             <tr>
         
-                                            <th>ID de los implementos</th>
+                                            <th>ID de los EPP</th>
                                             <th>Nombre </th>
                                             <th>Descripcion </th>
                                             <th>Categoria</th>

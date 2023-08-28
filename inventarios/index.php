@@ -38,7 +38,7 @@ require_once ("../db/conexion.php");
                         </label>
             <nav>
                 <ul>
-                    <li><a href="../index.php" id="selected">Inicio</a></li>
+                    <li><a href="../php/rolFuncionario/indexadministrador.php" id="selected">Inicio</a></li>
                     <li><a href="#">Modulos</a>
                         <ul> <b>
                             <li><a href="../inventarios/modulos/extintores/index.php">Administrar extintores</a></li>

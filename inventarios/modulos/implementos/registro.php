@@ -40,7 +40,7 @@ require_once ("../../../db/conexion.php");
                         <form name="form1" id="form1" class="form-horizontal row-fluid" action="registro.php" method="POST">
 
 										<blockquote>
-											Registrar implementos ✅
+											Registrar Elementos de Proteccion Personal ✅
 										</blockquote>
 						
 										<div class="control-group">
