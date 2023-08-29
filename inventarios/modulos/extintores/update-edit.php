@@ -13,8 +13,9 @@ if(isset($_POST['update'])){
 				$UltimaRecarga = mysqli_real_escape_string($conexion,(strip_tags($_POST['UltimaRecarga'], ENT_QUOTES)));
 				$ProximaRecarga = mysqli_real_escape_string($conexion,(strip_tags($_POST['ProximaRecarga'], ENT_QUOTES)));
 				$Comentarios = mysqli_real_escape_string($conexion,(strip_tags($_POST['Comentarios'], ENT_QUOTES)));
+				$ImagenReferencia = mysqli_real_escape_string($conexion,(strip_tags($_FETCH['ImagenReferencia'], ENT_QUOTES)));
 				
-				$update = mysqli_query($conexion, "UPDATE extintores SET NumeroDeSerie='$NumeroDeSerie', TipoDeExtintor='$TipoDeExtintor', FechaDeFabricacion='$FechaDeFabricacion', FechaDeCompra='$FechaDeCompra', Ubicacion='$Ubicacion', UbicacionEspecifica='$UbicacionEspecifica', UltimaRecarga='$UltimaRecarga', ProximaRecarga='$ProximaRecarga', Comentarios='$Comentarios' WHERE ExtintorID='$ExtintorID'") or die(mysqli_error());
+				$update = mysqli_query($conexion, "UPDATE extintores SET NumeroDeSerie='$NumeroDeSerie', TipoDeExtintor='$TipoDeExtintor', FechaDeFabricacion='$FechaDeFabricacion', FechaDeCompra='$FechaDeCompra', Ubicacion='$Ubicacion', UbicacionEspecifica='$UbicacionEspecifica', UltimaRecarga='$UltimaRecarga', ProximaRecarga='$ProximaRecarga', Comentarios='$Comentarios', ImagenReferencia='$ImagenReferencia' WHERE ExtintorID='$ExtintorID'") or die(mysqli_error());
 				if($update){
 					echo "<script>alert('Los datos han sido actualizados!'); window.location = 'index.php'</script>";
 				}else{

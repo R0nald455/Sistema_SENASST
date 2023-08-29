@@ -29,6 +29,7 @@ require_once ("../../../db/conexion.php");
 				$UltimaRecarga = mysqli_real_escape_string($conexion,(strip_tags($_POST['UltimaRecarga'], ENT_QUOTES)));
 				$ProximaRecarga = mysqli_real_escape_string($conexion,(strip_tags($_POST['ProximaRecarga'], ENT_QUOTES)));
 				$Comentarios = mysqli_real_escape_string($conexion,(strip_tags($_POST['Comentarios'], ENT_QUOTES)));
+				$ImagenReferencia = mysqli_real_escape_string($conexion,(strip_tags($_POST['ImagenReferencia'], ENT_QUOTES)));
                 $FechaDeRegistro = date("Y-m-d H:i:s");
 		
 				$insert = mysqli_query($conexion, "INSERT INTO extintores( NumeroDeSerie, TipoDeExtintor, FechaDeFabricacion, FechaDeCompra, Ubicacion, UbicacionEspecifica, UltimaRecarga, ProximaRecarga, Comentarios, FechaDeRegistro)
@@ -41,7 +42,7 @@ require_once ("../../../db/conexion.php");
 				
 			}
 			?>
-                        <form name="form1" id="form1" class="form-horizontal row-fluid" action="registro.php" method="POST">
+                        <form name="form1" id="form1" class="form-horizontal row-fluid" action="registro.php" method="POST" enctype="multipart/form-data">
 
 										<blockquote>
 											Registrar extintores 🧯
@@ -106,6 +107,13 @@ require_once ("../../../db/conexion.php");
 										<div class="control-group">
 											<div class="controls">
 												<label class="control-label" for="Comentarios">Comentarios: <input name="Comentarios" id="Comentarios" class=" form-control" type="text" placeholder="Ingrese un comentario en base al extintor." required /></label>
+											</div>
+										</div>
+
+										
+										<div class="control-group">
+											<div class="controls">
+												<label class="control-label" for="ImagenReferencia">Imagen de referencia: <input name="ImagenReferencia" id="ImagenReferencia" class=" form-control" type="file" required /></label>
 											</div>
 										</div>
 

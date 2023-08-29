@@ -101,6 +101,12 @@ require_once ("../../../db/conexion.php");
 											</div>
 										</div>
 
+										<div class="control-group">
+											<div class="controls">
+												<label class="control-label" for="ImagenReferencia">Imagen de referencia: <input name="ImagenReferencia" id="ImagenReferencia" class=" form-control" type="file" value="<?php echo $row['ImagenReferencia']; ?>" required /></label>
+											</div>
+										</div>
+
 										<div class="control-group buttons-container">
 											<div class="controls">
 												<input type="submit" name="update" id="update" value="Actualizar" class="btn btn-sm btn-primary"/>
