@@ -10,7 +10,7 @@ require_once ("../../db/conexion.php");
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="../../css/fontawesome-all.min.css">
+      <script src="https://kit.fontawesome.com/27e58a102f.js" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="../../css/bootstrap.min.css">
       <link rel="stylesheet" href="../../css/header.css">
       <title>Usuarios</title>
@@ -54,8 +54,8 @@ require_once ("../../db/conexion.php");
             <br>
             <div>
               
-              <a class="btn btn-success" href="../index.php">Agregar Nuevo
-              <i class="fa fa-power-off" aria-hidden="true"></i></a> 
+              <a class="btn btn-success" href="../index.php">Agregar Nuevo  
+              <i class="fa-solid fa-plus" style="color: #ffffff;"></i></a> 
             </div>
             <br>
             <br>
@@ -74,7 +74,6 @@ require_once ("../../db/conexion.php");
                 </thead>
                 <tbody>
                   <?php
-                  // $conexion = mysqli_connect("localhost:3307","root","","SSTCBA");
                   $SQL = "SELECT user.id, user.nombre, user.correo, user.password, user.telefono,
                   user.fecha, permisos.rol FROM user LEFT JOIN permisos 
                   ON user.rol = permisos.id";
@@ -93,10 +92,10 @@ require_once ("../../db/conexion.php");
                   
                   <td>
                     <a class="btn btn-success" href="editarUsuario.php?id=<?php echo $fila['id']?> ">
-                    <i class="fa fa-edit"></i> </a>
+                    <i class="fa-solid fa-pen-to-square" style="color: #f2eded;"></i> </a>
 
                     <a class="btn btn-danger" href="../Model/eliminar.php?id=<?php echo $fila['id']?>">
-                    <i class="fa fa-trash"></i></a>
+                    <i class="fa-solid fa-trash-can" style="color: #f2eded;"></i></i></i></a>
                   </td>              
                   </tr>
 
