@@ -65,6 +65,7 @@ if( !empty($requestData['search']['value']) ) {
 }
 
 $data = array();
+
 while( $row=mysqli_fetch_array($query) ) {  // preparing an array
 	$nestedData=array(); 
 

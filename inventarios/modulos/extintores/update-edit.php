@@ -4,18 +4,27 @@ include "../../../db/conexion.php";
 if(isset($_POST['update'])){
 
 				$ExtintorID	= intval($_POST['ExtintorID']);
-				$NumeroDeSerie	= mysqli_real_escape_string($conexion,(strip_tags($_POST['NumeroDeSerie'], ENT_QUOTES)));
-				$TipoDeExtintor  	= mysqli_real_escape_string($conexion,(strip_tags($_POST['TipoDeExtintor'], ENT_QUOTES)));
-				$FechaDeFabricacion = mysqli_real_escape_string($conexion,(strip_tags($_POST['FechaDeFabricacion'], ENT_QUOTES)));
-				$FechaDeCompra  = mysqli_real_escape_string($conexion,(strip_tags($_POST['FechaDeCompra'], ENT_QUOTES)));
-				$Ubicacion = mysqli_real_escape_string($conexion,(strip_tags($_POST['Ubicacion'], ENT_QUOTES)));
-				$UbicacionEspecifica = mysqli_real_escape_string($conexion,(strip_tags($_POST['UbicacionEspecifica'], ENT_QUOTES)));
-				$UltimaRecarga = mysqli_real_escape_string($conexion,(strip_tags($_POST['UltimaRecarga'], ENT_QUOTES)));
-				$ProximaRecarga = mysqli_real_escape_string($conexion,(strip_tags($_POST['ProximaRecarga'], ENT_QUOTES)));
-				$Comentarios = mysqli_real_escape_string($conexion,(strip_tags($_POST['Comentarios'], ENT_QUOTES)));
-				$ImagenReferencia = mysqli_real_escape_string($conexion,(strip_tags($_FETCH['ImagenReferencia'], ENT_QUOTES)));
-				
-				$update = mysqli_query($conexion, "UPDATE extintores SET NumeroDeSerie='$NumeroDeSerie', TipoDeExtintor='$TipoDeExtintor', FechaDeFabricacion='$FechaDeFabricacion', FechaDeCompra='$FechaDeCompra', Ubicacion='$Ubicacion', UbicacionEspecifica='$UbicacionEspecifica', UltimaRecarga='$UltimaRecarga', ProximaRecarga='$ProximaRecarga', Comentarios='$Comentarios', ImagenReferencia='$ImagenReferencia' WHERE ExtintorID='$ExtintorID'") or die(mysqli_error());
+				$NumeroDeSerie = $conexion->real_escape_string($_POST['NumeroDeSerie']);
+				$TipoDeExtintor = $conexion->real_escape_string($_POST['TipoDeExtintor']);
+				$FechaDeFabricacion = $conexion->real_escape_string($_POST['FechaDeFabricacion']);
+				$FechaDeCompra  =$conexion->real_escape_string($_POST['FechaDeCompra']);
+				$Ubicacion = $conexion->real_escape_string($_POST['Ubicacion']);
+				$UbicacionEspecifica = $conexion->real_escape_string($_POST['UbicacionEspecifica']);
+				$UltimaRecarga = $conexion->real_escape_string($_POST['UltimaRecarga']);
+				$ProximaRecarga = $conexion->real_escape_string($_POST['ProximaRecarga']);
+				$Comentarios = $conexion->real_escape_string($_POST['Comentarios']);
+
+				if(isset($_FILES['ImagenReferencia']['tmp_name']) && !empty($_FILES['ImagenReferencia']['tmp_name'])){
+
+					$NuevaImagenReferencia = $_FILES['ImagenReferencia']['tmp_name'];
+					$NuevaImagenContenido = addslashes(file_get_contents($NuevaImagenReferencia));
+			
+					$update = mysqli_query($conexion, "UPDATE extintores SET NumeroDeSerie='$NumeroDeSerie', TipoDeExtintor='$TipoDeExtintor', FechaDeFabricacion='$FechaDeFabricacion', FechaDeCompra='$FechaDeCompra', Ubicacion='$Ubicacion', UbicacionEspecifica='$UbicacionEspecifica', UltimaRecarga='$UltimaRecarga', ProximaRecarga='$ProximaRecarga', Comentarios='$Comentarios', ImagenReferencia='$NuevaImagenContenido' WHERE ExtintorID='$ExtintorID'") or die(mysqli_error());
+				} else {
+					// No se cargó una nueva imagen, mantener la imagen actual en la base de datos
+					$update = mysqli_query($conexion, "UPDATE extintores SET NumeroDeSerie='$NumeroDeSerie', TipoDeExtintor='$TipoDeExtintor', FechaDeFabricacion='$FechaDeFabricacion', FechaDeCompra='$FechaDeCompra', Ubicacion='$Ubicacion', UbicacionEspecifica='$UbicacionEspecifica', UltimaRecarga='$UltimaRecarga', ProximaRecarga='$ProximaRecarga', Comentarios='$Comentarios' WHERE ExtintorID='$ExtintorID'") or die(mysqli_error());
+				}
+			
 				if($update){
 					echo "<script>alert('Los datos han sido actualizados!'); window.location = 'index.php'</script>";
 				}else{

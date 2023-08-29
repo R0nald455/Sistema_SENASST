@@ -101,9 +101,15 @@ require_once ("../../../db/conexion.php");
 											</div>
 										</div>
 
+										<?php
+											echo '<img src="data:imag/png;base64,'.base64_encode($row['ImagenReferencia']).'" alt="Imagen" style="width: 150px; height:150px;" >'
+										?>
+
+
 										<div class="control-group">
 											<div class="controls">
-												<label class="control-label" for="ImagenReferencia">Imagen de referencia: <input name="ImagenReferencia" id="ImagenReferencia" class=" form-control" type="file" required /></label>
+												<label class="control-label" for="ImagenReferencia">Imagen de referencia: </label>
+												<input name="ImagenReferencia" id="ImagenReferencia" class="form-control" type="file" multiple />
 											</div>
 										</div>
 
