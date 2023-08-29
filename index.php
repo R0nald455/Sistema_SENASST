@@ -85,7 +85,7 @@
 			</div>
 			<div class="wow fadeInUp col-md-4 col-sm-6" >
 				<div class="trainer-thumb">
-				<button class="UbicarBrigadista"><a onclick="window.location.href='php/login.php'">Alerta a un Brigadista</a></button>
+				<button class="UbicarBrigadista"><a onclick="window.location.href='alertarbrigadistas/index.php'">Alerta a un Brigadista</a></button>
 				</div>
 			</div>
 			<div class="wow fadeInUp col-md-4 col-sm-6" >
