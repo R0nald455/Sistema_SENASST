@@ -21,7 +21,7 @@ require_once ("../../../db/conexion.php");
                         <div class="content">
                             <?php
            	$ExtintorID = intval($_GET['ExtintorID']);
-			$sql = mysqli_query($conexion, "SELECT ExtintorID, NumeroDeSerie, TipoDeExtintor, FechaDeFabricacion, FechaDeCompra, Ubicacion, UbicacionEspecifica, UltimaRecarga, ProximaRecarga, Comentarios, FechaDeRegistro FROM extintores WHERE ExtintorID='$ExtintorID'");
+			$sql = mysqli_query($conexion, "SELECT ExtintorID, NumeroDeSerie, TipoDeExtintor, FechaDeFabricacion, FechaDeCompra, Ubicacion, UbicacionEspecifica, UltimaRecarga, ProximaRecarga, Comentarios, ImagenReferencia, FechaDeRegistro FROM extintores WHERE ExtintorID='$ExtintorID'");
 			if(mysqli_num_rows($sql) == 0){
 				header("Location: index.php");
 			}else{
@@ -29,7 +29,7 @@ require_once ("../../../db/conexion.php");
 			}
 			?>
 
-                        <form name="form1" id="form1" class="form-horizontal row-fluid" action="update-edit.php" method="POST" >
+                        <form name="form1" id="form1" class="form-horizontal row-fluid" action="update-edit.php" method="POST" enctype="multipart/form-data">
 
 										<blockquote>
 											Editar extintor 🖋️
@@ -103,7 +103,7 @@ require_once ("../../../db/conexion.php");
 
 										<div class="control-group">
 											<div class="controls">
-												<label class="control-label" for="ImagenReferencia">Imagen de referencia: <input name="ImagenReferencia" id="ImagenReferencia" class=" form-control" type="file" value="<?php echo $row['ImagenReferencia']; ?>" required /></label>
+												<label class="control-label" for="ImagenReferencia">Imagen de referencia: <input name="ImagenReferencia" id="ImagenReferencia" class=" form-control" type="file" required /></label>
 											</div>
 										</div>
 

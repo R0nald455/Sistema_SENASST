@@ -78,7 +78,7 @@ while( $row=mysqli_fetch_array($query) ) {  // preparing an array
 	$nestedData[] = $row["UltimaRecarga"];
     $nestedData[] = $row["ProximaRecarga"];
     $nestedData[] = $row["Comentarios"];
-	$nestedData[] = '<img src="data:image;base64,'.base64_encode($row['ImagenReferencia']).'" alt="Image" style="width: 150px; height:150px;" >';
+	$nestedData[] = '<img src="data:imag/png;base64,'.base64_encode($row['ImagenReferencia']).'" alt="Imagen" style="width: 150px; height:150px;" >';
     $nestedData[] = date("d/m/Y", strtotime($row["FechaDeRegistro"]));
     $nestedData[] = '<td><center>
                     <a href="editar.php?ExtintorID='.$row['ExtintorID'].'"  data-toggle="tooltip" title="Editar datos" class="btn btn-sm btn-info"> <i class="fa-solid fa-pen-to-square" style="color: #f2eded;"></i> </a>

@@ -19,30 +19,36 @@ require_once ("../../../db/conexion.php");
                         <div class="content">
                             <?php
 			if(isset($_POST['input'])){
-				$ExtintorID	= mysqli_real_escape_string($conexion,(strip_tags($_POST['ExtintorID'], ENT_QUOTES)));
-				$NumeroDeSerie	= mysqli_real_escape_string($conexion,(strip_tags($_POST['NumeroDeSerie'], ENT_QUOTES)));
-				$TipoDeExtintor  	= mysqli_real_escape_string($conexion,(strip_tags($_POST['TipoDeExtintor'], ENT_QUOTES)));
-				$FechaDeFabricacion = mysqli_real_escape_string($conexion,(strip_tags($_POST['FechaDeFabricacion'], ENT_QUOTES)));
-				$FechaDeCompra  = mysqli_real_escape_string($conexion,(strip_tags($_POST['FechaDeCompra'], ENT_QUOTES)));
-				$Ubicacion = mysqli_real_escape_string($conexion,(strip_tags($_POST['Ubicacion'], ENT_QUOTES)));
-				$UbicacionEspecifica = mysqli_real_escape_string($conexion,(strip_tags($_POST['UbicacionEspecifica'], ENT_QUOTES)));
-				$UltimaRecarga = mysqli_real_escape_string($conexion,(strip_tags($_POST['UltimaRecarga'], ENT_QUOTES)));
-				$ProximaRecarga = mysqli_real_escape_string($conexion,(strip_tags($_POST['ProximaRecarga'], ENT_QUOTES)));
-				$Comentarios = mysqli_real_escape_string($conexion,(strip_tags($_POST['Comentarios'], ENT_QUOTES)));
-				$ImagenReferencia = mysqli_real_escape_string($conexion,(strip_tags($_POST['ImagenReferencia'], ENT_QUOTES)));
+
+				$NumeroDeSerie = $conexion->real_escape_string($_POST['NumeroDeSerie']);
+				$TipoDeExtintor = $conexion->real_escape_string($_POST['TipoDeExtintor']);
+				$FechaDeFabricacion = $conexion->real_escape_string($_POST['FechaDeFabricacion']);
+				$FechaDeCompra  =$conexion->real_escape_string($_POST['FechaDeCompra']);
+				$Ubicacion = $conexion->real_escape_string($_POST['Ubicacion']);
+				$UbicacionEspecifica = $conexion->real_escape_string($_POST['UbicacionEspecifica']);
+				$UltimaRecarga = $conexion->real_escape_string($_POST['UltimaRecarga']);
+				$ProximaRecarga = $conexion->real_escape_string($_POST['ProximaRecarga']);
+				$Comentarios = $conexion->real_escape_string($_POST['Comentarios']);
+
+				$ImagenReferencia = $_FILES['ImagenReferencia']['tmp_name'];
+				$ImagenContenido = addslashes(file_get_contents($ImagenReferencia));
+
                 $FechaDeRegistro = date("Y-m-d H:i:s");
+
+				$stmt = $conexion->query("INSERT INTO extintores (NumeroDeSerie, TipoDeExtintor, FechaDeFabricacion, FechaDeCompra, Ubicacion, UbicacionEspecifica, UltimaRecarga, ProximaRecarga, Comentarios, ImagenReferencia, FechaDeRegistro) VALUES ('$NumeroDeSerie', '$TipoDeExtintor', '$FechaDeFabricacion', '$FechaDeCompra', '$Ubicacion', '$UbicacionEspecifica', '$UltimaRecarga', '$ProximaRecarga', '$Comentarios', '$ImagenContenido', '$FechaDeRegistro')");
 		
-				$insert = mysqli_query($conexion, "INSERT INTO extintores( NumeroDeSerie, TipoDeExtintor, FechaDeFabricacion, FechaDeCompra, Ubicacion, UbicacionEspecifica, UltimaRecarga, ProximaRecarga, Comentarios, FechaDeRegistro)
-															VALUES(NULL,'$NumeroDeSerie', '$TipoDeExtintor', '$FechaDeFabricacion', '$FechaDeCompra', '$Ubicacion', '$UbicacionEspecifica', '$UltimaRecarga', '$ProximaRecarga', '$Comentarios', '$FechaDeRegistro')") or die(mysqli_error($conexion));
-						if($insert){
+				// $insert = mysqli_query($conexion, "INSERT INTO extintores( NumeroDeSerie, TipoDeExtintor, FechaDeFabricacion, FechaDeCompra, Ubicacion, UbicacionEspecifica, UltimaRecarga, ProximaRecarga, Comentarios, ImagenReferencia, FechaDeRegistro)
+				// 											VALUES('$NumeroDeSerie', '$TipoDeExtintor', '$FechaDeFabricacion', '$FechaDeCompra', '$Ubicacion', '$UbicacionEspecifica', '$UltimaRecarga', '$ProximaRecarga', '$Comentarios', '$ImagenReferencia', '$FechaDeRegistro')") or die(mysqli_error($conexion));
+						if($stmt){
 							echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Bien hecho, los datos han sido agregados correctamente.</div>';
 						}else{
 							echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Error, no se pudo registrar los datos.</div>';
 						}
+			
 				
 			}
 			?>
-                        <form name="form1" id="form1" class="form-horizontal row-fluid" action="registro.php" method="POST" enctype="multipart/form-data">
+                        <form enctype="multipart/form-data" name="form1" id="form1" class="form-horizontal row-fluid" action="registro.php" method="POST">
 
 										<blockquote>
 											Registrar extintores 🧯
@@ -113,13 +119,14 @@ require_once ("../../../db/conexion.php");
 										
 										<div class="control-group">
 											<div class="controls">
-												<label class="control-label" for="ImagenReferencia">Imagen de referencia: <input name="ImagenReferencia" id="ImagenReferencia" class=" form-control" type="file" required /></label>
+												<label class="control-label" for="ImagenReferencia">Imagen de referencia: </label>
+												<input name="ImagenReferencia" id="ImagenReferencia" class="form-control" type="file" multiple />
 											</div>
 										</div>
 
 										<div class="control-group buttons-container">
 											<div class="controls">
-												<button type="submit" name="input" id="input" class="btn btn-sm btn-primary">Registrar</button>
+												<input type="submit" name="input" id="input" value="Upload Image/Data" class="btn btn-sm btn-primary"></input>
                                                 <a href="index.php" class="btn btn-sm btn-danger">Cancelar</a>
 											</div>
 										</div>
