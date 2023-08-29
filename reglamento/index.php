@@ -90,7 +90,10 @@ require_once ("../db/conexion.php");
       if(mysqli_num_rows($result) > 0) {
           $row_count=0;
           echo "<br><br>Resultados encontrados: ";
-          echo "<br><table class='table table-striped'>";
+          echo "<br><table class='table table-striped'>
+          <th>No</th>
+          <th>Descripción</th>
+          <th>Interpretación</th>";
           While($row = $result->fetch_assoc()) {   
               $palabra=['integral'];
               $conPalabras="SELECT  palabra from significados";
@@ -116,12 +119,7 @@ require_once ("../db/conexion.php");
                   }
               }
               echo " 
-              <div class='card-content'>
-              <p>Contenido de la card...</p>
-              </div>
-              
-              
-              </td></tr>";
+              </td><td>".$row['interpretacion']."</td></tr>";
               /* <td><a class='expand-button' href='#card-content'>▼</a></td> */
 
           }
