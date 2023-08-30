@@ -90,6 +90,7 @@ require_once ("../../../db/conexion.php");
                                             <th>Ultima recarga</th>
                                             <th>Proxima recarga</th>
                                             <th>Comentarios</th>
+                                            <th>Imagen de referencia</th>
                                             <th>Fecha de registro</th>
                                             <th class="text-center"> Acciones </th>
         

@@ -7,7 +7,7 @@ require '../../../../phpmailer/SMTP.php';
 require '../../../../phpmailer/Exception.php';
 
 // Enviar recordatorio por correo electrónico
-function enviarRecordatorio($extintorID, $correo, $mensaje) {
+function enviarRecordatorio($extintorID, $correo, $mensaje, $imagenBinaria) {
     global $smtpHost, $smtpUsername, $smtpPassword, $smtpPort, $smtpSecurity;
 
     $mail = new PHPMailer(true);
@@ -27,6 +27,10 @@ function enviarRecordatorio($extintorID, $correo, $mensaje) {
         $mail->isHTML(true);
         $mail->Subject = 'Recordatorio de Recarga/Mantenimiento de Extintor';
         $mail->Body = $mensaje;
+
+        $mail->CharSet='UTF-8';
+
+        $mail->addStringAttachment($imagenBinaria, 'imagen.jpg');
 
         $mail->send();
         

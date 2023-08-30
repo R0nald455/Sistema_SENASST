@@ -21,11 +21,12 @@ $columns = array(
     7 => 'UltimaRecarga',
 	8 => 'ProximaRecarga',
 	9 => 'Comentarios',
-	10 => 'FechaDeRegistro'
+	10 => 'ImagenReferencia',
+	11 => 'FechaDeRegistro',
 );
 
 // getting total number records without any search
-$sql = "SELECT ExtintorID, NumeroDeSerie, TipoDeExtintor, FechaDeFabricacion, FechaDeCompra, Ubicacion, UbicacionEspecifica, UltimaRecarga, ProximaRecarga, Comentarios, FechaDeRegistro";
+$sql = "SELECT ExtintorID, NumeroDeSerie, TipoDeExtintor, FechaDeFabricacion, FechaDeCompra, Ubicacion, UbicacionEspecifica, UltimaRecarga, ProximaRecarga, Comentarios, ImagenReferencia, FechaDeRegistro";
 $sql.=" FROM extintores";
 $query=mysqli_query($conexion, $sql) or die("ajax-grid-data.php: get InventoryItems");
 $totalData = mysqli_num_rows($query);
@@ -34,7 +35,7 @@ $totalFiltered = $totalData;  // when there is no search parameter then total nu
 
 if( !empty($requestData['search']['value']) ) {
 	// if there is a search parameter
-	$sql = "SELECT ExtintorID, NumeroDeSerie, TipoDeExtintor, FechaDeFabricacion, FechaDeCompra, Ubicacion, UbicacionEspecifica, UltimaRecarga, ProximaRecarga, Comentarios, FechaDeRegistro";
+	$sql = "SELECT ExtintorID, NumeroDeSerie, TipoDeExtintor, FechaDeFabricacion, FechaDeCompra, Ubicacion, UbicacionEspecifica, UltimaRecarga, ProximaRecarga, Comentarios, ImagenReferencia, FechaDeRegistro";
 	$sql.=" FROM extintores";
 	$sql.=" WHERE ExtintorID LIKE '".$requestData['search']['value']."%' ";
 	$sql.=" OR NumeroDeSerie LIKE '".$requestData['search']['value']."%' ";    
@@ -46,6 +47,7 @@ if( !empty($requestData['search']['value']) ) {
     $sql.=" OR UltimaRecarga LIKE '".$requestData['search']['value']."%' ";
 	$sql.=" OR ProximaRecarga LIKE '".$requestData['search']['value']."%' ";
 	$sql.=" OR Comentarios LIKE '".$requestData['search']['value']."%' ";
+	$sql.=" OR ImagenReferencia LIKE '".$requestData['search']['value']."%' ";
 	$sql.=" OR FechaDeRegistro LIKE '".$requestData['search']['value']."%' ";
 	$query=mysqli_query($conexion, $sql) or die("ajax-grid-data.php: get PO");
 	$totalFiltered = mysqli_num_rows($query); // when there is a search parameter then we have to modify total number filtered rows as per search result without limit in the query 
@@ -55,7 +57,7 @@ if( !empty($requestData['search']['value']) ) {
 	
 } else {	
 
-	$sql = "SELECT ExtintorID, NumeroDeSerie, TipoDeExtintor, FechaDeFabricacion, FechaDeCompra, Ubicacion, UbicacionEspecifica, UltimaRecarga, ProximaRecarga, Comentarios, FechaDeRegistro";
+	$sql = "SELECT ExtintorID, NumeroDeSerie, TipoDeExtintor, FechaDeFabricacion, FechaDeCompra, Ubicacion, UbicacionEspecifica, UltimaRecarga, ProximaRecarga, Comentarios, ImagenReferencia, FechaDeRegistro";
 	$sql.=" FROM extintores";
 	$sql.=" ORDER BY ". $columns[$requestData['order'][0]['column']]."   ".$requestData['order'][0]['dir']." LIMIT ".$requestData['start']." ,".$requestData['length']."   ";
 	$query=mysqli_query($conexion, $sql) or die("ajax-grid-data.php: get PO");
@@ -63,6 +65,7 @@ if( !empty($requestData['search']['value']) ) {
 }
 
 $data = array();
+
 while( $row=mysqli_fetch_array($query) ) {  // preparing an array
 	$nestedData=array(); 
 
@@ -76,6 +79,7 @@ while( $row=mysqli_fetch_array($query) ) {  // preparing an array
 	$nestedData[] = $row["UltimaRecarga"];
     $nestedData[] = $row["ProximaRecarga"];
     $nestedData[] = $row["Comentarios"];
+	$nestedData[] = '<img src="data:imag/png;base64,'.base64_encode($row['ImagenReferencia']).'" alt="Imagen" style="width: 150px; height:150px;" >';
     $nestedData[] = date("d/m/Y", strtotime($row["FechaDeRegistro"]));
     $nestedData[] = '<td><center>
                     <a href="editar.php?ExtintorID='.$row['ExtintorID'].'"  data-toggle="tooltip" title="Editar datos" class="btn btn-sm btn-info"> <i class="fa-solid fa-pen-to-square" style="color: #f2eded;"></i> </a>
