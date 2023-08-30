@@ -109,7 +109,7 @@ require_once ("../../../db/conexion.php");
 										<div class="control-group">
 											<div class="controls">
 												<label class="control-label" for="ImagenReferencia">Imagen de referencia: </label>
-												<input name="ImagenReferencia" id="ImagenReferencia" class="form-control" type="file" multiple />
+												<input name="ImagenReferencia" id="ImagenReferencia" class="form-control" type="file" accept="image/*" multiple />
 											</div>
 										</div>
 
