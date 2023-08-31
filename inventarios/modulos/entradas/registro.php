@@ -13,7 +13,6 @@ require_once ("../../../db/conexion.php");
 
 	<?php if(isset($_SESSION["id"]) ): ?>
 
-	<br>
 
             <div class="container">
                 <div class="row">
@@ -48,7 +47,12 @@ require_once ("../../../db/conexion.php");
 						
 										<div class="control-group">
 											<div class="controls">
+<<<<<<< HEAD
 												<label class="control-label" for="ID_Implementos">Elementos de Proteccion Personal: <input type="text" name="ID_Implementos" id="ID_Implementos" placeholder="" class="form-control span8 tip" required></label>
+=======
+												<label class="control-label" for="ID_Implementos">Implementos: </label>
+												<select id="categoryName" class="categoryName form-control" name="ID_Implementos"></select>
+>>>>>>> 0923262486913cbb232570adc1097c2bba4d0b50
 											</div>
 										</div>
 
@@ -59,7 +63,6 @@ require_once ("../../../db/conexion.php");
 										</div>
 
 										<div class="control-group">
-											
 											<div class="controls">
 												<label class="control-label" for="descripcion">Descripcion: <input name="descripcion" id="descripcion" class="form-control span8 tip" type="text" placeholder="Descripcion del estado de los implementos"  required /></label>
 											</div>
@@ -80,7 +83,28 @@ require_once ("../../../db/conexion.php");
             </div>
             <!--/.container-->
 
-        <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+
+	<script type="text/javascript">
+			$('#categoryName').select2({
+			"placeholder": 'Selecciona un implemento',
+			"ajax": {
+				"url": 'select.php',
+				"dataType": 'json',
+				"delay": 250,
+				processResults: function (data) {
+					return {
+						"results": data
+					};
+				},
+				"cache": true
+			}
+		});
+	</script>
+		
 
 		<?php else:?>
 
