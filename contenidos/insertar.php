@@ -8,9 +8,6 @@ if(isset($_POST["submit"])){
     if($revisar !== false){
         $image = $_FILES['image']['tmp_name'];
         $imgContenido = addslashes(file_get_contents($image));
-        
-
-
 
         //se obtienen los datos de los campos
         $titulo=$_POST['txtTitulo'];

@@ -20,12 +20,16 @@ foreach ($extintoresNecesarios as $extintor) {
     $mensaje.= "Ubicado en el/la {$extintor['Ubicacion']}, {$extintor['UbicacionEspecifica']} <br>";
     $mensaje.= "Recargado por ultima vez el {$extintor['UltimaRecarga']} <br>";
     $mensaje.= "Con el siguiente comentario: {$extintor['Comentarios']} <br>";
-    $mensaje.= "<b> ¡¡ Necesita ser recargado o revisado urgentemente. !! </b><br></center>";
+    $mensaje.= "<b> ¡¡ Necesita ser recargado o revisado urgentemente. !! </b><br>";
+    $mensaje.= "<img src='cid:imagen' />";
+
+    $imagenBinaria= $extintor['ImagenReferencia'];
+
+    enviarRecordatorio($extintor['ExtintorID'], 'cbasst1957@gmail.com', $mensaje, $imagenBinaria);
+    header('Location: ../index.php');
 
 }
 
-enviarRecordatorio($extintor['ExtintorID'], 'cbasst1957@gmail.com', $mensaje);
 
-header('Location: ../index.php');
 
 ?>
