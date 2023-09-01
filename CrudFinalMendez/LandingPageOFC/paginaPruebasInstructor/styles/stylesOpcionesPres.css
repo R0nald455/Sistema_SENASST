@@ -1,0 +1,203 @@
+.fieldset-opcionPre{
+    position: relative;
+    border-right: none;
+    border-left: none;
+    left: -17px;
+    border-top: none;
+    border-bottom: none;
+    height: 310px;
+    font-size: 20px;
+    top: 300px;
+    width: 100%;
+    background-color: rgba(40, 43, 38, 0.144);
+    box-shadow: 0px 0px 10px black;
+}
+
+legend{
+    color: bisque;
+}
+
+
+#pre-a{
+    position: absolute;
+    left: 150px;
+    top: 25px;
+}
+
+#input-a{
+    position: absolute;
+    left: 180px;
+    top: 40px;
+    width: 720px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+
+#pre-b{
+    position: absolute;
+    left: 150px;
+    top: 80px;
+}
+
+#input-b{
+    position: absolute;
+    left: 180px;
+    top: 95px;
+    width: 720px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+
+#pre-c{
+    position: absolute;
+    left: 150px;
+    top: 135px;
+}
+
+#input-c{
+    position: absolute;
+    left: 180px;
+    top: 150px;
+    width: 720px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+
+#pre-d{
+    position: absolute;
+    left: 150px;
+    top: 190px;
+}
+
+#input-d{
+    position: absolute;
+    left: 180px;
+    top: 205px;
+    width: 720px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+
+#key{
+    position: absolute;
+    right: 293px;
+    top: -10px;
+    font-size: 17px;
+}
+
+#key-a{
+    position: absolute;
+    right: 279px;
+    top: 40px;
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
+
+#key-b{
+    position: absolute;
+    right: 279px;
+    top: 95px;
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
+
+#key-c{
+    position: absolute;
+    right: 279px;
+    top: 150px;
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
+
+#key-d{
+    position: absolute;
+    right: 279px;
+    top: 205px;
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
+
+#pre-key-puntos{
+    position: absolute;
+    right: 143px;
+    top: -10px;
+    font-size: 17px;
+}
+
+#puntos-a{
+    position: absolute;
+    right: 145px;
+    top: 40px;
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
+
+#puntos-b{
+    position: absolute;
+    right: 145px;
+    top: 95px;
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
+
+#puntos-c{
+    position: absolute;
+    right: 145px;
+    top: 150px;
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
+
+#puntos-d{
+    position: absolute;
+    right: 145px;
+    top: 205px;
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
+
+#btn-preguntasS{
+    position: absolute;
+    top: 260px;
+    right: 65px;
+    width:150px;
+    height: 28px;
+    border-radius: 20px;
+}
+
+.btnBuscar{
+    position: absolute;
+    top: 22px;
+    left: 200px;
+    width:70px;
+    height: 28px;
+    border-radius: 20px;
+}
