@@ -1,9 +1,9 @@
 <?php
 class normass{
     public function Consultar_normas(){        
-        $con=connect();
+        $conexion=connect();
         $sql="SELECT norma,Descripcion_Norm FROM tb_normatividad";
-        $consulta=$con->query($sql);
+        $consulta=$conexion->query($sql);
         $consulta->execute();
         return $consulta;
         $con=null;
