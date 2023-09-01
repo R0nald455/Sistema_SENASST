@@ -1,0 +1,96 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+.form-container{
+    display: flex;
+    flex-direction:column;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.907),
+        rgba(0, 0, 0, 0.907)
+    ), url("../image/fondoPruebas..jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.logoSena{
+    width: 250px;
+    height: 250px;
+    background-image: url("../image/logo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.form-container, h1{
+    font-size: 50px;
+    color: white;    
+}
+
+.form-container, .sstTitulo{
+    font-size: 50px;
+    color: #04ac04;    
+}
+
+.numPrueba{
+    background-color: rgba(187, 187, 187, 0.35);
+    border: none;
+    height: 30px;
+    width: 100px;
+    border-radius: 30px;
+    color: white;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.btn-prueba{
+    display:block;
+    background-color: greenyellow;
+    border: none;
+    height: 30px;
+    width: 150px;
+    border-radius: 20px;
+}
+
+.btn-prueba:hover{
+    background-color: rgb(33, 55, 1);
+    color: white;
+    cursor: pointer;
+}
+
+.btn-volver{
+    display: block;
+    background-color: greenyellow;
+    border: none;
+    height: 30px;
+    width: 150px;
+    border-radius: 20px;
+}
+
+.btn-volver:hover{
+    background-color: rgb(33, 55, 1);
+    color: white;
+    cursor: pointer;
+}
+
+.enviar-atras{
+    background-image: url("../image/hacia-atras.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    left: 400px;
+    margin-top: 20px;
+}
+
+.enviar-atras:hover{
+    cursor: pointer;
+}
+
+
