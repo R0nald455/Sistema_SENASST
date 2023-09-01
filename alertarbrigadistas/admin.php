@@ -9,7 +9,7 @@ if(isset($_POST['add_product'])){
    $b_image_tmp_name = $_FILES['p_image']['tmp_name'];
    $b_image_folder = 'uploaded_img/'.$b_image;
 
-   $insert_query = mysqli_query($conexion, "INSERT INTO `products`(name, contact, image) VALUES('$b_name', '$b_contact', '$b_image')") or die('query failed');
+   $insert_query = mysqli_query($conexion, "INSERT INTO `brigadista`(name, contact, image) VALUES('$b_name', '$b_contact', '$b_image')") or die('query failed');
 
    if($insert_query){
       move_uploaded_file($b_image_tmp_name, $b_image_folder);
@@ -21,12 +21,12 @@ if(isset($_POST['add_product'])){
 
 if(isset($_GET['delete'])){
    $delete_id = $_GET['delete'];
-   $delete_query = mysqli_query($conexion, "DELETE FROM `products` WHERE id = $delete_id ") or die('query failed');
+   $delete_query = mysqli_query($conexion, "DELETE FROM `brigadista` WHERE id = $delete_id ") or die('query failed');
    if($delete_query){
-      header('location:indexbrigad.php');
+      header('location:admin.php');
       $message[] = 'Brigadista eliminado';
    }else{
-      header('location:indexbrigad.php');
+      header('location:admin.php');
       $message[] = 'El brigadista no pudo ser eliminado';
    };
 };
@@ -64,7 +64,7 @@ if(isset($_POST['update_product'])){
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+   <link rel="stylesheet" href="../css/header.css">
    <!-- custom css file link  -->
    <link rel="stylesheet" href="style.css">
    <link rel="stylesheet" href="css/styleindex.css">
@@ -83,8 +83,31 @@ if(isset($message)){
 
 ?>
 
-<?php include 'header.php'; ?>
+<!-- Menu de navegacion-->
 
+<div class="container__menu">
+
+	<div class="menu">
+
+		<input type="checkbox" id="check__menu">
+		<label for="check__menu" class="lbl-menu">
+			<span id="spn1"></span>
+			<span id="spn2"></span>
+			<span id="spn3"></span>
+		</label>
+
+		<img id="logoResponsive" src="../img/LogoSenaBlanco.png"  width="70px" alt="logoSena">
+
+
+		<nav>
+			<ul>
+				<li><img src="../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></li>
+				<li><a href="../php/rolFuncionario/indexfuncionario.php" id="selected">Inicio</a></li>
+					<li><a onclick="window.location.href='../php/rolFuncionario/indexfuncionario.php'"><span class="material-symbols-outlined">Salir</span></a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
 <div class="container">
 
 <section>
@@ -113,7 +136,7 @@ if(isset($message)){
       <tbody>
          <?php
          
-            $select_products = mysqli_query($conexion, "SELECT * FROM `products`");
+            $select_products = mysqli_query($conexion, "SELECT * FROM `brigadista`");
             if(mysqli_num_rows($select_products) > 0){
                while($row = mysqli_fetch_assoc($select_products)){
          ?>
@@ -145,7 +168,7 @@ if(isset($message)){
    
    if(isset($_GET['edit'])){
       $edit_id = $_GET['edit'];
-      $edit_query = mysqli_query($conn, "SELECT * FROM `products` WHERE id = $edit_id");
+      $edit_query = mysqli_query($conn, "SELECT * FROM `brigadista` WHERE id = $edit_id");
       if(mysqli_num_rows($edit_query) > 0){
          while($fetch_edit = mysqli_fetch_assoc($edit_query)){
    ?>

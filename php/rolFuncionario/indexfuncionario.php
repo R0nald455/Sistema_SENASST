@@ -49,7 +49,7 @@ require_once ("../../db/conexion.php");
 							<li><a onclick="window.location.href='../../inventariosCristian/index.php'">Administrar inventarios Dotacion</a></li>
                             <li><a onclick="window.location.href='../../inventarios/index.php'">Administrar inventarios</a></li>
 							<li><a onclick="window.location.href='../../inventarios/index.php'">Administrar Dotacion Especial</a></li>
-							<li><a onclick="window.location.href='../../brigadistas/indexbrigad.php'">Administrar Brigadistas</a></li>
+							<li><a onclick="window.location.href='../../alertarbrigadistas/admin.php'">Administrar Brigadistas</a></li>
 							<li><a onclick="window.location.href='../../admiRiesgos/index.php'">Administrar Riesgos</a></li>
                         </ul> </b>
                     </li>

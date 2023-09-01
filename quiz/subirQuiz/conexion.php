@@ -1,6 +1,3 @@
 <?php
-
-
-$conexion=mysqli_connect("localhost:3306","root","","sstcba");
-
+require_once ("../db/conexion.php");
 ?>

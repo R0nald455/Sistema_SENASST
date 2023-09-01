@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/header.css">
     <script src="../js/jquery-1.12.4-jquery.min.js"></script>
 
 
@@ -117,12 +118,6 @@ footer {
   width: 100%;
 }
 
-header {
-  background-color: #5eb319;
-  box-shadow: 2px 2px 5px rgba(18, 18, 18, 0.3);
-  color: #FFFFFF;
-  width: 100%;
-}
 
 .header-content-wrap {
   display: flex;
@@ -425,6 +420,11 @@ label {
     line-height: 1.4rem;
     font-family: "Lato", sans-serif;
   }
+
+  #containerQuiz{
+    position: relative;
+    top :100px;
+  }
     </style>
           <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
           <link href="blog.css" rel="stylesheet">
@@ -483,70 +483,41 @@ $falsa3 = $fila['falsa3'];
 ?>
 
 
-<div id="Shadow-Panel" class="shadow-panel hidden"></div>
+<!-- Menu de navegacion-->
 
-<header>
-  <nav class="navbar navbar-expand-md navbar-light fixed-top bg-success">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Sena</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link" href="/Project_SST/admin/index.php">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../Juego/index.html">Juegos</a>
-            <ul class="bg-transparent">
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../inventario final/php/index.php">Inventario</a>
-            <ul class="bg-transparent">
-             
-              </ul>
-              </li>
-              <li class="nav-item">
-              <a class="nav-link" href="../TarjetaDeObservacion/Reportes/ProfIni.php">Tarjeta de observacion</a>
-              <ul class="bg-transparent">
-              </ul>
-              </li>
-              <li class="nav-item">
-             <!-- <a class="nav-link" href="#">Mapas</a>
-              <ul class="bg-transparent">
-              <li class="nav-item">
-              <a class="nav-link" href="#">Riesgos estructurales</a>
-              </li>
-              <li class="nav-item">
-              <a class="nav-link" href="#">Riesgos Biologicos</a>
-              </li>
-              <li class="nav-item">
-              <a class="nav-link" href="#">Situaciones</a>
-              </li>
-              </ul>
-              </li> -->
-              <li class="nav-item">
-              <a class="nav-link" href="../sobrenosotros/sobrenosotros.php">Sobre nosotros</a>
-              </li>
-             
-              <ul class="bg-transparent">
-              <li class="nav-item">
-              <a href="../cerrar_sesion.php"><button class="btn btn-danger text-left"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cerrar Sesion</button></a>
-              </li>
-              </ul>
-              </ul>
-              </div>
-              </div>
-              </nav>
+<div class="container__menu">
 
-  <br><br>
-              <div class="header-content-wrap">
+<div class="menu">
+
+    <input type="checkbox" id="check__menu">
+    <label for="check__menu" class="lbl-menu">
+        <span id="spn1"></span>
+        <span id="spn2"></span>
+        <span id="spn3"></span>
+    </label>
+
+    <a href="../php/rolPersona/indexpersona.php"><img id="logoResponsive" src="../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></a>
+    
+
+    <nav>
+        <ul>
+            
+            <li><a href="../php/rolPersona/indexpersona.php"><img src="../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></a></li>
+
+            <li><a href="../php/rolPersona/indexpersona.php" id="selected">Inicio</a></li>
+
+        </ul>
+    </nav>
+</div>
+</div>
+
+
+
+      <div class="header-content-wrap" id="containerQuiz">
     <h1>Quiz</h1>
     <h2>MAPA DE RIESGOS Y AMBIENTAL</h2>
   </div>
-</header>
+
 
 <main>
   <article>

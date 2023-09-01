@@ -34,15 +34,15 @@ require_once ("../db/conexion.php");
         <span id="spn3"></span>
     </label>
 
-    <a href="../php/rolPersona/indexPersona.php"><img id="logoResponsive" src="../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></a>
+    <a href="../php/rolPersona/indexpersona.php"><img id="logoResponsive" src="../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></a>
     
 
     <nav>
         <ul>
             
-            <li><a href="../php/rolPersona/indexPersona.php"><img src="../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></a></li>
+            <li><a href="../php/rolPersona/indexpersona.php"><img src="../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></a></li>
 
-            <li><a href="#overview" id="selected">Inicio</a></li>
+            <li><a href="../php/rolPersona/indexpersona.php" id="selected">Inicio</a></li>
             <li><a href="#trainer">Brigadistas</a></li>
             <li><a href="php/login.php">Reglamento</a></li>
             <li><a href="#newsletter">Reportar</a></li>

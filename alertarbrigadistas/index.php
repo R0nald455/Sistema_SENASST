@@ -9,7 +9,7 @@ if(isset($_POST['add_to_cart'])){
    $brigadista_image = $_POST['product_image'];
    $brigadista_quantity = 1;
 
-   $select_cart = mysqli_query($conn, "SELECT * FROM `alerta` WHERE name = '$brigadista_name'");
+   $select_cart = mysqli_query($conexion, "SELECT * FROM `alerta` WHERE name = '$brigadista_name'");
 
    if(mysqli_num_rows($select_cart) > 0){
       $message[] = 'La alerta ha sido enviada al brigdista, por favor espere...';
@@ -79,7 +79,7 @@ if(isset($_POST['add_to_cart'])){
 
       <?php
       
-      $select_products = mysqli_query($conn, "SELECT * FROM `brigadista`");
+      $select_products = mysqli_query($conexion, "SELECT * FROM `brigadista`");
       if(mysqli_num_rows($select_products) > 0){
          while($fetch_product = mysqli_fetch_assoc($select_products)){
       ?>
