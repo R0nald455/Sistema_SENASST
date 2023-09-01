@@ -15,7 +15,7 @@ require_once ("../db/conexion.php");
 <body>
     <?php if(isset($_SESSION["id"]) ): ?>
     <header>
-    <a href="../php/rolFuncionario/indexAdministrador.php"><img src="../img/LogoSena.png" alt="logosena"></a>
+    <a href="../php/rolFuncionario/indexadministrador.php"><img src="../img/LogoSena.png" alt="logosena"></a>
     <h1>Administrador de contenidos</h1>
     </header>
 
@@ -49,7 +49,7 @@ include '../Footer/footer.php';
 
 <script>
     alert("No has iniciado sesión, por favor inicia a continuación.");
-    window.location.href = "../php/login.php;
+    window.location.href = "../php/login.php";
 </script>
 
 <?php endif; ?>
