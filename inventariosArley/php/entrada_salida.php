@@ -18,7 +18,7 @@ $mensaje = "";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $product_id = $_POST['product_id'];
     
-    $query_entrada = "SELECT id, nombre, cantidad, imagen FROM inventario WHERE id = $product_id";
+    $query_entrada = "SELECT id, Nombre, cantidad, imagen FROM inventario WHERE id = $product_id";
     $result_entrada = $bd->query($query_entrada);
 
     if ($result_entrada->num_rows > 0) {
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $result_entrada->free();
     
-    $query_salida = "SELECT id, nombre, cantidad, imagen FROM inventario WHERE id = $product_id";
+    $query_salida = "SELECT id, Nombre, cantidad, imagen FROM inventario WHERE id = $product_id";
     $result_salida = $bd->query($query_salida);
 
     if ($result_salida->num_rows > 0) {
@@ -43,22 +43,51 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['operation']) && $_POST['operation'] === 'entrada') {
         $quantity_entrada = $_POST['quantity_entrada'];
 
-        $update_query = "UPDATE inventario SET cantidad = cantidad + $quantity_entrada WHERE id = $product_id";
-        $bd->query($update_query);
+        // Insertar un registro de entrada en la tabla entrada_inventario
+        $insert_query = "INSERT INTO entrada_inventario (fecha_entrada, cantidad_entrada, inventario_id) 
+                         VALUES (NOW(), $quantity_entrada, $product_id)";
+        
+        if ($bd->query($insert_query)) {
+            // Actualizar la cantidad en la tabla inventario
+            $update_query = "UPDATE inventario SET cantidad = cantidad + $quantity_entrada WHERE id = $product_id";
+            $bd->query($update_query);
 
-        $mensaje = "Se ha registrado una entrada de $quantity_entrada unidades del producto.";
+            $mensaje = "Se ha registrado una entrada de $quantity_entrada unidades del producto.";
 
+        } else {
+            $mensaje = "Error al registrar la entrada.";
+        }
     } elseif (isset($_POST['operation']) && $_POST['operation'] === 'salida') {
         $quantity_salida = $_POST['quantity_salida'];
 
-        if ($quantity_salida <= $product_info_salida['cantidad']) {
+        // Insertar un registro de salida en la tabla salida_inventario
+        $insert_query = "INSERT INTO salida_inventario (fecha_salida, cantidad_salida, inventario_id) 
+                         VALUES (NOW(), $quantity_salida, $product_id)";
+        
+        if ($bd->query($insert_query)) {
+            // Actualizar la cantidad en la tabla inventario
             $update_query = "UPDATE inventario SET cantidad = cantidad - $quantity_salida WHERE id = $product_id";
-            $bd->query($update_query);
+            
+            // Verificar si hay suficiente cantidad antes de realizar la actualización
+            $check_query = "SELECT cantidad FROM inventario WHERE id = $product_id";
+            $result_check = $bd->query($check_query);
 
-            $mensaje = "Se ha registrado una salida de $quantity_salida unidades del producto.";
+            if ($result_check->num_rows > 0) {
+                $row_check = $result_check->fetch_assoc();
+                $cantidad_disponible = $row_check['cantidad'];
+                
+                if ($quantity_salida <= $cantidad_disponible) {
+                    $bd->query($update_query);
+                    $mensaje = "Se ha registrado una salida de $quantity_salida unidades del producto.";
 
+                } else {
+                    $mensaje = "No hay suficiente cantidad disponible para la salida.";
+                }
+            }
+            
+            $result_check->free();
         } else {
-            $mensaje = "No hay suficiente cantidad disponible para la salida.";
+            $mensaje = "Error al registrar la salida.";
         }
     }
 }
@@ -112,7 +141,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             <?php
            
-            header("refresh:3;url=index.php");
+            header("refresh:3;url=../index.php");
             exit();
             ?>
         <?php endif; ?>
@@ -131,7 +160,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php if (!empty($product_info_entrada['id'])): ?>
         <div class="info-producto">
             <h2>Información del Producto (Entrada)</h2>
-            <p>Nombre: <?php echo $product_info_entrada['nombre']; ?></p>
+            <p>Nombre: <?php echo $product_info_entrada['Nombre']; ?></p>
             <form method="post">
                 <label for="quantity_entrada">Cantidad de Entrada:</label>
                 <input type="number" name="quantity_entrada" required>
@@ -144,9 +173,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php endif; ?>
         
         <?php if (!empty($product_info_salida['id'])): ?>
+        <div class
+
         <div class="info-producto">
             <h2>Información del Producto (Salida)</h2>
-            <p>Nombre: <?php echo $product_info_salida['nombre']; ?></p>
+            <p>Nombre: <?php echo $product_info_salida['Nombre']; ?></p>
             <form method="post">
                 <label for="quantity_salida">Cantidad de Salida:</label>
                 <input type="number" name="quantity_salida" required>

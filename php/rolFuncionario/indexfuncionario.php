@@ -47,10 +47,12 @@ require_once ("../../db/conexion.php");
                         <ul> <b>
 							<li><a onclick="window.location.href='../../inventariosArley/php/index.php'">Administrar inventarios SST</a></li>
 							<li><a onclick="window.location.href='../../inventariosCristian/index.php'">Administrar inventarios Dotacion</a></li>
-                            <li><a onclick="window.location.href='../../inventarios/index.php'">Administrar inventarios</a></li>
-							<li><a onclick="window.location.href='../../inventarios/index.php'">Administrar Dotacion Especial</a></li>
-							<li><a onclick="window.location.href='../../alertarbrigadistas/admin.php'">Administrar Brigadistas</a></li>
+							<li><a onclick="window.location.href='../../personas/indexdotac.php'">Administrar inventarios Dotacion Especial y Brigadistas</a></li>
+                            <li><a onclick="window.location.href='../../inventarios/index.php'">Administrar inventario para extintores</a></li>
+							<li><a onclick="window.location.href='../../inventarios/modulos/implementos/index.php'">Administrar inventario para EPP</a></li>
+							<!-- <li><a onclick="window.location.href='../../alertarbrigadistas/admin.php'">Administrar Brigadistas</a></li> -->
 							<li><a onclick="window.location.href='../../admiRiesgos/index.php'">Administrar Riesgos</a></li>
+							<li><a onclick="window.location.href='../../QR/indexCrud.php'">Administrar Salon</a></li>
                         </ul> </b>
                     </li>
 					<li><a id="cerrar-sesion"><span class="material-symbols-outlined">logout</span></a></li>

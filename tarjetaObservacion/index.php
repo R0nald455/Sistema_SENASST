@@ -2,9 +2,37 @@
 <html>
     <head>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="../css/header.css">
         <title>Tarjeta de Observación</title>
     </head>  
     <body>
+        <!-- Menu de navegacion-->
+
+<div class="container__menu">
+
+<div class="menu">
+
+    <input type="checkbox" id="check__menu">
+    <label for="check__menu" class="lbl-menu">
+        <span id="spn1"></span>
+        <span id="spn2"></span>
+        <span id="spn3"></span>
+    </label>
+
+    <a href="../index.php"><img id="logoResponsive" src="../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></a>
+    
+
+    <nav>
+        <ul>
+            
+            <li><a href="../index.php"><img src="../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></a></li>
+
+            <li><a href="../index.php" id="selected">Salir</a></li>
+
+        </ul>
+    </nav>
+</div>
+</div>
         <div class="contenedor">
         
             <form action="php/carga.php" method="POST">

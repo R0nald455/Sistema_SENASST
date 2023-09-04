@@ -39,7 +39,7 @@ if(isset($_POST['update_product'])){
    $update_b_image_tmp_name = $_FILES['update_p_image']['tmp_name'];
    $update_b_image_folder = 'uploaded_img/'.$update_p_image;
 
-   $update_query = mysqli_query($conn, "UPDATE `brigadista` SET name = '$update_b_name', contact = '$update_b_price', image = '$update_b_image' WHERE id = '$update_b_id'");
+   $update_query = mysqli_query($conexion, "UPDATE `brigadista` SET name = '$update_b_name', contact = '$update_b_contact', image = '$update_b_image' WHERE id = '$update_b_id'");
 
    if($update_query){
       move_uploaded_file($update_b_image_tmp_name, $update_b_image_folder);
@@ -64,10 +64,9 @@ if(isset($_POST['update_product'])){
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-   <link rel="stylesheet" href="../css/header.css">
    <!-- custom css file link  -->
    <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="css/styleindex.css">
+   <link rel="stylesheet" href="styleindex.css">
 
 
 </head>
@@ -83,18 +82,6 @@ if(isset($message)){
 
 ?>
 
-<!-- Menu de navegacion-->
-
-<div class="container__menu">
-
-	<div class="menu">
-
-		<input type="checkbox" id="check__menu">
-		<label for="check__menu" class="lbl-menu">
-			<span id="spn1"></span>
-			<span id="spn2"></span>
-			<span id="spn3"></span>
-		</label>
 
 		<img id="logoResponsive" src="../img/LogoSenaBlanco.png"  width="70px" alt="logoSena">
 
@@ -168,7 +155,7 @@ if(isset($message)){
    
    if(isset($_GET['edit'])){
       $edit_id = $_GET['edit'];
-      $edit_query = mysqli_query($conn, "SELECT * FROM `brigadista` WHERE id = $edit_id");
+      $edit_query = mysqli_query($conexion, "SELECT * FROM `brigadista` WHERE id = $edit_id");
       if(mysqli_num_rows($edit_query) > 0){
          while($fetch_edit = mysqli_fetch_assoc($edit_query)){
    ?>
@@ -177,7 +164,7 @@ if(isset($message)){
       <img src="uploaded_img/<?php echo $fetch_edit['image']; ?>" height="200" alt="">
       <input type="hidden" name="update_p_id" value="<?php echo $fetch_edit['id']; ?>">
       <input type="text" class="box" required name="update_p_name" value="<?php echo $fetch_edit['name']; ?>">
-      <input type="number" min="0" class="box" required name="update_p_price" value="<?php echo $fetch_edit['price']; ?>">
+      <input type="number" min="0" class="box" required name="update_p_price" value="<?php echo $fetch_edit['contact']; ?>">
       <input type="file" class="box" required name="update_p_image" accept="image/png, image/jpg, image/jpeg">
       <input type="submit" value="Editar brigadista" name="update_product" class="btn">
       <input type="reset" value="cancelar" id="close-edit" class="option-btn">

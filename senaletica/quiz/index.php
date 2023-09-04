@@ -2,9 +2,8 @@
 <html>
 <head>
     <title>Quiz Señaletica</title>
-    <link rel="stylesheet" href="../../css/header.css">
     <style>
-        body {
+       body {
             font-family: Arial, sans-serif;
             text-align: center;
         }
@@ -53,37 +52,10 @@
             max-width: 100%;
             height: auto;
             margin: 10px 0;
-        }
+        } 
     </style>
 </head>
 <body>
-<!-- Menu de navegacion-->
-
-<div class="container__menu">
-
-<div class="menu">
-
-    <input type="checkbox" id="check__menu">
-    <label for="check__menu" class="lbl-menu">
-        <span id="spn1"></span>
-        <span id="spn2"></span>
-        <span id="spn3"></span>
-    </label>
-
-    <a href="../php/rolPersona/indexPersona.php"><img id="logoResponsive" src="../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></a>
-    
-
-    <nav>
-        <ul>
-            
-            <li><a href="../php/rolPersona/indexPersona.php"><img src="../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></a></li>
-
-            <li><a href="../index.php" id="selected">Inicio</a></li>
-            <li><a href="../index.php">Salir</a></li>
-        </ul>
-    </nav>
-</div>
-</div>
 
 <h1>Quiz Señaletica</h1>
 
@@ -168,15 +140,41 @@ $questions = array(
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $score = 0;
+    $allAnswered = true;
 
     foreach ($questions as $index => $question) {
-        $selected_option = $_POST['question_' . $index];
+        $selected_option = isset($_POST['question_' . $index]) ? $_POST['question_' . $index] : '';
+        
+        if (empty($selected_option)) {
+            $allAnswered = false;
+            break;
+        }
+
         if ($selected_option === $question['correct_option']) {
             $score++;
         }
     }
 
-    echo "<p>Tus respuestas correctas son: $score / " . count($questions) . "</p>";
+    if ($allAnswered) {
+        echo "<p>Tu puntuación es: $score / " . count($questions) . ". ¡Muy bien!</p>";
+    } else {
+        echo "<p>Es importante contestar todas las preguntas del quiz. ¡Vamos, tú puedes!</p>";
+        echo '<form method="POST" action="">';
+
+        foreach ($questions as $index => $question) {
+            echo '<p>' . $question['question'] . '</p>';
+            echo '<img src="' . $question['image'] . '" alt="Imagen de la pregunta">';
+            foreach ($question['options'] as $optionKey => $option) {
+                echo '<label>';
+                echo '<input type="radio" name="question_' . $index . '" value="' . $optionKey . '">';
+                echo $option;
+                echo '</label><br>';
+            }
+        }
+
+        echo '<br><input type="submit" value="Ver respuestas correctas">';
+        echo '</form>';
+    }
 } else {
     echo '<form method="POST" action="">';
 
@@ -195,6 +193,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo '</form>';
 }
 ?>
-
 </body>
 </html>

@@ -85,7 +85,7 @@
 			</div>
 			<div class="wow fadeInUp col-md-4 col-sm-6" >
 				<div class="trainer-thumb">
-				<button class="UbicarBrigadista"><a onclick="window.location.href='alertarbrigadistas/index.php'">Alerta a un Brigadista</a></button>
+				<button class="UbicarBrigadista"><a onclick="window.location.href='personas/alertar.php'">Alerta a un Brigadista</a></button>
 				</div>
 			</div>
 			<div class="wow fadeInUp col-md-4 col-sm-6" >
@@ -190,7 +190,7 @@
 			<div class=" col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10" >
 				<h2>!Descubre nuestros simuladores!</h2>
 				<h4>Juega y diviértete</h4>
-				<button class="botonReportar" onclick="window.location.href='tarjetaObservacion/index.php'"><b>Ingresa</b></button>
+				<button class="botonReportar" onclick="window.location.href='simulador/index.php'"><b>Juega</b></button>
 			</div>
 		</div>
 	</div>

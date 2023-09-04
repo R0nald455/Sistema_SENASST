@@ -1,0 +1,231 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color:rgba(0, 0, 0, 0.87);
+    height: 100vh;
+}
+
+.container{ 
+    top: 5px;
+    left: 0px;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    border:rgba(0,0,0,0) solid 1px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -ms-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+}
+
+.container{
+    width: 1800px;
+    height: 920px;
+    border: 3px solid rgb(255, 255, 255);
+}
+
+.cont-pregEnun{
+    position: relative;
+    width: 1200px;
+    height: 100px;
+    right: -120px;
+    top: 70px;
+    text-align: center;
+}
+
+#titulo-pregEnun{
+    color: white;
+}
+
+#pregunta-enunciado{
+    position: relative;
+    top: -20px;
+}
+
+
+#previ-imagePreg{
+    position: absolute;
+    width: 100%;
+    height: 980px;
+    left: 0px;
+    /*border: #000000 solid 1px;*/
+    background-image: url(../image/Fondosistemas.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0px;
+    background-color: blue;
+}
+
+.traeBlob{
+    position: absolute;
+    top: 15px;
+    left: 57px;
+    width: 340px;
+    height: 335px;
+}
+
+#preA{
+    position: absolute;
+    top: 220px;
+    left: 520px;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+#preB{
+    position: absolute;
+    top: 295px;
+    left: 520px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#preC{
+    position: absolute;
+    top: 373px;
+    left: 520px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#preD{
+    position: absolute;
+    top: 455px;
+    left: 520px;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+span{
+    color: white;
+}
+
+#retroAli{
+    position: absolute;
+    top: 600px;
+    right: 250px;
+}
+
+
+#icono-image-salir{
+    position: absolute;
+    background-image: url(../image/salida.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 20px;
+    background-color: #0000002f;
+    width: 100px;
+    height: 100px;
+    right: 30px;
+}
+
+
+#icono-image-salir:hover{
+    width: 110px;
+    height: 110px;
+    transition: 150ms;
+}
+
+#icono-image-continuar{
+    position: absolute;
+    background-image: url(../image/saltar.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 20px;
+    background-color: #00000000;
+    width: 100px;
+    height: 100px;
+    right: 30px;
+    top: 815px;
+}
+
+#icono-image-continuar:hover{
+    width: 110px;
+    height: 110px;
+    transition: 150ms;
+}
+
+
+#btn-contestar{
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    top: 400px;
+    right: 30px;
+}   
+
+#btn-contestar:hover{
+    background-color: gray;
+    color: black;
+    cursor: pointer;
+    transition: 150ms;
+}
+
+.checkbox-container{
+    position: absolute;
+    cursor: pointer;
+    height: 270px;
+    width: 0px;
+    top: 220px;
+    left: 480px;
+}
+
+#checkmarkA {
+    position: absolute;
+    height: 25px; /* Altura del checkbox */
+    width: 25px; /* Anchura del checkbox */
+    background-color: blue;
+    left: 4px;
+    top: 3px;
+}
+
+#checkmarkB {
+    position: absolute;
+    height: 25px; /* Altura del checkbox */
+    width: 25px; /* Anchura del checkbox */
+    background-color: blue;
+    left: 4px;
+    top:80px;
+}
+
+#checkmarkC {
+    position: absolute;
+    height: 25px; /* Altura del checkbox */
+    width: 25px; /* Anchura del checkbox */
+    background-color: blue;
+    left: 4px;
+    top:155px;
+}
+
+#checkmarkD {
+    position: absolute;
+    height: 25px; /* Altura del checkbox */
+    width: 25px; /* Anchura del checkbox */
+    background-color: blue;
+    left: 4px;
+    top:237px;
+}
+
+
+.cont-retroAli{
+    position: relative;
+    width: 1200px;
+    height: 150px;
+    top: -280px;
+    left:  600px;
+    text-align: center;
+}
