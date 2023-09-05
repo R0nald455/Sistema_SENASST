@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
             $instruccion = "INSERT INTO inventario(codigo, imagen, cantidad, Nombre, fech_ven)
                             VALUES ('$codigo', '$imgContent', '$cantidad', '$nombre', '$fechaVencimiento')";
-            $ejecutar = mysqli_query($bd, $instruccion);
+            $ejecutar = mysqli_query($conexion, $instruccion);
             if ($ejecutar) {
                 echo "Inserción correcta";
             } else {

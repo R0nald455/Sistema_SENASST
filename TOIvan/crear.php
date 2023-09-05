@@ -90,38 +90,73 @@
 <input type="text" type="text" REQUIRED placeholder="ingrese su nombre" name="names"></p>
 
 <p>Identificación del riesgo <br>
+<table>
+        <tr>
+           <td colspan=3>
+               <!-- Añadido onchange para cargar los riesgos -->
+               <select name="riesgo" id="riesgo" onchange="cargarCondicion();" onclick="showContent()" >
+                   <!-- Hay que terminar los options -->
+                   <!-- 
+                        Eliminado de value la llamada a la función,
+                        si eso funciona lo desconocía, y aunque 
+                        lo haga es totalmente innecesario, 
+                        lo correcto es usar el evento onchange 
+                     -->
+                   <option value="">Seleccione un Riesgo...</option>
+               </select>
+           </td>
+       </tr>
+       <tr>                    
+           <td colspan=3>
+               <select name="condicion" id="condicion" style="display: none">
+                   <!-- Hay que terminar los options -->
+                   <!-- 
+                        Eliminado de value la llamada a la función,
+                        si eso funciona lo desconocía, y aunque 
+                        lo haga es totalmente innecesario, 
+                        lo correcto es usar el evento onchange 
+                     -->
+                   <option value="">Defina el riesgo...</option>
+               </select>
+           </td>
+       </tr>
+     </table>
 
-<select id="riesgo" name="condicion" onchange="mostrarOtro()">
-            <option value="riesgo1">Riesgo Electrico</option>
-            <option value="riesgo2">Riesgo Biologico</option>
-            <option value="riesgo3">Riesgo Fisico</option>
-            <option value="riesgo4">Riesgo Psicosocial</option>
-            <option value="riesgo5">Riesgo Ergonomico</option>
-        </select>
-        <div id="otroRiesgo" style="display: none;">
-            <label for="otroRiesgoInput">Escriba otro riesgo:</label>
-            <input type="text" id="otroRiesgoInput" name="otroRiesgoInput">
-        </div></p>
+
 
     
 
 <!--
 <p>Video de la condiciòn insegura<input type="text" REQUIRED placeholder="sub un videomostrando la con" name="video" size="30"></p>
 -->
-<p>¿Area donde observo el riesgo? <br><Textarea id = "myTextArea2"  REQUIRED placeholder="Ejm: En el bloque c" name="contexto" rows = "3"
-    cols = "35"></textarea></p>
-
-<p>Que tan peligroso cree que es?<br>
+<p>¿Área donde observó el riesgo? <br><br>
+<select id="contexto" name="contexto" onchange="mostrarOtro()">
+            <option selected>Seleccione</option>
+            <option value="Auditorio">Auditorio</option>
+            <option value="Administración">Administración</option>
+            <option value="Bloque A">Bloque A</option>
+            <option value="Bloque B">Bloque B</option>
+            <option value="Bloque C">Bloque C</option>
+            <option value="Biblioteca">Biblioteca</option>
+            <option value="Coliseo">Coliseo</option>
+            <option value="Cafetería">Cafetería</option>
+            <option value="otro">Otro</option>
+        </select>
+        <div id="otroRiesgo" style="display: none;">
+            <label for="otroRiesgoInput">En que parte:</label>
+            <input type="text" id="otroRiesgoInput" name="otroRiesgoInput">
+        </div></p>
+<p>¿Que tan peligroso cree que es?<br>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-  <label class="form-check-label" for="inlineRadio1">Bajo</label>
+  <input class="form-check-input" type="radio" name="situacion" id="inlineRadio1" value="Alto">
+  <label class="form-check-label" for="inlineRadio1">Alto</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+  <input class="form-check-input" type="radio" name="situacion" id="inlineRadio2" value="Medio">
   <label class="form-check-label" for="inlineRadio2">Medio</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" >
+  <input class="form-check-input" type="radio" name="situacion" id="inlineRadio3" value="Bajo" >
   <label class="form-check-label" for="inlineRadio3">Bajo</label>
 </div>
 
@@ -137,7 +172,7 @@
 <br>
     <a href="ProfIni.php">Volver</a>
 </center>
-<script src="../../js/script.js">
-</script>
+<script src="script.js"></script>
+    <script src="script2.js"></script>
 </body>
 </html> 

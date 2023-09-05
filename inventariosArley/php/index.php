@@ -1,12 +1,12 @@
 <?php
 include('conexion.php');
 
-if ($bd->connect_error) {
-    die("Error en la conexión: " . $bd->connect_error);
+if ($conexion->connect_error) {
+    die("Error en la conexión: " . $conexion->connect_error);
 }
 
 $query = "SELECT id,Nombre, cantidad, imagen, fech_ven FROM inventario";
-$result = $bd->query($query);
+$result = $conexion->query($query);
 
 function getThemeModeLink()
 {

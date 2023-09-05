@@ -90,7 +90,7 @@ require_once ("../db/conexion.php");
       if(mysqli_num_rows($result) > 0) {
           $row_count=0;
           echo "<br><br>Resultados encontrados: ";
-          echo "<br><table class='table table-striped'>
+          echo "<br><table class='table table-striped text-justify'>
           <th>No</th>
           <th>Descripción</th>
           <th>Interpretación</th>";
