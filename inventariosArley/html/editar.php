@@ -99,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (isset($_POST['buscar_producto'])) {
         $codigo = $_POST['codigo'];
         $instruccion = "SELECT * FROM inventario WHERE codigo='$codigo'";
-        $resultado = mysqli_query($bd, $instruccion);
+        $resultado = mysqli_query($conexion, $instruccion);
         $producto = mysqli_fetch_assoc($resultado);
         if ($producto) {
             echo '<form action="../html/editar.php" method="post" enctype="multipart/form-data">
@@ -152,7 +152,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $instruccion = "UPDATE inventario SET cantidad='$cantidad', Nombre='$Nombre', fech_ven='$fechaVencimiento', imagen='" . addslashes(base64_decode($imagenActual)) . "' WHERE codigo='$codigo'";
         }
 
-        $ejecutar = mysqli_query($bd, $instruccion);
+        $ejecutar = mysqli_query($conexion, $instruccion);
         if ($ejecutar) {
             echo "Actualización correcta";
             header("Location: ../php/index.php");

@@ -40,8 +40,6 @@ require_once ("../../db/conexion.php");
 		<nav>
 			<ul>
 				<li><img src="../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></li>
-				<li><a href="#overview" id="selected">Inicio</a></li>
-				<li><a href="#brigadista">Brigadistas</a></li>
 				<li><a onclick="window.location.href='../../reglamento/index.php'" >Reglamento</a></li>
 				<li><a onclick="window.location.href='../../tarjetaObservacion/index.php?session=1'" >Reportar</a></li>
 				<li><a onclick="window.location.href='../../NormasJason/index.php'" >Normas</a></li>

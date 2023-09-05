@@ -1,22 +1,20 @@
 <?php
 session_start();
 error_reporting(0);
-require_once ("../../../db/conexion.php");
+include "../../conexion.php";
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
+<head>
     <head>
 		<?php include("head.php");?>
     </head>
-
     <body>
 
     <?php if(isset($_SESSION["id"]) ): ?>
 
-        <!-- Menu de navegacion-->
-
-<div class="container__menu">
+    <br>
+    <div class="container__menu">
     <div class="menu">
 
         <input type="checkbox" id="check__menu">
@@ -29,9 +27,13 @@ require_once ("../../../db/conexion.php");
         <nav>
             <ul>
                 <li><img src="../../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></li>
-                <li><a href="../../../php/rolFuncionario/indexfuncionario.php" id="selected">Inicio</a></li>
-                <li><a href="../entradas/index.php">Administrar entradas</a></li>
-                <li><a href="../salidas">Administrar salidas</a></li>
+                <li><a href="../../../php/rolFuncionario/indexadministrador.php" id="selected">Inicio</a></li>
+                <li><a href="../botiquines/index.php">Administrar Elementos</a></li>
+                <li><a href="../inspecciones/index.php">Inspeccion de Elementos</a></li>
+                <li><a href="../entradas/index.php">Entrada de Elementos</a></li>
+                <li><a href="../salidas/index.php">Salida de Elementos</a></li>
+
+
             </ul>
         </nav>
 
@@ -40,68 +42,67 @@ require_once ("../../../db/conexion.php");
         </div>
     </div>
 </div>
-    <br>
+<br>
             <div class="container">
                 <div class="row">
                     <div class="span12">
                         <div class="content">
             <?php
                 if(isset($_GET['action']) == 'delete'){
-                    $id_delete = intval($_GET['ID_Implementos']);
-                    $query = mysqli_query($conexion, "SELECT * FROM tblimplementos WHERE ID_Implementos='$id_delete'");
+                    $id_delete = intval($_GET['ID_Entradas']);
+                    $query = mysqli_query($conexion, "SELECT * FROM tblentradas WHERE ID_Entradas='$id_delete'");
                     if(mysqli_num_rows($query) == 0){
                         echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> No se encontraron datos.</div>';
                     }else{
-                        $delete = mysqli_query($conexion, "DELETE FROM tblimplementos WHERE ID_Implementos='$id_delete'");
+                        $delete = mysqli_query($conexion, "DELETE FROM tblentradas WHERE ID_Entradas='$id_delete'");
                         if($delete){
-                            echo '<div class="alert alert-primary alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>  Bien hecho, los datos han sido eliminados correctamente.</div>';
+                            echo '<div class="alert alert-primary alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>  Bien hecho, la entrada ha sido eliminada correctamente.</div>';
                         }else{
-                            echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Error, no se pudo eliminar los datos.</div>';
+                            echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Error, no se pudo eliminar la entrada.</div>';
                         }
                     }
                 }
 			?>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title"><i class="fa-solid fa-screwdriver-wrench" style="color: #1b1c1d;"></i> Administrador de Elementos de Proteccion Personal</h3> 
-                                </div>
+                    <div class="panel panel-default">   
+                        <div class="panel-heading">
+                        <h3 class="panel-title" style="color:#3fc13f;"><i class="fa-solid fa-up-long" style="color: #49bd1f;"></i></i>Entrada de elementos al botiquin</h3> 
+                        </div>
 						
-                                <div class="panel-body">
-                                    <div class="pull-right">
-                                        <a href="registro.php" class="btn btn-sm btn-success">Nuevo EPP</a>
-                                    </div><br>
-                                    <hr>
-
-                                    <div class="table-container table-responsive">
+                        <div class="panel-body">
+							<div class="pull-right">
+								<a href="registro.php" class="btn btn-sm btn-success">Nueva entrada de Elementos</a>
+							</div><br>
+							<hr>
+                                <div class="table-container table-responsive">
                                         <table id="lookup" class="table table-hover">  
-                                            <thead bgcolor="rgb(57,168,1)" align="center">
-                                            <tr>
-        
-                                            <th>ID de los EPP</th>
-                                            <th>Nombre </th>
-                                            <th>Descripcion </th>
-                                            <th>Categoria</th>
-                                            <th>Cantidad </th>
-                                            <th>Ubicacion</th>
-                                            <th>Fecha de registro</th>
-                                            <th class="text-center"> Acciones </th> 
-        
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            </tbody>
-                                        </table> 
-                                    </div>
+	                                    <thead bgcolor="rgb(57,168,1)" align="center">
+                                        <tr>
+	  
+                                        <th>ID de la entrada</th>
+	                                    <th>ID del elemento del botiquín</th>
+                                        <th>Cantidad</th>
+                                        <th>Comentario</th>
+                                        <th>Fecha de entrada</th>
+	                                    <th class="text-center"> Acciones </th> 
+	  
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            
                                 </div>
                             </div>
+                            
                         </div>
                         <!--/.content-->
                     </div>
-                    <!--/.span12-->
+                    <!--/.span9-->
                 </div>
             </div>
             <!--/.container-->
-        
         <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../../datatables/jquery.dataTables.js"></script>
         <script src="../../datatables/dataTables.bootstrap.js"></script>
@@ -110,11 +111,11 @@ require_once ("../../../db/conexion.php");
         $(document).ready(function() {
 				let dataTable = $('#lookup').DataTable( {
 					
-				"language":	{
+				 "language":	{
 					"sProcessing":     "Procesando...",
 					"sLengthMenu":     "Mostrar _MENU_ registros",
-					"sZeroRecords":    "No se encontraron resultados.",
-					"sEmptyTable":     "Ningún dato disponible en esta tabla.",
+					"sZeroRecords":    "No se encontraron resultados",
+					"sEmptyTable":     "Ningún dato disponible en esta tabla",
 					"sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
 					"sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
 					"sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
@@ -158,5 +159,6 @@ require_once ("../../../db/conexion.php");
     window.location.href = "../../../php/login.php";
 </script>
     <?php endif; ?>
+    
+    </body>
 
-</body>

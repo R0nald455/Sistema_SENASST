@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-require_once ("../../../db/conexion.php");
+include "../../conexion.php";
 ?>
 
 <!DOCTYPE html>
@@ -24,14 +24,17 @@ require_once ("../../../db/conexion.php");
             <span id="spn1"></span>
             <span id="spn2"></span>
             <span id="spn3"></span>
+
         </label>
 
         <nav>
             <ul>
                 <li><img src="../../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></li>
-                <li><a href="../../../php/rolFuncionario/indexfuncionario.php" id="selected">Inicio</a></li>
-                <li><a href="../entradas/index.php">Administrar entradas</a></li>
-                <li><a href="../salidas">Administrar salidas</a></li>
+                <li><a href="../../../php/rolFuncionario/indexadministrador.php" id="selected">Inicio</a></li>
+                <li><a href="../botiquines/index.php">Administrar Elementos</a></li>
+                <li><a href="../inspecciones/index.php">Inspeccion de Elementos</a></li>
+                <li><a href="../entradas/index.php">Entrada de Elementos</a></li>
+                <li><a href="../salidas">Salida de Elementos</a></li>
             </ul>
         </nav>
 
@@ -47,12 +50,12 @@ require_once ("../../../db/conexion.php");
                         <div class="content">
             <?php
                 if(isset($_GET['action']) == 'delete'){
-                    $id_delete = intval($_GET['ID_Implementos']);
-                    $query = mysqli_query($conexion, "SELECT * FROM tblimplementos WHERE ID_Implementos='$id_delete'");
+                    $id_delete = intval($_GET['id_elementos']);
+                    $query = mysqli_query($conexion, "SELECT * FROM botiquin WHERE id_elementos='$id_delete'");
                     if(mysqli_num_rows($query) == 0){
                         echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> No se encontraron datos.</div>';
                     }else{
-                        $delete = mysqli_query($conexion, "DELETE FROM tblimplementos WHERE ID_Implementos='$id_delete'");
+                        $delete = mysqli_query($conexion, "DELETE FROM botiquin WHERE id_elementos='$id_delete'");
                         if($delete){
                             echo '<div class="alert alert-primary alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>  Bien hecho, los datos han sido eliminados correctamente.</div>';
                         }else{
@@ -63,12 +66,12 @@ require_once ("../../../db/conexion.php");
 			?>
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title"><i class="fa-solid fa-screwdriver-wrench" style="color: #1b1c1d;"></i> Administrador de Elementos de Proteccion Personal</h3> 
+                                    <h3 class="panel-title"><i class="fa-solid fa-kit-medical" style="color: #39a801"></i> Administrador de Elementos del Botiquin</h3> 
                                 </div>
 						
                                 <div class="panel-body">
                                     <div class="pull-right">
-                                        <a href="registro.php" class="btn btn-sm btn-success">Nuevo EPP</a>
+                                        <a href="registro.php" class="btn btn-sm btn-success">Nuevo Elemento</a>
                                     </div><br>
                                     <hr>
 
@@ -77,13 +80,16 @@ require_once ("../../../db/conexion.php");
                                             <thead bgcolor="rgb(57,168,1)" align="center">
                                             <tr>
         
-                                            <th>ID de los EPP</th>
-                                            <th>Nombre </th>
-                                            <th>Descripcion </th>
-                                            <th>Categoria</th>
-                                            <th>Cantidad </th>
-                                            <th>Ubicacion</th>
-                                            <th>Fecha de registro</th>
+                                            <th>ID del elemento</th>
+                                            <th>Nombre</th>
+                                            <th>Descripción</th>
+                                            <th>Cantidad</th>
+                                            <th>Ubicación</th>
+                                            <th>Ubicacion específica</th>
+                                            <th>Estado</th>
+                                            <th>Fecha de Registro</th>
+                                            <th>Comentarios</th>
+                                            <th>Fecha de Inspeccion</th>
                                             <th class="text-center"> Acciones </th> 
         
                                             </tr>

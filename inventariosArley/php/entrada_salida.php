@@ -1,13 +1,13 @@
 <?php
 include('conexion.php');
 
-if ($bd->connect_error) {
-    die("Error en la conexión: " . $bd->connect_error);
+if ($conexion->connect_error) {
+    die("Error en la conexión: " . $conexion->connect_error);
 }
 
 $productos = array();
 $query_products = "SELECT id, Nombre FROM inventario";
-$resultado_productos = $bd->query($query_products);
+$resultado_productos = $conexion->query($query_products);
 
 while ($fila = $resultado_productos->fetch_assoc()) {
     $productos[] = $fila;
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $product_id = $_POST['product_id'];
     
     $query_entrada = "SELECT id, Nombre, cantidad, imagen FROM inventario WHERE id = $product_id";
-    $result_entrada = $bd->query($query_entrada);
+    $result_entrada = $conexion->query($query_entrada);
 
     if ($result_entrada->num_rows > 0) {
         $product_info_entrada = $result_entrada->fetch_assoc();
@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result_entrada->free();
     
     $query_salida = "SELECT id, Nombre, cantidad, imagen FROM inventario WHERE id = $product_id";
-    $result_salida = $bd->query($query_salida);
+    $result_salida = $conexion->query($query_salida);
 
     if ($result_salida->num_rows > 0) {
         $product_info_salida = $result_salida->fetch_assoc();
@@ -47,10 +47,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $insert_query = "INSERT INTO entrada_inventario (fecha_entrada, cantidad_entrada, inventario_id) 
                          VALUES (NOW(), $quantity_entrada, $product_id)";
         
-        if ($bd->query($insert_query)) {
+        if ($conexion->query($insert_query)) {
             // Actualizar la cantidad en la tabla inventario
             $update_query = "UPDATE inventario SET cantidad = cantidad + $quantity_entrada WHERE id = $product_id";
-            $bd->query($update_query);
+            $conexion->query($update_query);
 
             $mensaje = "Se ha registrado una entrada de $quantity_entrada unidades del producto.";
 
@@ -64,20 +64,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $insert_query = "INSERT INTO salida_inventario (fecha_salida, cantidad_salida, inventario_id) 
                          VALUES (NOW(), $quantity_salida, $product_id)";
         
-        if ($bd->query($insert_query)) {
+        if ($conexion->query($insert_query)) {
             // Actualizar la cantidad en la tabla inventario
             $update_query = "UPDATE inventario SET cantidad = cantidad - $quantity_salida WHERE id = $product_id";
             
             // Verificar si hay suficiente cantidad antes de realizar la actualización
             $check_query = "SELECT cantidad FROM inventario WHERE id = $product_id";
-            $result_check = $bd->query($check_query);
+            $result_check = $conexion->query($check_query);
 
             if ($result_check->num_rows > 0) {
                 $row_check = $result_check->fetch_assoc();
                 $cantidad_disponible = $row_check['cantidad'];
                 
                 if ($quantity_salida <= $cantidad_disponible) {
-                    $bd->query($update_query);
+                    $conexion->query($update_query);
                     $mensaje = "Se ha registrado una salida de $quantity_salida unidades del producto.";
 
                 } else {

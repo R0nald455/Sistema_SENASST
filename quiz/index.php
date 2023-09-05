@@ -127,7 +127,6 @@ footer {
   height: auto;
   padding: 2rem 0;
   width: 100%;
-  border-top:solid black;
 }
 
 body {
@@ -378,7 +377,7 @@ label {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   body {
-    background-image: linear-gradient(to right, #FFFFFF, #bdbdbd, #bdbdbd, #bdbdbd, #bdbdbd, #bdbdbd, #FFFFFF);
+    background-image: linear-gradient(to right, #FFFFFF, #bdbdbd, #FFFFFF, #FFFFFF, #FFFFFF, #bdbdbd, #FFFFFF);
   }
 }
 
@@ -521,7 +520,6 @@ $falsa3 = $fila['falsa3'];
 
 <main>
   <article>
-    <h2 class="quiz-title hidden">eCommerce Quiz</h2>
 
     <section id="Start-Menu" class="menu hidden active-panel">
       <div class="menu-content-wrap">
@@ -550,7 +548,7 @@ $falsa3 = $fila['falsa3'];
       <div class="menu-content-wrap">
         <h3 id="Menu-h3">No seleccionaste nada</h3>
         <p>Con el objetivo de la excelencia en mente, debe seleccionar una respuesta para continuar.</p>
-        <input id="Close-Button" type="submit" value="Close" name="Close">
+        <input id="Close-Button" type="submit" value="Cerrar" name="Close">
       </div>
     </section>
 
@@ -691,13 +689,13 @@ function redirectToQuizPage() {
 
   <div id="Retry-Button-Wrap" class="footer-content-wrap hidden">
     <input id="Retry-Button" type="submit" value="Reintentar" name="Main-Menu">
-    <input id="Quit-Button" type="submit" value="Quit" name="Quit-Button">
+    <input id="Quit-Button" type="submit" value="Salir" name="Quit-Button">
   </div>
 
   <div id="Quiz-Button-Wrap" class="footer-content-wrap hidden">
-    <input id="Next-Button" type="submit" value="Next ❯" name="Next">
+    <input id="Next-Button" type="submit" value="Siguiente ❯" name="Next">
     <div class="container-timer">
-      <p id="Timer-Title">time left:</p>
+      <p id="Timer-Title">tiempo:</p>
       <p id="timer">
         <span id="timer-mins">02</span>
         <span id="timer-colon"> : </span>
