@@ -43,14 +43,18 @@ require_once ("../../db/conexion.php");
 			<ul>
 				<li><img src="../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></li>
 				<li><a href="#overview" id="selected">Inicio</a></li>
+				<li><a href="#">Inventarios</a>
+				<ul> <b>
+							<li><a onclick="window.location.href='../../inventariosArley/php/index.php'">Inventario SST</a></li>
+							<li><a onclick="window.location.href='../../inventariosCristian/index.php'">Inventario Dotacion</a></li>
+							<li><a onclick="window.location.href='../../personas/indexdotac.php'">Inventario Dotacion Especial y Brigadistas</a></li>
+                            <li><a onclick="window.location.href='../../inventarios/index.php'">Inventario para extintores</a></li>
+							<li><a onclick="window.location.href='../../elementos/Model/inspecciones/index.php'">Inventario botiquines</a></li>
+							<li><a onclick="window.location.href='../../inventarios/modulos/implementos/index.php'">Inventario para EPP's</a></li>
+                        </ul> </b>
+				</li>
 				<li><a href="#">Modulos administrativos</a>
                         <ul> <b>
-							<li><a onclick="window.location.href='../../inventariosArley/php/index.php'">Administrar inventarios SST</a></li>
-							<li><a onclick="window.location.href='../../inventariosCristian/index.php'">Administrar inventarios Dotacion</a></li>
-							<li><a onclick="window.location.href='../../personas/indexdotac.php'">Administrar inventarios Dotacion Especial y Brigadistas</a></li>
-                            <li><a onclick="window.location.href='../../inventarios/index.php'">Administrar inventario para extintores</a></li>
-							<li><a onclick="window.location.href='../../elementos/Model/inspecciones/index.php'">Administrar inventario botiquines</a></li>
-							<li><a onclick="window.location.href='../../inventarios/modulos/implementos/index.php'">Administrar inventario para EPP</a></li>
 							<!-- <li><a onclick="window.location.href='../../alertarbrigadistas/admin.php'">Administrar Brigadistas</a></li> -->
 							<li><a onclick="window.location.href='../../admiRiesgos/index.php'">Administrar Riesgos</a></li>
 							<li><a onclick="window.location.href='../../QR/indexCrud.php'">Administrar Salon</a></li>
