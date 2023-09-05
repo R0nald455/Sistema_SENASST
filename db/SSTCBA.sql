@@ -169,18 +169,6 @@ INSERT INTO `extintores` (`ExtintorID`, `NumeroDeSerie`, `TipoDeExtintor`, `Fech
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `extintorimagenes`
---
-
-CREATE TABLE `extintorimagenes` (
-  `ID` int(11) NOT NULL,
-  `NombreArchivo` varchar(255) NOT NULL,
-  `TipoArchivo` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `inventario`
 --
 
@@ -612,13 +600,6 @@ ALTER TABLE `extintores`
   ADD PRIMARY KEY (`ExtintorID`);
 
 --
--- Indices de la tabla `extintorimagenes`
---
-ALTER TABLE `extintorimagenes`
-  ADD PRIMARY KEY (`ID`),
-  ADD KEY `ID` (`ID`);
-
---
 -- Indices de la tabla `inventario`
 --
 ALTER TABLE `inventario`
@@ -759,12 +740,6 @@ ALTER TABLE `brigalerta`
 --
 ALTER TABLE `extintores`
   MODIFY `ExtintorID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
---
--- AUTO_INCREMENT de la tabla `extintorimagenes`
---
-ALTER TABLE `extintorimagenes`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `inventario`

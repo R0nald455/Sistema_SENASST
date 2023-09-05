@@ -94,8 +94,9 @@
 <select id="riesgo" name="condicion" onchange="mostrarOtro()">
             <option value="riesgo1">Riesgo Electrico</option>
             <option value="riesgo2">Riesgo Biologico</option>
-            <option value="riesgo3">Riesgo Fisicos</option>
-            <option value="otro">Otro</option>
+            <option value="riesgo3">Riesgo Fisico</option>
+            <option value="riesgo4">Riesgo Psicosocial</option>
+            <option value="riesgo5">Riesgo Ergonomico</option>
         </select>
         <div id="otroRiesgo" style="display: none;">
             <label for="otroRiesgoInput">Escriba otro riesgo:</label>

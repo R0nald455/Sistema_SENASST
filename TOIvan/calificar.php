@@ -6,6 +6,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
     <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         /* Estilo para el botón de submit */
         input[type="submit"] {
             background-color: #4CAF50;
@@ -122,7 +128,7 @@
         line-height: 1.5;
     }
     #aparte{
-        width: 40%;
+        width: 80%;
     }
     *{
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
