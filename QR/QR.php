@@ -49,7 +49,10 @@ $conexion->close();
 </tbody>
 </table>
 <br>
-  <a href="./Modelo3D/BloqueD.html">
+  <a href="./Modelo3DD/BloqueD.html">
+	<button class="custom-btn btn-9">Ver modelo 3D del bloque</button>
+</a>
+<a href="./Modelo3D/BloqueD.html">
 	<button class="custom-btn btn-9">Ver modelo 3D del bloque</button>
 </a>
   </main>

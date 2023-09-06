@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" Content="text/html;charset=UTF-8">
-<TITLE>Modelo 3D</TITLE>
+<TITLE>SU2WebGL</TITLE>
 <!--
 <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, user-scalable=no" />
 -->
@@ -72,14 +72,14 @@
     renderer.setClearColor(0x606069, 1.0);
 	//enable shadowmap
 renderer.autoClear = false;
-renderer.shadowMap.enabled = false;
+renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFShadowMap;
 
     // init scene
     scene = new THREE.Scene();
 
     // init camera ( fov, aspect, near, far )
-	var scene_length = 26196;
+	var scene_length = 7987;
     camera = new THREE.PerspectiveCamera(50, aspr, 10, scene_length);
     scene.add(camera);
 
@@ -89,7 +89,7 @@ renderer.shadowMap.type = THREE.PCFShadowMap;
 	
     // init 平行光線：右上手前45degから強度1.0
     light2 = new THREE.DirectionalLight(0xcccccc, 1.0);
-	tpos =new THREE.Vector3( 77.9131650133858,181.31826947399608,-431.48107172660707 );
+	tpos =new THREE.Vector3( -149.75775193082774,212.6019574566678,-147.60994736165497 );
 	sunvec = new THREE.Vector3( -0.22763179748099063,0.5098615364885734,0.8295932608122395 );
 	sunvec.setLength( scene_length / 2 );
     light2.position.set(sunvec.x + tpos.x , sunvec.y + tpos.y, sunvec.z + tpos.z);
@@ -156,17 +156,17 @@ light2.shadowMapHeight = 2048;
       controls.maxPolarAngle = Math.PI; 
       controls.minDistance = 0;        //近づける距離の最小値
       controls.maxDistance = Infinity; //遠ざかれる距離の最大
-    controls.object.position.set( 141.987,162.898,-414.165 );  //cAMEYE
-    controls.target = new THREE.Vector3( 470.717,113.727,-146.033 ); //cAMTGT  
+    controls.object.position.set( -128.474,218.341,-156.132 );  //cAMEYE
+    controls.target = new THREE.Vector3( -134.088,97.748,-2607.098 ); //cAMTGT  
 	controls.lookaround = true;
-	controls.flyspeed = 50;
+	controls.flyspeed = 65;
 	
     // axis ３軸表示 : use LineAxisHelper.js
     axis = new THREE.AxisHelper(5000); 
     axis.position.set(0, 0, 0);
     scene.add(axis);
     // init materials
-	codeclips = "vec3 clipDIST = vec3( 2381.886,367.973,1026.442 ) + vec3(40,40,40);vec3 clipBASE = vec3( -1113.030,-2.668,-944.702 ) - vec3(20,20,20);"
+	codeclips = "vec3 clipDIST = vec3( 398.177,182.286,668.000 ) + vec3(40,40,40);vec3 clipBASE = vec3( -348.846,121.459,-481.610 ) - vec3(20,20,20);"
     for(var i=0; i < mat.length; i++){
      materials[i] = new THREE.ShaderMaterial( {
 		uniforms: THREE.UniformsUtils.merge([
@@ -400,8 +400,8 @@ mtx[3]/mtx[15],mtx[7]/mtx[15],mtx[11]/mtx[15],1.0
 	
     //geom.computeVertexNormals();
     mface = new THREE.Mesh(geom, new THREE.MeshFaceMaterial(materials));
-mface.castShadow = true;
-mface.receiveShadow = true;
+mface.castShadow = false;
+mface.receiveShadow = false;
     scene.add( mface );
 	var edgeom = new THREE.Geometry();
     for(var j=0; j < geomlist[k].ne; j++){
@@ -432,7 +432,7 @@ texture_show( true);
 		suncolor: "#cccccc",
 		subcolor: "#cccccc",
 		headcolor: "#cccccc",
-		flyspeed:50,
+		flyspeed:65,
 		gclipxmax:1.0,
 		gclipxmin:1.0,
 		gclipymax:1.0,
