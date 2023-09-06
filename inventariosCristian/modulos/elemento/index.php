@@ -1,6 +1,6 @@
 <?php
 ob_start();
-include("../../conexion.php");
+include("../../../db/conexionPDO.php");
 
 function insertarAsignacion($conexion, $idPersona, $idCargo) {
     $stm_asignacion = $conexion->prepare("INSERT INTO asignacion (id_per, id_cargo) VALUES (:id_per, :id_cargo)");

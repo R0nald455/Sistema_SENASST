@@ -1,5 +1,5 @@
 <?php
-include("../../conexion.php");
+include("../../../db/conexionPDO.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $elementoRestar = $_POST['elementoRestar'];
