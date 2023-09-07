@@ -1,0 +1,87 @@
+/* #formulario {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  } */
+
+  *{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+ 
+
+  .botonActualizar{
+    background-color: rgb(51, 255, 0);
+    color: #000000;
+    border-radius: 10px;
+    padding: 10px  15px;
+    margin: 10px 10px;
+  }
+  .botonVolver{
+    background-color: rgb(133, 133, 133);
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 10px  28px;
+    margin: 10px 10px;
+  }
+  .botonEliminar{
+    background-color: rgb(51, 255, 0);
+    color: #000000;
+    border-radius: 10px;
+    padding: 10px  15px;
+    margin: 10px 10px;
+  }
+
+
+
+
+  label{
+    font-size: 17px;
+    font-weight: bold;
+  }
+  p{
+    font-size: 15px;
+  }
+
+  select{
+    padding: 20px 40px;
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+  }
+
+
+  .card{
+    margin-top: 3rem;
+    overflow-x: scroll;
+  }
+
+
+  table{
+    margin-top: 3rem;
+    
+  }
+
+  th{
+    background-color: rgb(202, 199, 199);
+  }
+  th,td{
+    padding: 20px 40px;
+    border: 1px;
+    border-color: rgb(190, 190, 190);
+    border-style: solid;
+  }
+
+  footer{
+    margin-top: 6rem;
+  }
+

@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+:root{
+    --color-sena: rgb(57,168,1);
+    --color-blanco: white;
+}
+
+/* ------------------------------ HEADER - GLOBAL ---------------------------------------*/
+
+header{
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: white;
+}
+
+.header__superior{
+    max-width: 1500px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+}
+
+.logo img{
+    position: relative;
+    left: 110px;
+    width: 150px;
+    z-index: 1000;
+}
+
+.tittle{
+    font-size: 28px;
+    padding-left: 60px;
+    margin-left: 120px;
+    width: 1800px;
+}
+
+.search{
+    width: 100%;
+    height: 100px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    align-items: center;
+}
+
+.search input{
+    width: 100%;
+    height: 40%;
+    object-fit: contain;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 5px;
+    z-index: 2000;
+    min-width: 300px;
+}
+
+/* ------------------------------- Barra menu - GLOBAL -----------------------------------*/
+
+.container__menu{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background-color: var(--color-sena);
+    padding: 0px 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    z-index: 20;
+}
+
+.menu {
+    position: relative;
+    top: -48px;
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+
+nav{
+    height: 100%;
+}
+
+nav>ul{
+    height: 100%;
+    display: flex;
+}
+
+nav ul li{
+    height: 100%;
+    list-style: none;
+    position: relative;
+    top: 48px;
+}
+
+nav>ul>li>a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 14px 60px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 23px;
+    transition: all 300ms ease;
+}
+
+nav>ul>li>a:hover{
+    transform: scale(1.1);
+    background-color: rgb(57,168,1);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+#selected {
+    transform: scale(1);
+    background-color: rgb(57,168,1);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* --------------------------- Sub-Menu - GLOBAL ---------------------------------------*/
+
+nav ul li ul{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    transition: all 300ms ease;
+}
+
+nav ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+}
+
+
+nav ul li ul:before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid white;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+
+nav ul li ul li a{
+    display: block;
+    color: var(--color-sena);
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+    position: relative;
+    top: -50px;
+}
+
+nav ul li ul li a:hover{
+    background-color: rgb(57,168,1);
+    color: beige;
+    transform:scale(1.1);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/*------------------------------- ELEMENTOS RESPONSIVE - GLOBAL ------------------------------------------*/
+
+.lbl-menu {
+    width: 50px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+
+#check__menu{
+    display: none;
+}
+
+
+@media screen and (max-width: 880px){
+
+    .header__superior{
+        display: none;
+    }
+
+    .menu{
+        position: relative;
+        top: 15px;
+    }
+
+    nav > ul {
+        flex-direction: column;
+        background-color: var(--color-sena);
+        position: fixed;
+        left: 0;
+        top: 70px;
+        width: 100%;
+        height: 0;
+        transition: all 300ms ease;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    nav > ul > li > a:hover {
+        transform: scale(1);
+    }
+
+    nav ul li ul{
+        left: 90px;
+    }
+
+    nav ul li:hover ul{
+        top: 50px;
+    }
+    
+    nav ul li{
+        position: relative;
+        top: 0px;
+    }
+
+    nav ul li ul li a{
+        position: relative;
+        top: 0px;
+    }
+
+    nav > ul > li:first-child a {
+        background-position: 20px;
+    }
+
+    #selected{
+        transform: scale(1);
+    }
+    
+    .lbl-menu #spn1,#spn2,#spn3{
+        position: absolute;
+        content: '';
+        background-color: white;
+        width: 50px;
+        height: 8px;
+        border-radius: 5px;
+        transition: all 400ms ease;
+    }
+
+    #spn2{
+        top: 11px;
+    }
+
+    #spn3{
+        top: 22px;
+    }
+
+    .lbl-menu{
+        display: flex;
+    }
+
+    #check__menu:checked ~ nav > ul {
+        height: 300px;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    #check__menu:checked ~ .lbl-menu #spn1{
+        transform: rotate(140deg);
+        top: 10px;
+    }
+    
+    #check__menu:checked ~ .lbl-menu #spn2{
+        opacity: 0;
+    }
+    
+    #check__menu:checked ~ .lbl-menu #spn3{
+        transform: rotate(-140deg);
+        top: 10px;
+    }
+
+}
+
+/* --------------------------------- Apartado del Carrusel - GLOBAL ---------------------------------------- */
+
+.carrusel{
+    display: flex;
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+.carrusel__image{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 200px;
+}
+
+/* ------------------------------------------Redes Sociales ---------------------------------------------------*/
+
+.social-media__container{
+    width:20px;
+    height: 100px;
+    position: fixed;
+    top: 300px;
+    left: 0;
+    z-index: 300;
+}
+
+.social-media__item{
+    width: 20%;
+    height: 50%;
+    display: flex;
+    z-index: 300;
+}
+
+
+/* -------------------------------- LANDING PAGE CONTENT ------------------------------------------ */
+
+.info_container{
+    display: flex;
+    width: 100%;
+    position: relative;
+    flex-direction: row;
+}
+
+.sst{
+    flex: 1 0 50%;
+    background-color: var(--color-sena);
+    color: var(--color-blanco);
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+    padding: 30px;
+    z-index: -10;
+}
+
+.sst__content{
+    background-color: rgb(135, 254, 88);
+    color: var(--color-blanco);
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+    padding: 50px;
+    z-index: -10;
+}
+
+.sst__image{
+    margin-top: 10px;
+    width: 30%;
+    height: 30%;
+    object-fit: contain;
+    z-index: -10;
+}
+
+.objetivo{
+    background-color: #00519E;
+    color: var(--color-blanco);
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+    padding: 20px;
+    z-index: -10;
+
+}
+
+.objetivo__content{
+    background-color: #5271FF;
+    color: var(--color-blanco);
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+    padding: 50px;
+    z-index: -10;
+
+}
+
+.objetivo__image{
+    margin-top: 10px;
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    z-index: -10;
+}
+
+/* ---------------------------- Apartado de los videos relacionados - GLOBAL ------------------------------------------ */
+
+.videos-relacionados{
+    background-color: var(--color-sena);
+    color: var(--color-blanco);
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+    padding: 20px;
+}
+
+.videos-relacionados__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    align-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.videos-relacionados__item1{
+    flex: 1 0 33%;
+    height: 300px;
+}
+
+.videos-relacionados__item2{
+    flex: 1 0 33%;
+    height: 300px;
+
+}
+
+.videos-relacionados__item3{
+    flex: 1 0 33%;
+    height: 300px;
+
+}
+
+/* ----------------------------- Apartado para editar el footer - GLOBAL --------------------------------- */
+
+footer{
+    background-color: var(--color-sena);
+    padding: 50px;
+    text-align: center;
+    color: var(--color-blanco);
+    position: relative;
+}
+
+.incontec{
+    position: relative;
+    top: 40px;
+    flex-direction: column;
+    object-fit: contain;
+    max-width: 250px;
+}
+
+/*-------------------- MODULO QUIENES SOMOS ---------------------------*/
+
+.informacion{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo_container{
+    width: 100%;
+    padding: 10px;
+    background-color: #0F434F;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.titulo_quienes{
+    margin: 10px 0px 10px 0px;
+    font-size: 50px;
+    background-color: #5271FF;
+}
+
+.contenido_container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px;
+    background-color: #6B949E;
+    color: #FFFFFF;
+    text-align: center;
+    align-items: center;
+}
+
+.img-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.img-container img{
+    width: 50%;
+    height: 70%;
+    flex: 1 0 25;
+}
+
+.contenido_container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px;
+    background-color: #6B949E;
+    color: #FFFFFF;
+    text-align: center;
+    align-items: center;
+}
+
+.img-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.img-container img{
+    width: 50%;
+    height: 70%;
+    flex: 1 0 25;
+}
+
+.contenido_quienes{
+    font-size: 20px;
+    background-color: antiquewhite;
+}

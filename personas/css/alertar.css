@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#maestro{
+    margin-top: 100px;
+    padding: 50px;
+}
+
+#container {
+    margin-top: 100px;
+    padding: 50px;
+}
+
+.card{
+    padding: 100px;
+    box-shadow: 10px 5px 10px 5px rgb(167, 166, 166);
+}
+
+h1{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+select{
+    width: 100%;
+    min-height: 50px;
+    height: auto;
+}
+
+#otroRiesgo{
+    width: 100%;
+    margin-top: 20px;
+}
+
+#otroRiesgoInput{
+    width: 100%;
+    min-height: 50px;
+    height: auto;
+}
+
+#BotonAlertar{
+    background-color: red;
+    min-height: 80px;
+    box-shadow: 10px 5px 10px 5px rgb(167, 166, 166);
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#BotonAlertar:hover{
+    background-color: rgb(155, 36, 36);
+}

@@ -1,0 +1,77 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  header{
+    background-color: #ffffff;
+    height: 120px;
+    position: sticky;
+    border-bottom: 20px;
+    border-style: solid;
+    border-color: #45d100;
+  }
+  
+  header img {
+    height: 70px;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  
+  header h1 {
+    float: right;
+  
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-right: 5%;
+  }
+
+  .botonEliminar{
+    background-color: red;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 5px  10px;
+  }
+
+  #BotonPublicar{
+    background-color: #45d100;
+    border: 0px;
+  }
+
+  .botonNuevo{
+    margin-top: 2rem;
+    background-color: #45d100;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 20px 40px;
+    font-weight: bold;
+  }
+
+
+  .card{
+    margin-top: 3rem;
+  }
+
+
+  table{
+    margin-top: 3rem;
+    
+  }
+
+  th{
+    background-color: rgb(202, 199, 199);
+  }
+  th,td{
+    padding: 20px 40px;
+    border: 1px;
+    border-color: rgb(190, 190, 190);
+    border-style: solid;
+  }
+
+  footer{
+    margin-top: 6rem;
+  }
+

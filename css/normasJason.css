@@ -1,0 +1,29 @@
+#container{
+    position: relative;
+    top: 100px;
+  
+}
+
+
+:root{
+    --color-sena: rgb(57,168,1);
+    --color-blanco: white;
+  } 
+
+#container a{
+    background-color:rgb(57,168,1) ;
+    font-weight: bold;
+    padding: 15px 30px;
+    color: aliceblue;
+}
+  nav a{
+    background-color:rgb(57,168,1) ;
+    font-weight: bold;
+  }
+
+.btn{
+    font-weight:bold ;
+    background-color:rgb(57,168,1) ;
+    padding: 10px 10px;
+}
+

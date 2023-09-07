@@ -1,0 +1,109 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+  background-color: #ffffff;
+  height: 120px;
+  position: sticky;
+  border-bottom: 20px;
+  border-style: solid;
+  border-color: #000000;
+}
+
+header img {
+  height: 70px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+header h1 {
+  float: right;
+
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-right: 5%;
+}
+
+.container{
+  position: relative;
+  top: 100px;
+  text-align: justify;
+}
+
+/*opcion de cambiar de color los tooltips*/
+/* .container td a{
+  background-color: #45d100;
+  color: #ffffff;
+  padding: 2px 2px;
+}
+
+.container td a:hover{
+  color: #fff;
+} */
+
+
+/* .container td .expand-button{
+  background-color: none;
+  color: black;
+  padding: 10px 20px;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.container td .expand-button{
+ text-decoration: none;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.card-content:target {
+  padding: 10px;
+  display: none;
+}
+ */
+
+.container button[type="submit"]{
+  background-color: #45d100;
+  color: #fff;
+  padding: 20px 40px;
+  font-weight: 900;
+  font-size: 20px;
+  border-radius: 5px;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; 
+  }
+  
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+  }
+  
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+

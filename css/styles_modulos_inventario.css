@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+:root{
+    --color-sena: rgb(57,168,1);
+    --color-blanco: white;
+}
+
+.content{
+    margin-top: 70px;
+}
+
+.table-container table thead{
+    color: var(--color-sena);
+}
+
+.table-container table thead tr th{
+    color: white;
+}
+
+form[id="form1"]{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form[id="form1"] .control-group{
+    width: 100%;
+}
+
+form[id="form1"] .control-group .controls{
+    width: 100%;
+    margin: 10px;
+}
+
+form[id="form1"] .control-group .controls label{
+    width: 100%;
+}
+
+form[id="form1"] .control-group .controls label input{
+    width: 100%;
+    border-color: rgb(57,168,1);
+}
+
+form[id="form1"] .buttons-container .controls{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+blockquote{
+    font-size: 30px;
+}
