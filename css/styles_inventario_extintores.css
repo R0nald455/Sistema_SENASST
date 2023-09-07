@@ -442,3 +442,11 @@ footer{
     color: var(--color-blanco);
     position: relative;
 }
+
+/*------------------------------ Estilos de inventario EPPS ----------------------------------------------*/
+
+.carousel-item img {
+    width: auto;
+    height: 600px;
+    max-height: 600px;
+}
