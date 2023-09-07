@@ -108,7 +108,7 @@ if(isset($message)){
             <h3><?php echo $fetch_product['name']; ?></h3>
             <div class="price">Correo: <?php echo $fetch_product['contact']; ?></div>
             <input type="hidden" name="product_name" value="<?php echo $fetch_product['name']; ?>">
-            <!-- <input type="hidden" name="product_price" value="<?php echo $fetch_product['price']; ?>"> -->
+            <input type="hidden" name="product_price" value="<?php echo $fetch_product['contact']; ?>">
             <input type="hidden" name="product_image" value="<?php echo $fetch_product['image']; ?>">
             <input type="submit" class="btn" value="Alertar" name="add_to_cart">
          </div>
