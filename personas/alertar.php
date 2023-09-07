@@ -33,8 +33,8 @@
   <nav>
     <ul>
       <li><img src="../img/LogoSenaBlanco.png"  width="70px" alt="logoSena"></li>
-      <li><a href="window.location.href='../index.php'" id="selected">Inicio</a></li>
-      <li><a onclick="window.location.href='../index.php'"><span class="material-symbols-outlined">Salir</span></a></li>
+      <li><a href="https://cbaproy20.com/SenaSST/'" id="selected">Inicio</a></li>
+      <li><a href="https://cbaproy20.com/SenaSST/'"><span class="material-symbols-outlined">Salir</span></a></li>
     </ul>
   </nav>
 </div>
