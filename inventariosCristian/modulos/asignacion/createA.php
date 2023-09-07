@@ -1,5 +1,5 @@
 <?php 
-include("../../conexion.php");
+include("../../../db/conexionPDO.php");
 
 $stm = $conexion->prepare("SELECT p.id_per, p.doc_per, c.nom_cargo, c.elemento as dotacion, a.fecha
     FROM personas p

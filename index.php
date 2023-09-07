@@ -210,7 +210,7 @@
 			<?php
 				include_once 'db/conexion.php';
 
-				$result = $conexion->query("SELECT id,titulo,descripcion,creado FROM publicaciones ");
+				$result = $conexion->query("SELECT id,titulo,descripcion,creado FROM publicaciones ORDER BY id DESC");
 
 				while($fila=$result->fetch_assoc()){
 					$fecha=new DateTime($fila['creado']);
@@ -224,7 +224,7 @@
 					</div>
 					</div>
 					<center>
-					<img src='http://localhost/Sistema_SENASST/php/consultarImagen.php?id=".$fila['id']."'  class='img-responsive'  alt='Imagen'>
+					<img src='https://cbaproy20.com/SenaSST/php/consultarImagen.php?id=".$fila['id']."'  class='img-responsive'  alt='Imagen'>
 					</center><br>
 
 					<div class='mb-3'>
@@ -241,7 +241,7 @@
 
 <!-- footer -->
 <?php
-include("footer/footer.php");
+include("Footer/footer.php");
 ?>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="soporte/js/alert.js"></script>

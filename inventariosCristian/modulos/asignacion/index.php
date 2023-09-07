@@ -1,6 +1,5 @@
 <?php
-include("../../conexion.php");
-
+include("../../../db/conexionPDO.php");
 $stm_asignacion = $conexion->prepare("SELECT id_per, nom_per, ape_per, doc_per, nom_cargo, GROUP_CONCAT(CONCAT(Dotacion, ': ', Cantidad) SEPARATOR ' | ') AS Dotaciones_Cantidades, MAX(Fecha) AS Ultima_Fecha FROM asignacion GROUP BY id_per, nom_per, ape_per, doc_per, nom_cargo");
 $stm_asignacion->execute();
 $registros_asignacion = $stm_asignacion->fetchAll(PDO::FETCH_ASSOC);

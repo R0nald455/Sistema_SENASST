@@ -20,7 +20,7 @@ $query = mysqli_query($conexion, $sql);
 <body>  
     
 <header>
-    <a href="../php/rolfuncionario/indexfuncionario.php"><img src="Imagen/LogoSena.png" alt="logosena"></a>
+    <a href="../php/rolFuncionario/indexfuncionario.php"><img src="Imagen/LogoSena.png" alt="logosena"></a>
     <h1>QR</h1>
     </header>
   <main>

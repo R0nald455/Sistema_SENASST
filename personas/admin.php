@@ -39,7 +39,7 @@ if(isset($_POST['update_product'])){
    $update_p_image_tmp_name = $_FILES['update_p_image']['tmp_name'];
    $update_p_image_folder = 'uploaded_img/'.$update_p_image;
 
-   $update_query = mysqli_query($conexion, "UPDATE `products` SET name = '$update_p_name', price = '$update_p_price', image = '$update_p_image' WHERE id = '$update_p_id'");
+   $update_query = mysqli_query($conexion, "UPDATE `products` SET name = '$update_p_name', contact = '$update_p_price', image = '$update_p_image' WHERE id = '$update_p_id'");
 
    if($update_query){
       move_uploaded_file($update_p_image_tmp_name, $update_p_image_folder);
@@ -92,8 +92,8 @@ if(isset($message)){
 <form action="" method="post" class="add-product-form" enctype="multipart/form-data">
    <h3>Agregar nuevo Brigadista</h3>
    <input type="text" name="p_name" placeholder="ingrese su nombre completo" class="box" required>
-   <input type="number" name="p_price" min="0" placeholder="ingrese su número de contacto" class="box" required>
-   <input type="file" name="p_image" accept="image/png, image/jpg, image/jpeg" class="box" required>
+   <input type="email" name="p_price" min="0" placeholder="ingrese el correo" class="box" required>
+   <input type="file" name="p_image" accept="image/png, image/jpg, image/jpeg" class="box">
    <input type="submit" value="Agregar" name="add_product" class="btn">
 </form>
 
@@ -106,7 +106,7 @@ if(isset($message)){
       <thead>
          <th>Foto</th>
          <th>Nombre</th>
-         <th>Contacto</th>
+         <th>Correo</th>
          <th>Accion</th>
       </thead>
 
@@ -154,10 +154,10 @@ if(isset($message)){
       <img src="uploaded_img/<?php echo $fetch_edit['image']; ?>" height="200" alt="">
       <input type="hidden" name="update_p_id" value="<?php echo $fetch_edit['id']; ?>">
       <input type="text" class="box" required name="update_p_name" value="<?php echo $fetch_edit['name']; ?>">
-      <input type="number" min="0" class="box" required name="update_p_price" value="<?php echo $fetch_edit['price']; ?>">
-      <input type="file" class="box" required name="update_p_image" accept="image/png, image/jpg, image/jpeg">
+      <input type="email" min="0" class="box" required name="update_p_price" value="<?php echo $fetch_edit['contact']; ?>">
+      <input type="file" class="box"  name="update_p_image" accept="image/png, image/jpg, image/jpeg">
       <input type="submit" value="Editar brigadista" name="update_product" class="btn">
-      <input type="reset" value="cancelar" id="close-edit" class="option-btn">
+      <a href="admin.php"><input type="button" value="cancelar" id="close-edit" class="option-btn"></a>
    </form>
 
    <?php

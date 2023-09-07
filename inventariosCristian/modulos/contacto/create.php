@@ -1,7 +1,7 @@
 <?php
 ob_start();
 
-include("../../conexion.php");
+include("../../../db/conexionPDO.php");
 
 if ($_POST) {
     $nombre = (isset($_POST['nom_per']) ? $_POST['nom_per'] : "");

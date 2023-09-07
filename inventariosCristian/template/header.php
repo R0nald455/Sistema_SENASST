@@ -1,4 +1,4 @@
-<?php $url_base = "http://localhost/SISTEMA_SENASST/inventariosCristian/";?>
+<?php $url_base = "https://cbaproy20.com/SenaSST/inventariosCristian/";?>
 
 <!doctype html>
 <html lang="en">
@@ -22,7 +22,7 @@
     <nav class="navbar navbar-expand navbar-dark bg-dark">
         <ul class="nav navbar-nav">
             <li class="nav-item">
-                <a class="nav-link active" href="http://localhost/SISTEMA_SENASST/php/rolfuncionario/indexfuncionario.php" aria-current="page">Sena CBA<span class="visually-hidden">(current)</span></a>
+                <a class="nav-link active" href="https://cbaproy20.com/SenaSST/php/rolfuncionario/indexfuncionario.php" aria-current="page">Sena CBA<span class="visually-hidden">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo $url_base;?>modulos/contacto/">Personas</a>
