@@ -48,9 +48,9 @@ require_once ("../../db/conexion.php");
 							<li><a onclick="window.location.href='../../inventariosArley/php/index.php'">Inventario SST</a></li>
 							<li><a onclick="window.location.href='../../inventariosCristian/index.php'">Inventario Dotacion</a></li>
 							<li><a onclick="window.location.href='../../personas/indexdotac.php'">Inventario Dotacion Especial y Brigadistas</a></li>
-                            <li><a onclick="window.location.href='../../inventarios/index.php'">Inventario para extintores</a></li>
+                            <li><a onclick="window.location.href='../../inventarios/indexExtintores.php'">Inventario para extintores</a></li>
 							<li><a onclick="window.location.href='../../elementos/Model/inspecciones/index.php'">Inventario botiquines</a></li>
-							<li><a onclick="window.location.href='../../inventarios/modulos/implementos/index.php'">Inventario para EPP's</a></li>
+							<li><a onclick="window.location.href='../../inventarios/indexEpps.php'">Inventario para EPP's</a></li>
                         </ul> </b>
 				</li>
 				<li><a href="#">Modulos administrativos</a>

@@ -44,16 +44,13 @@ require_once("../db/conexion.php");
                 <nav>
                     <ul>
                         <li><a href="../php/rolFuncionario/indexfuncionario.php" id="selected">Inicio</a></li>
-                        <li><a href="#">Modulos</a>
-                            <ul> <b>
-                                    <li><a href="../inventarios/modulos/extintores/index.php">Administrar extintores</a>
-                                    </li>
-                                    <li><a href="../inventarios/modulos/recarga/index.php">Extintores con revisiones
-                                            pendientes</a></li>
-                            </ul> </b>
+
+                        <li><a href="../inventarios/modulos/implementos/index.php">Administrar EPP's</a>
+                        <li><a href="../inventarios/modulos/entradas/index.php">Entrada de
+                                EPP's</a>
                         </li>
-                        <li><a href="#">Ayuda y Soporte</a></li>
-                        <li><a href="#">Acerca de inventarios</a></li>
+                        <li><a href="../inventarios/modulos/salidas/index.php">Salida de EPP's</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -109,25 +106,41 @@ require_once("../db/conexion.php");
             </button>
         </div>
 
-        <div class="info-extintor-container">
+        <div class="info-epps-container">
 
             <div class="info1-container">
-                <div class="info1"><b>¿Que puedes hacer con el sistema de inventario para extintores?</b> </div>
-                <div class="info1__content">El Sistema de inventario para extintores te permitirá mantener un registro
-                    preciso de todos tus extintores, garantizar que estén en condiciones óptimas para su uso y cumplir con
-                    las regulaciones de seguridad. Esto contribuirá a mejorar la preparación para situaciones de emergencia
-                    y a mantener un ambiente seguro para empleados y visitantes. <br>
-                    <img class="info1__image" src="https://i.imgur.com/eOKfrpo.jpg" alt="">
+                <div class="info1-text">
+                    <div class="info1"><b>¿Que puedes hacer con el sistema de inventario para extintores?</b> </div>
+                    <div class="info1__content">El Sistema de inventario para extintores te permitirá mantener un registro
+                        preciso de todos tus extintores, garantizar que estén en condiciones óptimas para su uso y cumplir
+                        con
+                        las regulaciones de seguridad. Esto contribuirá a mejorar la preparación para situaciones de
+                        emergencia
+                        y a mantener un ambiente seguro para empleados y visitantes. <br>
+                    </div>
                 </div>
+
+                <div class="info1-img-container">
+                    <img class="info1__image" src="https://i.imgur.com/DnAuxci.jpg" alt="">
+                </div>
+
             </div>
 
             <div class="info2-container">
-                <div class="info2"><b>Objetivo general</b></div>
-                <div class="info2__content">El objetivo general de un sistema de inventario para extintores es mejorar la
-                    seguridad, la eficiencia y el cumplimiento normativo en relación con los extintores, garantizando que
-                    estén listos y en buen estado para su uso en caso de emergencia. <br>
-                    <img class="info2__image" src="https://i.imgur.com/XMG1mVU.gif" alt="">
+                <div class="info2-text">
+                    <div class="info2"><b>Objetivo general</b></div>
+                    <div class="info2__content">El objetivo general de un sistema de inventario para extintores es mejorar
+                        la
+                        seguridad, la eficiencia y el cumplimiento normativo en relación con los extintores, garantizando
+                        que
+                        estén listos y en buen estado para su uso en caso de emergencia. <br>
+                    </div>
                 </div>
+
+                <div class="info2-img-container">
+                    <img class="info2__image" src="https://i.imgur.com/K7Mqf9u.jpg" alt="">
+                </div>
+
             </div>
 
         </div>
@@ -139,17 +152,17 @@ require_once("../db/conexion.php");
         <div class="videos-relacionados__container">
 
             <iframe class="videos-relacionados__item1" width="560" height="315"
-                src="https://www.youtube.com/embed/i6rJQFOKuMI?si=OiEXnTljeCTftJ9w" title="YouTube video player"
+                src="https://www.youtube.com/embed/0NbihQi4FMM?si=qf55mHNEXpsveb63" title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
             <iframe class="videos-relacionados__item2" width="560" height="315"
-                src="https://www.youtube.com/embed/UPe2Uyue418?si=Tko13R7mXI2WBd9S" title="YouTube video player"
+                src="https://www.youtube.com/embed/5CF3HZdu6Bc?si=yTbk2qRNnYbQSxgD" title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
             <iframe class="videos-relacionados__item3" width="560" height="315"
-                src="https://www.youtube.com/embed/n8NkEB1T-fw?si=1mJvsv_MQvKoipmi" title="YouTube video player"
+                src="https://www.youtube.com/embed/MFYKqtfit8w?si=pgtcACIPOvtAMFQW" title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
