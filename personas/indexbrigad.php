@@ -106,7 +106,7 @@ if(isset($message)){
          <div class="box">
             <img src="uploaded_img/<?php echo $fetch_product['image']; ?>" alt="">
             <h3><?php echo $fetch_product['name']; ?></h3>
-            <div class="price">Contacto: <?php echo $fetch_product['contact']; ?></div>
+            <div class="price">Correo: <?php echo $fetch_product['contact']; ?></div>
             <input type="hidden" name="product_name" value="<?php echo $fetch_product['name']; ?>">
             <!-- <input type="hidden" name="product_price" value="<?php echo $fetch_product['price']; ?>"> -->
             <input type="hidden" name="product_image" value="<?php echo $fetch_product['image']; ?>">
