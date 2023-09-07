@@ -62,10 +62,10 @@ error_reporting(0);
                             <div class="panel-body">
 
                                 <div class="pull-right">
-                                    <button data-bs-toggle="modal" data-bs-target="#registroModal" type="button"
-                                        href="registro.php" class="btn btn-sm btn-success">Nuevo extintor</button>
-                                    <a id="button-pdf" href="reportes.php" class="btn btn-sm btn-primary">Generar PDF</a>
-                                    <a id="button-alert" href="alertas/config.php" class="btn btn-sm btn-info">Alerta para
+                                    <a
+                                        href="registro.php" class="btn btn-sm btn-success"><i class="fa-solid fa-plus"></i>  Nuevo extintor</a>
+                                    <a id="button-pdf" href="reportes.php" class="btn btn-sm btn-primary"><i class="fa-solid fa-file-pdf"></i> Generar PDF</a>
+                                    <a id="button-alert" href="alertas/config.php" class="btn btn-sm btn-info"><i class="fa-solid fa-envelope"></i>  Alerta para
                                         extintores con revisiones/recargas pendientes</a>
                                 </div><br>
                                 <h6><i>"Al alertar te llega un correo electronico con la informacion del extintor"</i></h6>

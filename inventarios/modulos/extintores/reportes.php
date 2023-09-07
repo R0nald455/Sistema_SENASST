@@ -9,15 +9,9 @@ ob_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
-        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
-        crossorigin="anonymous"></script>
     <title>Reporte de todos los extintores PDF</title>
 </head>
 
@@ -31,6 +25,58 @@ ob_start();
     $listaExtintores = $sql->fetchAll(PDO::FETCH_ASSOC);
 
     ?>
+
+    <?php
+    $nombreImagen = "../../../img/LogoSena.png";
+    ?>
+
+    <style>
+        .imgContainer {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 50px;
+        }
+
+        .imgContainer #logoPDF {
+            height: 100%;
+        }
+
+        table {
+            width: 100%;
+            border: 1px solid #000;
+        }
+
+        th{
+            width: 25%;
+            text-align: left;
+            vertical-align: top;
+            border: 1px solid #000;
+            border-collapse: collapse;
+            padding: 0.3em;
+            caption-side: bottom;
+            background-color: rgb(57,168,1);
+            color: white;
+        }
+
+        td {
+            width: 25%;
+            text-align: left;
+            vertical-align: top;
+            border: 1px solid #000;
+            border-collapse: collapse;
+            padding: 0.3em;
+            caption-side: bottom;
+        }
+
+    </style>
+
+    <div class="imgContainer">
+        <img id="logoPDF" style=""
+            src="data:imag/png;base64,<?php echo base64_encode(file_get_contents($nombreImagen)); ?>" alt="Imagen"
+            style="width: 100px; height:100px;">
+    </div>
+
+
 
     <h1>REPORTE DE LOS EXTINTORES DEL CENTRO DE BIOTECNOLOGIA AGROPECUARIA</h1>
 
@@ -99,13 +145,11 @@ ob_start();
 
 <?php
 $html = ob_get_clean();
-require '../../dompdf/vendor/autoload.php';
+require '../../dompdf/autoload.inc.php';
 
 use Dompdf\Dompdf;
-use Dompdf\Options;
 
 $dompdf = new Dompdf();
-$options = new Options();
 
 $options = $dompdf->getOptions();
 $options->set(array('isRemoteEnabled' => true));
