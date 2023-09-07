@@ -39,7 +39,7 @@ if(isset($_POST['update_product'])){
    $update_p_image_tmp_name = $_FILES['update_p_image']['tmp_name'];
    $update_p_image_folder = 'uploaded_img/'.$update_p_image;
 
-   $update_query = mysqli_query($conexion, "UPDATE `products` SET name = '$update_p_name', price = '$update_p_price', image = '$update_p_image' WHERE id = '$update_p_id'");
+   $update_query = mysqli_query($conexion, "UPDATE `products` SET name = '$update_p_name', contact = '$update_p_price', image = '$update_p_image' WHERE id = '$update_p_id'");
 
    if($update_query){
       move_uploaded_file($update_p_image_tmp_name, $update_p_image_folder);
