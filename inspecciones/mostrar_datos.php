@@ -41,7 +41,7 @@
               <?php
               $divSeleccionado = $_POST['divSeleccionado'];
 
-              $conexion = mysqli_connect("localhost","root","","u632157300_SSTCBA");
+              $conexion = mysqli_connect("localhost","root","","sstcba");
               $sql = "SELECT ExtintorID, NumeroDeSerie, TipoDeExtintor, Ubicacion, UbicacionEspecifica, UltimaRecarga, ProximaRecarga, Comentarios FROM extintores WHERE Ubicacion = '$divSeleccionado'";
               $result = $conexion->query($sql);
 
