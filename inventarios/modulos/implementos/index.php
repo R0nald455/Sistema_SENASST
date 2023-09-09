@@ -29,7 +29,7 @@ require_once ("../../../db/conexion.php");
         <nav>
             <ul>
                 <li><img src="../../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></li>
-                <li><a href="../../../php/rolFuncionario/indexfuncionario.php" id="selected">Inicio</a></li>
+                <li><a href="../../indexEpps.php" id="selected">Inicio</a></li>
                 <li><a href="#">Administrar elementos de proteccion personal</a></li>
                 <li><a href="../entradas/index.php">Administrar entradas</a></li>
                 <li><a href="../salidas">Administrar salidas</a></li>
