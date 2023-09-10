@@ -19,10 +19,10 @@ if(isset($_POST['update'])){
 					$NuevaImagenReferencia = $_FILES['ImagenReferencia']['tmp_name'];
 					$NuevaImagenContenido = addslashes(file_get_contents($NuevaImagenReferencia));
 			
-					$update = mysqli_query($conexion, "UPDATE extintores SET NumeroDeSerie='$NumeroDeSerie', TipoDeExtintor='$TipoDeExtintor', FechaDeFabricacion='$FechaDeFabricacion', FechaDeCompra='$FechaDeCompra', Ubicacion='$Ubicacion', UbicacionEspecifica='$UbicacionEspecifica', UltimaRecarga='$UltimaRecarga', ProximaRecarga='$ProximaRecarga', Comentarios='$Comentarios', ImagenReferencia='$NuevaImagenContenido' WHERE ExtintorID='$ExtintorID'") or die(mysqli_error());
+					$update = mysqli_query($conexion, "UPDATE extintores SET NumeroDeSerie='$NumeroDeSerie', TipoDeExtintor='$TipoDeExtintor', FechaDeFabricacion='$FechaDeFabricacion', FechaDeCompra='$FechaDeCompra', Ubicacion='$Ubicacion', UbicacionEspecifica='$UbicacionEspecifica', UltimaRecarga='$UltimaRecarga', ProximaRecarga='$ProximaRecarga', Comentarios='$Comentarios', ImagenReferencia='$NuevaImagenContenido' WHERE ExtintorID='$ExtintorID'");
 				} else {
 					// No se cargó una nueva imagen, mantener la imagen actual en la base de datos
-					$update = mysqli_query($conexion, "UPDATE extintores SET NumeroDeSerie='$NumeroDeSerie', TipoDeExtintor='$TipoDeExtintor', FechaDeFabricacion='$FechaDeFabricacion', FechaDeCompra='$FechaDeCompra', Ubicacion='$Ubicacion', UbicacionEspecifica='$UbicacionEspecifica', UltimaRecarga='$UltimaRecarga', ProximaRecarga='$ProximaRecarga', Comentarios='$Comentarios' WHERE ExtintorID='$ExtintorID'") or die(mysqli_error());
+					$update = mysqli_query($conexion, "UPDATE extintores SET NumeroDeSerie='$NumeroDeSerie', TipoDeExtintor='$TipoDeExtintor', FechaDeFabricacion='$FechaDeFabricacion', FechaDeCompra='$FechaDeCompra', Ubicacion='$Ubicacion', UbicacionEspecifica='$UbicacionEspecifica', UltimaRecarga='$UltimaRecarga', ProximaRecarga='$ProximaRecarga', Comentarios='$Comentarios' WHERE ExtintorID='$ExtintorID'");
 				}
 			
 				if($update){
