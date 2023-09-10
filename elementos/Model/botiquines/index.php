@@ -30,7 +30,7 @@ include "../../conexion.php";
         <nav>
             <ul>
                 <li><img src="../../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></li>
-                <li><a href="../../../php/rolFuncionario/indexadministrador.php" id="selected">Inicio</a></li>
+                <li><a href="../../../php/rolFuncionario/indexfuncionario.php" id="selected">Inicio</a></li>
                 <li><a href="../botiquines/index.php">Administrar Elementos</a></li>
                 <li><a href="../inspecciones/index.php">Inspeccion de Elementos</a></li>
                 <li><a href="../entradas/index.php">Entrada de Elementos</a></li>
