@@ -1,6 +1,6 @@
 <?php
 
-include "../../../db/conexion.php";
+include "../../../../db/conexion.php";
 
 /* Database connection end */
 
@@ -35,12 +35,13 @@ $sql .= " FROM camillas";
 $query = mysqli_query($conexion, $sql) or die("ajax-grid-data.php: get InventoryItems");
 $totalData = mysqli_num_rows($query);
 $totalFiltered = $totalData; // when there is no search parameter then total number rows = total number filtered rows.
-
+date_default_timezone_set('America/Bogota');
+$hoy = date('Y-m-d');
 
 if (!empty($requestData['search']['value'])) {
 	// if there is a search parameter
 	$sql = "SELECT *";
-	$sql .= " FROM camillas";
+	$sql .= " FROM camillas WHERE FechaProximoMantenimiento <= '$hoy'";
 	$sql .= " WHERE CamillaID LIKE '" . $requestData['search']['value'] . "%' ";
 	$sql .= " OR ImagenReferencia LIKE '" . $requestData['search']['value'] . "%' ";
 	$sql .= " OR TipoCamilla LIKE '" . $requestData['search']['value'] . "%' ";
@@ -67,7 +68,7 @@ if (!empty($requestData['search']['value'])) {
 } else {
 
 	$sql = "SELECT *";
-	$sql .= " FROM camillas";
+	$sql .= " FROM camillas WHERE FechaProximoMantenimiento <= '$hoy'";
 	$sql .= " ORDER BY " . $columns[$requestData['order'][0]['column']] . "   " . $requestData['order'][0]['dir'] . " LIMIT " . $requestData['start'] . " ," . $requestData['length'] . "   ";
 	$query = mysqli_query($conexion, $sql) or die("ajax-grid-data.php: get PO");
 

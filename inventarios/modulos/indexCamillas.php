@@ -43,9 +43,9 @@ require_once("../../db/conexion.php");
                 </label>
                 <nav>
                     <ul>
-                        <li><a href="../php/rolFuncionario/indexfuncionario.php" id="selected">Inicio</a></li>
+                        <li><a href="../../php/rolFuncionario/indexfuncionario.php" id="selected">Inicio</a></li>
                         <li><a href="camillas/index.php">Administrar Camillas</a>
-                        <li><a href="#">Camillas con revisiones pendientes</a>
+                        <li><a href="camillas/revisiones/index.php">Camillas con revisiones pendientes</a>
                         </li>
                     </ul>
                 </nav>

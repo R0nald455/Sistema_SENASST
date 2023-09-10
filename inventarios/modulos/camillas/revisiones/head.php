@@ -1,10 +1,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Extintores con revisiones pendientes</title>
+        <title>Camillas con revisiones pendientes</title>
 
         <!-- css table datatables/dataTables -->
         <link rel="stylesheet" href="../../../datatables/dataTables.bootstrap.css"/>
+        <!-- <link type="text/css" href="../../../css/bootstrap.min.css" rel="stylesheet"> -->
         <link type="text/css" href="../../../../css/bootstrap-responsive.min.css" rel="stylesheet">
+        <!-- <link type="text/css" href="../../../css/theme.css" rel="stylesheet"> -->
         <link rel="stylesheet" href="../../../../css/styles_modulos_inventario.css">
         <link rel="stylesheet" href="../../../../css/header-modulos.css">
 

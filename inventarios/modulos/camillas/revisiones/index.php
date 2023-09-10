@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-require_once("../../../db/conexion.php");
+require_once("../../../../db/conexion.php");
 ?>
 
 <!DOCTYPE html>
@@ -29,15 +29,15 @@ require_once("../../../db/conexion.php");
 
                 <nav>
                     <ul>
-                        <li><img src="../../../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></li>
-                        <li><a href="../indexCamillas.php" id="selected">Inicio</a></li>
-                        <li><a href="#">Administrar camillas</a></li>
-                        <li><a href="revisiones/index.php">Camillas con revisiones pendientes</a></li>
+                        <li><img src="../../../../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></li>
+                        <li><a href="../../indexCamillas.php" id="selected">Inicio</a></li>
+                        <li><a href="../index.php">Administrar camillas</a></li>
+                        <li><a href="#">Camillas con revisiones pendientes</a></li>
                     </ul>
                 </nav>
 
                 <div class="responsive-container">
-                    <img id="logoResponsive" src="../../../img/LogoSenaBlanco.png" width="50px" alt="logoSena">
+                    <img id="logoResponsive" src="../../../../img/LogoSenaBlanco.png" width="50px" alt="logoSena">
                 </div>
             </div>
         </div>
@@ -64,13 +64,10 @@ require_once("../../../db/conexion.php");
                         ?>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa-solid fa-truck-medical"></i> Administrador de Camillas</h3>
+                                <h3 class="panel-title"><i class="fa-solid fa-truck-medical"></i> Camillas con revisiones pendientes</h3>
                             </div>
 
-                            <div class="panel-body">
-                                <div class="pull-right">
-                                    <a href="registro.php" class="btn btn-sm btn-success">Nueva camilla</a>
-                                </div><br>
+                            <div class="panel-body"><br>
                                 <hr>
 
                                 <div class="table-container table-responsive">
@@ -112,9 +109,10 @@ require_once("../../../db/conexion.php");
         </div>
         <!--/.container-->
 
-        <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="../../datatables/jquery.dataTables.js"></script>
-        <script src="../../datatables/dataTables.bootstrap.js"></script>
+
+        <script src="../../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../../../datatables/jquery.dataTables.js"></script>
+        <script src="../../../datatables/dataTables.bootstrap.js"></script>
 
         <script>
             $(document).ready(function () {

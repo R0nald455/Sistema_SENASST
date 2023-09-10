@@ -13,9 +13,6 @@ error_reporting(0);
 
     <?php if (isset($_SESSION["id"])): ?>
 
-
-        <?php include('registroModal.php'); ?>
-
         <!-- Menu de navegacion-->
 
         <div class="container__menu">
@@ -33,7 +30,7 @@ error_reporting(0);
                         <li><img src="../../../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></li>
                         <li><a href="../../indexExtintores.php" id="selected">Inicio</a></li>
                         <li><a href="#">Administrar extintores</a></li>
-                        <li><a href="../recarga/index.php">Extintores con revisiones pendientes</a></li>
+                        <li><a href="recarga/index.php">Extintores con revisiones pendientes</a></li>
                     </ul>
                 </nav>
 
@@ -48,9 +45,6 @@ error_reporting(0);
             <div class="row">
                 <div class="span12">
                     <div class="content">
-
-                        <?php include('editarModal.php'); ?>
-                        <?php include('eliminar.php'); ?>
 
                         <div class="panel panel-default">
 
