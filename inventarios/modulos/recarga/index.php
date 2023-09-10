@@ -31,6 +31,7 @@ require_once ("../../../db/conexion.php");
                 <li><img src="../../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></li>
                 <li><a href="../../indexExtintores.php" id="selected">Inicio</a></li>
                 <li><a href="../extintores/index.php">Administrar extintores</a></li>
+                <li><a href="../../../inspecciones/index.php">Inspección de extintores</a></li>
                 <li><a href="#">Extintores con revisiones pendientes</a></li>
             </ul>
         </nav>

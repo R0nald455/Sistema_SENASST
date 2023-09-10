@@ -111,7 +111,7 @@
   </div>
 </div>
 <?php
-include("../../footer/footer.php");
+include '../../../Footer/footer.php';
 ?>
     </body>
 </html>

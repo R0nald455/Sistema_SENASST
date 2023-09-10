@@ -33,6 +33,7 @@ error_reporting(0);
                         <li><img src="../../../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></li>
                         <li><a href="../../indexExtintores.php" id="selected">Inicio</a></li>
                         <li><a href="#">Administrar extintores</a></li>
+                        <li><a href="../../../inspecciones/index.php">Inspección de extintores</a></li>
                         <li><a href="../recarga/index.php">Extintores con revisiones pendientes</a></li>
                     </ul>
                 </nav>

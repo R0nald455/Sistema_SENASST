@@ -26,7 +26,7 @@
                 <li><img src="../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></li>
                 <li><a href="../inventarios/index.php" id="selected">Inicio</a></li>
                 <li><a href="../inventarios/modulos/extintores/index.php">Administrar extintores</a></li>
-                <li><a href="../inspecciones/index.php">Inspeccion de Extintores</a></li>
+                <li><a href="../inspecciones/index.php">Inspección de Extintores</a></li>
                 <li><a href="../inventarios/modulos/recarga/index.php">Extintores con revisiones pendientes</a></li>
 
             </ul>

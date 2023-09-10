@@ -23,9 +23,8 @@
         <li class="list-group-item">
           <form method="post">
             <div class="form-row align-items-center">
-              <div class="col-auto">
-              <table class="table table-striped table-dark " id= "table_id">
-            <thead>
+              <table id="lookup" class="table table-hover">
+            <thead bgcolor="rgb(57,168,1)">
               <tr>
                 <th>Extintor ID</th>
                 <th>Numero de Serie</th>
@@ -68,8 +67,12 @@
                 $segundosEnUnMes = 30 * 24 * 60 * 60;
                 // Verificar si la diferencia es menor o igual a un mes en segundos
                 if($diferenciaSegundos <= $segundosEnUnMes){
-                  echo "El objeto esta un mes de vencerse";
+                  ?> <i class="fa-solid fa-circle-exclamation fa-2xl" style="color: #ffd500;"></i> 
+                  <br> <br><?php
+                  echo "El objeto esta a un mes de vencerse";
                 }else{
+                  ?> <i class="fa-solid fa-circle-check fa-2xl" style="color: #2bf21c;"></i>
+                  <br> <?php
                   echo "El objeto todavia tiene mas de un mes para vencerse";
                 }
                 
