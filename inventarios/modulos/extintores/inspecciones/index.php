@@ -1,4 +1,4 @@
-<?php include '../db/conexion.php';?>
+<?php include '../../../../db/conexion.php';?>
 
 <!DOCTYPE html>
 <html>
@@ -23,11 +23,11 @@
 
         <nav>
             <ul>
-                <li><img src="../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></li>
-                <li><a href="../inventarios/index.php" id="selected">Inicio</a></li>
-                <li><a href="../inventarios/modulos/extintores/index.php">Administrar extintores</a></li>
-                <li><a href="../inspecciones/index.php">Inspección de Extintores</a></li>
-                <li><a href="../inventarios/modulos/recarga/index.php">Extintores con revisiones pendientes</a></li>
+                <li><img src="../../../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></li>
+                <li><a href="../../indexExtintores.php" id="selected">Inicio</a></li>
+                <li><a href="../index.php">Administrar extintores</a></li>
+                <li><a href="#">Inspección de Extintores</a></li>
+                <li><a href="../recarga/index.php">Extintores con revisiones pendientes</a></li>
 
             </ul>
         </nav>
