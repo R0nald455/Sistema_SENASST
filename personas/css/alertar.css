@@ -4,14 +4,16 @@
     box-sizing: border-box;
 }
 
+.alert{
+    top: 40px;
+}
 
 #maestro{
-    margin-top: 100px;
+    position: relative;
     padding: 50px;
 }
 
 #container {
-    margin-top: 100px;
     padding: 50px;
 }
 
@@ -49,8 +51,13 @@ select{
     color: white;
     font-size: 30px;
     font-weight: bold;
+    width: 100%;
 }
 
 #BotonAlertar:hover{
     background-color: rgb(155, 36, 36);
+}
+
+.card{
+    padding: 35px;
 }

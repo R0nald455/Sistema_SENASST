@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+include_once("../db/conexion.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,6 +24,8 @@
 
   <!-- Menu de navegacion-->
 
+  <!-- Menu de navegacion-->
+
   <div class="container__menu">
 
     <div class="menu">
@@ -30,19 +37,52 @@
         <span id="spn3"></span>
       </label>
 
-      <img id="logoResponsive" src="../img/LogoSenaBlanco.png" width="70px" alt="logoSena">
-
+      <img id="logoResponsive" src="../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></a>
 
       <nav>
+
+        <img src="../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></a>
+
         <ul>
-          <li><img src="../img/LogoSenaBlanco.png" width="70px" alt="logoSena"></li>
-          <li><a href="../index.php" id="selected">Inicio</a></li>
+          <?php if (isset($_SESSION["id"])):
+
+            $rol = $_SESSION["rol"];
+
+
+            if ($rol == 1) {
+              ?>
+              <li><a href="../php/rolFuncionario/indexfuncionario.php" id="selected">Inicio</a></li>
+
+              <?php
+            } elseif ($rol == 2) {
+              ?>
+              <li><a href="../php/rolPersona/indexpersona.php" id="selected">Inicio</a></li>
+
+              <?php
+            } elseif ($rol == 3) {
+              ?>
+              <li><a href="../php/rolPersona/indexbrigadista.php" id="selected">Inicio</a></li>
+
+              <?php
+            } elseif ($rol == 4) {
+              ?>
+              <li><a href="../php/rolFuncionario/indexadministrador.php" id="selected">Inicio</a></li>
+
+              <?php
+            }
+            ?>
+
+          <?php else: ?>
+
+            <li><a href="../index.php" id="selected">Inicio</a></li>
+
+          <?php endif; ?>
         </ul>
       </nav>
     </div>
   </div>
 
-  <div class="container mt-5" id="maestro">
+  <div class="container" id="maestro">
     <?php
     if (isset($_GET['mensaje']) and $_GET['mensaje'] == 'registrado') {
       ?>

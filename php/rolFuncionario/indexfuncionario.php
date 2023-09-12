@@ -45,6 +45,7 @@ require_once("../../db/conexion.php");
 					<ul>
 						<li><img src="../../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></li>
 						<li><a href="#overview" id="selected">Inicio</a></li>
+						<li><a onclick="window.location.href='../../reglamento/index.php'">Reglamento</a></li>
 						<li><a href="#">Inspecciones</a>
 							<ul> <b>
 									<li><a onclick="window.location.href='../../inventarios/modulos/indexExtintores.php'">Inventario
@@ -103,10 +104,10 @@ require_once("../../db/conexion.php");
 			</div>
 		</section>
 
-				<!-- =========================
+		<!-- =========================
 	NEWSLETTER SECTION   
 ============================== -->
-<section id="newsletter">
+		<section id="newsletter">
 			<div class="container">
 				<div class="row">
 					<div class=" col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10">
