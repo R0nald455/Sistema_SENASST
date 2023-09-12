@@ -126,7 +126,7 @@ require_once ("../../../db/conexion.php");
 
 										<div class="control-group buttons-container">
 											<div class="controls">
-												<input type="submit" name="input" id="input" value="Upload Image/Data" class="btn btn-sm btn-primary"></input>
+												<input type="submit" name="input" id="input" value="Registrar" class="btn btn-sm btn-primary"></input>
                                                 <a href="index.php" class="btn btn-sm btn-danger">Cancelar</a>
 											</div>
 										</div>
