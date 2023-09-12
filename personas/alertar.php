@@ -24,187 +24,122 @@ include_once("../db/conexion.php");
 
   <!-- Menu de navegacion-->
 
+  <!-- Menu de navegacion-->
+
   <div class="container__menu">
-    <?php if (isset($_SESSION["id"])):
 
-      $rol = $_SESSION["rol"];
+    <div class="menu">
 
-      if ($rol == 1) {
+      <input type="checkbox" id="check__menu">
+      <label for="check__menu" class="lbl-menu">
+        <span id="spn1"></span>
+        <span id="spn2"></span>
+        <span id="spn3"></span>
+      </label>
 
-        ?>
-        <div class="menu">
+      <img id="logoResponsive" src="../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></a>
 
-          <input type="checkbox" id="check__menu">
-          <label for="check__menu" class="lbl-menu">
-            <span id="spn1"></span>
-            <span id="spn2"></span>
-            <span id="spn3"></span>
-          </label>
+      <nav>
 
-          <img style="top: -49px;" id="logoResponsive" src="../img/LogoSenaBlanco.png" width="70px" alt="logoSena">
+        <img src="../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></a>
 
-          <nav>
-            <ul style="height: 120px;">
-              <li style="left: -20px;"><img src="../img/LogoSenaBlanco.png" width="70px" alt="logoSena"></li>
-              <li style="height: 70px; left: -20px;"><a href="../php/rolFuncionario/indexfuncionario.php"
-                  id="selected">Inicio</a></li>
-            </ul>
-          </nav>
-          <?php
+        <ul>
+          <?php if (isset($_SESSION["id"])):
 
-      } elseif ($rol == 2) {
-        ?>
+            $rol = $_SESSION["rol"];
 
-          <div class="menu">
 
-            <input type="checkbox" id="check__menu">
-            <label for="check__menu" class="lbl-menu">
-              <span id="spn1"></span>
-              <span id="spn2"></span>
-              <span id="spn3"></span>
-            </label>
-
-            <img style="top: -49px;" id="logoResponsive" src="../img/LogoSenaBlanco.png" width="70px" alt="logoSena">
-
-            <nav>
-              <ul style="height: 120px;">
-                <li style="left: -20px;"><img src="../img/LogoSenaBlanco.png" width="70px" alt="logoSena"></li>
-                <li style="height: 70px; left: -20px;"><a href="../php/rolPersona/indexpersona.php" id="selected">Inicio</a>
-                </li>
-              </ul>
-            </nav>
-
-            <?php
-      } elseif ($rol == 3) {
-        ?>
-
-            <div class="menu">
-
-              <input type="checkbox" id="check__menu">
-              <label for="check__menu" class="lbl-menu">
-                <span id="spn1"></span>
-                <span id="spn2"></span>
-                <span id="spn3"></span>
-              </label>
-
-              <img style="top: -49px;" id="logoResponsive" src="../img/LogoSenaBlanco.png" width="70px" alt="logoSena">
-
-              <nav>
-                <ul style="height: 120px;">
-                  <li style="left: -20px;"><img src="../img/LogoSenaBlanco.png" width="70px" alt="logoSena"></li>
-                  <li style="height: 70px; left: -20px;"><a href="../php/rolPersona/indexbrigadista.php"
-                      id="selected">Inicio</a></li>
-                </ul>
-              </nav>
+            if ($rol == 1) {
+              ?>
+              <li><a href="../php/rolFuncionario/indexfuncionario.php" id="selected">Inicio</a></li>
 
               <?php
-      } elseif ($rol == 4) {
-        ?>
-              <div class="menu">
+            } elseif ($rol == 2) {
+              ?>
+              <li><a href="../php/rolPersona/indexpersona.php" id="selected">Inicio</a></li>
 
-                <input type="checkbox" id="check__menu">
-                <label for="check__menu" class="lbl-menu">
-                  <span id="spn1"></span>
-                  <span id="spn2"></span>
-                  <span id="spn3"></span>
-                </label>
+              <?php
+            } elseif ($rol == 3) {
+              ?>
+              <li><a href="../php/rolPersona/indexbrigadista.php" id="selected">Inicio</a></li>
 
-                <img style="top: -49px;" id="logoResponsive" src="../img/LogoSenaBlanco.png" width="70px" alt="logoSena">
+              <?php
+            } elseif ($rol == 4) {
+              ?>
+              <li><a href="../php/rolFuncionario/indexadministrador.php" id="selected">Inicio</a></li>
 
-                <nav>
-                  <ul style="height: 120px;">
-                    <li style="left: -20px;"><img src="../img/LogoSenaBlanco.png" width="70px" alt="logoSena"></li>
-                    <li style="height: 70px; left: -20px;"><a href="../php/rolFuncionario/indexadministrador.php"
-                        id="selected">Inicio</a></li>
-                  </ul>
-                </nav>
-                <?php
-      }
+              <?php
+            }
+            ?>
 
+          <?php else: ?>
+
+            <li><a href="../index.php" id="selected">Inicio</a></li>
+
+          <?php endif; ?>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container" id="maestro">
+    <?php
+    if (isset($_GET['mensaje']) and $_GET['mensaje'] == 'registrado') {
       ?>
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Alertados!</strong> Alerta Enviada!!!!.
+      </div>
+      <?php
+    }
+    ?>
 
-            <?php else: ?>
+    <?php
+    if (isset($_GET['mensaje']) and $_GET['mensaje'] == 'error') {
+      ?>
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Error!</strong> Vuelve a intentarlo!!!!.
+      </div>
+      <?php
+    }
+    ?>
 
-              <div class="menu">
 
-                <input type="checkbox" id="check__menu">
-                <label for="check__menu" class="lbl-menu">
-                  <span id="spn1"></span>
-                  <span id="spn2"></span>
-                  <span id="spn3"></span>
-                </label>
 
-                <img style="top: -49px;" id="logoResponsive" src="../img/LogoSenaBlanco.png" width="70px" alt="logoSena">
-
-                <nav>
-                  <ul style="height: 120px;">
-                    <li style="left: -20px;"><img src="../img/LogoSenaBlanco.png" width="70px" alt="logoSena"></li>
-                    <li style="height: 70px; left: -20px;"><a href="../index.php" id="selected">Inicio</a></li>
-                  </ul>
-                </nav>
-
-              <?php endif; ?>
-
+    <div class="row justify-content-center">
+      <div class="col-md-10" id="container">
+        <div class="card">
+          <form name="p-4" id="p-4" method="post" action="enviarAlerta.php" autocomplete="off"
+            enctype="multipart/form-data">
+            <div class="mb-3 text-center">
+              <h1 class="heading">Envianos tu ubicación, para poder ayudarte!!!</h1>
             </div>
-
-            <div class="container mt-5" id="maestro">
-              <?php
-              if (isset($_GET['mensaje']) and $_GET['mensaje'] == 'registrado') {
-                ?>
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                  <strong>Alertados!</strong> Alerta Enviada!!!!.
-                </div>
-                <?php
-              }
-              ?>
-
-              <?php
-              if (isset($_GET['mensaje']) and $_GET['mensaje'] == 'error') {
-                ?>
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                  <strong>Error!</strong> Vuelve a intentarlo!!!!.
-                </div>
-                <?php
-              }
-              ?>
-
-
-
-              <div class="row justify-content-center">
-                <div class="col-md-10" id="container">
-                  <div class="card">
-                    <form name="p-4" id="p-4" method="post" action="enviarAlerta.php" autocomplete="off"
-                      enctype="multipart/form-data">
-                      <div class="mb-3 text-center">
-                        <h1 class="heading">Envianos tu ubicación, para poder ayudarte!!!</h1>
-                      </div>
-                      <div class="mb-3">
-                        <select id="contexto" name="contexto" onchange="mostrarOtro()">
-                          <option selected>Seleccione</option>
-                          <option value="Auditorio">Auditorio</option>
-                          <option value="Administración">Administración</option>
-                          <option value="Bloque A">Bloque A</option>
-                          <option value="Bloque B">Bloque B</option>
-                          <option value="Bloque C">Bloque C</option>
-                          <option value="Biblioteca">Biblioteca</option>
-                          <option value="Coliseo">Coliseo</option>
-                          <option value="Cafetería">Cafetería</option>
-                          <option value="otro">Otro</option>
-                        </select>
-                        <div id="otroRiesgo" style="display: none;">
-                          <label for="otroRiesgoInput">Cual:</label>
-                          <input type="text" id="otroRiesgoInput" name="otroRiesgoInput">
-                        </div>
-                        </p>
-                      </div>
-                      <div class="d-grid">
-                        <button name="submit" class="btn" id="BotonAlertar">Alertar!</button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
+            <div class="mb-3">
+              <select id="contexto" name="contexto" onchange="mostrarOtro()">
+                <option selected>Seleccione</option>
+                <option value="Auditorio">Auditorio</option>
+                <option value="Administración">Administración</option>
+                <option value="Bloque A">Bloque A</option>
+                <option value="Bloque B">Bloque B</option>
+                <option value="Bloque C">Bloque C</option>
+                <option value="Biblioteca">Biblioteca</option>
+                <option value="Coliseo">Coliseo</option>
+                <option value="Cafetería">Cafetería</option>
+                <option value="otro">Otro</option>
+              </select>
+              <div id="otroRiesgo" style="display: none;">
+                <label for="otroRiesgoInput">Cual:</label>
+                <input type="text" id="otroRiesgoInput" name="otroRiesgoInput">
               </div>
-              <script src="script2.js"></script>
+              </p>
+            </div>
+            <div class="d-grid">
+              <button name="submit" class="btn" id="BotonAlertar">Alertar!</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="script2.js"></script>
 </body>
 
 </html>
