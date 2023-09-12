@@ -47,6 +47,8 @@ require_once("../../db/conexion.php");
 						<li><a href="#overview" id="selected">Inicio</a></li>
 						<li><a href="#">Modulos administrativos</a>
 							<ul> <b>
+									<li><a onclick="window.location.href='../../reglamento/index.php'">Reglamento</a></li>
+
 									<li><a onclick="window.location.href='../../administrador/view/user.php'">Administrar
 											usuarios</a></li>
 									<li><a onclick="window.location.href='../../contenidos/index.php'">Administrar

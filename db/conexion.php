@@ -1,6 +1,6 @@
 <?php
 
-$server="localhost";
+$server="localhost:3307";
 $usuario="root";
 $password="";
 $database="sstcba";

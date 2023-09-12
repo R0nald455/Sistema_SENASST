@@ -139,7 +139,7 @@ include_once("../db/conexion.php");
                 <nav>
                   <ul style="height: 120px;">
                     <li style="left: -20px;"><img src="../img/LogoSenaBlanco.png" width="70px" alt="logoSena"></li>
-                    <li style="height: 70px; left: -20px;"><a href="../index.php" id="selected">Inicio visitante</a></li>
+                    <li style="height: 70px; left: -20px;"><a href="../index.php" id="selected">Inicio</a></li>
                   </ul>
                 </nav>
 

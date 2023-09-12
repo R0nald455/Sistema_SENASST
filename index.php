@@ -34,7 +34,7 @@
 					<li><img src="img/LogoSenaBlanco.png" width="50px" alt="logoSena"></li>
 					<li><a href="#overview" id="selected">Inicio</a></li>
 					<li><a href="#trainer">Brigadistas</a></li>
-					<li><a href="php/login.php">Reglamento</a></li>
+					<li><a href="reglamento/index.php">Reglamento</a></li>
 					<li><a href="#newsletter">Reportar</a></li>
 					<li><a href="#simuladores">Simuladores</a></li>
 					<li><a href="#testimonial">Noticias</a></li>

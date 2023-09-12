@@ -45,10 +45,10 @@ require_once("../../db/conexion.php");
 					<ul>
 						<li><img src="../../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></li>
 						<li><a href="#overview" id="selected">Inicio</a></li>
+						<li><a onclick="window.location.href='../../reglamento/index.php'">Reglamento</a></li>
 						<li><a href="#">Modulos administrativos</a>
 							<ul> <b>
-
-									<li><a onclick="window.location.href='../../inventarios/index.php'">Administrar
+									<li><a onclick="window.location.href='../../personas/index.php'">Administrar
 											Dotacion</a></li>
 							</ul> </b>
 						</li>
