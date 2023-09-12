@@ -34,16 +34,13 @@ require_once("../db/conexion.php");
         <span id="spn3"></span>
       </label>
 
-      <a href="../php/rolPersona/indexpersona.php"><img id="logoResponsive" src="../img/LogoSenaBlanco.png" width="50px"
-          alt="logoSena"></a>
-
+      <img id="logoResponsive" src="../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></a>
 
       <nav>
+
+      <img src="../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></a>
+
         <ul>
-
-          <li><a href="../php/rolPersona/indexpersona.php"><img src="../img/LogoSenaBlanco.png" width="50px"
-                alt="logoSena"></a></li>
-
           <?php if (isset($_SESSION["id"])):
 
             $rol = $_SESSION["rol"];
