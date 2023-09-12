@@ -103,10 +103,10 @@ require_once("../../db/conexion.php");
 			</div>
 		</section>
 
-				<!-- =========================
+		<!-- =========================
 	NEWSLETTER SECTION   
 ============================== -->
-<section id="newsletter">
+		<section id="newsletter">
 			<div class="container">
 				<div class="row">
 					<div class=" col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10">
