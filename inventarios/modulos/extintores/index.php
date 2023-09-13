@@ -6,7 +6,10 @@ error_reporting(0);
 <html lang="en">
 
 <head>
-    <?php include("head.php"); ?>
+    <?php 
+    include("head.php");
+    include('registro.php');
+    ?>
 </head>
 
 <body>
@@ -57,10 +60,13 @@ error_reporting(0);
                             <div class="panel-body">
 
                                 <div class="pull-right">
-                                    <a
-                                        href="registro.php" class="btn btn-sm btn-success"><i class="fa-solid fa-plus"></i>  Nuevo extintor</a>
-                                    <a id="button-pdf" href="reportes.php" class="btn btn-sm btn-primary"><i class="fa-solid fa-file-pdf"></i> Generar PDF</a>
-                                    <a id="button-alert" href="alertas/config.php" class="btn btn-sm btn-info"><i class="fa-solid fa-envelope"></i>  Alerta para
+                                    <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#registroModal"><i class="fa-solid fa-plus"></i>Nuevo
+                                        extintor</button>
+                                    <a id="button-pdf" href="reportes.php" class="btn btn-sm btn-primary"><i
+                                            class="fa-solid fa-file-pdf"></i> Generar PDF</a>
+                                    <a id="button-alert" href="alertas/config.php" class="btn btn-sm btn-info"><i
+                                            class="fa-solid fa-envelope"></i> Alerta para
                                         extintores con revisiones/recargas pendientes</a>
                                 </div><br>
                                 <h6><i>"Al alertar te llega un correo electronico con la informacion del extintor"</i></h6>
@@ -98,7 +104,7 @@ error_reporting(0);
             </div>
         </div>
         <!--/.container-->
-        
+
 
         <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../../datatables/jquery.dataTables.js"></script>

@@ -42,8 +42,6 @@ include 'index.php';
                   <tbody>
                     <?php
                     $divSeleccionado = $_POST['divSeleccionado'];
-
-                    $conexion = mysqli_connect("localhost", "root", "", "sstcba");
                     $sql = "SELECT ExtintorID, NumeroDeSerie, TipoDeExtintor, Ubicacion, UbicacionEspecifica, UltimaRecarga, ProximaRecarga, Comentarios FROM extintores WHERE Ubicacion = '$divSeleccionado'";
                     $result = $conexion->query($sql);
 
@@ -61,8 +59,37 @@ include 'index.php';
                             <?php echo $fila['TipoDeExtintor']; ?>
                           </td>
                           <td>
-                            <?php echo $fila['Ubicacion']; ?>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d654.9712851702054!2d-74.216249818881!3d4.69572981024312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnNDQuNCJOIDc0wrAxMic1Ny40Ilc!5e1!3m2!1ses-419!2sco!4v1694375903985!5m2!1ses-419!2sco" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <?php
+                            switch ($fila['Ubicacion']) {
+
+                              case 'Biblioteca':
+
+                                echo $fila['Ubicacion'];
+                                ?>
+                                <iframe
+                                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d208.29876097118972!2d-74.21726913685644!3d4.695541010889089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnNDQuMCJOIDc0wrAxMycwMS42Ilc!5e1!3m2!1ses-419!2sco!4v1694558172765!5m2!1ses-419!2sco"
+                                  width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <?php
+                                break;
+
+                              case 'Administracion':
+
+                                echo $fila['Ubicacion'];
+                                ?>
+                                <iframe
+                                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d163.74281803261528!2d-74.21589439980467!3d4.6957436974358595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnNDQuNiJOIDc0wrAxMic1Ny4yIlc!5e1!3m2!1ses-419!2sco!4v1694558624024!5m2!1ses-419!2sco"
+                                  width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <?php
+                                break;
+
+                              default:
+                                echo $fila['Ubicacion'];
+                                break;
+                            }
+
+                            ?>
                           </td>
                           <td>
                             <?php echo $fila['UbicacionEspecifica']; ?>
@@ -115,7 +142,6 @@ include 'index.php';
                 </table>
               </div>
               <div class="col-auto">
-
               </div>
       </div>
       </form>
