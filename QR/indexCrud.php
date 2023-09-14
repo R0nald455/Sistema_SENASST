@@ -1,5 +1,5 @@
 <?php
-include("conexion/connection.php");
+include("../db/conexion.php");
 
 
 $sql = "SELECT * FROM inventariosalon";

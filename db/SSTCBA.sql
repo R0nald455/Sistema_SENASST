@@ -627,6 +627,49 @@ INSERT INTO `user` (`id`, `nombre`, `correo`, `telefono`, `password`, `fecha`, `
 (13, 'Brigadista', 'brigadista@brigadista.com', '3112412', '12345', '2023-08-23 20:58:03', 3),
 (0, 'Jesus', 'jdcuadro993@soy.sena.edu.co', '3214587654', '12345', '2023-09-11 05:00:00', 2);
 
+
+
+--
+-- Estructura de tabla para la tabla `inventariosalon`
+--
+
+CREATE TABLE `inventariosalon` (
+  `id` int(11) NOT NULL,
+  `articulo` varchar(50) NOT NULL,
+  `cantidad` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `inventariosalon`
+--
+
+INSERT INTO `inventariosalon` (`id`, `articulo`, `cantidad`) VALUES
+(1, 'Computadores', 16),
+(2, 'Teclados y ratones', 16),
+(3, 'Escritorios', 18),
+(4, 'Sillas', 40),
+(5, 'Tablero', 1);
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `inventariosalon`
+--
+ALTER TABLE `inventariosalon`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `inventariosalon`
+--
+ALTER TABLE `inventariosalon`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- Índices para tablas volcadas
 --
