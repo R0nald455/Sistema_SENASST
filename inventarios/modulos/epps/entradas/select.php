@@ -1,10 +1,5 @@
 <?php
-include('../../../db/conexion.php');
-
-// Verificar la conexión
-if ($conexion->connect_error) {
-    die("Conexión fallida: " . $conexion->connect_error);
-}
+include('../../../../db/conexion.php');
 
 $searchTerm = $_GET['q'];
 

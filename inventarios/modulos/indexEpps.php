@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-require_once("../db/conexion.php");
+require_once("../../db/conexion.php");
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@ require_once("../db/conexion.php");
     <title>Inicio | Sistema de inventario para elementos de proteccion personal</title>
     <link rel="icon" href="../../img/LogoSena.png">
     <script src="https://kit.fontawesome.com/27e58a102f.js" crosssorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/styles_inventario_extintores.css">
+    <link rel="stylesheet" href="../../css/styles_inventario_extintores.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
@@ -26,7 +26,7 @@ require_once("../db/conexion.php");
         <header>
             <div class="header__superior">
                 <div class="logo">
-                    <img src="../img/LogoSena.png" alt="">
+                    <img src="../../img/LogoSena.png" alt="">
                 </div>
                 <div class="tittle"><b>Sistema de inventario para elementos de proteccion personal</b><br> Centro de
                     Biotecnologia <br> Agropecuaria </div>
@@ -43,13 +43,13 @@ require_once("../db/conexion.php");
                 </label>
                 <nav>
                     <ul>
-                        <li><a href="../php/rolFuncionario/indexfuncionario.php" id="selected">Inicio</a></li>
+                        <li><a href="../../php/rolFuncionario/indexfuncionario.php" id="selected">Inicio</a></li>
 
-                        <li><a href="../inventarios/modulos/implementos/index.php">Administrar EPP's</a>
-                        <li><a href="../inventarios/modulos/entradas/index.php">Entrada de
+                        <li><a href="epps/index.php">Administrar EPP's</a>
+                        <li><a href="epps/entradas/index.php">Entrada de
                                 EPP's</a>
                         </li>
-                        <li><a href="../inventarios/modulos/salidas/index.php">Salida de EPP's</a>
+                        <li><a href="epps/salidas/index.php">Salida de EPP's</a>
                         </li>
                     </ul>
                 </nav>

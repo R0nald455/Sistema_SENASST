@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-require_once ("../../../db/conexion.php");
+require_once ("../../../../db/conexion.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,16 +24,16 @@ require_once ("../../../db/conexion.php");
 
         <nav>
             <ul>
-                <li><img src="../../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></li>
+                <li><img src="../../../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></li>
                 <li><a href="../../indexEpps.php" id="selected">Inicio</a></li>
-                <li><a href="../implementos/index.php">Administrar elementos de proteccion personal</a></li>
+                <li><a href="../index.php">Administrar elementos de proteccion personal</a></li>
                 <li><a href="../entradas/index.php">Administrar entradas</a></li>
                 <li><a href="#">Administrar salidas</a></li>
             </ul>
         </nav>
 
         <div class="responsive-container">
-            <img id="logoResponsive" src="../../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena">
+            <img id="logoResponsive" src="../../../../img/LogoSenaBlanco.png"  width="50px" alt="logoSena">
         </div>
     </div>
 </div>
@@ -100,9 +100,9 @@ require_once ("../../../db/conexion.php");
             <!--/.container-->
             </div>
         
-        <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="../../datatables/jquery.dataTables.js"></script>
-        <script src="../../datatables/dataTables.bootstrap.js"></script>
+        <script src="../../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../../../datatables/jquery.dataTables.js"></script>
+        <script src="../../../datatables/dataTables.bootstrap.js"></script>
 
         <script>
         $(document).ready(function() {

@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-require_once ("../../../db/conexion.php");
+require_once ("../../../../db/conexion.php");
 ?>
 
 <!DOCTYPE html>
@@ -47,12 +47,8 @@ require_once ("../../../db/conexion.php");
 						
 										<div class="control-group">
 											<div class="controls">
-<<<<<<< HEAD
-												<label class="control-label" for="ID_Implementos">Elementos de Proteccion Personal: <input type="text" name="ID_Implementos" id="ID_Implementos" placeholder="" class="form-control span8 tip" required></label>
-=======
 												<label class="control-label" for="ID_Implementos">Implementos: </label>
 												<select id="categoryName" class="categoryName form-control" name="ID_Implementos"></select>
->>>>>>> 0923262486913cbb232570adc1097c2bba4d0b50
 											</div>
 										</div>
 

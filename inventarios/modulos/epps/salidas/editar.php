@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-require_once ("../../../db/conexion.php");
+require_once ("../../../../db/conexion.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
