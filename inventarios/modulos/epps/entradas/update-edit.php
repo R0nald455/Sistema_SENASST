@@ -8,7 +8,7 @@ if(isset($_POST['update'])){
                 $cantidad  		= mysqli_real_escape_string($conexion,(strip_tags($_POST['cantidad'], ENT_QUOTES)));
 				$descripcion  	= mysqli_real_escape_string($conexion,(strip_tags($_POST['descripcion'], ENT_QUOTES)));
 				
-				$update = mysqli_query($conexion, "UPDATE tblentradas SET ID_Implementos='$id_implementos', cantidad='$cantidad', descripcion='$descripcion' WHERE ID_Entradas='$id'") or die(mysqli_error());
+				$update = mysqli_query($conexion, "UPDATE tblentradas SET ID_Implementos='$id_implementos', cantidad='$cantidad', descripcion='$descripcion' WHERE ID_Entradas='$id'");
 				$sql = mysqli_query($conexion, "UPDATE tblimplementos SET cantidad = cantidad + $cantidad WHERE id_implementos = '$id_implementos'");
 	
 				// $dato = mysqli_query($conexion, "SELECT cantidad - '$cantidad' FROM tblentradas WHERE ID_Entradas='$id'") or die(mysqli_error());

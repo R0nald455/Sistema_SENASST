@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 include_once("../db/conexion.php");
 ?>
 
@@ -40,12 +39,6 @@ include_once("../db/conexion.php");
                                     ?>
 
                                     <a href="../php/rolFuncionario/indexfuncionario.php">Inicio</a>
-
-                                    <?php
-                              } elseif ($rol == 2) {
-                                    ?>
-
-                                    <a href="../php/rolPersona/indexpersona.php">Inicio</a>
 
                                     <?php
                               } elseif ($rol == 3) {

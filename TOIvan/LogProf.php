@@ -1,37 +1,46 @@
 <head>
   <link rel="stylesheet" type="text/css" href="../css//now.css">
 </head>
+
 <body>
-    <div>
+  <div>
 
-<?php
-//error_reporting(0);
-include("../db/conexion.php");
+    <?php
+    //error_reporting(0);
+    include("../db/conexion.php");
 
 
-// Recibimos los datos del formulario
-$names = $_POST['names'];
-$condicion = $_POST['condicion'];
-$mision = $_POST['contexto'];
-$situacion = $_POST['situacion'];
+    // Recibimos los datos del formulario
+    $names = $_POST['names'];
+    $condicion = $_POST['condicion'];
+    $mision = $_POST['contexto'];
+    $situacion = $_POST['situacion'];
 
-$laimagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
+    $laimagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
 
-$query = "INSERT INTO observacion (nombre,Condicion, Lugar, Foto, contexto) 
+    $query = "INSERT INTO observacion (nombre,Condicion, Lugar, Foto, contexto) 
 VALUES ('$names', '$condicion', '$mision','$laimagen', '$situacion')";
-$resultado = mysqli_query($conexion, $query);
 
-// Verificamos si el insert fue exitoso
-if ($resultado) {
-header("location: ./ProfIni.php");
-} else {
-    echo "Error al insertar el registro: " . mysqli_error($conexion);
-}
+    $resultado = mysqli_query($conexion, $query);
 
-// Cerramos la conexión
-mysqli_close($conexion);
+    // Verificamos si el insert fue exitoso
+    if ($resultado) {
+
+      echo '<script>
+          alert("Bien hecho, la tarjeta se ha enviado exitosamente.")
+          window.location.href = "crear.php";
+      </script>';
 
 
-?>
-</div>
+    } else {
+      echo "Error al insertar el registro: " . mysqli_error($conexion);
+      header("location: crear.php");
+    }
+
+    // Cerramos la conexión
+    mysqli_close($conexion);
+
+
+    ?>
+  </div>
 </body>
