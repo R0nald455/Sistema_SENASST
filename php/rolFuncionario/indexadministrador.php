@@ -50,7 +50,7 @@ require_once("../../db/conexion.php");
 							<ul> <b>
 									<li><a onclick="window.location.href='../../reglamento/index.php'">Reglamento</a></li>
 
-									<li><a onclick="window.location.href='../../administrador/view/user.php'">Administrar
+									<li><a onclick="window.location.href='../../administrador/indes.php'">Administrar
 											usuarios</a></li>
 									<li><a onclick="window.location.href='../../contenidos/index.php'">Administrar
 											Contenidos</a></li>
