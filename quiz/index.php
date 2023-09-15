@@ -2,14 +2,20 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Quiz</title>
+  <title>CodePen - Online Quiz Web Application - &quot;Quizapalooza&quot;</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/header.css">
+    <title>Quizapalooza Web Application</title>
+    <meta name="description" content="An online Web Application for taking quizzes.">
+    <meta name="keywords" content="quizapalooza, online quiz app, web application quiz, online quiz, web quiz app, eCommerce quiz"><link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
     <script src="../js/jquery-1.12.4-jquery.min.js"></script>
 
 
@@ -118,6 +124,12 @@ footer {
   width: 100%;
 }
 
+header {
+  background-color: #5eb319;
+  box-shadow: 2px 2px 5px rgba(18, 18, 18, 0.3);
+  color: #FFFFFF;
+  width: 100%;
+}
 
 .header-content-wrap {
   display: flex;
@@ -127,6 +139,7 @@ footer {
   height: auto;
   padding: 2rem 0;
   width: 100%;
+  border-top:solid black;
 }
 
 body {
@@ -377,7 +390,7 @@ label {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   body {
-    background-image: linear-gradient(to right, #FFFFFF, #bdbdbd, #FFFFFF, #FFFFFF, #FFFFFF, #bdbdbd, #FFFFFF);
+    background-image: linear-gradient(to right, #FFFFFF, #bdbdbd, #bdbdbd, #bdbdbd, #bdbdbd, #bdbdbd, #FFFFFF);
   }
 }
 
@@ -419,10 +432,12 @@ label {
     line-height: 1.4rem;
     font-family: "Lato", sans-serif;
   }
-
-  #containerQuiz{
+  .idea{
+    width: 120px;
+    height: 100px;
     position: relative;
-    top :100px;
+    left: 145px;
+
   }
     </style>
           <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
@@ -482,49 +497,28 @@ $falsa3 = $fila['falsa3'];
 ?>
 
 
-<!-- Menu de navegacion-->
+<div id="Shadow-Panel" class="shadow-panel hidden"></div>
 
-<div class="container__menu">
-
-<div class="menu">
-
-    <input type="checkbox" id="check__menu">
-    <label for="check__menu" class="lbl-menu">
-        <span id="spn1"></span>
-        <span id="spn2"></span>
-        <span id="spn3"></span>
-    </label>
-
-    <a href="../php/rolPersona/indexpersona.php"><img id="logoResponsive" src="../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></a>
-    
-
-    <nav>
-        <ul>
-            
-            <li><a href="../php/rolPersona/indexpersona.php"><img src="../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></a></li>
-
-            <li><a href="../php/rolPersona/indexpersona.php" id="selected">Inicio</a></li>
-
-        </ul>
-    </nav>
-</div>
-</div>
-
-
-
-      <div class="header-content-wrap" id="containerQuiz">
+<header>
+  
+  <br><br>
+              <div class="header-content-wrap">
     <h1>Quiz</h1>
-    <h2>MAPA DE RIESGOS Y AMBIENTAL</h2>
+    <h2>SEGURIDAD Y SALUD EN EL TRABAJO</h2>
+    <H2>(SST)</H2>
   </div>
-
+</header>
 
 <main>
   <article>
+    <h2 class="quiz-title hidden">eCommerce Quiz</h2>
 
     <section id="Start-Menu" class="menu hidden active-panel">
       <div class="menu-content-wrap">
-        <h3 id="Menu-h3">Mapa de Riesgos y Mapa Ambiental</h3>
-        <p>Este cuestionario cuenta de tres preguntas sobre mapa de riesgos y ambiental. Tendrá dos minutos para completar el cuestionario. La excelencia es obligatoria; Las respuestas incorrectas reiniciarán su cuestionario, sin embargo, su temporizador continuará disminuyendo. Puede volver a tomar el cuestionario tantas veces como desee. Presione "comenzar" para iniciar.</p>
+        <img class="idea" src="ideaif.gif ">
+        <p>Este cuestionario cuenta con tres preguntas aleatorias, estas se deben responder en 2 minutos.
+Este quiz tiene como fin evaluar tus conocimientos las respuestas incorrectas reiniciaran el quiz, no te olvides del tiempo.
+Puedes tomar el cuestionario tantas veces como desees .</p>
       </div>
     </section>
 
@@ -547,8 +541,8 @@ $falsa3 = $fila['falsa3'];
     <section id="Nothing-Selected-Notice" class="error-notice hidden">
       <div class="menu-content-wrap">
         <h3 id="Menu-h3">No seleccionaste nada</h3>
-        <p>Con el objetivo de la excelencia en mente, debe seleccionar una respuesta para continuar.</p>
-        <input id="Close-Button" type="submit" value="Cerrar" name="Close">
+        <p>Debe seleccionar una respuesta para continuar.</p>
+        <input id="Close-Button" type="submit" value="Close" name="Close">
       </div>
     </section>
 
@@ -659,7 +653,7 @@ $falsa3 = $fila['falsa3'];
 
     <section id="You-Won" class="winner-panel hidden">
       <h3 id="Menu-h3">¡Felicidades!</h3>
-      <p>¡Has alcanzado la excelencia!</p>
+      <p>¡Has logrado hacer el cuestionario sin errores</p>
       <!-- SMALL PUPPY IMAGES FOR SMALLER SCREEN SIZES -->
       <img id="Shih-Tzu-Small" class="hidden puppies-small-img" src="gasnate.pgn.jpg" alt="Three Shih-Tzu puppies sitting cuddled together on a wooden board in a rustic house with a blue ball.">
       <img id="Labradoodle-Small" class="hidden puppies-small-img" src="img/sst.jpg" alt="Eleven blonde Labradoodle puppies are standing side-by-side in the bed of an old Chevrolet Truck, their front paws resting on the tailgate.">
@@ -670,7 +664,7 @@ $falsa3 = $fila['falsa3'];
       <img id="Labradoodle-Medium" class="hidden puppies-medium-img" src="img/sst.jpg" alt="Eleven blonde Labradoodle puppies are standing side-by-side in the bed of an old Chevrolet Truck, their front paws resting on the tailgate.">
       <img id="Plott-Hound-Medium" class="hidden puppies-medium-img" src="img/sst.jpg" alt="On a lawn are three Plott Hound puppies sitting in a whisker basket, their heads resting over the edge of the basket.">
       <img id="Siberian-Husky-Medium" class="hidden puppies-medium-img" src="img/sst.jpg" alt="Two Siberian Husky puppies are sitting outside against a stone-plaster brick wall; they have their mouths open and their eyes bright with excitement as they playfully bite at each other.">
-      <p class="small-paragraph">(Por favor, juegue de nuevo para la oportunidad de aumentar su dosis diaria de serotonina.)</p>
+      <p class="small-paragraph">(Por favor, juegue de nuevo para que sigas mejorando.)</p>
     </section>
   </article>
 </main>
@@ -689,13 +683,13 @@ function redirectToQuizPage() {
 
   <div id="Retry-Button-Wrap" class="footer-content-wrap hidden">
     <input id="Retry-Button" type="submit" value="Reintentar" name="Main-Menu">
-    <input id="Quit-Button" type="submit" value="Salir" name="Quit-Button">
+    <input id="Quit-Button" type="submit" value="Volver" name="Quit-Button">
   </div>
 
   <div id="Quiz-Button-Wrap" class="footer-content-wrap hidden">
     <input id="Next-Button" type="submit" value="Siguiente ❯" name="Next">
     <div class="container-timer">
-      <p id="Timer-Title">tiempo:</p>
+      <p id="Timer-Title">Tiempo:</p>
       <p id="timer">
         <span id="timer-mins">02</span>
         <span id="timer-colon"> : </span>
