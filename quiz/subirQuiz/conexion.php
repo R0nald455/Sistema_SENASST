@@ -1,6 +1,5 @@
 <?php
 
-
-$conexion=mysqli_connect("localhost:3307","root","","quiz");
+require_once ("../../db/conexion.php");
 
 ?>

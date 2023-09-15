@@ -17,14 +17,13 @@ $columns = array(
 	3 => 'cantidad',
     4 => 'ubicacion',
     5 => 'ubiEspecifica',
-	6 => 'estado',
-	7 => 'fechaRegis',
-	8 => 'comentarios',
-    9 => 'fechaInspec'
+	6 => 'fechaRegis',
+	7 => 'comentarios',
+    8 => 'fechaInspec'
 );
 
 // getting total number records without any search
-$sql = "SELECT id_elementos, nombre, descripcion, cantidad, ubicacion, ubiEspecifica, estado, fechaRegis, comentarios, fechaInspec";
+$sql = "SELECT id_elementos, nombre, descripcion, cantidad, ubicacion, ubiEspecifica, fechaRegis, comentarios, fechaInspec";
 $sql.=" FROM botiquin";
 $query=mysqli_query($conexion, $sql) or die("ajax-grid-data.php: get InventoryItems");
 $totalData = mysqli_num_rows($query);
@@ -33,7 +32,7 @@ $totalFiltered = $totalData;  // when there is no search parameter then total nu
 
 if( !empty($requestData['search']['value']) ) {
 	// if there is a search parameter
-	$sql = "SELECT id_elementos, nombre, descripcion, cantidad, ubicacion, ubiEspecifica, estado, fechaRegis, comentarios, fechaInspec";
+	$sql = "SELECT id_elementos, nombre, descripcion, cantidad, ubicacion, ubiEspecifica, fechaRegis, comentarios, fechaInspec";
 	$sql.=" FROM botiquin";
 	$sql.=" WHERE id_elementos LIKE '".$requestData['search']['value']."%' ";
 	$sql.=" OR nombre LIKE '".$requestData['search']['value']."%' ";    
@@ -41,7 +40,6 @@ if( !empty($requestData['search']['value']) ) {
 	$sql.=" OR cantidad LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR ubicacion LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR ubiEspecifica LIKE '".$requestData['search']['value']."%' ";
-    $sql.=" OR estado LIKE '".$requestData['search']['value']."%' ";
 	$sql.=" OR fechaRegis LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR comentarios LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR fechaInspec LIKE '".$requestData['search']['value']."%' ";
@@ -54,7 +52,7 @@ if( !empty($requestData['search']['value']) ) {
 	
 } else {	
 
-	$sql = "SELECT id_elementos, nombre, descripcion, cantidad, ubicacion, ubiEspecifica, estado, fechaRegis, comentarios, fechaInspec";
+	$sql = "SELECT id_elementos, nombre, descripcion, cantidad, ubicacion, ubiEspecifica, fechaRegis, comentarios, fechaInspec";
 	$sql.=" FROM botiquin";
 	$sql.=" ORDER BY ". $columns[$requestData['order'][0]['column']]."   ".$requestData['order'][0]['dir']." LIMIT ".$requestData['start']." ,".$requestData['length']."   ";
 	$query=mysqli_query($conexion, $sql) or die("ajax-grid-data.php: get PO");
@@ -71,7 +69,6 @@ while( $row=mysqli_fetch_array($query) ) {  // preparing an array
 	$nestedData[] = $row["cantidad"];
 	$nestedData[] = $row["ubicacion"];
 	$nestedData[] = $row["ubiEspecifica"];
-	$nestedData[] = $row["estado"];
 	$nestedData[] = date("Y/m/d", strtotime($row["fechaRegis"]));
     $nestedData[] = $row["comentarios"];
     $nestedData[] = date("Y/m/d", strtotime($row["fechaInspec"]));
