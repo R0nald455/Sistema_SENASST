@@ -86,7 +86,6 @@ include "../../conexion.php";
                                             <th>Cantidad</th>
                                             <th>Ubicación</th>
                                             <th>Ubicacion específica</th>
-                                            <th>Estado</th>
                                             <th>Fecha de Registro</th>
                                             <th>Comentarios</th>
                                             <th>Fecha de Inspeccion</th>

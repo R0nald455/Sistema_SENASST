@@ -25,13 +25,12 @@ error_reporting(0);
 				$cantidad 	= $conexion -> real_escape_string($_POST['cantidad']);
 				$ubicacion  = $conexion -> real_escape_string($_POST['ubicacion']);
 				$ubiEspecifica = $conexion -> real_escape_string($_POST['ubiEspecifica']);
-				$estado = $conexion -> real_escape_string($_POST['estado']);
 				$fechaRegis = date("Y-m-d H:i:s");
 				$comentarios = $conexion -> real_escape_string($_POST['comentarios']);
 				$fechaInspec = $conexion -> real_escape_string($_POST['fechaInspec']);
 
 
-				$stmt = $conexion->query("INSERT INTO botiquin (id_elementos, nombre, descripcion, cantidad, ubicacion, ubiEspecifica, estado, fechaRegis, 
+				$stmt = $conexion->query("INSERT INTO botiquin (id_elementos, nombre, descripcion, cantidad, ubicacion, ubiEspecifica, fechaRegis, 
 					comentarios, fechaInspec) VALUES ('$id_elementos', '$nombre', '$descripcion', '$cantidad', '$ubicacion', '$ubiEspecifica', '$estado', '$fechaRegis', '$comentarios', '$fechaInspec')");
 
 			//	$insert = mysqli_query($conexion, "INSERT INTO botiquin(id_elementos, nombre, descripcion, cantidad, ubicacion, ubiEspecifica, estado, fechaRegis, comentarios, fechaInspec)
