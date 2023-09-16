@@ -73,12 +73,6 @@ include "../../conexion.php";
 
 										<div class="control-group">
 											<div class="controls">
-												<label class="control-label" for="basicinput">Estado: <input name="estado" id="estado" value="<?php echo $row['estado']; ?>" class="form-control" type="text"  required /></label>
-											</div>
-										</div>
-
-										<div class="control-group">
-											<div class="controls">
 												<label class="control-label" for="basicinput">Comentarios: <input name="comentarios" id="comentarios" value="<?php echo $row['comentarios']; ?>" class="form-control" type="text"  required /></label>
 											</div>
 										</div>
