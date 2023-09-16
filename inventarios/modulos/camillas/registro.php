@@ -14,50 +14,53 @@ require_once("../../../db/conexion.php");
 
     <?php if (isset($_SESSION["id"])): ?>
 
-        <br>
-        <div class="container">
-            <div class="row">
-                <div class="span12">
-                    <div class="content">
-                        <?php
-                        if (isset($_POST['input'])) {
+        <?php
+        if (isset($_POST['input'])) {
 
-                            $ImagenReferencia = $_FILES['ImagenReferencia']['tmp_name'];
-                            $ImagenContenido = addslashes(file_get_contents($ImagenReferencia));
+            $ImagenReferencia = $_FILES['ImagenReferencia']['tmp_name'];
+            $ImagenContenido = addslashes(file_get_contents($ImagenReferencia));
 
-                            $TipoCamilla = $conexion->real_escape_string($_POST['TipoCamilla']);
-                            $Señalizacion = $conexion->real_escape_string($_POST['Señalizacion']);
-                            $Acceso = $conexion->real_escape_string($_POST['Acceso']);
-                            $EstadoSoporte = $conexion->real_escape_string($_POST['EstadoSoporte']);
-                            $CorreasSeguridad = $conexion->real_escape_string($_POST['CorreasSeguridad']);
-                            $Inmovilizador = $conexion->real_escape_string($_POST['Inmovilizador']);
-                            $Limpieza = $conexion->real_escape_string($_POST['Limpieza']);
-                            $InstalacionPared = $conexion->real_escape_string($_POST['InstalacionPared']);
-                            $UbicacionActual = $conexion->real_escape_string($_POST['UbicacionActual']);
-                            $FechaAdquisicion = $conexion->real_escape_string($_POST['FechaAdquisicion']);
-                            $FechaUltimoMantenimiento = $conexion->real_escape_string($_POST['FechaUltimoMantenimiento']);
-                            $FechaProximoMantenimiento = $conexion->real_escape_string($_POST['FechaProximoMantenimiento']);
-                            $Observaciones = $conexion->real_escape_string($_POST['Observaciones']);
+            $TipoCamilla = $conexion->real_escape_string($_POST['TipoCamilla']);
+            $Señalizacion = $conexion->real_escape_string($_POST['Señalizacion']);
+            $Acceso = $conexion->real_escape_string($_POST['Acceso']);
+            $EstadoSoporte = $conexion->real_escape_string($_POST['EstadoSoporte']);
+            $CorreasSeguridad = $conexion->real_escape_string($_POST['CorreasSeguridad']);
+            $Inmovilizador = $conexion->real_escape_string($_POST['Inmovilizador']);
+            $Limpieza = $conexion->real_escape_string($_POST['Limpieza']);
+            $InstalacionPared = $conexion->real_escape_string($_POST['InstalacionPared']);
+            $UbicacionActual = $conexion->real_escape_string($_POST['UbicacionActual']);
+            $FechaAdquisicion = $conexion->real_escape_string($_POST['FechaAdquisicion']);
+            $FechaUltimoMantenimiento = $conexion->real_escape_string($_POST['FechaUltimoMantenimiento']);
+            $FechaProximoMantenimiento = $conexion->real_escape_string($_POST['FechaProximoMantenimiento']);
+            $Observaciones = $conexion->real_escape_string($_POST['Observaciones']);
 
-                            $FechaRegistro = date("Y-m-d H:i:s");
+            $FechaRegistro = date("Y-m-d H:i:s");
 
-                            $stmt = $conexion->query("INSERT INTO camillas (ImagenReferencia, TipoCamilla, Señalizacion, Acceso, EstadoSoporte, CorreasSeguridad, Inmovilizador, Limpieza, InstalacionPared, UbicacionActual, FechaAdquisicion, FechaUltimoMantenimiento, FechaProximoMantenimiento, Observaciones, FechaRegistro) VALUES ('$ImagenContenido', '$TipoCamilla', '$Señalizacion', '$Acceso', '$EstadoSoporte', '$CorreasSeguridad', '$Inmovilizador', '$Limpieza', '$InstalacionPared', '$UbicacionActual', '$FechaAdquisicion', '$FechaUltimoMantenimiento', '$FechaProximoMantenimiento', '$Observaciones', '$FechaRegistro')");
-                            if ($stmt) {
-                                echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Bien hecho, los datos han sido agregados correctamente.</div>';
-                            } else {
-                                echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Error, no se pudo registrar los datos.</div>';
-                            }
+            $stmt = $conexion->query("INSERT INTO camillas (ImagenReferencia, TipoCamilla, Señalizacion, Acceso, EstadoSoporte, CorreasSeguridad, Inmovilizador, Limpieza, InstalacionPared, UbicacionActual, FechaAdquisicion, FechaUltimoMantenimiento, FechaProximoMantenimiento, Observaciones, FechaRegistro) VALUES ('$ImagenContenido', '$TipoCamilla', '$Señalizacion', '$Acceso', '$EstadoSoporte', '$CorreasSeguridad', '$Inmovilizador', '$Limpieza', '$InstalacionPared', '$UbicacionActual', '$FechaAdquisicion', '$FechaUltimoMantenimiento', '$FechaProximoMantenimiento', '$Observaciones', '$FechaRegistro')");
+            if ($stmt) {
+                echo '<script>
+                alert("La camilla ha sido ingresada exitosamente.")
+                window.location.href="index.php";
+                </script>';
+            } else {
+                echo '<script>
+                alert("Error al ingresar los datos.")
+                window.location.href="index.php";
+                </script>';
+            }
+        }
+        ?>
 
-
-                        }
-                        ?>
+        <div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="labelRegistroModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="labelRegistroModal">Registrar camillas 🚑</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
                         <form enctype="multipart/form-data" name="form1" id="form1" class="form-horizontal row-fluid"
                             action="registro.php" method="POST">
-
-                            <blockquote>
-                                Registrar camillas 🚑
-                            </blockquote>
-
 
                             <div class="control-group">
                                 <div class="controls">
@@ -79,8 +82,8 @@ require_once("../../../db/conexion.php");
                                 <div class="controls">
                                     <label class="control-label" for="Señalizacion">Señalizacion:
                                         <select name="Señalizacion" class="form-control">
-                                            <option value="Si">Si, cuenta con señalizacion.</option>
-                                            <option value="No">No, no cuenta con señalizacion.
+                                            <option value="Si">Si, cuenta con señalizacion. ✅</option>
+                                            <option value="No">No, no cuenta con señalizacion. ❌
                                             </option>
                                         </select>
                                     </label>
@@ -90,18 +93,27 @@ require_once("../../../db/conexion.php");
 
                             <div class="control-group">
                                 <div class="controls">
-                                    <label class="control-label" for="Acceso">Acceso: <input name="Acceso" id="Acceso"
-                                            class="form-control" type="text"
-                                            placeholder="Ingrese como esta el acceso a la camilla..." required /></label>
+                                    <label class="control-label" for="Acceso">Acceso:
+
+                                        <select class="form-control" name="Acceso" id="Acceso">
+                                            <option value="Acceso libre">Acceso libre ✅</option>
+                                            <option value="Acceso obstaculizado">Acceso obstaculizado ❌</option>
+                                        </select>
+
+                                    </label>
                                 </div>
                             </div>
 
                             <div class="control-group">
                                 <div class="controls">
-                                    <label class="control-label" for="EstadoSoporte">Estado del soporte: <input
-                                            name="EstadoSoporte" id="EstadoSoporte" class="form-control" type="text"
-                                            placeholder="Ingrese en que estado esta el soporte de la camilla..."
-                                            required /></label>
+                                    <label class="control-label" for="EstadoSoporte">Estado del soporte:
+
+                                        <select class="form-control" name="EstadoSoporte" id="EstadoSoporte">
+                                            <option value="Buen estado ✅">Buen estado ✅</option>
+                                            <option value="Mal estado ❌">Mal estado ❌</option>
+                                        </select>
+
+                                    </label>
                                 </div>
                             </div>
 
@@ -109,25 +121,41 @@ require_once("../../../db/conexion.php");
                             <div class="control-group">
                                 <div class="controls">
                                     <label class="control-label" for="CorreasSeguridad">Estado de las correas de seguridad:
-                                        <input name="CorreasSeguridad" id="CorreasSeguridad" class="form-control"
-                                            type="text" placeholder="Ingrese el estado de las correas de seguridad..."
-                                            required /></label>
+
+                                        <select class="form-control" name="CorreasSeguridad" id="CorreasSeguridad">
+                                            <option value="Buen estado ✅">Buen estado ✅</option>
+                                            <option value="Mal estado ❌">Mal estado ❌</option>
+                                        </select>
+
+                                    </label>
                                 </div>
                             </div>
 
                             <div class="control-group">
                                 <div class="controls">
-                                    <label class="control-label" for="Inmovilizador">Inmovilizador: <input
-                                            name="Inmovilizador" id="Inmovilizador" class="form-control" type="text"
-                                            placeholder="Ingrese el estado del inmovilizador..." required /></label>
+
+                                    <label class="control-label" for="Inmovilizador">Inmovilizador:
+
+                                        <select class="form-control" name="Inmovilizador" id="Inmovilizador">
+                                            <option value="Cuenta con inmovilizador ✅">Cuenta con inmovilizador ✅</option>
+                                            <option value="No cuenta con inmovilizador ❌">No cuenta con inmovilizador ❌
+                                            </option>
+                                        </select>
+
+                                    </label>
                                 </div>
                             </div>
 
                             <div class="control-group">
                                 <div class="controls">
-                                    <label class="control-label" for="Limpieza">Limpieza: <input name="Limpieza"
-                                            id="Limpieza" class="form-control" type="text"
-                                            placeholder="Ingrese el estado de limpieza..." required /></label>
+                                    <label class="control-label" for="Limpieza">Limpieza:
+
+                                        <select class="form-control" name="Limpieza" id="Limpieza">
+                                            <option value="Limpio ✅">Limpio ✅</option>
+                                            <option value="Sucio ❌">Sucio ❌</option>
+                                        </select>
+
+                                    </label>
                                 </div>
                             </div>
 
@@ -135,20 +163,57 @@ require_once("../../../db/conexion.php");
                             <div class="control-group">
                                 <div class="controls">
                                     <label class="control-label" for="InstalacionPared">Instalacion en la pared:
-                                        <input name="InstalacionPared" id="InstalacionPared" class="form-control"
-                                            type="text" placeholder="Ingrese el estado de la instalacion de pared..."
-                                            required /></label>
+
+                                        <select class="form-control" name="InstalacionPared" id="InstalacionPared">
+                                            <option value="Cuenta con instalacion de pared ✅">Cuenta con instalacion de
+                                                pared ✅</option>
+                                            <option value="No cuenta con instalacion de pared ❌">No cuenta con instalacion
+                                                de pared ❌</option>
+                                        </select>
+
+                                    </label>
                                 </div>
                             </div>
 
 
                             <div class="control-group">
                                 <div class="controls">
-                                    <label class="control-label" for="UbicacionActual">Ubicacion: <input
-                                            name="UbicacionActual" id="UbicacionActual" class="form-control" type="text"
-                                            placeholder="Ingrese la ubicacion de la camilla..." required /></label>
+                                    <label class="control-label" for="UbicacionActual">Ubicacion:
+                                        <select name="UbicacionActual" class="form-control">
+                                            <option value="Administracion">Administracion</option>
+                                            <option value="Auditorio">Auditorio
+                                            </option>
+                                            <option value="Bloque A">Bloque A</option>
+                                            <option value="Bloque B">Bloque B
+                                            </option>
+                                            <option value="Bloque C">Bloque C</option>
+                                            <option value="Biblioteca">
+                                                Biblioteca</option>
+                                            <option value="Administracion educativa">Administracion educativa</option>
+                                            <option value="Emprendimiento">Emprendimiento</option>
+                                            <option value="Gastronomia">Gastronomia
+                                            </option>
+                                            <option value="Estar de instructores">Estar de instructores
+                                            </option>
+                                            <option value="Centro de convivencia">Centro de convivencia
+                                            </option>
+                                            <option value="Maquinaria agricola">Maquinaria agricola
+                                            </option>
+                                            <option value="Agroindustria">Agroindustria
+                                            </option>
+                                            <option value="Ganaderia">Ganaderia
+                                            </option>
+                                            <option value="Especies menores y mayores">Especies menores y mayores
+                                            </option>
+                                            <option value="Agricultura">Agricultura
+                                            </option>
+                                            <option value="Agricultura">Unidad de recursos naturales
+                                            </option>
+                                        </select>
+                                    </label>
                                 </div>
                             </div>
+
 
                             <div class="control-group">
                                 <div class="controls">
@@ -176,9 +241,13 @@ require_once("../../../db/conexion.php");
 
                             <div class="control-group">
                                 <div class="controls">
-                                    <label class="control-label" for="Observaciones">Observaciones: <input
-                                            name="Observaciones" id="Observaciones" class="form-control" type="text"
-                                            required /></label>
+                                    <label class="control-label" for="Observaciones">Observaciones:
+
+                                        <textarea class="form-control" id="Observaciones" name="Observaciones" rows="10"
+                                            cols="50"
+                                            placeholder="Ingrese sus observaciones acerca de la camilla."></textarea>
+
+                                    </label>
                                 </div>
                             </div>
 
@@ -191,12 +260,9 @@ require_once("../../../db/conexion.php");
                             </div>
                         </form>
                     </div>
-                    <!--/.content-->
                 </div>
-                <!--/.span9-->
             </div>
         </div>
-        <!--/.container-->
 
         <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 

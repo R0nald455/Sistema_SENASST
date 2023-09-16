@@ -58,3 +58,16 @@ form[id="form1"] .buttons-container .controls{
 blockquote{
     font-size: 30px;
 }
+
+/* ----------------------------- Estilos Modal -------------------------------- */
+
+#Observaciones{
+    border: 1px var(--color-sena) solid;
+    height: 120px;
+    width: 100%;
+    resize: none;
+}
+
+select[class="form-control"]{
+    border: 1px var(--color-sena) solid;
+}

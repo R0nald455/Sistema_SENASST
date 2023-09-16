@@ -8,7 +8,11 @@ require_once("../../../db/conexion.php");
 <html lang="en">
 
 <head>
-    <?php include("head.php"); ?>
+    <?php
+    include("head.php"); 
+    include ("registro.php");
+
+    ?>
 </head>
 
 <body>
@@ -42,6 +46,7 @@ require_once("../../../db/conexion.php");
             </div>
         </div>
         <br>
+
         <div class="container">
             <div class="row">
                 <div class="span12">
@@ -70,9 +75,12 @@ require_once("../../../db/conexion.php");
 
                             <div class="panel-body">
                                 <div class="pull-right">
-                                    <a href="registro.php" class="btn btn-sm btn-success">Nueva camilla</a>
+                                    <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#registroModal"><i class="fa-solid fa-plus"></i>Nueva
+                                        camilla</button>
 
-                                    <a id="button-pdf" href="reportes.php" class="btn btn-sm btn-primary"><i class="fa-solid fa-file-pdf"></i> Generar PDF</a>
+                                    <a id="button-pdf" href="reportes.php" class="btn btn-sm btn-primary"><i
+                                            class="fa-solid fa-file-pdf"></i> Generar PDF</a>
 
 
                                     <a id="button-alert" href="alertas/config.php" class="btn btn-sm btn-info"><i
@@ -124,7 +132,7 @@ require_once("../../../db/conexion.php");
 
         <script>
 
-        <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+            <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../../datatables/jquery.dataTables.js"></script>
         <script src="../../datatables/dataTables.bootstrap.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -166,12 +174,12 @@ require_once("../../../db/conexion.php");
                 "sLast": "Último",
                 "sNext": "Siguiente -->",
                 "sPrevious": "<-- Anterior"
-                            },
+                                },
                 "oAria": {
                     "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
                 "sSortDescending": ": Activar para ordenar la columna de manera descendente"
-                            }
-                        },
+                                }
+                            },
 
                 "processing": true,
                 "serverSide": true,
@@ -183,10 +191,10 @@ require_once("../../../db/conexion.php");
                 $("#lookup").append('<tbody class="employee-grid-error"><tr><th colspan="3">No se encontraron datos en el servidor</th></tr></tbody>');
                 $("#lookup_processing").css("display", "none");
 
+                                }
                             }
-                        }
+                        });
                     });
-                });
         </script>
 
     <?php else: ?>
