@@ -71,3 +71,34 @@ blockquote{
 select[class="form-control"]{
     border: 1px var(--color-sena) solid;
 }
+
+/* ----------------------------- Estilos select autocomplete -------------------------------- */
+
+.autocomplete {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#ID_Implementos {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+}
+
+#ID_Implementos_Div {
+    max-height: 200px;
+    overflow-y: auto;
+    position: absolute;
+    width: 300px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+#ID_Implementos_Div div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#ID_Implementos_Div div:hover {
+    background-color: #f2f2f2;
+}
