@@ -14,30 +14,33 @@ require_once("../../../../db/conexion.php");
 <body>
 
 	<?php if (isset($_SESSION["id"])): ?>
+		<?php include 'registrar.php'; ?>
 
 
-		<div class="container">
-			<div class="row">
-				<div class="span12">
-					<div class="content">
+		<div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="labelRegistroModal" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="labelRegistroModal">Registrar entradas ✅</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
 
-					<?php include 'registrar.php';?>
+						<form enctype="multipart/form-data" name="form1" id="form1" class="form-horizontal row-fluid"
+							action="registro.php" method="POST">
 
-						<form name="form1" id="form1" class="form-horizontal row-fluid" action="registro.php" method="POST">
+							<div class="control-group">
+								<label class="control-label" for="ID_Implementos">Elementos:</label>
+								<input class="form-control" type="text" id="ID_Implementos" placeholder="Buscar EPP"
+									autocomplete="off">
+								<input type="hidden" id="producto_id" name="producto_id">
+								<div id="ID_Implementos_Div"></div>
+							</div>
 
-							<blockquote>
-								Registrar entradas ✅
-							</blockquote>
-							
-								<div class="autocomplete">
-									<input type="text" id="ID_Implementos" placeholder="Buscar EPP" autocomplete="off">
-									<input type="hidden" id="producto_id" name="producto_id">
-									<div id="ID_Implementos_Div"></div>
-								</div>
 
 							<div class="control-group">
 								<div class="controls">
-									<label class="control-label" for="cantidad">Cantidad: <input type="text" name="cantidad"
+									<label class="control-label" for="cantidad">Cantidad: <input type="number" name="cantidad"
 											id="cantidad" placeholder="Ingrese la cantidad de implementos"
 											class="form-control span8 tip" required></label>
 								</div>
@@ -60,14 +63,11 @@ require_once("../../../../db/conexion.php");
 							</div>
 						</form>
 					</div>
-					<!--/.content-->
 				</div>
-				<!--/.span9-->
 			</div>
 		</div>
-		<!--/.container-->
 
-		<script src="script.js"></script>
+		<script src="js/script.js"></script>
 		<script src="../../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
