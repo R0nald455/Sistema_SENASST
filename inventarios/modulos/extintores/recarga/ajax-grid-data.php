@@ -4,6 +4,8 @@ include "../../../../db/conexion.php";
 
 /* Database connection end */
 
+date_default_timezone_set('America/Bogota');
+$hoy = date('Y-m-d');
 
 // storing  request (ie, get/post) global array to a variable  
 $requestData = $_REQUEST;
@@ -26,18 +28,17 @@ $columns = array(
 );
 
 // getting total number records without any search
-$sql = "SELECT ExtintorID, NumeroDeSerie, TipoDeExtintor, FechaDeFabricacion, FechaDeCompra, Ubicacion, UbicacionEspecifica, UltimaRecarga, ProximaRecarga, Comentarios, ImagenReferencia, FechaDeRegistro";
+$sql = "SELECT *";
 $sql.=" FROM extintores";
 $query=mysqli_query($conexion, $sql) or die("ajax-grid-data.php: get InventoryItems");
 $totalData = mysqli_num_rows($query);
 $totalFiltered = $totalData;  // when there is no search parameter then total number rows = total number filtered rows.
-date_default_timezone_set('America/Bogota');
-$hoy = date('Y-m-d');
+
 
 if( !empty($requestData['search']['value']) ) {
 	// if there is a search parameter
-	$sql = "SELECT ExtintorID, NumeroDeSerie, TipoDeExtintor, FechaDeFabricacion, FechaDeCompra, Ubicacion, UbicacionEspecifica, UltimaRecarga, ProximaRecarga, Comentarios, ImagenReferencia, FechaDeRegistro";
-	$sql.=" FROM extintores WHERE ProximaRecarga <= '$hoy'";
+	$sql = "SELECT *";
+	$sql.=" FROM extintores";
 	$sql.=" WHERE ExtintorID LIKE '".$requestData['search']['value']."%' ";
 	$sql.=" OR NumeroDeSerie LIKE '".$requestData['search']['value']."%' ";    
 	$sql.=" OR TipoDeExtintor LIKE '".$requestData['search']['value']."%' ";

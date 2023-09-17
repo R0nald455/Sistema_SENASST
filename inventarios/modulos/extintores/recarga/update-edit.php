@@ -1,5 +1,5 @@
 <?php
-include "../../../db/conexion.php";
+include "../../../../db/conexion.php";
 
 if(isset($_POST['update'])){
 

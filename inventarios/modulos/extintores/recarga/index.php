@@ -147,7 +147,7 @@ require_once("../../../../db/conexion.php");
                         type: "post",  // method  , by default get
                         error: function () {  // error handling
                             $(".lookup-error").html("");
-                            $("#lookup").append('<tbody class="employee-grid-error"><tr><th colspan="3">No se encontraron datos en el servidor</th></tr></tbody>');
+                            $("#lookup").append('<tbody class="employee-grid-error"><tr><th colspan="13">No se encontraron datos en el servidor</th></tr></tbody>');
                             $("#lookup_processing").css("display", "none");
 
                         }

@@ -26,7 +26,7 @@ $columns = array(
 );
 
 // getting total number records without any search
-$sql = "SELECT ExtintorID, NumeroDeSerie, TipoDeExtintor, FechaDeFabricacion, FechaDeCompra, Ubicacion, UbicacionEspecifica, UltimaRecarga, ProximaRecarga, Comentarios, ImagenReferencia, FechaDeRegistro";
+$sql = "SELECT *";
 $sql .= " FROM extintores";
 $query = mysqli_query($conexion, $sql) or die("ajax-grid-data.php: get InventoryItems");
 $totalData = mysqli_num_rows($query);
@@ -35,7 +35,7 @@ $totalFiltered = $totalData; // when there is no search parameter then total num
 
 if (!empty($requestData['search']['value'])) {
 	// if there is a search parameter
-	$sql = "SELECT ExtintorID, NumeroDeSerie, TipoDeExtintor, FechaDeFabricacion, FechaDeCompra, Ubicacion, UbicacionEspecifica, UltimaRecarga, ProximaRecarga, Comentarios, ImagenReferencia, FechaDeRegistro";
+	$sql = "SELECT *";
 	$sql .= " FROM extintores";
 	$sql .= " WHERE ExtintorID LIKE '" . $requestData['search']['value'] . "%' ";
 	$sql .= " OR NumeroDeSerie LIKE '" . $requestData['search']['value'] . "%' ";
@@ -57,7 +57,7 @@ if (!empty($requestData['search']['value'])) {
 
 } else {
 
-	$sql = "SELECT ExtintorID, NumeroDeSerie, TipoDeExtintor, FechaDeFabricacion, FechaDeCompra, Ubicacion, UbicacionEspecifica, UltimaRecarga, ProximaRecarga, Comentarios, ImagenReferencia, FechaDeRegistro";
+	$sql = "SELECT *";
 	$sql .= " FROM extintores";
 	$sql .= " ORDER BY " . $columns[$requestData['order'][0]['column']] . "   " . $requestData['order'][0]['dir'] . " LIMIT " . $requestData['start'] . " ," . $requestData['length'] . "   ";
 	$query = mysqli_query($conexion, $sql) or die("ajax-grid-data.php: get PO");

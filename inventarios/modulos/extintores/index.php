@@ -1,12 +1,15 @@
 <?php
 session_start();
 error_reporting(0);
+
+require_once("../../../db/conexion.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <?php 
+    <?php
     include("head.php");
     include('registro.php');
     ?>
@@ -49,6 +52,8 @@ error_reporting(0);
             <div class="row">
                 <div class="span12">
                     <div class="content">
+
+                        <?php include('eliminar.php'); ?>
 
                         <div class="panel panel-default">
 

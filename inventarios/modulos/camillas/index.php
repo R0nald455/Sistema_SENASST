@@ -9,8 +9,8 @@ require_once("../../../db/conexion.php");
 
 <head>
     <?php
-    include("head.php"); 
-    include ("registro.php");
+    include("head.php");
+    include("registro.php");
 
     ?>
 </head>
@@ -85,7 +85,7 @@ require_once("../../../db/conexion.php");
 
                                     <a id="button-alert" href="alertas/config.php" class="btn btn-sm btn-info"><i
                                             class="fa-solid fa-envelope"></i> Alerta para
-                                        extintores con revisiones/recargas pendientes</a>
+                                        camillas con revisiones/recargas pendientes</a>
                                 </div><br>
                                 <hr>
 
@@ -130,9 +130,7 @@ require_once("../../../db/conexion.php");
 
 
 
-        <script>
-
-            <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../../datatables/jquery.dataTables.js"></script>
         <script src="../../datatables/dataTables.bootstrap.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -153,55 +151,56 @@ require_once("../../../db/conexion.php");
         ?>
 
         <script>
-                $(document).ready(function () {
-                    let dataTable = $('#lookup').DataTable({
+            $(document).ready(function () {
+                let dataTable = $('#lookup').DataTable({
 
                     "language": {
-                    "sProcessing": "Procesando...",
-                "sLengthMenu": "Mostrar _MENU_ registros",
-                "sZeroRecords": "No se encontraron resultados.",
-                "sEmptyTable": "Ningún dato disponible en esta tabla.",
-                "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
-                "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
-                "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
-                "sInfoPostFix": "",
-                "sSearch": "Buscar:",
-                "sUrl": "",
-                "sInfoThousands": ",",
-                "sLoadingRecords": "Cargando...",
-                "oPaginate": {
-                    "sFirst": "Primero",
-                "sLast": "Último",
-                "sNext": "Siguiente -->",
-                "sPrevious": "<-- Anterior"
-                                },
-                "oAria": {
-                    "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
-                "sSortDescending": ": Activar para ordenar la columna de manera descendente"
-                                }
-                            },
+                        "sProcessing": "Procesando...",
+                        "sLengthMenu": "Mostrar _MENU_ registros",
+                        "sZeroRecords": "No se encontraron resultados.",
+                        "sEmptyTable": "Ningún dato disponible en esta tabla.",
+                        "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                        "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+                        "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+                        "sInfoPostFix": "",
+                        "sSearch": "Buscar:",
+                        "sUrl": "",
+                        "sInfoThousands": ",",
+                        "sLoadingRecords": "Cargando...",
+                        "oPaginate": {
+                            "sFirst": "Primero",
+                            "sLast": "Último",
+                            "sNext": "Siguiente -->",
+                            "sPrevious": "<-- Anterior"
+                        },
+                        "oAria": {
+                            "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
+                            "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+                        }
+                    },
 
-                "processing": true,
-                "serverSide": true,
-                "ajax": {
-                    url: "ajax-grid-data.php", // json datasource
-                type: "post",  // method  , by default get
-                error: function () {  // error handling
-                    $(".lookup-error").html("");
-                $("#lookup").append('<tbody class="employee-grid-error"><tr><th colspan="3">No se encontraron datos en el servidor</th></tr></tbody>');
-                $("#lookup_processing").css("display", "none");
+                    "processing": true,
+                    "serverSide": true,
+                    
+                    "ajax": {
+                        url: "ajax-grid-data.php", // json datasource
+                        type: "post",  // method  , by default get
+                        error: function () {  // error handling
+                            $(".lookup-error").html("");
+                            $("#lookup").append('<tbody class="employee-grid-error"><tr><th colspan="3">No se encontraron datos en el servidor</th></tr></tbody>');
+                            $("#lookup_processing").css("display", "none");
 
-                                }
-                            }
-                        });
-                    });
+                        }
+                    }
+                });
+            });
         </script>
 
     <?php else: ?>
 
         <script>
-                alert("No has iniciado sesión, por favor inicia a continuación.");
-                window.location.href = "../../../php/login.php";
+            alert("No has iniciado sesión, por favor inicia a continuación.");
+            window.location.href = "../../../php/login.php";
         </script>
     <?php endif; ?>
 

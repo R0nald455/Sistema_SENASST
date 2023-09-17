@@ -41,7 +41,7 @@ $hoy = date('Y-m-d');
 if (!empty($requestData['search']['value'])) {
 	// if there is a search parameter
 	$sql = "SELECT *";
-	$sql .= " FROM camillas WHERE FechaProximoMantenimiento <= '$hoy'";
+	$sql .= " FROM camillas";
 	$sql .= " WHERE CamillaID LIKE '" . $requestData['search']['value'] . "%' ";
 	$sql .= " OR ImagenReferencia LIKE '" . $requestData['search']['value'] . "%' ";
 	$sql .= " OR TipoCamilla LIKE '" . $requestData['search']['value'] . "%' ";

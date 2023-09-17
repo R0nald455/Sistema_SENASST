@@ -4,6 +4,7 @@ include "../../../db/conexion.php";
 if(isset($_POST['update'])){
 
 				$ExtintorID	= intval($_POST['ExtintorID']);
+
 				$NumeroDeSerie = $conexion->real_escape_string($_POST['NumeroDeSerie']);
 				$TipoDeExtintor = $conexion->real_escape_string($_POST['TipoDeExtintor']);
 				$FechaDeFabricacion = $conexion->real_escape_string($_POST['FechaDeFabricacion']);
@@ -26,9 +27,9 @@ if(isset($_POST['update'])){
 				}
 			
 				if($update){
-					echo "<script>alert('Los datos han sido actualizados!'); window.location = 'index.php'</script>";
+					echo "<script>alert('Los datos han sido actualizados!'); window.location.href = 'index.php'</script>";
 				}else{
-					echo "<script>alert('Error, no se pudo actualizar los datos'); window.location = 'index.php'</script>";
+					echo "<script>alert('Error, no se pudo actualizar los datos'); window.location.href = 'index.php'</script>";
 				}
 			}
 ?>

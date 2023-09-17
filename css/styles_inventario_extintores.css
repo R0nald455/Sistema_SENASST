@@ -225,6 +225,7 @@ nav ul li ul li a:hover{
     nav ul li{
         position: relative;
         top: 0px;
+        left: -12px;
     }
 
     nav ul li ul li a{

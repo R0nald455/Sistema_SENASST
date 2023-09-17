@@ -44,11 +44,11 @@ require_once("../../db/conexion.php");
                 <nav>
                     <ul>
                         <li><a href="../../php/rolFuncionario/indexfuncionario.php" id="selected">Inicio</a></li>
-                        <li><a href="extintores/index.php">Administrar extintores</a></li>
-                        <li><a href="extintores/inspecciones/index.php">Inspección de extintores</a></li>
-                        <li><a href="extintores/recarga/index.php">Extintores con revisiones pendientes</a></li>
-
-
+                        <li><a style="font-size: 12px;" href="extintores/index.php">Administrar extintores</a></li>
+                        <li><a style="font-size: 12px;" href="extintores/inspecciones/index.php">Inspección de
+                                extintores</a></li>
+                        <li><a style="font-size: 12px;" href="extintores/recarga/index.php">Extintores con revisiones
+                                pendientes</a></li>
                     </ul>
                 </nav>
             </div>

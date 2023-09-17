@@ -82,8 +82,8 @@ require_once("../../../db/conexion.php");
                                 <div class="controls">
                                     <label class="control-label" for="Señalizacion">Señalizacion:
                                         <select name="Señalizacion" class="form-control">
-                                            <option value="Si">Si, cuenta con señalizacion. ✅</option>
-                                            <option value="No">No, no cuenta con señalizacion. ❌
+                                            <option value="Cuenta con señalizacion. ✅">Cuenta con señalizacion. ✅</option>
+                                            <option value="No cuenta con señalizacion. ❌">No cuenta con señalizacion. ❌
                                             </option>
                                         </select>
                                     </label>
@@ -96,8 +96,8 @@ require_once("../../../db/conexion.php");
                                     <label class="control-label" for="Acceso">Acceso:
 
                                         <select class="form-control" name="Acceso" id="Acceso">
-                                            <option value="Acceso libre">Acceso libre ✅</option>
-                                            <option value="Acceso obstaculizado">Acceso obstaculizado ❌</option>
+                                            <option value="Acceso libre ✅">Acceso libre ✅</option>
+                                            <option value="Acceso obstaculizado ❌">Acceso obstaculizado ❌</option>
                                         </select>
 
                                     </label>

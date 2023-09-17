@@ -36,13 +36,15 @@ require_once("../../../../db/conexion.php");
                             method="POST" enctype="multipart/form-data">
 
                             <blockquote>
-                                Editar camilla 🖋️
+                                <h1><b>Editar camillas 🖋️</b></h1>
                             </blockquote>
+
+                            <center><h3><i>"En este apartado puedes dedicarte a editar los datos previamente registrados."</i></h3></center>
 
                             
                             <div class="control-group">
                                 <div class="controls">
-                                    <label class="control-label" for="basicinput">Identificador de la camilla: <input type="text" name="CamillaID" id="CamillaID" value="<?php echo $row['CamillaID']; ?>" placeholder="" class="form-control" readonly="readonly"></label>
+                                    <label class="control-label" for="basicinput">Identificador de la camilla: <input type="text" name="CamillaID" id="CamillaID" value="<?php echo $row['CamillaID']; ?>" placeholder="" class="form-control" disabled readonly="readonly"></label>
                                 </div>
                             </div>
 

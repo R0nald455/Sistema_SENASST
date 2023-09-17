@@ -276,7 +276,7 @@ nav ul li ul{
   @media screen and (max-width: 767px){
     div.container__menu{
       position: relative;
-      width: 110%;
+      width: 115%;
       left: -20px;
     }
   }

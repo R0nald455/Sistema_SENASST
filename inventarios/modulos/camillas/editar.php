@@ -31,15 +31,15 @@ require_once("../../../db/conexion.php");
                             $row = mysqli_fetch_assoc($sql);
                         }
                         ?>
+                            <blockquote>
+                                <h1><b>Editar camillas 🖋️</b></h1>
+                            </blockquote>
 
+                            <center><h3><i>"En este apartado puedes dedicarte a editar los datos previamente registrados."</i></h3></center>
+                            
                         <form name="form1" id="form1" class="form-horizontal row-fluid" action="update-edit.php"
                             method="POST" enctype="multipart/form-data">
 
-                            <blockquote>
-                                Editar camilla 🖋️
-                            </blockquote>
-
-                            
                             <div class="control-group">
                                 <div class="controls">
                                     <label class="control-label" for="basicinput">Identificador de la camilla: <input type="text" name="CamillaID" id="CamillaID" value="<?php echo $row['CamillaID']; ?>" placeholder="" class="form-control" readonly="readonly"></label>

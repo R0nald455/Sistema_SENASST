@@ -24,7 +24,7 @@ include 'index.php';
         <ul class="list-group">
           <li class="list-group-item">
             <form method="post">
-              <div class="form-row align-items-center">
+              <div class="form-row align-items-center table-responsive">
                 <table id="lookup" class="table table-hover">
                   <thead bgcolor="rgb(57,168,1)">
                     <tr>
@@ -103,6 +103,7 @@ include 'index.php';
                             // Fecha de vencimiento del objeto en la base de datos (en formato 'Y-m-d')
                             $fechaVencimiento = $fila['ProximaRecarga'];
                             // Obtener la fecha actual
+                            date_default_timezone_set('America/Bogota');
                             $fechaActual = date('Y-m-d');
                             // Calcular la diferencia en segundos entre las fechas
                             $diferenciaSegundos = strtotime($fechaVencimiento) - strtotime($fechaActual);
@@ -113,7 +114,7 @@ include 'index.php';
                               ?> <i class="fa-solid fa-circle-exclamation fa-2xl" style="color: #ffd500;"></i>
                               <br> <br>
                               <?php
-                              echo "El objeto esta a un mes de vencerse";
+                              echo "El objeto esta a menos de un mes de vencerse";
                             } else {
                               ?> <i class="fa-solid fa-circle-check fa-2xl" style="color: #2bf21c;"></i>
                               <br>
