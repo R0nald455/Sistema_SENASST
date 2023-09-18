@@ -32,12 +32,16 @@ require_once("../../../db/conexion.php");
 						}
 						?>
 
+						<center>
+							<blockquote>
+								<h1><b>Editar extintores 🖋️</b></h1>
+							</blockquote>
+							<h3><i>"En este apartado puedes dedicarte a editar los datos previamente registrados."</i>
+							</h3>
+						</center>
+
 						<form name="form1" id="form1" class="form-horizontal row-fluid" action="update-edit.php"
 							method="POST">
-
-							<blockquote>
-								Editar Elementos de Proteccion Personal 🖋️
-							</blockquote>
 
 							<div class="control-group">
 								<div class="controls">
@@ -48,10 +52,23 @@ require_once("../../../db/conexion.php");
 								</div>
 							</div>
 
+							<?php
+							echo '<img src="data:imag/png;base64,' . base64_encode($row['ImagenReferencia']) . '" alt="Imagen" style="width: 150px; height:150px;" >'
+								?>
+
+
+							<div class="control-group">
+								<div class="controls">
+									<label class="control-label" for="ImagenReferencia">Imagen de referencia: </label>
+									<input name="ImagenReferencia" id="ImagenReferencia" class="form-control" type="file"
+										accept="image/*" multiple />
+								</div>
+							</div>
+
 							<div class="control-group">
 								<div class="controls">
 									<label class="control-label" for="basicinput">Nombre: <input type="text" name="nombre"
-											id="nombre" value="<?php echo $row['nombre']; ?>" placeholder=""
+											id="nombre" value="<?php echo $row['Nombre']; ?>" placeholder=""
 											class="form-control" required></label>
 								</div>
 							</div>
@@ -59,7 +76,7 @@ require_once("../../../db/conexion.php");
 							<div class="control-group">
 								<div class="controls">
 									<label class="control-label" for="basicinput">Descripcion: <input type="text"
-											name="descripcion" id="descripcion" value="<?php echo $row['descripcion']; ?>"
+											name="descripcion" id="descripcion" value="<?php echo $row['Descripcion']; ?>"
 											placeholder="" class="form-control" required></label>
 								</div>
 							</div>
@@ -67,7 +84,7 @@ require_once("../../../db/conexion.php");
 							<div class="control-group">
 								<div class="controls">
 									<label class="control-label" for="basicinput">Categoria: <input name="categoria"
-											id="categoria" value="<?php echo $row['categoria']; ?>" class="form-control"
+											id="categoria" value="<?php echo $row['Categoria']; ?>" class="form-control"
 											type="text" required /></label>
 								</div>
 							</div>
@@ -75,7 +92,7 @@ require_once("../../../db/conexion.php");
 							<div class="control-group">
 								<div class="controls">
 									<label class="control-label" for="basicinput">Cantidad: <input name="cantidad"
-											id="cantidad" value="<?php echo $row['cantidad']; ?>" class="form-control"
+											id="cantidad" value="<?php echo $row['Cantidad']; ?>" class="form-control"
 											type="text" required /></label>
 								</div>
 							</div>
@@ -83,7 +100,7 @@ require_once("../../../db/conexion.php");
 							<div class="control-group">
 								<div class="controls">
 									<label class="control-label" for="basicinput">Ubicacion: <input name="ubicacion"
-											id="ubicacion" value="<?php echo $row['ubicacion']; ?>" class="form-control"
+											id="ubicacion" value="<?php echo $row['Ubicacion']; ?>" class="form-control"
 											type="text" required /></label>
 								</div>
 							</div>
@@ -91,7 +108,7 @@ require_once("../../../db/conexion.php");
 							<div class="control-group">
 								<div class="controls">
 									<label class="control-label" for="basicinput">Fecha de registro: <input name="notelp"
-											id="notelp" value="<?php echo $row['fecha']; ?>" class=" form-control"
+											id="notelp" value="<?php echo $row['Fecha']; ?>" class=" form-control"
 											type="text" disabled /></label>
 								</div>
 							</div>

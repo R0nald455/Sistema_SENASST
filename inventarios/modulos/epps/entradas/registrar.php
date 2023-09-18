@@ -12,9 +12,15 @@ if (isset($_POST['input'])) {
     $actualizar_cantidad = mysqli_query($conexion, "UPDATE tblimplementos SET cantidad = cantidad + $cantidad WHERE ID_Implementos = $id_implementos") or die(mysqli_error($conexion));
 
     if ($insert && $actualizar_cantidad) {
-        echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Bien hecho, la entrada ha sido ingresada correctamente.</div>';
+        echo '<script>
+        alert("Bien hecho, los datos han sido agregados correctamente.")
+        window.location.href = "index.php";
+    </script>';
     } else {
-        echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Error, no se pudo registrar la entrada.</div>';
+        echo '<script>
+        alert("Error, no se pudieron ingresar los datos");
+        window.location.href = "index.php";
+    </script>';
     }
 
 }

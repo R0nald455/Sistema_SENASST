@@ -190,10 +190,10 @@ INSERT INTO `cargo` (`id_cargo`, `nom_cargo`, `Codigo_ele`, `elemento`, `cantida
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `entradasbotiquin`
+-- Estructura de tabla para la tabla `entradasBotiquin`
 --
 
-CREATE TABLE `entradasbotiquin` (
+CREATE TABLE `entradasBotiquin` (
   `id_entradas` int(11) NOT NULL,
   `id_elementos` int(11) NOT NULL,
   `cantidad` int(11) NOT NULL,
@@ -202,10 +202,10 @@ CREATE TABLE `entradasbotiquin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `entradasbotiquin`
+-- Volcado de datos para la tabla `entradasBotiquin`
 --
 
-INSERT INTO `entradasbotiquin` (`id_entradas`, `id_elementos`, `cantidad`, `comentario`, `fechaEntra`) VALUES
+INSERT INTO `entradasBotiquin` (`id_entradas`, `id_elementos`, `cantidad`, `comentario`, `fechaEntra`) VALUES
 (1, 4, 4, 'buenas curas', '2023-09-04'),
 (2, 2, 3, 'buen isodines', '2023-09-04'),
 (3, 4, 3, 'sdsad', '2023-09-07');
@@ -499,10 +499,10 @@ INSERT INTO `revision` (`id`, `nombre`, `Estado`, `id_Observacion`, `Fecha_revis
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `salidasbotiquin`
+-- Estructura de tabla para la tabla `salidasBotiquin`
 --
 
-CREATE TABLE `salidasbotiquin` (
+CREATE TABLE `salidasBotiquin` (
   `id_salidas` int(11) NOT NULL,
   `id_elementos` int(11) NOT NULL,
   `cantidad` int(11) NOT NULL,
@@ -511,10 +511,10 @@ CREATE TABLE `salidasbotiquin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `salidasbotiquin`
+-- Volcado de datos para la tabla `salidasBotiquin`
 --
 
-INSERT INTO `salidasbotiquin` (`id_salidas`, `id_elementos`, `cantidad`, `comentario`, `fechaSale`) VALUES
+INSERT INTO `salidasBotiquin` (`id_salidas`, `id_elementos`, `cantidad`, `comentario`, `fechaSale`) VALUES
 (1, 2, 4, 'Sale isodine', '2023-09-04'),
 (2, 2, 2, 'ddf', '2023-09-07'),
 (3, 4, 2, 'dasd', '2023-09-07');
@@ -693,9 +693,9 @@ ALTER TABLE `camillas`
   ADD PRIMARY KEY (`CamillaID`);
 
 --
--- Indices de la tabla `entradasbotiquin`
+-- Indices de la tabla `entradasBotiquin`
 --
-ALTER TABLE `entradasbotiquin`
+ALTER TABLE `entradasBotiquin`
   ADD PRIMARY KEY (`id_entradas`),
   ADD KEY `id_elementos` (`id_elementos`);
 
@@ -706,9 +706,9 @@ ALTER TABLE `extintores`
   ADD PRIMARY KEY (`ExtintorID`);
 
 --
--- Indices de la tabla `salidasbotiquin`
+-- Indices de la tabla `salidasBotiquin`
 --
-ALTER TABLE `salidasbotiquin`
+ALTER TABLE `salidasBotiquin`
   ADD PRIMARY KEY (`id_salidas`),
   ADD KEY `id_elementos` (`id_elementos`);
 
@@ -729,9 +729,9 @@ ALTER TABLE `camillas`
   MODIFY `CamillaID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT de la tabla `entradasbotiquin`
+-- AUTO_INCREMENT de la tabla `entradasBotiquin`
 --
-ALTER TABLE `entradasbotiquin`
+ALTER TABLE `entradasBotiquin`
   MODIFY `id_entradas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
@@ -741,9 +741,9 @@ ALTER TABLE `extintores`
   MODIFY `ExtintorID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT de la tabla `salidasbotiquin`
+-- AUTO_INCREMENT de la tabla `salidasBotiquin`
 --
-ALTER TABLE `salidasbotiquin`
+ALTER TABLE `salidasBotiquin`
   MODIFY `id_salidas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
@@ -751,16 +751,16 @@ ALTER TABLE `salidasbotiquin`
 --
 
 --
--- Filtros para la tabla `entradasbotiquin`
+-- Filtros para la tabla `entradasBotiquin`
 --
-ALTER TABLE `entradasbotiquin`
-  ADD CONSTRAINT `entradasbotiquin_ibfk_1` FOREIGN KEY (`id_elementos`) REFERENCES `botiquin` (`id_elementos`);
+ALTER TABLE `entradasBotiquin`
+  ADD CONSTRAINT `entradasBotiquin_ibfk_1` FOREIGN KEY (`id_elementos`) REFERENCES `botiquin` (`id_elementos`);
 
 --
--- Filtros para la tabla `salidasbotiquin`
+-- Filtros para la tabla `salidasBotiquin`
 --
-ALTER TABLE `salidasbotiquin`
-  ADD CONSTRAINT `salidasbotiquin_ibfk_1` FOREIGN KEY (`id_elementos`) REFERENCES `botiquin` (`id_elementos`);
+ALTER TABLE `salidasBotiquin`
+  ADD CONSTRAINT `salidasBotiquin_ibfk_1` FOREIGN KEY (`id_elementos`) REFERENCES `botiquin` (`id_elementos`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

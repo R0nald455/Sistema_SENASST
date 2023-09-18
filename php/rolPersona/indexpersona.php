@@ -43,8 +43,7 @@ require_once("../../db/conexion.php");
 					<ul>
 						<li><img src="../../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></li>
 						<li><a onclick="window.location.href='../../reglamento/index.php'">Reglamento</a></li>
-						<li><a onclick="window.location.href='../../TOIvan/ProfIni.php'">Reportar</a>
-						</li>
+
 						<li><a onclick="window.location.href='../../NormasJason/index.php'">Normas</a></li>
 						<li><a onclick="window.location.href='../../senaletica/index.php'">Señaletica</a></li>
 						<li><a onclick="window.location.href='../../quiz/index.php'">quiz</a></li>
