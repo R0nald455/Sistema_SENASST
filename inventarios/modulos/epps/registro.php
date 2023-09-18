@@ -1,98 +1,101 @@
 <?php
 session_start();
 error_reporting(0);
-require_once ("../../../db/conexion.php");
+require_once("../../../db/conexion.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-        <?php include("head.php");?>
+	<?php include("head.php"); ?>
 </head>
-    <body>
 
-	<?php if(isset($_SESSION["id"]) ): ?>
+<body>
 
-	<br>
-            <div class="container">
-                <div class="row">
-                    <div class="span12">
-                        <div class="content">
-                            <?php
-			if(isset($_POST['input'])){
-				$id_implementos	= mysqli_real_escape_string($conexion,(strip_tags($_POST['ID_Implementos'], ENT_QUOTES)));
-				$nombre	= mysqli_real_escape_string($conexion,(strip_tags($_POST['nombre'], ENT_QUOTES)));
-				$descripcion  	= mysqli_real_escape_string($conexion,(strip_tags($_POST['descripcion'], ENT_QUOTES)));
-				$categoria 	= mysqli_real_escape_string($conexion,(strip_tags($_POST['categoria'], ENT_QUOTES)));
-				$cantidad  = mysqli_real_escape_string($conexion,(strip_tags($_POST['cantidad'], ENT_QUOTES)));
-				$ubicacion = mysqli_real_escape_string($conexion,(strip_tags($_POST['ubicacion'], ENT_QUOTES)));
-                $fecha = date("Y-m-d H:i:s");
-		
-				$insert = mysqli_query($conexion, "INSERT INTO tblimplementos(ID_Implementos, Nombre, Descripcion, Categoria, Cantidad, Ubicacion, Fecha)
-															VALUES('$id_implementos','$nombre', '$descripcion', '$categoria', '$cantidad', '$ubicacion', '$fecha')") or die(mysqli_error($conexion));
-						if($insert){
-							echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Bien hecho, los datos han sido agregados correctamente.</div>';
-						}else{
-							echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Error, no se pudo registrar los datos.</div>';
-						}
-				
-			}
-			?>
-                        <form name="form1" id="form1" class="form-horizontal row-fluid" action="registro.php" method="POST">
+	<?php if (isset($_SESSION["id"])): ?>
 
-										<blockquote>
-											Registrar Elementos de Proteccion Personal ✅
-										</blockquote>
-						
-										<div class="control-group">
-											<div class="controls">
-												<label class="control-label" for="nombre">Nombre: <input type="text" name="nombre" id="nombre" placeholder="Nombre del implemento" class="form-control" required></label>
-											</div>
-										</div>
+		<?php include 'registrar.php'; ?>
 
-										<div class="control-group">
-											<div class="controls">
-												<label class="control-label" for="descripcion">Descripcion: <input type="text" name="descripcion" id="descripcion" placeholder="Descripcion del implemento" class="form-control" required></label>
-											</div>
-										</div>
+		<div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="labelRegistroModal" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="labelRegistroModal">Registrar Elementos de Proteccion Personal ✅</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
 
-										<div class="control-group">
-											<div class="controls">
-												<label class="control-label" for="categoria">Categoria: <input name="categoria" id="categoria" class="form-control" type="text" placeholder="Ingrese a que categoria pertenece el producto"  required /></label>
-											</div>
-										</div>
+						<form enctype="multipart/form-data" name="form1" id="form1" class="form-horizontal row-fluid"
+							action="registrar.php" method="POST">
 
-										<div class="control-group">
-											<div class="controls">
-												<label class="control-label" for="cantidad">Cantidad: <input name="cantidad" id="cantidad" class=" form-control" type="text" placeholder="Ingrese la cantidad" required /></label>
-											</div>
-										</div>
+							<div class="control-group">
+								<div class="controls">
+									<label class="control-label" for="ImagenReferencia">Imagen de
+										referencia: </label>
+									<input name="ImagenReferencia" id="ImagenReferencia" class="form-control" type="file"
+										accept="image/*" multiple />
+								</div>
+							</div>
 
-                                        <div class="control-group">
-											<div class="controls">
-												<label class="control-label" for="ubicacion">Ubicacion: <input name="ubicacion" id="ubicacion" class=" form-control" type="text" placeholder="Ingrese la ubicacion" required /></label>
-											</div>
-										</div>
+							<div class="control-group">
+								<div class="controls">
+									<label class="control-label" for="nombre">Nombre: <input type="text" name="nombre"
+											id="nombre" placeholder="Nombre del implemento" class="form-control"
+											required></label>
+								</div>
+							</div>
 
-										<div class="control-group buttons-container">
-											<div class="controls">
-												<button type="submit" name="input" id="input" class="btn btn-sm btn-primary">Registrar</button>
-                                                <a href="index.php" class="btn btn-sm btn-danger">Cancelar</a>
-											</div>
-										</div>
-									</form>
-                        </div>
-                        <!--/.content-->
-                    </div>
-                    <!--/.span9-->
-                </div>
-            </div>
-            <!--/.container-->
+							<div class="control-group">
+								<div class="controls">
+									<label class="control-label" for="descripcion">Descripcion: <input type="text"
+											name="descripcion" id="descripcion" placeholder="Descripcion del implemento"
+											class="form-control" required></label>
+								</div>
+							</div>
 
-        <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+							<div class="control-group">
+								<div class="controls">
+									<label class="control-label" for="categoria">Categoria: <input name="categoria"
+											id="categoria" class="form-control" type="text"
+											placeholder="Ingrese a que categoria pertenece el producto" required /></label>
+								</div>
+							</div>
 
-		<?php else:?>
+							<div class="control-group">
+								<div class="controls">
+									<label class="control-label" for="cantidad">Cantidad: <input name="cantidad"
+											id="cantidad" class=" form-control" type="text"
+											placeholder="Ingrese la cantidad" required /></label>
+								</div>
+							</div>
+
+							<div class="control-group">
+								<div class="controls">
+									<label class="control-label" for="ubicacion">Ubicacion: <input name="ubicacion"
+											id="ubicacion" class=" form-control" type="text"
+											placeholder="Ingrese la ubicacion" required /></label>
+								</div>
+							</div>
+
+							<div class="control-group buttons-container">
+								<div class="controls">
+									<button type="submit" name="input" id="input"
+										class="btn btn-sm btn-primary">Registrar</button>
+									<a href="index.php" class="btn btn-sm btn-danger">Cancelar</a>
+								</div>
+							</div>
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+	<?php else: ?>
 
 		<h1>No has iniciado sesion.</h1>
 
-		<?php endif; ?>
-    </body>
+	<?php endif; ?>
+</body>

@@ -10,7 +10,7 @@ if(isset($_POST['update'])){
 				$cantidad  		= mysqli_real_escape_string($conexion,(strip_tags($_POST['cantidad'], ENT_QUOTES)));
 				$ubicacion 		= mysqli_real_escape_string($conexion,(strip_tags($_POST['ubicacion'], ENT_QUOTES)));
 				
-				$update = mysqli_query($conexion, "UPDATE tblimplementos SET nombre='$nombre', descripcion='$descripcion', categoria='$categoria', cantidad='$cantidad', ubicacion='$ubicacion' WHERE ID_Implementos='$id'") or die(mysqli_error());
+				$update = mysqli_query($conexion, "UPDATE tblimplementos SET nombre='$nombre', descripcion='$descripcion', categoria='$categoria', cantidad='$cantidad', ubicacion='$ubicacion' WHERE ID_Implementos='$id'");
 				if($update){
 					echo "<script>alert('Los datos han sido actualizados!'); window.location = 'index.php'</script>";
 				}else{

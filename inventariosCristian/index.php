@@ -43,7 +43,7 @@
 
 <div class="p-5 mb-4 bg-light rounded-3">
     <div class="container-fluid py-5">
-        <h1 class="display-5 fw-bold">Crud Inventario</h1>
+        <h1 class="display-5 fw-bold">Inventario</h1>
         <p class="col-md-8 fs-4">En esta página, podrás insertar datos y visualizar la información de un inventario. Nuestro objetivo es proporcionarte una herramienta sencilla y eficiente para gestionar tus activos.</p>
         <br>
         <label>

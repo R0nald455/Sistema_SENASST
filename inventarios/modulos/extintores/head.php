@@ -4,9 +4,7 @@
 
         <!-- css table datatables/dataTables -->
         <link rel="stylesheet" href="../../datatables/dataTables.bootstrap.css"/>
-        <!-- <link type="text/css" href="../../../css/bootstrap.min.css" rel="stylesheet"> -->
         <link type="text/css" href="../../../css/bootstrap-responsive.min.css" rel="stylesheet">
-        <!-- <link type="text/css" href="../../../css/theme.css" rel="stylesheet"> -->
         <link rel="stylesheet" href="../../../css/styles_modulos_inventario.css">
         <link rel="stylesheet" href="../../../css/header-modulos.css">
 

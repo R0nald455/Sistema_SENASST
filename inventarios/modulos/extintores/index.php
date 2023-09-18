@@ -48,13 +48,12 @@ require_once("../../../db/conexion.php");
         </div>
         <br>
 
+        <?php include('eliminar.php'); ?>
+
         <div class="container">
             <div class="row">
                 <div class="span12">
                     <div class="content">
-
-                        <?php include('eliminar.php'); ?>
-
                         <div class="panel panel-default">
 
                             <div class="panel-heading">
@@ -81,7 +80,7 @@ require_once("../../../db/conexion.php");
                                     <table id="lookup" class="table table-hover">
                                         <thead bgcolor="rgb(57,168,1)" align="center">
                                             <tr>
-                                                <th>ID del extintor</th>
+                                                <th>ID</th>
                                                 <th>Numero de serie</th>
                                                 <th>Tipo de extintor</th>
                                                 <th>Fecha de fabricación</th>
