@@ -29,9 +29,9 @@
 <tbody class="table-hover">
 <tr>
 <?php
-include("conexion/connection.php");
+include("../db/conexion.php");
 // Ejecuta una consulta
-$query = "SELECT `articulo`, `cantidad` FROM `inventariosalon`";
+$query = "SELECT articulo, cantidad FROM inventariosalon";
 $result = $conexion->query($query);
 
 

@@ -1,6 +1,6 @@
 <?php
 
-include("../conexion/connection.php");
+include("../../db/conexion.php");
 
 
         $articulo = $_POST['articulo'];
