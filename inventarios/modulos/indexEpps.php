@@ -110,9 +110,9 @@ require_once("../../db/conexion.php");
 
             <div class="info1-container">
                 <div class="info1-text">
-                    <div class="info1"><b>¿Que puedes hacer con el sistema de inventario para extintores?</b> </div>
-                    <div class="info1__content">El Sistema de inventario para extintores te permitirá mantener un registro
-                        preciso de todos tus extintores, garantizar que estén en condiciones óptimas para su uso y cumplir
+                    <div class="info1"><b>¿Que puedes hacer con el sistema de inventario para elementos de proteccion personal?</b> </div>
+                    <div class="info1__content">El Sistema de inventario para elementos de proteccion personal te permitirá mantener un registro
+                        preciso de todos tus EPPS, garantizando que estén en condiciones óptimas para su uso y cumplir
                         con
                         las regulaciones de seguridad. Esto contribuirá a mejorar la preparación para situaciones de
                         emergencia
@@ -129,11 +129,11 @@ require_once("../../db/conexion.php");
             <div class="info2-container">
                 <div class="info2-text">
                     <div class="info2"><b>Objetivo general</b></div>
-                    <div class="info2__content">El objetivo general de un sistema de inventario para extintores es mejorar
+                    <div class="info2__content">El objetivo general de un sistema de inventario para elementos de proteccion personal es mejorar
                         la
-                        seguridad, la eficiencia y el cumplimiento normativo en relación con los extintores, garantizando
+                        seguridad, la eficiencia y el cumplimiento normativo en relación con los elementos de proteccion personal, garantizando
                         que
-                        estén listos y en buen estado para su uso en caso de emergencia. <br>
+                        estén listos y en buen estado para su uso en caso de ser necesario. <br>
                     </div>
                 </div>
 
