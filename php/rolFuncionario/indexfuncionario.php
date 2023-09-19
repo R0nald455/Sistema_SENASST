@@ -70,7 +70,7 @@ require_once("../../db/conexion.php");
 						</li>
 						<li><a href="#">Administrativos</a>
 							<ul> <b>
-									<li><a onclick="window.location.href='../../personas/index.php'">Administrar Brigadistas</a></li>
+									<li><a onclick="window.location.href='../../personas/indexbrigad.php'">Administrar Brigadistas</a></li>
 									<li><a onclick="window.location.href='../../QR/indexCrud.php'">Administrar Salon</a>
 									</li>
 							</ul> </b>
