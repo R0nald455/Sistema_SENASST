@@ -32,6 +32,7 @@ require_once("../../../../db/conexion.php");
                         <li><img src="../../../../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></li>
                         <li><a href="../../indexCamillas.php" id="selected">Inicio</a></li>
                         <li><a href="../index.php">Administrar camillas</a></li>
+                        <li><a href="../inspecciones/index.php">Inspeccionar Camillas</a>
                         <li><a href="#">Camillas con revisiones pendientes</a></li>
                     </ul>
                 </nav>

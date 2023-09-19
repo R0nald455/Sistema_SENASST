@@ -26,10 +26,10 @@
             <nav>
                 <ul>
                     <li><img src="../../../../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></li>
-                    <li><a href="../../indexExtintores.php" id="selected">Inicio</a></li>
-                    <li><a href="../index.php">Administrar extintores</a></li>
-                    <li><a href="#">Inspección de Extintores</a></li>
-                    <li><a href="../recarga/index.php">Extintores con revisiones pendientes</a></li>
+                    <li><a href="../../indexCamillas.php" id="selected">Inicio</a></li>
+                    <li><a href="../index.php">Administrar camillas</a></li>
+                    <li><a href="#">Inspeccionar Camillas</a></li>
+                    <li><a href="../revisiones/index.php">Camillas con revisiones pendientes</a></li>
 
                 </ul>
             </nav>
@@ -45,14 +45,14 @@
 <br>
 <br>
     <center>
-        <h1>Inspección de Extintores 🧯</h1>
+        <h1>Inspección de camillas 🚑</h1>
     </center>
     <br>
 
     <div class="col-12 col-md-12">
         <ul class="list-group">
             <li class="list-group-item">
-                <form method="post" action="../inspecciones/mostrar_datos.php">
+                <form method="post" action="mostrar_datos.php">
                     <center>
                         <br>
                         <h1>Por favor, ingrese la ubicacion en donde desea inspeccionar. </h1>
@@ -96,7 +96,7 @@
     </select>
     <br>
 
-    <input class="btn btn-outline-success" type="submit" value="Mostrar Datos">
+    <input class="btn btn-outline-success"  type="submit" value="Mostrar Datos">
 
     </div>
     </div>
