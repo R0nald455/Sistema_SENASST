@@ -7,7 +7,6 @@
     <title>Personas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="css/styledotac.css">
-    <link rel="stylesheet" href="../css/header-modulos.css">
 
     <?php
         include("./config.php");
@@ -15,32 +14,33 @@
     
 </head>
 <body>
-<!-- Menu de navegacion-->
 
-<div class="container__menu">
-
-<div class="menu">
-
-    <input type="checkbox" id="check__menu">
-    <label for="check__menu" class="lbl-menu">
-        <span id="spn1"></span>
-        <span id="spn2"></span>
-        <span id="spn3"></span>
-    </label>
-
-    <a href="../php/rolPersona/indexpersona.php"><img id="logoResponsive" src="../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></a>
-    
-
-    <nav>
-        <ul>
-            
-            <li><a href="../php/rolPersona/indexpersona.php"><img src="../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></a></li>
-
-            <li><a href="#overview" id="selected">Inicio</a></li>
-            <li><a href="../php/rolPersona/indexpersona.php">salir</a></li>
-        </ul>
-    </nav>
-</div>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                </div>
+                <a href="#" class="logo">SENA SST</a>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.php" class="nav-link ">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="indexbrigad.php" class="nav-link ">Brigadistas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="indexdotac.php" class="nav-link active">Dotación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link ">Más sobre el SENA</a>
+                    </li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
 
 
     <section class="hero" id="hero">
