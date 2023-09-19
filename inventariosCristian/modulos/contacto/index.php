@@ -1,7 +1,7 @@
 <?php
 ob_start();
 
-include("../../conexion.php");
+include("../../db/conexion.php");
 
 $stm = $conexion->prepare("SELECT id_cargo, nom_cargo FROM cargo");
 $stm->execute();
