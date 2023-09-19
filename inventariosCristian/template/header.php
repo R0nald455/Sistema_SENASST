@@ -22,7 +22,7 @@
     <nav class="navbar navbar-expand navbar-dark bg-dark">
         <ul class="nav navbar-nav">
             <li class="nav-item">
-                <a class="nav-link active" href="https://https://cbaproy20.com/SenaSST/php/rolFuncionario/indexfuncionario.php" aria-current="page">Sena CBA<span class="visually-hidden">(current)</span></a>
+                <a class="nav-link active" href="https://cbaproy20.com/SenaSST/php/rolFuncionario/indexfuncionario.php" aria-current="page">Sena CBA<span class="visually-hidden">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo $url_base;?>modulos/contacto/">Personas</a>
