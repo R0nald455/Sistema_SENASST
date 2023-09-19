@@ -9,7 +9,7 @@
                 <a href="../php/rolFuncionario/indexfuncionario.php" class="logo">SENA SST</a>
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="index.php" class="nav-link ">Inicio</a>
+                        <a href="indexbrigad.php" class="nav-link ">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a href="indexbrigad.php" class="nav-link active">Brigadistas</a>
