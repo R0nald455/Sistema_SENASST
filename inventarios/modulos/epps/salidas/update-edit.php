@@ -5,7 +5,7 @@ if(isset($_POST['update'])){
 
 				$id				= intval($_POST['ID_Salidas']);
                 $id_implementos	= intval($_POST['ID_Implementos']);
-                $id_empleado	= intval($_POST['ID_Empleado']);
+                $id_empleado	= mysqli_real_escape_string($conexion,(strip_tags($_POST['ID_Empleado'], ENT_QUOTES)));
                 $cantidad  		= mysqli_real_escape_string($conexion,(strip_tags($_POST['cantidad'], ENT_QUOTES)));
 				$descripcion  	= mysqli_real_escape_string($conexion,(strip_tags($_POST['descripcion'], ENT_QUOTES)));
 				

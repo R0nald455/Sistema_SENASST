@@ -1,4 +1,6 @@
 <?php
+require_once("../../../../db/conexion.php");
+
 if (isset($_GET['action']) == 'delete') {
     $id_delete = intval($_GET['ID_Entradas']);
     $query = mysqli_query($conexion, "SELECT * FROM tblentradas WHERE ID_Entradas='$id_delete'");

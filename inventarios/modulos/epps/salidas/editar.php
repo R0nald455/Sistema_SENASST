@@ -55,7 +55,7 @@ require_once("../../../../db/conexion.php");
 
 							<div class="control-group">
 								<div class="controls">
-									<label class="control-label" for="basicinput">Identificador del empleado: <input
+									<label class="control-label" for="basicinput">Responsable: <input
 											type="text" name="ID_Empleado" id="ID_Empleado"
 											value="<?php echo $row['ID_Empleado']; ?>" placeholder=""
 											class="form-control span8 tip"></label>

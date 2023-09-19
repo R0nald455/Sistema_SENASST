@@ -69,7 +69,7 @@ require_once("../../../../db/conexion.php");
 
                                                 <th>ID de la salida</th>
                                                 <th>ID del EPP</th>
-                                                <th>ID del empleado</th>
+                                                <th>Responsable</th>
                                                 <th>Cantidad</th>
                                                 <th>Descripcion</th>
                                                 <th>Fecha de salida</th>

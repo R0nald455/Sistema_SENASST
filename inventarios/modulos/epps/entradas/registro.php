@@ -14,8 +14,8 @@ require_once("../../../../db/conexion.php");
 <body>
 
 	<?php if (isset($_SESSION["id"])): ?>
-		<?php include 'registrar.php'; ?>
 
+		<?php include 'registrar.php'; ?>
 
 		<div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="labelRegistroModal" aria-hidden="true">
 			<div class="modal-dialog">
@@ -27,7 +27,7 @@ require_once("../../../../db/conexion.php");
 					<div class="modal-body">
 
 						<form enctype="multipart/form-data" name="form1" id="form1" class="form-horizontal row-fluid"
-							action="registro.php" method="POST">
+							action="registrar.php" method="POST">
 
 							<div class="control-group">
 								<label class="control-label" for="ID_Implementos">Elementos de proteccion personal:</label>
@@ -37,11 +37,19 @@ require_once("../../../../db/conexion.php");
 								<div id="ID_Implementos_Div"></div>
 							</div>
 
+							<div class="control-group">
+								<label class="control-label" for="ID_Empleado">Responsable: </label>
+								<input class="form-control" type="text" id="ID_Empleado"
+									placeholder="Buscar persona responsable del EPP" autocomplete="off">
+								<input type="hidden" id="empleado_id" name="empleado_id">
+								<div id="ID_Empleado_Div"></div>
+							</div>
+
 
 							<div class="control-group">
 								<div class="controls">
-									<label class="control-label" for="cantidad">Cantidad: <input type="number" name="cantidad"
-											id="cantidad" placeholder="Ingrese la cantidad de implementos"
+									<label class="control-label" for="cantidad">Cantidad: <input type="number"
+											name="cantidad" id="cantidad" placeholder="Ingrese la cantidad de implementos"
 											class="form-control span8 tip" required></label>
 								</div>
 							</div>
@@ -68,6 +76,8 @@ require_once("../../../../db/conexion.php");
 		</div>
 
 		<script src="js/script.js"></script>
+		<script src="js/scriptEmpleado.js"></script>
+
 		<script src="../../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
@@ -76,7 +86,10 @@ require_once("../../../../db/conexion.php");
 
 	<?php else: ?>
 
-		<h1>No has iniciado sesion.</h1>
+		<script>
+			alert('No has iniciado sesion.');
+			window.location.href = '../../../../php/login.php';
+		</script>
 
 	<?php endif; ?>
 </body>
