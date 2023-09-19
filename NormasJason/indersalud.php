@@ -1,4 +1,4 @@
-<?php include '../db/conexion.php';?>
+<?php include 'conexion.php';?>
 <!doctype html>
 <html lang="es">
   <head>
@@ -6,7 +6,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../css/header.css">
 
     <!-- Bootstrap CSS v5.0.2 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -15,40 +14,38 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   </head>
   <body>
-    <!-- Menu de navegacion-->
-
-<div class="container__menu">
-
-<div class="menu">
-
-    <input type="checkbox" id="check__menu">
-    <label for="check__menu" class="lbl-menu">
-        <span id="spn1"></span>
-        <span id="spn2"></span>
-        <span id="spn3"></span>
-    </label>
-
-    <a href="../php/rolPersona/indexpersona.php"><img id="logoResponsive" src="../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></a>
-    
-
-    <nav>
-        <ul>
-            
-            <li><a href="../php/rolPersona/indexpersona.php"><img src="../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></a></li>
-
-            <li><a href="index.php" id="selected">Inicio</a></li>
-            <li><a href="#trainer">Brigadistas</a></li>
-            <li><a href="php/login.php">Reglamento</a></li>
-            <li><a href="#newsletter">Reportar</a></li>
-            <li><a href="#testimonial">Noticias</a></li>
-        </ul>
-    </nav>
-</div>
-</div>
-      <div class="container-fluid ">
+  <style>
+      .container-fluid  {
+    background-color:#5eb319;
+}
+.btn-success {
+    color: #fff;
+    background-color: #5eb319;
+    border-color: #5eb319;
+}
+.text-center {
+    color: white;
+}
+body{
+   
+}
+    </style>
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md">
+                  <header class="py-3">
+                      <h3 class="text-center">Normas de Higiene (Invima)</h3>
+                  </header>
+              </div>
+          </div>
+          </div>
           <br>
           <br>
-
+       <center>
+       <div class="btn-group">
+        <a  href="index.php" class="btn btn-success">Inicio</a>
+      </div>
+       </center>
        <br>
        <center>
 
@@ -81,7 +78,7 @@ for($i = 1; $i < count($aKeyword); $i++) {
  }
 }
 
-$result = $conexion->query($query);
+$result = $db->query($query);
 echo "<br>Has buscado la palabra clave:<b> ". $_POST['PalabraClave']."</b>";
               
 if(mysqli_num_rows($result) > 0) {
@@ -108,7 +105,7 @@ else {
 <footer class="container-fluid bg-dark fixed-bottom">
         <div class="row">
             <div class="col-md text-light text-center py-3">
-                Autor: Yeison Steven Valbuena Leguizamon
+            SENA CBA
             </div>
         </div>
     </footer>

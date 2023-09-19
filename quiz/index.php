@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Online Quiz Web Application - &quot;Quizapalooza&quot;</title>
+  <title>Quiz</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -443,6 +443,7 @@ label {
           <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
           <link href="blog.css" rel="stylesheet">
           <link href="./texdis.css" rel="stylesheet">
+          <link rel="stylesheet" href="../css/header.css">
 </head>
 <body>
  
@@ -455,7 +456,7 @@ label {
 
 <?php
 
-include ('subirQuiz/conexion.php');
+include ('../db/conexion.php');
 
 
 $nuelemen = "SELECT count(id) as total FROM problema";
@@ -499,19 +500,37 @@ $falsa3 = $fila['falsa3'];
 
 <div id="Shadow-Panel" class="shadow-panel hidden"></div>
 
+
 <header>
-  
-  <br><br>
-              <div class="header-content-wrap">
-    <h1>Quiz</h1>
-    <h2>SEGURIDAD Y SALUD EN EL TRABAJO</h2>
-    <H2>(SST)</H2>
-  </div>
-</header>
+            <div class="header__superior">
+                <div class="logo">
+                    <img src="../../img/LogoSena.png" alt="">
+                </div>
+                <div class="tittle"><b></b><br>
+                     <br>  </div>
+            </div>
+        </header>
+
+        <div class="container__menu">
+            <div class="menu">
+                <input type="checkbox" id="check__menu">
+                <label for="check__menu" class="lbl-menu">
+                    <span id="spn1"></span>
+                    <span id="spn2"></span>
+                    <span id="spn3"></span>
+                </label>
+                <nav>
+                    <ul>
+                        <li><a href="../php/rolPersona/indexpersona.php" id="selected">Inicio</a></li>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
 
 <main>
   <article>
-    <h2 class="quiz-title hidden">eCommerce Quiz</h2>
 
     <section id="Start-Menu" class="menu hidden active-panel">
       <div class="menu-content-wrap">

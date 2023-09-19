@@ -57,12 +57,10 @@ require_once("../../db/conexion.php");
 							</ul> </b>
 						</li>
 						<li><a href="#">Inventarios</a>
-							<ul> <b>
-									<li><a onclick="window.location.href='../../inventariosArley/php/index.php'">Inventario
-											SST</a></li>
+							<ul> <b> 
 									<li><a onclick="window.location.href='../../inventariosCristian/index.php'">Inventario
 											Dotacion</a></li>
-									<li><a onclick="window.location.href='../../dotacionSamuel/index.php'">Inventario
+									<li><a onclick="window.location.href='../../dotacionSamuel/views/usuarios/index.php'">Inventario
 											Dotacion Especial</a></li>
 									<li><a onclick="window.location.href='../../inventarios/modulos/indexEpps.php'">Inventario
 											para EPP's</a></li>

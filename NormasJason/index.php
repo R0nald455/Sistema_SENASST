@@ -1,4 +1,7 @@
-<?php include '../db/conexion.php';?>
+<?php 
+session_start();
+include 'conexion.php';
+?>
 <!doctype html>
 <html lang="es">
   <head>
@@ -6,7 +9,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../css/header.css">
+
     <!-- Bootstrap CSS v5.0.2 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -14,33 +17,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   </head>
   <body>
-    <!-- Menu de navegacion-->
-
-<div class="container__menu">
-
-<div class="menu">
-
-    <input type="checkbox" id="check__menu">
-    <label for="check__menu" class="lbl-menu">
-        <span id="spn1"></span>
-        <span id="spn2"></span>
-        <span id="spn3"></span>
-    </label>
-
-    <a href="../php/rolPersona/indexpersona.php"><img id="logoResponsive" src="../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></a>
-    
-
-    <nav>
-        <ul>
-            
-            <li><a href="../php/rolPersona/indexpersona.php"><img src="../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></a></li>
-
-            <li><a href="#overview" id="selected">Inicio</a></li>
-            <li><a href="../php/rolPersona/indexpersona.php">salir</a></li>
-        </ul>
-    </nav>
-</div>
-</div>
+    <style>
+      .container-fluid  {
+    background-color:#5eb319;
+}
+.btn-success {
+    color: #fff;
+    background-color: #5eb319;
+    border-color: #5eb319;
+}
+.text-center {
+    color: white;
+}
+    </style>
       <div class="container-fluid ">
           <div class="row">
               <div class="col-md">
@@ -53,73 +42,138 @@
           <br>
           <br>
        <center>
-      <div class="btn-group">
-        <a href="indextrab.php" class="btn btn-success">Ministerio del Trabajo</a>
-        <a href="indexagro.php" class="btn btn-success">Ministerio Agricultura</a>
-        <a  href="indersalud.php" class="btn btn-success">Invima</a>
-      </div>
-       </center> 
-        <br>
-<center>
-       <ul class="list-group">
-  <li class="list-group-item">
-<form method="post">
-  <div class="form-row align-items-center">
-    <div class="col-auto">
-      <input type="text" name="PalabraClave" placeholder="Ingrese una palabra clave">
-      <button type="submit" class="btn btn-success mb-2">Buscar Ahora</button>
-    </div>
-  </div>
-</form>
-  </li>
+       <?php if (isset($_SESSION["id"])):
 
-</ul>
-</center>
+          $rol = $_SESSION["rol"];
 
-<?php
- 
-if(!empty($_POST))
-{
-      $aKeyword = explode(" ", $_POST['PalabraClave']);
-      $query ="SELECT * FROM normas_apren WHERE concepto like '%" . $aKeyword[0] . "%' OR descripcion like '%" . $aKeyword[0] . "%'";
+          if ($rol == 1) {
+                ?>
+                  <div class="btn-group">
+                  <a href="indextrab.php" class="btn btn-success">Ministerio del Trabajo</a>
+                  <a href="indexagro.php" class="btn btn-success">Ministerio Agricultura</a>
+                  <a  href="indersalud.php" class="btn btn-success">Invima</a>
+                  <a  href="index.php" class="btn btn-success">Agregar</a>
+                  <a  href="editar.php" class="btn btn-success">Editar</a>
+                  <a  href="eliminar.php" class="btn btn-success">Eliminar</a>
+                </div>
+                
+
+                <?php
+          } elseif ($rol == 2) {
+                ?>
+
+               
+
+                <?php
+          } elseif ($rol == 4) {
+                ?>
+
+                
+
+                <?php
+          }
+
+          ?>
+
+          <?php else: ?>
+
+
+          <?php endif; ?>
+
       
-     for($i = 1; $i < count($aKeyword); $i++) {
-        if(!empty($aKeyword[$i])) {
-            $query .= " OR descripcion like '%" . $aKeyword[$i] . "%'";
-        }
-      }     
-     $result = $conexion->query($query);
-     echo "<br>Has buscado la palabra clave:<b> ". $_POST['PalabraClave']."</b>";
-                     
-     if(mysqli_num_rows($result) > 0) {
-        $row_count=0;
-        echo "<br><br>Resultados encontrados: ";
-        echo "<br><table class='table table-striped'>";
-        While($row = $result->fetch_assoc()) {   
-            $row_count++;                         
-            echo "<tr><td>".$row_count." </td><td>". $row['concepto'] . "</td><td>". $row['descripcion'] . "</td></tr>";
-        }
-        echo "</table>";
-	
+       </center>
+       <br>
+       
+<html>
+<head>
+  <title>REGISTRADOR</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <style>
+    body{
+      backdrop-filter: url(filters.svg#filter) blur(4px) saturate(40%);
+      background-image: url(fondoregistro.gif);
+      background-repeat: no-repeat;
+      background-size: 150%;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: large;
+      color:black;
     }
-    else {
-        echo "<br>Resultados encontrados: Ninguno";
-		
-    }
-}
- 
-?>
-</div>
+  </style>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<center><h1>ADMINISTRADOR DE NORMATIVIDAD</h1></center>
+
+
+  <!--FUNCION DE VARIABLE GLOBAL-->
+
+
+  <div class="row">
+    <div class="col-md-4"></div>
+
+  <!-- INICIA LA COLUMNA -->
+
+
+    <div class="col-md-4">
+
+      <center><h2>Insertar</h2></center>
+
+      <form method="POST" action="procesar/insertar.php" >
+
+      <div class="form-group">
+      <label for="miCombo">¿A qué ministerio desea agregar normas?</label>
+      <br>
+      <center><select id="miCombo" name="miCombo" required>
+        <option value="trabajo">Ministerio de trabajo</option>
+        <option value="invima">Invima</option>
+        <option value="agricultura">Ministerio Agricultura</option>
+        <option value="aprendiz">normas Apendiz</option>
+      </select></center>
+  </div>
+
+      <div class="form-group">
+          <label for="nombre">Numero de Resolución </label>
+          <input type="text" name="num_resol" class="form-control" id="num_resol" required >
+      </div>
+
+      <div class="form-group">
+          <label for="pape">Concepto</label>
+          <input type="text" name="concepto" class="form-control" id="concepto" required>
+      </div>
+
+      <div class="form-group">
+          <label for="sape">Descripciom</label>
+          <input type="text" name="descripcion" class="form-control" id="descripcion">
+      </div>
+
+      <center>
+        <input type="submit" value="Registrar" class="btn btn-success" name="btn_registrar">
+        <br>
+      </center>
+
+    </form>
+
+
+
+
+
+
 <br>
 <br>
 
        <footer class="container-fluid bg-dark fixed-bottom">
         <div class="row">
             <div class="col-md text-light text-center py-3">
-                Autor: Yeison Steven Valbuena Leguizamon
+                SENA CBA
             </div>
         </div>
     </footer>
+
+
+
+
 </body>
 </html>
 
