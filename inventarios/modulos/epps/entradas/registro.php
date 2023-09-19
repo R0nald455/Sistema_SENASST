@@ -30,7 +30,7 @@ require_once("../../../../db/conexion.php");
 							action="registro.php" method="POST">
 
 							<div class="control-group">
-								<label class="control-label" for="ID_Implementos">Elementos:</label>
+								<label class="control-label" for="ID_Implementos">Elementos de proteccion personal:</label>
 								<input class="form-control" type="text" id="ID_Implementos" placeholder="Buscar EPP"
 									autocomplete="off">
 								<input type="hidden" id="producto_id" name="producto_id">

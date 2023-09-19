@@ -20,7 +20,7 @@ require_once ("../../../../db/conexion.php");
                         <div class="content">
                             <?php
            	$id = intval($_GET['ID_Entradas']);
-			$sql = mysqli_query($conexion, "SELECT ID_Entradas, ID_Implementos, cantidad, descripcion, fecha FROM tblentradas WHERE ID_Entradas='$id'");
+			$sql = mysqli_query($conexion, "SELECT * FROM tblentradas WHERE ID_Entradas='$id'");
 			if(mysqli_num_rows($sql) == 0){
 				header("Location: index.php");
 			}else{

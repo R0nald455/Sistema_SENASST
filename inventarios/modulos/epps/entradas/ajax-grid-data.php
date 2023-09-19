@@ -13,13 +13,14 @@ $columns = array(
 // datatable column index  => database column name
 	0 => 'ID_Entradas',
     1 => 'ID_Implementos',
-    2 => 'cantidad', 
-	3 => 'descripcion',
-    4 => 'fecha'
+	2 => 'ID_Empleado',
+    3 => 'cantidad', 
+	4 => 'descripcion',
+    5 => 'fecha'
 );
 
 // getting total number records without any search
-$sql = "SELECT ID_Entradas, ID_Implementos, cantidad, descripcion, fecha";
+$sql = "SELECT *";
 $sql.=" FROM tblentradas";
 $query=mysqli_query($conexion, $sql) or die("ajax-grid-data.php: get InventoryItems");
 $totalData = mysqli_num_rows($query);
@@ -28,7 +29,7 @@ $totalFiltered = $totalData;  // when there is no search parameter then total nu
 
 if( !empty($requestData['search']['value']) ) {
 	// if there is a search parameter
-	$sql = "SELECT ID_Entradas, ID_Implementos, cantidad, descripcion, fecha";
+	$sql = "SELECT *";
 	$sql.=" FROM tblentradas";
 	$sql.=" WHERE ID_Entradas LIKE '".$requestData['search']['value']."%' ";
 	$sql.=" OR ID_Implementos LIKE '".$requestData['search']['value']."%' ";    
@@ -43,7 +44,7 @@ if( !empty($requestData['search']['value']) ) {
 	
 } else {	
 
-	$sql = "SELECT ID_Entradas, ID_Implementos, cantidad, descripcion, fecha";
+	$sql = "SELECT *";
 	$sql.=" FROM tblentradas";
 	$sql.=" ORDER BY ". $columns[$requestData['order'][0]['column']]."   ".$requestData['order'][0]['dir']." LIMIT ".$requestData['start']." ,".$requestData['length']."   ";
 	$query=mysqli_query($conexion, $sql) or die("ajax-grid-data.php: get PO");
@@ -56,6 +57,7 @@ while( $row=mysqli_fetch_array($query) ) {  // preparing an array
 
 	$nestedData[] = $row["ID_Entradas"];
     $nestedData[] = $row["ID_Implementos"];
+	$nestedData[] = $row["ID_Empleado"];
     $nestedData[] = $row["cantidad"];
 	$nestedData[] = $row["descripcion"];
     $nestedData[] = date("d/m/Y", strtotime($row["fecha"]));
