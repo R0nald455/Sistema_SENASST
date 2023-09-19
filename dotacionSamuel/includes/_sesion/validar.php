@@ -9,7 +9,7 @@ $password=$_POST['password'];
 session_start();
 $_SESSION['correo']=$correo;
 
-$consulta="SELECT*FROM usuarios where correo='$correo' and password='$password'";
+$consulta="SELECT*FROM usuario where correo='$correo' and password='$password'";
 $resultado=mysqli_query($conexion,$consulta);
 $filas=mysqli_num_rows($resultado);
 
