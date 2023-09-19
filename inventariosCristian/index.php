@@ -21,8 +21,11 @@
 
     <nav class="navbar navbar-expand navbar-dark bg-dark">
         <ul class="nav navbar-nav">
-            <li class="nav-item">
+        <li class="nav-item">
                 <a class="nav-link active" href="../php/rolFuncionario/indexfuncionario.php" aria-current="page">Sena CBA<span class="visually-hidden">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="<?php echo $url_base;?>index.php" aria-current="page">Busqueda<span class="visually-hidden">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo $url_base;?>modulos/contacto/">Personas</a>
