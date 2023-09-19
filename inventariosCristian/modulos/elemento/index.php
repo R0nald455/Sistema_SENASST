@@ -1,6 +1,6 @@
 <?php
 ob_start();
-include("../../conexion.php");
+include("../../db/conexion.php");
 
 function insertarAsignacion($conexion, $idPersona, $idCargo)
 {
