@@ -13,7 +13,6 @@ include "../../conexion.php";
 
     <?php if(isset($_SESSION["id"]) ): ?>
 
-    <br>
     <div class="container__menu">
     <div class="menu">
 

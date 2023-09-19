@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Señales de SST</title>
-    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/header-modulos.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -10,13 +11,13 @@
             padding: 0;
             background-color: #f4f4f4;
         }
-        
+
         h1 {
             text-align: center;
             color: #333;
             margin-top: 20px;
         }
-        
+
         .senales-container {
             display: flex;
             flex-wrap: wrap;
@@ -86,38 +87,38 @@
         }
     </style>
 </head>
+
 <body>
 
-<!-- Menu de navegacion-->
+    <!-- Menu de navegacion-->
 
-<div class="container__menu">
+    <div class="container__menu">
+        <div class="menu">
 
-<div class="menu">
+            <input type="checkbox" id="check__menu">
+            <label for="check__menu" class="lbl-menu">
+                <span id="spn1"></span>
+                <span id="spn2"></span>
+                <span id="spn3"></span>
+            </label>
 
-    <input type="checkbox" id="check__menu">
-    <label for="check__menu" class="lbl-menu">
-        <span id="spn1"></span>
-        <span id="spn2"></span>
-        <span id="spn3"></span>
-    </label>
+            <nav>
+                <ul>
+                    <li><img src="../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></li>
+                    <li><a href="../php/rolPersona/indexpersona.php" id="selected">Inicio</a></li>
+                    <li><a href="quiz/index.php">Quiz</a></li>
+                </ul>
+            </nav>
 
-    <a href="../php/rolPersona/indexpersona.php"><img id="logoResponsive" src="../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></a>
-    
+            <div class="responsive-container">
+                <img id="logoResponsive" src="../img/LogoSenaBlanco.png" width="50px" alt="logoSena">
+            </div>
+        </div>
+    </div>
 
-    <nav>
-        <ul>
-            
-            <li><a href="../php/rolPersona/indexpersona.php"><img src="../img/LogoSenaBlanco.png"  width="50px" alt="logoSena"></a></li>
-
-            <li><a href="../php/rolPersona/indexpersona.php" id="selected">Inicio</a></li>
-            <li><a href="quiz/index.php">Juego</a></li>
-        </ul>
-    </nav>
-</div>
-</div>
 
     <h1>Señales de Seguridad</h1>
-    
+
     <div class="senales-container">
         <?php
         $senalesSST = array(
@@ -150,7 +151,7 @@
                 "imagen" => "escaleras.jpg"
             ),
         );
-        
+
         foreach ($senalesSST as $senal => $datos) {
             echo "<div class='senal'>";
             echo "<h2>$senal</h2>";
@@ -166,4 +167,5 @@
         ?>
     </div>
 </body>
+
 </html>

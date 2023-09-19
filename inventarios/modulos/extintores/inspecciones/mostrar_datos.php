@@ -14,7 +14,7 @@ include 'index.php';
   <header>
     <br>
     <center>
-      <h1>Administracion de implementos SST</h1>
+      <h1>Administracion de extintores</h1>
   </header>
 
   <div class="container">
