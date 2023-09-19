@@ -1,4 +1,6 @@
 <?php
+require_once("../../../../db/conexion.php");
+
 
 if (isset($_POST['input'])) {
     $id_implementos = mysqli_real_escape_string($conexion, (strip_tags($_POST['producto_id'], ENT_QUOTES)));
