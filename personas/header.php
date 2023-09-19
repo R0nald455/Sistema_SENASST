@@ -14,12 +14,6 @@
                     <li class="nav-item">
                         <a href="indexbrigad.php" class="nav-link active">Brigadistas</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="indexdotac.php" class="nav-link ">Dotación</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link ">Más sobre el SENA</a>
-                    </li>
                     
                 </ul>
             </nav>
