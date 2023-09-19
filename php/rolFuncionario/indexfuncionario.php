@@ -62,15 +62,15 @@ require_once("../../db/conexion.php");
 											SST</a></li>
 									<li><a onclick="window.location.href='../../inventariosCristian/index.php'">Inventario
 											Dotacion</a></li>
-									<li><a onclick="window.location.href='../../personas/indexdotac.php'">Inventario
-											Dotacion Especial y Brigadistas</a></li>
+									<li><a onclick="window.location.href='../../dotacionSamuel/index.php'">Inventario
+											Dotacion Especial</a></li>
 									<li><a onclick="window.location.href='../../inventarios/modulos/indexEpps.php'">Inventario
 											para EPP's</a></li>
 							</ul></b>
 						</li>
 						<li><a href="#">Administrativos</a>
 							<ul> <b>
-									<!-- <li><a onclick="window.location.href='../../alertarbrigadistas/admin.php'">Administrar Brigadistas</a></li> -->
+									<li><a onclick="window.location.href='../../personas/index.php'">Administrar Brigadistas</a></li>
 									<li><a onclick="window.location.href='../../QR/indexCrud.php'">Administrar Salon</a>
 									</li>
 							</ul> </b>

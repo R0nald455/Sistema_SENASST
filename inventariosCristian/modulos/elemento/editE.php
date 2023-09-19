@@ -1,5 +1,5 @@
 <?php
-include("../../../db/conexionPDO.php");
+include("../../conexion.php");
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
@@ -35,7 +35,7 @@ if ($_POST) {
         $nuevoCodigoEle = '001'; // Valor predeterminado si no hay registros anteriores para el cargo
     } else {
         $nuevoCodigoEleInt = intval($ultimoCodigoEle) + 1;
-        $nuevoCodigoEle = str_pad((string)$nuevoCodigoEleInt, 3, '0', STR_PAD_LEFT);
+        $nuevoCodigoEle = str_pad((string) $nuevoCodigoEleInt, 3, '0', STR_PAD_LEFT);
     }
 
     // Insertar un nuevo elemento si se proporcionó uno
@@ -89,14 +89,29 @@ if ($_POST) {
         <tbody>
             <?php foreach ($registros as $index => $registro) { ?>
                 <tr id="fila-<?php echo $index; ?>">
-                    <td><?php echo $registro['nom_cargo']; ?></td>
-                    <td><?php echo $registro['Codigo_ele']; ?></td>
-                    <td><?php echo $registro['elemento']; ?></td>
                     <td>
-                        <input type="number" class="form-control" min="0" pattern="^[0-9]+" name="<?php echo $registro['elemento']; ?>" value="<?php echo $registro['cantidad_ele']; ?>">
+                        <?php echo $registro['nom_cargo']; ?>
                     </td>
                     <td>
-                        <button type="submit" name="eliminar_id[]" value="<?php echo $registro['elemento']; ?>" class="btn btn-outline-danger btn-eliminar"><i class="far fa-trash-alt"></i></button>
+                        <?php echo $registro['Codigo_ele']; ?>
+                    </td>
+                    <td>
+                        <?php echo $registro['elemento']; ?>
+                    </td>
+                    <td>
+                        <input type="number" class="form-control" min="0" pattern="^[0-9]+"
+                            name="<?php echo $registro['elemento']; ?>" value="<?php echo $registro['cantidad_ele']; ?>">
+                    </td>
+                    <td>
+                        <button type="submit" name="eliminar_id[]" value="<?php echo $registro['elemento']; ?>"
+                            class="btn btn-outline-danger btn-eliminar" title="Eliminar Registro"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-trash" viewBox="0 0 16 16">
+                                <path
+                                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z" />
+                                <path
+                                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z" />
+                            </svg></button>
                     </td>
                 </tr>
             <?php } ?>
@@ -107,7 +122,8 @@ if ($_POST) {
                     <input type="text" class="form-control" name="nuevo_elemento" placeholder="Nuevo elemento">
                 </td>
                 <td>
-                    <input type="number" class="form-control" name="nueva_cantidad" placeholder="Cantidad" min="0" pattern="^[0-9]+">
+                    <input type="number" class="form-control" name="nueva_cantidad" placeholder="Cantidad" min="0"
+                        pattern="^[0-9]+">
                 </td>
                 <td></td>
                 <td></td>
