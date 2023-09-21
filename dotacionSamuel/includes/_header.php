@@ -66,7 +66,24 @@ session_start();
     </a> -->
 </li>
 <li class="nav-item">
+<?php
+
+$rol = $_SESSION["rol"];
+
+
+if ($rol == 1) {
+    ?>
+
     <a class="nav-link" href="../../../php/rolFuncionario/indexfuncionario.php">
+
+    <?php
+} elseif ($rol == 4) {
+    ?>
+    <a class="nav-link" href="../../../php/rolFuncionario/indexadministrador.php">
+    <?php
+}
+?>
+
     <span class="material-icons">logout</span>
         <span>Salir</span></a>
         

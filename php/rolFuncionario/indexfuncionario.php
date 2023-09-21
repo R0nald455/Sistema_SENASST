@@ -57,7 +57,7 @@ require_once("../../db/conexion.php");
 							</ul> </b>
 						</li>
 						<li><a href="#">Inventarios</a>
-							<ul> <b> 
+							<ul> <b>
 									<li><a onclick="window.location.href='../../inventariosCristian/index.php'">Inventario
 											Dotacion</a></li>
 									<li><a onclick="window.location.href='../../dotacionSamuel/views/usuarios/index.php'">Inventario
@@ -68,7 +68,8 @@ require_once("../../db/conexion.php");
 						</li>
 						<li><a href="#">Administrativos</a>
 							<ul> <b>
-									<li><a onclick="window.location.href='../../personas/indexbrigad.php'">Administrar Brigadistas</a></li>
+									<li><a onclick="window.location.href='../../personas/indexbrigad.php'">Administrar
+											Brigadistas</a></li>
 									<li><a onclick="window.location.href='../../QR/indexCrud.php'">Administrar Salon</a>
 									</li>
 							</ul> </b>

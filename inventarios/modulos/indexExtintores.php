@@ -28,7 +28,7 @@ require_once("../../db/conexion.php");
                 <div class="logo">
                     <img src="../../img/LogoSena.png" alt="">
                 </div>
-                <div class="tittle"><b>Sistema de inventario para extintores</b><br> Centro de Biotecnologia <br>
+                <div class="tittle"><b>Sistema de inventario y inspecciones para extintores</b><br> Centro de Biotecnologia <br>
                     Agropecuaria </div>
             </div>
         </header>

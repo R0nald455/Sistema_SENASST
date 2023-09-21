@@ -56,12 +56,6 @@ require_once("../../db/conexion.php");
                         } elseif ($rol == 4) {
                             ?>
                             <li><a href="../../php/rolFuncionario/indexadministrador.php" id="selected">Inicio</a></li>
-
-                            <?php
-                        } elseif ($rol == 3) {
-                            ?>
-                            <li><a href="../../php/rolPersona/indexbrigadista.php" id="selected">Inicio</a></li>
-
                             <?php
                         }
                         ?>

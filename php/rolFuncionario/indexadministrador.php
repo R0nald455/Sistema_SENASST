@@ -57,12 +57,25 @@ require_once("../../db/conexion.php");
 											y inspeccion para camillas</a></li>
 							</ul> </b>
 						</li>
-						<li><a href="#">Modulos administrativos</a>
+						<li><a href="#">Inventarios</a>
+							<ul> <b>
+									<li><a onclick="window.location.href='../../inventariosCristian/index.php'">Inventario
+											Dotacion</a></li>
+									<li><a onclick="window.location.href='../../dotacionSamuel/views/usuarios/index.php'">Inventario
+											Dotacion Especial</a></li>
+									<li><a onclick="window.location.href='../../inventarios/modulos/indexEpps.php'">Inventario
+											para EPP's</a></li>
+							</ul></b>
+						</li>
+						<li><a href="#">Administrativos</a>
 							<ul> <b>
 									<li><a onclick="window.location.href='../../administrador/View/user.php'">Administrar
 											usuarios</a></li>
 									<li><a onclick="window.location.href='../../contenidos/index.php'">Administrar
 											Contenidos</a></li>
+									<li><a onclick="window.location.href='../../personas/indexbrigad.php'">Administrar
+											Brigadistas</a></li>
+									<li><a onclick="window.location.href='../../QR/indexCrud.php'">Administrar Salon</a>
 							</ul> </b>
 						</li>
 						<li><a id="cerrar-sesion"><span class="material-symbols-outlined">logout</span></a></li>
