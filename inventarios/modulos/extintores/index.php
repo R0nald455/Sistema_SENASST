@@ -108,12 +108,12 @@ require_once("../../../db/conexion.php");
             </div>
         </div>
         <!--/.container-->
+        
 
 
         <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../../datatables/jquery.dataTables.js"></script>
         <script src="../../datatables/dataTables.bootstrap.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
         <?php
         session_start();
@@ -174,6 +174,7 @@ require_once("../../../db/conexion.php");
                 });
             });
         </script>
+
 
     <?php else: ?>
 

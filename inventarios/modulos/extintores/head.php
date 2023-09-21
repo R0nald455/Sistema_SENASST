@@ -18,3 +18,6 @@
         <script src="../../scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
 
         <script src="https://kit.fontawesome.com/27e58a102f.js" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+

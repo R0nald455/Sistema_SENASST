@@ -20,7 +20,7 @@ require_once("../../../../db/conexion.php");
 
 						<?php include('registrar.php'); ?>
 
-						<div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="labelRegistroModal"
+						<div style="height: 90%; top: 50px;" class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="labelRegistroModal"
 							aria-hidden="true">
 							<div class="modal-dialog">
 								<div class="modal-content">
@@ -89,7 +89,7 @@ require_once("../../../../db/conexion.php");
 						<script src="../../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 						<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 						<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
-						
+
 					<?php else: ?>
 
 						<script>

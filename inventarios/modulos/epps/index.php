@@ -52,7 +52,7 @@ require_once("../../../db/conexion.php");
                     <div class="content">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                            <?php include('eliminar.php'); ?>
+                                <?php include('eliminar.php'); ?>
 
                                 <h3 class="panel-title"><i class="fa-solid fa-screwdriver-wrench"
                                         style="color: #1b1c1d;"></i> Administrador de Elementos de Proteccion Personal</h3>

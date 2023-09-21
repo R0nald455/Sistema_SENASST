@@ -14,8 +14,8 @@ require_once("../../../db/conexion.php");
 
 	<?php if (isset($_SESSION["id"])): ?>
 
-		<div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="labelRegistroModal" aria-hidden="true">
-			<div class="modal-dialog">
+		<div style="height: 90%; top: 50px;" class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="labelRegistroModal" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
 				<div class="modal-content">
 					<div class="modal-header">
 						<h5 class="modal-title" id="labelRegistroModal">Registrar extintores 🧯</h5>
