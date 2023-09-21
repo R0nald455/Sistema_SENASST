@@ -43,9 +43,20 @@ require_once("../../db/conexion.php");
 
 				<nav>
 					<ul>
+
 						<li><img src="../../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></li>
 						<li><a href="#overview" id="selected">Inicio</a></li>
 						<li><a onclick="window.location.href='../../reglamento/index.php'">Reglamento</a></li>
+						<li><a href="#">Inspecciones</a>
+							<ul> <b>
+									<li><a onclick="window.location.href='../../inventarios/modulos/indexExtintores.php'">Inventario
+											y inspeccion para extintores</a></li>
+									<li><a onclick="window.location.href='../../elementos/Model/indexBotiquines.php'">Inventario
+											y inspeccion para botiquines</a></li>
+									<li><a onclick="window.location.href='../../inventarios/modulos/indexCamillas.php'">Inventario
+											y inspeccion para camillas</a></li>
+							</ul> </b>
+						</li>
 						<li><a href="#">Modulos administrativos</a>
 							<ul> <b>
 									<li><a onclick="window.location.href='../../administrador/View/user.php'">Administrar
@@ -55,6 +66,7 @@ require_once("../../db/conexion.php");
 							</ul> </b>
 						</li>
 						<li><a id="cerrar-sesion"><span class="material-symbols-outlined">logout</span></a></li>
+
 					</ul>
 				</nav>
 			</div>

@@ -51,7 +51,7 @@ require_once ("../db/conexion.php");
                             <div class="form-group">
                                 <label for="rol" class="form-label">Rol de usuario *</label>
                                 <br>
-                                <input type="number" id="rol" name="rol" class="form-control" placeholder="Escribe el rol: 1 funcionario, 2 lector,3 brigadista">
+                                <input type="number" id="rol" name="rol" class="form-control" placeholder="Escribe el rol: 1 funcionario, 2 lector">
                             </div>
                             <br>
                             <br>

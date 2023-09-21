@@ -43,8 +43,28 @@ require_once("../../db/conexion.php");
                 </label>
                 <nav>
                     <ul>
-                        <li><a href="../../php/rolFuncionario/indexfuncionario.php" id="selected">Inicio</a></li>
+                        <?php
 
+                        $rol = $_SESSION["rol"];
+
+
+                        if ($rol == 1) {
+                            ?>
+                            <li><a href="../../php/rolFuncionario/indexfuncionario.php" id="selected">Inicio</a></li>
+
+                            <?php
+                        } elseif ($rol == 4) {
+                            ?>
+                            <li><a href="../../php/rolFuncionario/indexadministrador.php" id="selected">Inicio</a></li>
+
+                            <?php
+                        } elseif ($rol == 3) {
+                            ?>
+                            <li><a href="../../php/rolPersona/indexbrigadista.php" id="selected">Inicio</a></li>
+
+                            <?php
+                        }
+                        ?>
                         <li><a href="epps/index.php">Administrar EPP's</a>
                         <li><a href="epps/entradas/index.php">Entrada de
                                 EPP's</a>
@@ -110,8 +130,10 @@ require_once("../../db/conexion.php");
 
             <div class="info1-container">
                 <div class="info1-text">
-                    <div class="info1"><b>¿Que puedes hacer con el sistema de inventario para elementos de proteccion personal?</b> </div>
-                    <div class="info1__content">El Sistema de inventario para elementos de proteccion personal te permitirá mantener un registro
+                    <div class="info1"><b>¿Que puedes hacer con el sistema de inventario para elementos de proteccion
+                            personal?</b> </div>
+                    <div class="info1__content">El Sistema de inventario para elementos de proteccion personal te permitirá
+                        mantener un registro
                         preciso de todos tus EPPS, garantizando que estén en condiciones óptimas para su uso y cumplir
                         con
                         las regulaciones de seguridad. Esto contribuirá a mejorar la preparación para situaciones de
@@ -129,9 +151,11 @@ require_once("../../db/conexion.php");
             <div class="info2-container">
                 <div class="info2-text">
                     <div class="info2"><b>Objetivo general</b></div>
-                    <div class="info2__content">El objetivo general de un sistema de inventario para elementos de proteccion personal es mejorar
+                    <div class="info2__content">El objetivo general de un sistema de inventario para elementos de proteccion
+                        personal es mejorar
                         la
-                        seguridad, la eficiencia y el cumplimiento normativo en relación con los elementos de proteccion personal, garantizando
+                        seguridad, la eficiencia y el cumplimiento normativo en relación con los elementos de proteccion
+                        personal, garantizando
                         que
                         estén listos y en buen estado para su uso en caso de ser necesario. <br>
                     </div>

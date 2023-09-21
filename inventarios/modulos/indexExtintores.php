@@ -43,11 +43,26 @@ require_once("../../db/conexion.php");
                 </label>
                 <nav>
                     <ul>
-                        <li><a href="../../php/rolFuncionario/indexfuncionario.php" id="selected">Inicio</a></li>
-                        <li><a style="font-size: 12px;" href="extintores/index.php">Administrar extintores</a></li>
-                        <li><a style="font-size: 12px;" href="extintores/inspecciones/index.php">Inspección de
+                        <?php
+
+                        $rol = $_SESSION["rol"];
+
+
+                        if ($rol == 1) {
+                            ?>
+                            <li><a href="../../php/rolFuncionario/indexfuncionario.php" id="selected">Inicio</a></li>
+
+                            <?php
+                        } elseif ($rol == 4) {
+                            ?>
+                            <li><a href="../../php/rolFuncionario/indexadministrador.php" id="selected">Inicio</a></li>
+                            <?php
+                        }
+                        ?>
+                        <li><a href="extintores/index.php">Administrar extintores</a></li>
+                        <li><a href="extintores/inspecciones/index.php">Inspección de
                                 extintores</a></li>
-                        <li><a style="font-size: 12px;" href="extintores/recarga/index.php">Extintores con revisiones
+                        <li><a href="extintores/recarga/index.php">Extintores con revisiones
                                 pendientes</a></li>
                     </ul>
                 </nav>

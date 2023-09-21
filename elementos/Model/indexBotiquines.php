@@ -11,7 +11,7 @@ require_once("../../db/conexion.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio | Sistema de inventario para camillas</title>
+    <title>Inicio | Sistema de inventario para botiquines y elementos de un botiquin</title>
     <link rel="icon" href="../../img/LogoSena.png">
     <script src="https://kit.fontawesome.com/27e58a102f.js" crosssorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/styles_inventario_extintores.css">
@@ -28,7 +28,7 @@ require_once("../../db/conexion.php");
                 <div class="logo">
                     <img src="../../img/LogoSena.png" alt="">
                 </div>
-                <div class="tittle"><b>Sistema de inventario para camillas</b><br> Centro de
+                <div class="tittle"><b>Sistema de inventario para botiquines y elementos de un botiquin</b><br> Centro de
                     Biotecnologia <br> Agropecuaria </div>
             </div>
         </header>
@@ -59,9 +59,10 @@ require_once("../../db/conexion.php");
                             <?php
                         }
                         ?>
-                        <li><a href="camillas/index.php">Administrar Camillas</a>
-                        <li><a href="camillas/inspecciones/index.php">Inspeccionar Camillas</a>
-                        <li><a href="camillas/revisiones/index.php">Camillas con revisiones pendientes</a>
+                        <li><a href="botiquines/index.php">Administrar Elementos</a>
+                        <li><a href="inspecciones/index.php">Inspeccion de Elementos</a>
+                        <li><a href="entradas/index.php">Entrada de elementos</a>
+                        <li><a href="salidas/index.php">Salida de elementos</a>
                         </li>
                     </ul>
                 </nav>
@@ -97,13 +98,13 @@ require_once("../../db/conexion.php");
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://i.imgur.com/AGyM2sZ.jpg" class="d-block w-100" alt="imagen1">
+                    <img src="https://i.imgur.com/TUrasyb.jpg" class="d-block w-100" alt="imagen1">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://i.imgur.com/7nSrrHd.jpg" class="d-block w-100" alt="imagen2">
+                    <img src="https://i.imgur.com/2vHNjWo.jpg" class="d-block w-100" alt="imagen2">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://i.imgur.com/EeTGlTR.jpg" class="d-block w-100" alt="imagen3">
+                    <img src="https://i.imgur.com/z07AMnz.jpg" class="d-block w-100" alt="imagen3">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -122,7 +123,7 @@ require_once("../../db/conexion.php");
 
             <div class="info1-container">
                 <div class="info1-text">
-                    <div class="info1"><b>¿Que puedes hacer con el sistema de inventario para camillas?</b> </div>
+                    <div class="info1"><b>¿Que puedes hacer con el sistema de inventario para botiquines?</b> </div>
                     <div class="info1__content"> Un sistema de inventario para camillas es una herramienta esencial para
                         garantizar la disponibilidad, la seguridad y la eficiencia en la gestión de camillas en el entorno
                         del Centro de Biotecnologia Agropecuaria. Al automatizar y sistematizar estas tareas, los
@@ -132,7 +133,7 @@ require_once("../../db/conexion.php");
                 </div>
 
                 <div class="info1-img-container">
-                    <img class="info1__image" src="https://i.imgur.com/VxcH9d8.jpg" alt="">
+                    <img class="info1__image" src="https://i.imgur.com/6y0KWpL.png" alt="">
                 </div>
 
             </div>
@@ -148,8 +149,8 @@ require_once("../../db/conexion.php");
                     </div>
                 </div>
 
-                <div class="info2-img-container">
-                    <img class="info2__image" src="https://i.imgur.com/d2hd0Gv.jpg" alt="">
+                <div style="height: 500px;" class="info2-img-container">
+                    <img class="info2__image" src="https://i.imgur.com/0R8xSws.jpg" alt="">
                 </div>
 
             </div>
@@ -162,19 +163,16 @@ require_once("../../db/conexion.php");
 
         <div class="videos-relacionados__container">
 
-            <iframe class="videos-relacionados__item1" width="560" height="315"
-                src="https://www.youtube.com/embed/buVHAAn1oJM?si=aewJqlFFVYKSvS_5" title="YouTube video player"
-                frameborder="0"
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/XmQlmJtNYKo?si=yMdOyrkkILAlPDaR"
+                title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
-            <iframe class="videos-relacionados__item2 width=" 560" height="315"
-                src="https://www.youtube.com/embed/XH12Hk0Rohk?si=SmhRX6ZGGLbOGKmD" title="YouTube video player"
-                frameborder="0"
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0S8LQ3pIqL8?si=OwGN5QlosqEleq-m"
+                title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
-            <iframe class="videos-relacionados__item3" width="560" height="315"
-                src="https://www.youtube.com/embed/QurCZgeAdig?si=p7YcdiHomFUKWyBk" title="YouTube video player"
-                frameborder="0"
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hVtFVDuuvGw?si=kPBryP_zjrwENpGC"
+                title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
         </div>

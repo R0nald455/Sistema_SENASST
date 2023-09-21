@@ -90,10 +90,10 @@ nav>ul>li>a{
     height: 100%;
     display: flex;
     align-items: center;
-    padding: 14px 60px;
+    padding: 14px 35px;
     color: white;
     text-transform: uppercase;
-    font-size: 23px;
+    font-size: medium;
     transition: all 300ms ease;
     text-decoration: none;
 }
