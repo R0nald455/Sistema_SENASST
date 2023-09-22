@@ -30,7 +30,6 @@ $url_base = "https://cbaproy20.com/SenaSST/inventariosCristian/"; ?>
 
             $rol = $_SESSION["rol"];
 
-
             if ($rol == 1) {
                 ?>
                 <li class="nav-item">

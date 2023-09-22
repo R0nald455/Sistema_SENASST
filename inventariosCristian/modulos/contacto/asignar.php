@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Restar la cantidad asignada del inventario disponible en la tabla cargo
     $nueva_cantidad_disponible = 0;
-    
+
     foreach ($elementos as $elemento) {
         if ($elemento['elemento'] === $elemento_per) {
             $nueva_cantidad_disponible = $elemento['cantidad_ele'] - $cantidad_per;
@@ -75,19 +75,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </thead>
         <tbody>
             <tr>
-                <td><?php echo $registro['id_per']; ?></td>
-                <td><?php echo $registro['nom_per']; ?></td>
-                <td><?php echo $registro['ape_per']; ?></td>
-                <td><?php echo $registro['doc_per']; ?></td>
-                <td><?php echo $registro['nom_cargo']?></td>
+                <td>
+                    <?php echo $registro['id_per']; ?>
+                </td>
+                <td>
+                    <?php echo $registro['nom_per']; ?>
+                </td>
+                <td>
+                    <?php echo $registro['ape_per']; ?>
+                </td>
+                <td>
+                    <?php echo $registro['doc_per']; ?>
+                </td>
+                <td>
+                    <?php echo $registro['nom_cargo'] ?>
+                </td>
                 <td>
                     <select class="form-select" id="elemento_per" name="elemento_per" required>
                         <option selected disabled>Elije</option>
-                        <?php foreach ($elementos as $elemento) { echo '<option value="' . $elemento['elemento'] . '">' . $elemento['elemento'] . '</option>'; } ?>
+                        <?php foreach ($elementos as $elemento) {
+                            echo '<option value="' . $elemento['elemento'] . '">' . $elemento['elemento'] . '</option>';
+                        } ?>
                     </select>
                 </td>
                 <td><input id="cantidad_disponible" name="cantidad_disponible" type="text" disabled></td>
-                <td><input id="cantidad_per" name="cantidad_per" type="number" min="0" pattern="^[0-9]+" max="<?php echo $elementos[0]['cantidad_ele']; ?>"></td>
+                <td><input id="cantidad_per" name="cantidad_per" type="number" min="0" pattern="^[0-9]+"
+                        max="<?php echo $elementos[0]['cantidad_ele']; ?>"></td>
             </tr>
         </tbody>
     </table>
@@ -99,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </form>
 
 <script>
-    document.getElementById('elemento_per').addEventListener('change', function() {
+    document.getElementById('elemento_per').addEventListener('change', function () {
         var selectedElement = this.value;
         var elementData = <?php echo json_encode($elementos); ?>;
         var cantidadDisponibleInput = document.getElementById('cantidad_disponible');
