@@ -12,89 +12,14 @@ include_once("../db/conexion.php");
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Roboto:wght@300&display=swap');
-
-
-        body {
-            background-color: #f8f8f8;
-            font-family: 'Roboto', sans-serif;
-            font-size: 16px;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        h1 {
-            font-size: 2em;
-            text-align: center;
-            margin-bottom: 1em;
-            margin-top: 0.5em;
-        }
-
-        form {
-            max-width: 40%;
-            margin: 0 auto;
-            padding: 1em;
-            border: 2px solid #31cf18;
-            border-radius: 10px;
-            background-color: #fff;
-        }
-
-        input[type="text"],
-        textarea {
-            padding: 0.5em;
-            width: 80%;
-            border-radius: 5px;
-            margin-bottom: 1em;
-        }
-
-        input[type="submit"] {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 12px 30px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #1b7161;
-            color: white;
-        }
-
-        a {
-            display: inline-block;
-            padding: 10px;
-            margin: 10px;
-            border: 2px solid #4caf50;
-            border-radius: 5px;
-            color: #333;
-            text-decoration: none;
-            text-align: center;
-            /* Centrar el texto */
-            width: 80%;
-            /* Ajustar el ancho */
-            max-width: 200px;
-            /* Establecer un ancho máximo */
-        }
-
-        /* Estilos para el enlace en hover */
-        a:hover {
-            background-color: #4caf50;
-            color: #fff;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/style_TO.css">
 </head>
 
 <body>
     <center>
-        <h1> Tarjeta De Observación</h1>
+        <h1><b>Tarjeta De Observación</b></h1>
+        <h6 class="container-descripcion"><i>"Esta tarjeta de observación es una herramienta esencial para identificar y prevenir riesgos. Registra de manera concisa y precisa las observaciones relacionadas con la seguridad y salud en el trabajo, fomentando un entorno laboral más seguro y saludable."</i></h5>
+
         <form action="LogProf.php" method="post" enctype="multipart/form-data">
 
 
