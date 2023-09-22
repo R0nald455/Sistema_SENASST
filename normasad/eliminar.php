@@ -118,7 +118,7 @@ if ($recibidor==0){
 }else{
 
     $sql ="SELECT  num_resol, concepto, descripcion FROM $normaTab where id=$recibidor";
-    $resultado= mysqli_query($db, $sql);
+    $resultado= mysqli_query($conexion, $sql);
     $fila= mysqli_fetch_assoc($resultado);
     $finalmente=$fila['num_resol'];
     $finalmente2=$fila['concepto'];
