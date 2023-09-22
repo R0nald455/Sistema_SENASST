@@ -1,5 +1,5 @@
 <?php 
-include 'conexion.php';
+include '../db/conexion.php';
 ?>
 <!doctype html>
 <html lang="es">
@@ -42,9 +42,6 @@ include 'conexion.php';
           <br>
        <center>
       <div class="btn-group">
-        <a href="indextrab.php" class="btn btn-success">Ministerio del Trabajo</a>
-        <a href="indexagro.php" class="btn btn-success">Ministerio Agricultura</a>
-        <a  href="indersalud.php" class="btn btn-success">Invima</a>
         <a  href="index.php" class="btn btn-success">Agregar</a>
         <a  href="editar.php" class="btn btn-success">Editar</a>
         <a  href="eliminar.php" class="btn btn-success">Eliminar</a>
@@ -86,101 +83,42 @@ include 'conexion.php';
 
     <div class="col-md-4">
 
-      <center><h2>Editar</h2></center>
+      <center><h2>Insertar</h2></center>
 
-      <form action="" method="post">
-      
-      <center><div class="form-group">
-      <label for="miCombo">¿Cual es el ministerio al que le quiere eliminar la norma?</label>
+      <form method="POST" action="procesar/insertar.php" >
+
+      <div class="form-group">
+      <label for="miCombo">¿A qué ministerio desea agregar normas?</label>
       <br>
-      <select id="miCombo" name="normaTab" required>
-        <option value="normas_trab">Ministerio de trabajo</option>
-        <option value="normas_hig">Invima</option>
-        <option value="normas_ica">Ministerio Agricultura</option>
-        <option value="normas_apren">normas Apendiz</option>
-      </select>
-  </div></center>
- <center> <div class="form-group">
-  <label for="miCombo">¿Cual es el codigo de la norma que desea eliminar?</label>
-      <input type="number" name="recibidor" required >
-      <br><br>
-      <input type="submit">
-      </div></center>
-      </form>
-
-<?php
-include ('conexion.php');
-error_reporting(0);
-$normaTab =$_POST['normaTab'];
-$recibidor =$_POST['recibidor'];
-
-
-if ($recibidor==0){
-   echo"no hay respuesta";
-}else{
-
-    $sql ="SELECT  num_resol, concepto, descripcion FROM $normaTab where id=$recibidor";
-    $resultado= mysqli_query($db, $sql);
-    $fila= mysqli_fetch_assoc($resultado);
-    $finalmente=$fila['num_resol'];
-    $finalmente2=$fila['concepto'];
-    $finalmente3=$fila['descripcion'];
-    if(empty($fila)){
-      echo "<h1>el codigo no ha sido encontrado</h1>";
-    }else{
-
-?>
-<center><h2>¿Que quiere cambiar?</h2></center>
-      <form method="POST" action="procesar/editarPro.php" >
-
-      <input type="hidden" name="id" value="<?php echo $recibidor ?>">
-      <input type="hidden" name="miCombo" value="<?php echo $normaTab  ?>">
+      <center><select id="miCombo" name="miCombo" required>
+        <option value="trabajo">Ministerio de trabajo</option>
+        <option value="invima">Invima</option>
+        <option value="agricultura">Ministerio Agricultura</option>
+        <option value="aprendiz">normas Apendiz</option>
+      </select></center>
+  </div>
 
       <div class="form-group">
           <label for="nombre">Numero de Resolución </label>
-          <input type="text" name="num_resol" class="form-control" id="num_resol" required value="<?php echo $finalmente; ?>">
+          <input type="text" name="num_resol" class="form-control" id="num_resol" required >
       </div>
 
       <div class="form-group">
           <label for="pape">Concepto</label>
-          <input type="text" name="concepto" class="form-control" id="concepto" value="<?php echo $finalmente2; ?>" required>
+          <input type="text" name="concepto" class="form-control" id="concepto" required>
       </div>
 
       <div class="form-group">
           <label for="sape">Descripciom</label>
-          <input type="text" name="descripcion"  class="form-control" id="descripcion" value="<?php echo $finalmente3; ?>" required >
+          <input type="text" name="descripcion" class="form-control" id="descripcion">
       </div>
 
       <center>
-
-        <input type="submit" value="Editar" class="btn btn-info" name="btn_editar">
-
+        <input type="submit" value="Registrar" class="btn btn-success" name="btn_registrar">
         <br>
       </center>
 
     </form>
-
-
-
-<?php
-    }
-}
-?>
-
-
-<br>
-<br>
-
-       <footer class="container-fluid bg-dark fixed-bottom">
-        <div class="row">
-            <div class="col-md text-light text-center py-3">
-                SENA CBA
-            </div>
-        </div>
-    </footer>
-
-
-
 
 </body>
 </html>

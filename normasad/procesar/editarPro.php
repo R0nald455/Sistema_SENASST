@@ -1,5 +1,5 @@
 <?php
-include("../conexion.php");
+include '../../db/conexion.php';
 error_reporting(0);
 if (isset($_POST['btn_editar'])) {
     $id = $_POST['id'];

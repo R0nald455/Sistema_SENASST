@@ -1,4 +1,4 @@
-<?php include 'conexion.php';?>
+<?php include '../db/conexion.php';?>
 <!doctype html>
 <html lang="es">
   <head>
@@ -13,11 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   </head>
-  <body>
   <style>
-    .text-center {
-    color: white;
-}
       .container-fluid  {
     background-color:#5eb319;
 }
@@ -26,8 +22,12 @@
     background-color: #5eb319;
     border-color: #5eb319;
 }
+.text-center {
+    color: white;
+}
     </style>
-      <div class="container-fluid">
+  <body>
+      <div class="container-fluid bg-success">
           <div class="row">
               <div class="col-md">
                   <header class="py-3">
@@ -40,7 +40,7 @@
           <br>
        <center>
        <div class="btn-group">
-        <a  href="index.php" class="btn btn-success">Inicio</a>
+        <a  href="index.php" class="btn btn-success">inicio</a>
       </div>
        </center>
        <br>
@@ -67,7 +67,8 @@
 if(!empty($_POST))
 {
 $aKeyword = explode(" ", $_POST['PalabraClave']);
-$query ="SELECT * FROM normas_ica WHERE concepto like '%" . $aKeyword[0] . "%' OR descripcion like '%" . $aKeyword[0] . "%'";
+$query ="SELECT * FROM normas_ica WHERE concepto
+ like '%" . $aKeyword[0] . "%' OR descripcion like '%" . $aKeyword[0] . "%'";
 
 for($i = 1; $i < count($aKeyword); $i++) {
  if(!empty($aKeyword[$i])) {
@@ -96,15 +97,5 @@ else {
 }
 
 ?>
-<br>
-<br>
-
-       <footer class="container-fluid bg-dark fixed-bottom">
-        <div class="row">
-            <div class="col-md text-light text-center py-3">
-            SENA CBA
-            </div>
-        </div>
-    </footer>
 </body>
 </html>
