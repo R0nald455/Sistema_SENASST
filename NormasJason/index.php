@@ -76,7 +76,7 @@ if(!empty($_POST))
             $query .= " OR descripcion like '%" . $aKeyword[$i] . "%'";
         }
       }     
-     $result = $db->query($query);
+     $result = $conexion->query($query);
      echo "<br>Has buscado la palabra clave:<b> ". $_POST['PalabraClave']."</b>";
                      
      if(mysqli_num_rows($result) > 0) {

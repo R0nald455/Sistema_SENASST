@@ -7,7 +7,7 @@ if (isset($_POST['btn_eliminar'])) {
 
     $query = "DELETE FROM $tablaName where id=$id";
 
-    $resultado = mysqli_query($db, $query); // Ejecuta la consulta SQL
+    $resultado = mysqli_query($conexion, $query); // Ejecuta la consulta SQL
 
     if ($resultado) {
         echo "<center><h1>Registro eliminado correctamente</h1></center>";
@@ -15,7 +15,7 @@ if (isset($_POST['btn_eliminar'])) {
         header("refresh:2;url=../eliminar.php");
         exit(); // Asegura que no se ejecuten más instrucciones
     } else {
-        echo "Error al actualizar el registro: " . mysqli_error($db);
+        echo "Error al actualizar el registro: " . mysqli_error($conexion);
     }
 }
 ?>

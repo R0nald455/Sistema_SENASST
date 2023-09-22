@@ -9,13 +9,13 @@ if (isset($_POST['btn_editar'])) {
     $descripcion = $_POST['descripcion'];
 
     // Quita los corchetes y escapa las variables
-    $num_resol = mysqli_real_escape_string($db, $num_resol);
-    $concepto = mysqli_real_escape_string($db, $concepto);
-    $descripcion = mysqli_real_escape_string($db, $descripcion);
+    $num_resol = mysqli_real_escape_string($conexion, $num_resol);
+    $concepto = mysqli_real_escape_string($conexion, $concepto);
+    $descripcion = mysqli_real_escape_string($conexion, $descripcion);
 
     $query = "UPDATE $tablaName SET `num_resol`='$num_resol', `concepto`='$concepto', `descripcion`='$descripcion' WHERE id=$id";
 
-    $resultado = mysqli_query($db, $query); // Ejecuta la consulta SQL
+    $resultado = mysqli_query($conexion, $query); // Ejecuta la consulta SQL
 
 
     if ($resultado) {
@@ -24,7 +24,7 @@ if (isset($_POST['btn_editar'])) {
         header("refresh:2;url=../editar.php");
         exit(); // Asegura que no se ejecuten más instrucciones
     } else {
-        echo "Error al actualizar el registro: " . mysqli_error($db);
+        echo "Error al actualizar el registro: " . mysqli_error($conexion);
     }
 }
 ?>
