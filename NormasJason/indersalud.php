@@ -1,4 +1,4 @@
-<?php include 'conexion.php';?>
+<?php include '../db/conexion.php';?>
 <!doctype html>
 <html lang="es">
   <head>
@@ -13,7 +13,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   </head>
-  <body>
   <style>
       .container-fluid  {
     background-color:#5eb319;
@@ -26,11 +25,9 @@
 .text-center {
     color: white;
 }
-body{
-   
-}
     </style>
-      <div class="container-fluid">
+  <body>
+      <div class="container-fluid bg-success">
           <div class="row">
               <div class="col-md">
                   <header class="py-3">
@@ -43,7 +40,7 @@ body{
           <br>
        <center>
        <div class="btn-group">
-        <a  href="index.php" class="btn btn-success">Inicio</a>
+        <a  href="index.php" class="btn btn-success">inicio</a>
       </div>
        </center>
        <br>
@@ -87,7 +84,7 @@ if(mysqli_num_rows($result) > 0) {
  echo "<br><table class='table table-striped'>";
  While($row = $result->fetch_assoc()) {   
      $row_count++;                         
-     echo "<tr><td>".$row_count." </td><td>". $row['concepto'] . "</td><td>". $row['descripcion'] . "</td></tr>";
+     echo "<tr><td>".$row_count." </td><td>".$row['fech_ingre'] ."</td><td>". $row['num_resol'] ."</td><td>".$row['descripcion'] . "</td><td>". $row['concepto'] . "</td></tr>";
  }
  echo "</table>";
 
@@ -99,15 +96,5 @@ else {
 }
 
 ?>
-<br>
-<br>
-
-<footer class="container-fluid bg-dark fixed-bottom">
-        <div class="row">
-            <div class="col-md text-light text-center py-3">
-            SENA CBA
-            </div>
-        </div>
-    </footer>
 </body>
 </html>
