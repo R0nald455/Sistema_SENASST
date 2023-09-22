@@ -114,7 +114,7 @@ if (isset($_POST['add_to_cart'])) {
                                     <h3>
                                         <?php echo $fetch_product['name']; ?>
                                     </h3>
-                                    <div class="price">Correo:
+                                    <div style="font-size: 15px;" class="price">Correo:
                                         <?php echo $fetch_product['contact']; ?>
                                     </div>
                                 </div>
