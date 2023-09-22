@@ -1,4 +1,6 @@
 <?php 
+session_start();
+error_reporting(0);
 include '../db/conexion.php';
 ?>
 <!doctype html>
@@ -8,7 +10,7 @@ include '../db/conexion.php';
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="stylesheet" href="../css/header.css">
     <!-- Bootstrap CSS v5.0.2 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -29,19 +31,68 @@ include '../db/conexion.php';
 }
     </style>
   <body>
-      <div class="container-fluid bg-success">
-          <div class="row">
-              <div class="col-md">
-                  <header class="py-3">
-                      <h3 class="text-center">Normatividad </h3>
-                  </header>
-              </div>
-          </div>
-          </div>
+
+  <!-- Menu de navegacion-->
+
+  <div class="container__menu">
+
+    <div class="menu">
+
+      <input type="checkbox" id="check__menu">
+      <label for="check__menu" class="lbl-menu">
+        <span id="spn1"></span>
+        <span id="spn2"></span>
+        <span id="spn3"></span>
+      </label>
+
+      <img id="logoResponsive" src="../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></a>
+
+      <nav>
+
+      <img src="../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></a>
+
+        <ul>
+          <?php if (isset($_SESSION["id"])):
+
+            $rol = $_SESSION["rol"];
+
+
+            if ($rol == 1) {
+              ?>
+              <li><a href="../php/rolFuncionario/indexfuncionario.php" id="selected">Inicio</a></li>
+
+              <?php
+            } elseif ($rol == 2) {
+              ?>
+              <li><a href="../php/rolPersona/indexpersona.php" id="selected">Inicio</a></li>
+
+              <?php
+            } elseif ($rol == 3) {
+              ?>
+              <li><a href="../php/rolPersona/indexbrigadista.php" id="selected">Inicio</a></li>
+
+              <?php
+            } elseif ($rol == 4) {
+              ?>
+              <li><a href="../php/rolFuncionario/indexadministrador.php" id="selected">Inicio</a></li>
+
+              <?php
+            }
+            ?>
+
+          <?php else: ?>
+
+            <li><a href="../index.php" id="selected">Inicio</a></li>
+
+          <?php endif; ?>
+        </ul>
+      </nav>
+    </div>
+  </div>
           <br>
           <br>
        <center>
-      <div class="btn-group">
+      <div class="btn-group" id="botones">
         <a href="indextrab.php" class="btn btn-success">Ministerio del Trabajo</a>
         <a href="indexagro.php" class="btn btn-success">Ministerio Agricultura</a>
         <a  href="indersalud.php" class="btn btn-success">Invima</a>

@@ -33,10 +33,10 @@
 
         if ($resultado) {
             echo "<center><h1>Registro insertado correctamente</h1></center>";
-            header("refresh:2;url=../index.php");
+            header('Location:../index.php');
         exit();
         } else {
-            echo "Error al insertar el registro: " . mysqli_error($conexion);
+            header('Location:../index.php');
         }
 
             

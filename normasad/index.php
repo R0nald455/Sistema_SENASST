@@ -1,4 +1,6 @@
 <?php 
+session_start();
+error_reporting(0);
 include '../db/conexion.php';
 ?>
 <!doctype html>
@@ -10,6 +12,7 @@ include '../db/conexion.php';
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
@@ -28,20 +31,76 @@ include '../db/conexion.php';
 .text-center {
     color: white;
 }
+body{
+      backdrop-filter: url(filters.svg#filter) blur(4px) saturate(40%);
+      background-image: url(fondoregistro.gif);
+      background-repeat: no-repeat;
+      background-size: 150%;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: large;
+      color:black;}
     </style>
-      <div class="container-fluid ">
-          <div class="row">
-              <div class="col-md">
-                  <header class="py-3">
-                      <h3 class="text-center">Normatividad </h3>
-                  </header>
-              </div>
-          </div>
-          </div>
+ <!-- Menu de navegacion-->
+
+ <div class="container__menu">
+
+<div class="menu">
+
+  <input type="checkbox" id="check__menu">
+  <label for="check__menu" class="lbl-menu">
+    <span id="spn1"></span>
+    <span id="spn2"></span>
+    <span id="spn3"></span>
+  </label>
+
+  <img id="logoResponsive" src="../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></a>
+
+  <nav>
+
+  <img src="../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></a>
+
+    <ul>
+      <?php if (isset($_SESSION["id"])):
+
+        $rol = $_SESSION["rol"];
+
+
+        if ($rol == 1) {
+          ?>
+          <li><a href="../php/rolFuncionario/indexfuncionario.php" id="selected">Inicio</a></li>
+
+          <?php
+        } elseif ($rol == 2) {
+          ?>
+          <li><a href="../php/rolPersona/indexpersona.php" id="selected">Inicio</a></li>
+
+          <?php
+        } elseif ($rol == 3) {
+          ?>
+          <li><a href="../php/rolPersona/indexbrigadista.php" id="selected">Inicio</a></li>
+
+          <?php
+        } elseif ($rol == 4) {
+          ?>
+          <li><a href="../php/rolFuncionario/indexadministrador.php" id="selected">Inicio</a></li>
+
+          <?php
+        }
+        ?>
+
+      <?php else: ?>
+
+        <li><a href="../index.php" id="selected">Inicio</a></li>
+
+      <?php endif; ?>
+    </ul>
+  </nav>
+</div>
+</div>
           <br>
           <br>
        <center>
-      <div class="btn-group">
+      <div class="btn-group" id="botones">
         <a  href="index.php" class="btn btn-success">Agregar</a>
         <a  href="editar.php" class="btn btn-success">Editar</a>
         <a  href="eliminar.php" class="btn btn-success">Eliminar</a>
@@ -49,24 +108,11 @@ include '../db/conexion.php';
        </center>
        <br>
        
-<html>
-<head>
-  <title>REGISTRADOR</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  <style>
-    body{
-      backdrop-filter: url(filters.svg#filter) blur(4px) saturate(40%);
-      background-image: url(fondoregistro.gif);
-      background-repeat: no-repeat;
-      background-size: 150%;
-      font-family: 'Times New Roman', Times, serif;
-      font-size: large;
-      color:black;
-    }
-  </style>
-</head>
-<body>
+
+ 
+    
+ 
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <center><h1>ADMINISTRADOR DE NORMATIVIDAD</h1></center>
