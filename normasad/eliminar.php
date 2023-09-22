@@ -1,5 +1,5 @@
 <?php 
-include 'conexion.php';
+include '../db/conexion.php';
 ?>
 <!doctype html>
 <html lang="es">
@@ -42,9 +42,6 @@ include 'conexion.php';
           <br>
        <center>
       <div class="btn-group">
-        <a href="indextrab.php" class="btn btn-success">Ministerio del Trabajo</a>
-        <a href="indexagro.php" class="btn btn-success">Ministerio Agricultura</a>
-        <a  href="indersalud.php" class="btn btn-success">Invima</a>
         <a  href="index.php" class="btn btn-success">Agregar</a>
         <a  href="editar.php" class="btn btn-success">Editar</a>
         <a  href="eliminar.php" class="btn btn-success">Eliminar</a>
@@ -86,7 +83,7 @@ include 'conexion.php';
 
     <div class="col-md-4">
 
-      <center><h2>Editar</h2></center>
+      <center><h2>Eliminar</h2></center>
 
       <form action="" method="post">
       
@@ -107,20 +104,21 @@ include 'conexion.php';
       <input type="submit">
       </div></center>
       </form>
+      
 
 <?php
-include ('conexion.php');
+
 error_reporting(0);
 $normaTab =$_POST['normaTab'];
 $recibidor =$_POST['recibidor'];
 
 
 if ($recibidor==0){
-   echo"no hay respuesta";
+   echo"";
 }else{
 
     $sql ="SELECT  num_resol, concepto, descripcion FROM $normaTab where id=$recibidor";
-    $resultado= mysqli_query($db, $sql);
+    $resultado= mysqli_query($conexion, $sql);
     $fila= mysqli_fetch_assoc($resultado);
     $finalmente=$fila['num_resol'];
     $finalmente2=$fila['concepto'];
@@ -128,13 +126,12 @@ if ($recibidor==0){
     if(empty($fila)){
       echo "<h1>el codigo no ha sido encontrado</h1>";
     }else{
+      
+    
 
 ?>
-<center><h2>¿Que quiere cambiar?</h2></center>
-      <form method="POST" action="procesar/editarPro.php" >
+<center><h2>¿Quiere eliminar esta norma?</h2></center>
 
-      <input type="hidden" name="id" value="<?php echo $recibidor ?>">
-      <input type="hidden" name="miCombo" value="<?php echo $normaTab  ?>">
 
       <div class="form-group">
           <label for="nombre">Numero de Resolución </label>
@@ -152,8 +149,11 @@ if ($recibidor==0){
       </div>
 
       <center>
+      <form method="POST" action="procesar/eliminarPro.php" >
 
-        <input type="submit" value="Editar" class="btn btn-info" name="btn_editar">
+      <input type="hidden" name="id" value="<?php echo $recibidor ?>">
+      <input type="hidden" name="miCombo" value="<?php echo $normaTab  ?>">
+      <input type="submit" value="Eliminar" class="btn btn-danger" name="btn_eliminar">
 
         <br>
       </center>
@@ -163,24 +163,9 @@ if ($recibidor==0){
 
 
 <?php
-    }
+}
 }
 ?>
-
-
-<br>
-<br>
-
-       <footer class="container-fluid bg-dark fixed-bottom">
-        <div class="row">
-            <div class="col-md text-light text-center py-3">
-                SENA CBA
-            </div>
-        </div>
-    </footer>
-
-
-
 
 </body>
 </html>

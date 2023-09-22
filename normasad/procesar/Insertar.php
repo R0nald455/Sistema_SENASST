@@ -1,5 +1,5 @@
 <?php
-      include("../conexion.php");
+      include '../../db/conexion.php';
         error_reporting(0);
         if(isset($_POST['btn_registrar']))
         {      
@@ -29,14 +29,14 @@
 
         $query = "INSERT INTO `$tablaName`( `num_resol`, `concepto`, `descripcion`) 
         values ('$num_resol','$concepto','$descripcion')";
-        $resultado = mysqli_query($db, $query);
+        $resultado = mysqli_query($conexion, $query);
 
         if ($resultado) {
             echo "<center><h1>Registro insertado correctamente</h1></center>";
-            header("refresh:2;url=../index.php");
+            header('Location:../index.php');
         exit();
         } else {
-            echo "Error al insertar el registro: " . mysqli_error($db);
+            header('Location:../index.php');
         }
 
             

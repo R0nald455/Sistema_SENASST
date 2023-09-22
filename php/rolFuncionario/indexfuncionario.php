@@ -71,6 +71,7 @@ require_once("../../db/conexion.php");
 									<li><a onclick="window.location.href='../../personas/indexbrigad.php'">Administrar
 											Brigadistas</a></li>
 									<li><a onclick="window.location.href='../../QR/indexCrud.php'">Administrar Salon</a>
+									<li><a onclick="window.location.href='../../normasad/index.php'">Administrar Normas</a>
 									</li>
 							</ul> </b>
 						</li>
