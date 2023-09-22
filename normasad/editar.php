@@ -105,7 +105,6 @@
       </form>
 
 <?php
-include ('conexion.php');
 error_reporting(0);
 $normaTab =$_POST['normaTab'];
 $recibidor =$_POST['recibidor'];

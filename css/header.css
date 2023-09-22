@@ -16,6 +16,10 @@
   --color-blanco: white;
 }
 
+
+#botones{
+  margin-top: 100px;
+}
 .container__menu {
   position: fixed;
   width: 100%;

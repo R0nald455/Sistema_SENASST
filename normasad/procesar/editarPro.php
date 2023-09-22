@@ -21,10 +21,10 @@ if (isset($_POST['btn_editar'])) {
     if ($resultado) {
         echo "<center><h1>Registro editado correctamente</h1></center>";
         // Redirige al usuario a otro archivo después de 2 segundos
-        header("refresh:2;url=../editar.php");
+        header('Location:../index.php');
         exit(); // Asegura que no se ejecuten más instrucciones
     } else {
-        echo "Error al actualizar el registro: " . mysqli_error($conexion);
+        header('Location:../index.php');
     }
 }
 ?>
