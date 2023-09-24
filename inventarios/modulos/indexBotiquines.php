@@ -28,7 +28,8 @@ require_once("../../db/conexion.php");
                 <div class="logo">
                     <img src="../../img/LogoSena.png" alt="">
                 </div>
-                <div class="tittle"><b>Sistema de inventario y inspecciones para botiquines y elementos de un botiquin</b><br> Centro de
+                <div class="tittle"><b>Sistema de inventario y inspecciones para botiquines y elementos de un
+                        botiquin</b><br> Centro de
                     Biotecnologia <br> Agropecuaria </div>
             </div>
         </header>
@@ -59,6 +60,7 @@ require_once("../../db/conexion.php");
                             <?php
                         }
                         ?>
+                        <li><a href="#">Administrar Botiquines</a></li>
                         <li><a href="botiquines/index.php">Administrar Elementos</a>
                         <li><a href="inspecciones/index.php">Inspeccion de Elementos</a>
                         <li><a href="entradas/index.php">Entrada de elementos</a>

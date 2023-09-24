@@ -8,48 +8,13 @@ require_once("../../../db/conexion.php");
 
 <head>
     <?php include("head.php"); ?>
+    <?php include("registrar.php"); ?>
+
 </head>
 
 <body>
 
     <?php if (isset($_SESSION["id"])): ?>
-
-        <?php
-        if (isset($_POST['input'])) {
-
-            $ImagenReferencia = $_FILES['ImagenReferencia']['tmp_name'];
-            $ImagenContenido = addslashes(file_get_contents($ImagenReferencia));
-
-            $TipoCamilla = $conexion->real_escape_string($_POST['TipoCamilla']);
-            $Señalizacion = $conexion->real_escape_string($_POST['Señalizacion']);
-            $Acceso = $conexion->real_escape_string($_POST['Acceso']);
-            $EstadoSoporte = $conexion->real_escape_string($_POST['EstadoSoporte']);
-            $CorreasSeguridad = $conexion->real_escape_string($_POST['CorreasSeguridad']);
-            $Inmovilizador = $conexion->real_escape_string($_POST['Inmovilizador']);
-            $Limpieza = $conexion->real_escape_string($_POST['Limpieza']);
-            $InstalacionPared = $conexion->real_escape_string($_POST['InstalacionPared']);
-            $UbicacionActual = $conexion->real_escape_string($_POST['UbicacionActual']);
-            $FechaAdquisicion = $conexion->real_escape_string($_POST['FechaAdquisicion']);
-            $FechaUltimoMantenimiento = $conexion->real_escape_string($_POST['FechaUltimoMantenimiento']);
-            $FechaProximoMantenimiento = $conexion->real_escape_string($_POST['FechaProximoMantenimiento']);
-            $Observaciones = $conexion->real_escape_string($_POST['Observaciones']);
-
-            $FechaRegistro = date("Y-m-d H:i:s");
-
-            $stmt = $conexion->query("INSERT INTO camillas (ImagenReferencia, TipoCamilla, Señalizacion, Acceso, EstadoSoporte, CorreasSeguridad, Inmovilizador, Limpieza, InstalacionPared, UbicacionActual, FechaAdquisicion, FechaUltimoMantenimiento, FechaProximoMantenimiento, Observaciones, FechaRegistro) VALUES ('$ImagenContenido', '$TipoCamilla', '$Señalizacion', '$Acceso', '$EstadoSoporte', '$CorreasSeguridad', '$Inmovilizador', '$Limpieza', '$InstalacionPared', '$UbicacionActual', '$FechaAdquisicion', '$FechaUltimoMantenimiento', '$FechaProximoMantenimiento', '$Observaciones', '$FechaRegistro')");
-            if ($stmt) {
-                echo '<script>
-                alert("La camilla ha sido ingresada exitosamente.")
-                window.location.href="index.php";
-                </script>';
-            } else {
-                echo '<script>
-                alert("Error al ingresar los datos.")
-                window.location.href="index.php";
-                </script>';
-            }
-        }
-        ?>
 
         <div style="height: 90%; top: 50px;" class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="labelRegistroModal" aria-hidden="true">
             <div class="modal-dialog">
@@ -60,7 +25,7 @@ require_once("../../../db/conexion.php");
                     </div>
                     <div class="modal-body">
                         <form enctype="multipart/form-data" name="form1" id="form1" class="form-horizontal row-fluid"
-                            action="registro.php" method="POST">
+                            action="registrar.php" method="POST">
 
                             <div class="control-group">
                                 <div class="controls">
