@@ -7,45 +7,19 @@ error_reporting(0);
 
 <head>
 	<?php include("head.php");
-	include "../../conexion.php"; ?>
+	include "../../../../db/conexion.php"; ?>
 </head>
 
 <body>
 
-	<?php if (isset($_SESSION["id"])): ?>
+	<?php if (isset($_SESSION["id"])) : ?>
 
 		<br>
 		<div class="container">
 			<div class="row">
 				<div class="span12">
 					<div class="content">
-						<?php
-						if (isset($_POST['input'])) {
-							$id_elementos = $conexion->real_escape_string($_POST['id_elementos']);
-							$nombre = $conexion->real_escape_string($_POST['nombre']);
-							$descripcion = $conexion->real_escape_string($_POST['descripcion']);
-							$cantidad = $conexion->real_escape_string($_POST['cantidad']);
-							$ubicacion = $conexion->real_escape_string($_POST['ubicacion']);
-							$ubiEspecifica = $conexion->real_escape_string($_POST['ubiEspecifica']);
-							$fechaRegis = date("Y-m-d H:i:s");
-							$comentarios = $conexion->real_escape_string($_POST['comentarios']);
-							$fechaInspec = $conexion->real_escape_string($_POST['fechaInspec']);
-
-
-							$stmt = $conexion->query("INSERT INTO botiquin (id_elementos, nombre, descripcion, cantidad, ubicacion, ubiEspecifica, fechaRegis, 
-					comentarios, fechaInspec) VALUES ('$id_elementos', '$nombre', '$descripcion', '$cantidad', '$ubicacion', '$ubiEspecifica', '$estado', '$fechaRegis', '$comentarios', '$fechaInspec')");
-
-							//	$insert = mysqli_query($conexion, "INSERT INTO botiquin(id_elementos, nombre, descripcion, cantidad, ubicacion, ubiEspecifica, estado, fechaRegis, comentarios, fechaInspec)
-							//												VALUES('$id_elementos', '$nombre', '$descripcion', '$cantidad', '$ubicacion', '$ubiEspecifica', '$estado', '$fechaRegis', '$comentarios', '$fechaInspec')") or die(mysqli_error($conexion));
-							if ($stmt) {
-								echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Bien hecho, los datos han sido agregados correctamente.</div>';
-							} else {
-								echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Error, no se pudo registrar los datos.</div>';
-							}
-
-						}
-						?>
-						<form name="form1" id="form1" class="form-horizontal row-fluid" action="registro.php" method="POST">
+						<form enctype="multipart/form-data" name="form1" id="form1" class="form-horizontal row-fluid" action="registrar.php" method="POST">
 
 							<blockquote>
 								Registrar Elementos del Botiquin ✅
@@ -53,23 +27,26 @@ error_reporting(0);
 
 							<div class="control-group">
 								<div class="controls">
-									<label class="control-label" for="nombre">Nombre: <input type="text" name="nombre"
-											id="nombre" placeholder="Ingrese el nombre del elemento." class="form-control"
-											required></label>
+									<label class="control-label" for="id_botiquin">ID del Botiquin: <input type="text" name="id_botiquin" id="id_botiquin" placeholder="Ingrese el ID del respectivo botiquin al que pertenece." class="form-control" required></label>
 								</div>
 							</div>
+
 							<div class="control-group">
 								<div class="controls">
-									<label class="control-label" for="descripcion">Descripción: <input name="descripcion"
-											id="descripcion" class=" form-control" type="text"
-											placeholder="Ingrese un descripcion del elemento" required /></label>
+									<label class="control-label" for="ImagenReferencia">Imagen de referencia: </label>
+									<input name="ImagenReferencia" id="ImagenReferencia" class="form-control" type="file" accept="image/*" multiple />
 								</div>
 							</div>
+
 							<div class="control-group">
 								<div class="controls">
-									<label class="control-label" for="cantidad">Cantidad: <input name="cantidad"
-											id="cantidad" class=" form-control" type="text"
-											placeholder="Ingrese la cantidad de elementos." required /></label>
+									<label class="control-label" for="nombre">Nombre y tipo: <input name="nombre" id="nombre" class="form-control" type="text" placeholder="Ingrese el nombre del elemento." required /></label>
+								</div>
+							</div>
+
+							<div class="control-group">
+								<div class="controls">
+									<label class="control-label" for="cantidad">Cantidad: <input name="cantidad" id="cantidad" class="form-control" type="text" placeholder="Ingrese la cantidad de elementos." required /></label>
 								</div>
 							</div>
 
@@ -77,45 +54,82 @@ error_reporting(0);
 								<div class="controls">
 									<label class="control-label" for="ubicacion">Ubicación:
 										<select name="ubicacion" class="form-control">
-											<option value="Administracion">Administración</option>
-											<option value="Auditorio">Auditorio</option>
-											<option value="Cafeteria">Cafeteria</option>
-											<option value="Cocina">Cocina</option>
-											<option value="Sistemas">Sistemas</option>
-											<option value="Ganaderia">Ganaderia</option>
+											<option value="Administracion">Administracion</option>
+											<option value="Auditorio">Auditorio
+											</option>
 											<option value="Bloque A">Bloque A</option>
-											<option value="Bloque B">Bloque B</option>
+											<option value="Bloque B">Bloque B
+											</option>
 											<option value="Bloque C">Bloque C</option>
+											<option value="Biblioteca">
+												Biblioteca</option>
+											<option value="Administracion educativa">Administracion educativa</option>
+											<option value="Emprendimiento">Emprendimiento</option>
+											<option value="Gastronomia">Gastronomia
+											</option>
+											<option value="Estar de instructores">Estar de instructores
+											</option>
+											<option value="Centro de convivencia">Centro de convivencia
+											</option>
+											<option value="Maquinaria agricola">Maquinaria agricola
+											</option>
+											<option value="Agroindustria">Agroindustria
+											</option>
+											<option value="Ganaderia">Ganaderia
+											</option>
+											<option value="Especies menores y mayores">Especies menores y mayores
+											</option>
+											<option value="Agricultura">Agricultura
+											</option>
+											<option value="Agricultura">Unidad de recursos naturales
+											</option>
 										</select>
 									</label>
-								</div>
-							</div>
-							<div class="control-group">
-								<div class="controls">
-									<label class="control-label" for="ubiEspecifica">Ubicación Específica: <input
-											name="ubiEspecifica" id="ubiEspecifica" class=" form-control" type="text"
-											placeholder="Ingrese una ubicacion detallada." required /></label>
 								</div>
 							</div>
 
 							<div class="control-group">
 								<div class="controls">
-									<label class="control-label" for="comentarios">Comentarios: <input name="comentarios"
-											id="comentarios" class=" form-control" type="text"
-											placeholder="Ingrese un breve comentario." required /></label>
+									<label class="control-label" for="ubicacionEspecifica">Ubicación Específica: <input name="ubicacionEspecifica" id="ubicacionEspecifica" class=" form-control" type="text" placeholder="Ingrese una ubicacion detallada." required /></label>
 								</div>
 							</div>
-							<div class="control-group">
-								<div class="controls">
-									<label class="control-label" for="fechaInspec">Fecha de Proxima Inspección: <input
-											name="fechaInspec" id="fechaInspec" class=" form-control" type="date"
-											required /></label>
-								</div>
-							</div>
+
+				            <div class="control-group">
+                                <div class="controls">
+                                    <label class="control-label" for="estado">Estado: <input
+                                            name="estado" id="estado" class="form-control" type="text"  placeholder="Ingrese en que estado se encuentra el elemento."
+                                            required /></label>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <div class="controls">
+                                    <label class="control-label" for="fechaRegistro">Fecha en que se registra el elemento: <input
+                                            name="fechaRegistro" id="fechaRegistro" class="form-control" type="date"
+                                            required /></label>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <div class="controls">
+                                    <label class="control-label" for="fechaVencimiento">Fecha de vencimiento: <input
+                                            name="fechaVencimiento" id="fechaVencimiento" class="form-control" type="date"
+                                            required /></label>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <div class="controls">
+                                    <label class="control-label" for="comentarios">Comentarios: <input name="comentarios"
+                                            id="comentarios" class="form-control" type="text"
+                                            placeholder="Ingrese un comentario acerca del estado o observaciones que se le puedan hacer al elemento."
+                                            required /></label>
+                                </div>
+                            </div>
+
 							<div class="control-group buttons-container">
 								<div class="controls">
-									<button type="submit" name="input" id="input"
-										class="btn btn-sm btn-primary">Registrar</button>
+									<button type="submit" name="input" id="input" class="btn btn-sm btn-primary">Registrar</button>
 									<a href="index.php" class="btn btn-sm btn-danger">Cancelar</a>
 								</div>
 							</div>
@@ -128,9 +142,9 @@ error_reporting(0);
 		</div>
 		<!--/.container-->
 
-		<script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="../../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 
-	<?php else: ?>
+	<?php else : ?>
 
 		<h1>No has iniciado sesion.</h1>
 

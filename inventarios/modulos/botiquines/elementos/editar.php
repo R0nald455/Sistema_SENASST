@@ -1,8 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-include "../../conexion.php";
-?>
+include "../../../../db/conexion.php";?>
 
 <!DOCTYPE html>
 <html lang="en">

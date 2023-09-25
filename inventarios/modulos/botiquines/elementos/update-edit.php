@@ -1,5 +1,5 @@
 <?php
-include "../../conexion.php";
+include "../../../../db/conexion.php";
 
 if(isset($_POST['update'])){
 
@@ -13,11 +13,10 @@ if(isset($_POST['update'])){
 				$fechaInspec = $conexion->real_escape_string($_POST['fechaInspec']);
 				
 				$update = mysqli_query($conexion, "UPDATE botiquin SET nombre='$nombre', descripcion='$descripcion', cantidad='$cantidad', ubicacion='$ubicacion', ubiEspecifica='$ubiEspecifica',
-					 comentarios='$comentarios', fechaInspec='$fechaInspec' WHERE id_elementos='$id_elementos'") or die(mysqli_error());
+					 comentarios='$comentarios', fechaInspec='$fechaInspec' WHERE id_elementos='$id_elementos'");
 				if($update){
 					echo "<script>alert('Los datos han sido actualizados!'); window.location = 'index.php'</script>";
 				}else{
 					echo "<script>alert('Error, no se pudo actualizar los datos'); window.location = 'index.php'</script>";
 				}
 			}
-?>

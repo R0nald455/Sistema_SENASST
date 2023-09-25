@@ -1,8 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-include "../../../db/conexion.php";
-?>
+include "../../../../db/conexion.php";?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +12,7 @@ include "../../../db/conexion.php";
 
 <body>
 
-    <?php if (isset($_SESSION["id"])): ?>
+    <?php if (isset($_SESSION["id"])) : ?>
 
         <!-- Menu de navegacion-->
 
@@ -30,8 +29,9 @@ include "../../../db/conexion.php";
 
                 <nav>
                     <ul>
-                        <li><img src="../../../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></li>
+                        <li><img src="../../../../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></li>
                         <li><a href="../indexBotiquines.php" id="selected">Inicio</a></li>
+                        <li><a href="../index.php">Administrar Botiquines</a></li>
                         <li><a href="#">Administrar Elementos</a></li>
                         <li><a href="inspecciones/index.php">Inspeccion de Elementos</a></li>
                         <li><a href="entradas/index.php">Entrada de Elementos</a></li>
@@ -40,7 +40,7 @@ include "../../../db/conexion.php";
                 </nav>
 
                 <div class="responsive-container">
-                    <img id="logoResponsive" src="../../../img/LogoSenaBlanco.png" width="50px" alt="logoSena">
+                    <img id="logoResponsive" src="../../../../img/LogoSenaBlanco.png" width="50px" alt="logoSena">
                 </div>
             </div>
         </div>
@@ -49,26 +49,11 @@ include "../../../db/conexion.php";
             <div class="row">
                 <div class="span12">
                     <div class="content">
-                        <?php
-                        if (isset($_GET['action']) == 'delete') {
-                            $id_delete = intval($_GET['id_elementos']);
-                            $query = mysqli_query($conexion, "SELECT * FROM botiquin WHERE id_elementos='$id_delete'");
-                            if (mysqli_num_rows($query) == 0) {
-                                echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> No se encontraron datos.</div>';
-                            } else {
-                                $delete = mysqli_query($conexion, "DELETE FROM botiquin WHERE id_elementos='$id_delete'");
-                                if ($delete) {
-                                    echo '<div class="alert alert-primary alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>  Bien hecho, los datos han sido eliminados correctamente.</div>';
-                                } else {
-                                    echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Error, no se pudo eliminar los datos.</div>';
-                                }
-                            }
-                        }
-                        ?>
+                        <?php include('eliminar.php'); ?>
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h3 class="panel-title"><i class="fa-solid fa-kit-medical" style="color: #39a801"></i>
-                                    Administrador de Elementos del Botiquin</h3>
+                                    Administrador de Elementos de un Botiquin</h3>
                             </div>
 
                             <div class="panel-body">
@@ -83,14 +68,16 @@ include "../../../db/conexion.php";
                                             <tr>
 
                                                 <th>ID del elemento</th>
-                                                <th>Nombre</th>
-                                                <th>Descripción</th>
+                                                <th>ID del botiquin</th>
+                                                <th>Imagen de referencia</th>
+                                                <th>Nombre y tipo</th>
                                                 <th>Cantidad</th>
                                                 <th>Ubicación</th>
                                                 <th>Ubicacion específica</th>
-                                                <th>Fecha de Registro</th>
+                                                <th>Estado</th>
+                                                <th>Fecha de registro</th>
+                                                <th>Fecha de vencimiento</th>
                                                 <th>Comentarios</th>
-                                                <th>Fecha de Inspeccion</th>
                                                 <th class="text-center"> Acciones </th>
 
                                             </tr>
@@ -109,12 +96,12 @@ include "../../../db/conexion.php";
         </div>
         <!--/.container-->
 
-        <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="../../datatables/jquery.dataTables.js"></script>
-        <script src="../../datatables/dataTables.bootstrap.js"></script>
+        <script src="../../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../../../datatables/jquery.dataTables.js"></script>
+        <script src="../../../datatables/dataTables.bootstrap.js"></script>
 
         <script>
-            $(document).ready(function () {
+            $(document).ready(function() {
                 let dataTable = $('#lookup').DataTable({
 
                     "language": {
@@ -146,8 +133,8 @@ include "../../../db/conexion.php";
                     "serverSide": true,
                     "ajax": {
                         url: "ajax-grid-data.php", // json datasource
-                        type: "post",  // method  , by default get
-                        error: function () {  // error handling
+                        type: "post", // method  , by default get
+                        error: function() { // error handling
                             $(".lookup-error").html("");
                             $("#lookup").append('<tbody class="employee-grid-error"><tr><th colspan="3">No se encontraron datos en el servidor</th></tr></tbody>');
                             $("#lookup_processing").css("display", "none");
@@ -158,11 +145,11 @@ include "../../../db/conexion.php";
             });
         </script>
 
-    <?php else: ?>
+    <?php else : ?>
 
         <script>
             alert("No has iniciado sesión, por favor inicia a continuación.");
-            window.location.href = "../../../php/login.php";
+            window.location.href = "../../../../php/login.php";
         </script>
     <?php endif; ?>
 
