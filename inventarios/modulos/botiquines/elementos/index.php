@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-include "../../../../db/conexion.php";?>
+include "../../../../db/conexion.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,12 +30,14 @@ include "../../../../db/conexion.php";?>
                 <nav>
                     <ul>
                         <li><img src="../../../../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></li>
-                        <li><a href="../indexBotiquines.php" id="selected">Inicio</a></li>
-                        <li><a href="../index.php">Administrar Botiquines</a></li>
-                        <li><a href="#">Administrar Elementos</a></li>
-                        <li><a href="inspecciones/index.php">Inspeccion de Elementos</a></li>
-                        <li><a href="entradas/index.php">Entrada de Elementos</a></li>
-                        <li><a href="salidas">Salida de Elementos</a></li>
+                        <li><a href="../../indexBotiquines.php" id="selected">Inicio</a></li>
+                        <li><a href="../index.php">Administrar botiquines</a></li>
+                        <li><a href="#">Administrar elementos</a>
+                        <li><a href="../inspeccionBotiquines/index.php">Inspeccion de botiquines</a>
+                        <li><a href="../inspecciones/index.php">Inspeccion de elementos</a>
+                        <li><a href="../entradas/index.php">Entrada de elementos</a>
+                        <li><a href="../salidas/index.php">Salida de elementos</a>
+                        </li>
                     </ul>
                 </nav>
 

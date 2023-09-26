@@ -1,6 +1,6 @@
 <?php
 
-include "../../../db/conexion.php";
+include "../../../../db/conexion.php";
 
 /* Database connection end */
 
@@ -19,8 +19,8 @@ $columns = array(
 );
 
 // getting total number records without any search
-$sql = "SELECT id_salidas, id_elementos, cantidad, comentario, fechaSale";
-$sql.=" FROM salidasBotiquin";
+$sql = "SELECT *";
+$sql.=" FROM salidasbotiquin";
 $query=mysqli_query($conexion, $sql) or die("ajax-grid-data.php: get InventoryItems");
 $totalData = mysqli_num_rows($query);
 $totalFiltered = $totalData;  // when there is no search parameter then total number rows = total number filtered rows.
@@ -28,8 +28,8 @@ $totalFiltered = $totalData;  // when there is no search parameter then total nu
 
 if( !empty($requestData['search']['value']) ) {
 	// if there is a search parameter
-	$sql = "SELECT id_salidas, id_elementos, cantidad, comentario, fechaSale";
-	$sql.=" FROM salidasBotiquin";
+	$sql = "SELECT *";
+	$sql.=" FROM salidasbotiquin";
 	$sql.=" WHERE id_salidas LIKE '".$requestData['search']['value']."%' ";
 	$sql.=" OR id_elementos LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR cantidad LIKE '".$requestData['search']['value']."%' ";  
@@ -43,8 +43,8 @@ if( !empty($requestData['search']['value']) ) {
 	
 } else {	
 
-	$sql = "SELECT id_salidas, id_elementos, cantidad, comentario, fechaSale";
-	$sql.=" FROM salidasBotiquin";
+	$sql = "SELECT *";
+	$sql.=" FROM salidasbotiquin";
 	$sql.=" ORDER BY ". $columns[$requestData['order'][0]['column']]."   ".$requestData['order'][0]['dir']." LIMIT ".$requestData['start']." ,".$requestData['length']."   ";
 	$query=mysqli_query($conexion, $sql) or die("ajax-grid-data.php: get PO");
 	

@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-include "../../conexion.php";
+include "../../../../db/conexion.php";
 ?>
 
 <!DOCTYPE html>
@@ -19,28 +19,7 @@ include "../../conexion.php";
                 <div class="row">
                     <div class="span12">
                         <div class="content">
-                            <?php
-			if(isset($_POST['input'])){
-				$id_entradas	= mysqli_real_escape_string($conexion,(strip_tags($_POST['id_entradas'], ENT_QUOTES)));
-                $id_elementos	= mysqli_real_escape_string($conexion,(strip_tags($_POST['id_elementos'], ENT_QUOTES)));
-				$cantidad	= mysqli_real_escape_string($conexion,(strip_tags($_POST['cantidad'], ENT_QUOTES)));
-				$comentario  	= mysqli_real_escape_string($conexion,(strip_tags($_POST['comentario'], ENT_QUOTES)));
-                $fechaEntra = date("Y-m-d H:i:s");
-		
-				$insert = mysqli_query($conexion, "INSERT INTO entradasBotiquin(id_entradas, id_elementos, cantidad, comentario, fechaEntra)
-															VALUES('$id_entradas', '$id_elementos', '$cantidad', '$comentario', '$fechaEntra')") or die(mysqli_error($conexion));
-				$actualizar_cantidad = mysqli_query($conexion, "UPDATE botiquin SET cantidad = cantidad + $cantidad WHERE id_elementos = $id_elementos") or die(mysqli_error($conexion)); 
-				
-						if($insert && $actualizar_cantidad){
-							echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Bien hecho, la entrada ha sido ingresada correctamente.</div>';
-						}else{
-							echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Error, no se pudo registrar la entrada.</div>';
-						}
-				
-			}
-			?>
-            
-                        <form name="form1" id="form1" class="form-horizontal row-fluid" action="registro.php" method="POST">
+                        <form enctype="multipart/form-data" name="form1" id="form1" class="form-horizontal row-fluid" action="registrar.php" method="POST">
 
 										<blockquote>
 										Registrar entradas ✅

@@ -13,7 +13,7 @@ include "../../../db/conexion.php";
 
 <body>
 
-    <?php if (isset($_SESSION["id"])): ?>
+    <?php if (isset($_SESSION["id"])) : ?>
 
         <!-- Menu de navegacion-->
 
@@ -32,11 +32,13 @@ include "../../../db/conexion.php";
                     <ul>
                         <li><img src="../../../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></li>
                         <li><a href="../indexBotiquines.php" id="selected">Inicio</a></li>
-                        <li><a href="#">Administrar Botiquines</a></li>
-                        <li><a href="elementos/index.php">Administrar Elementos</a></li>
-                        <li><a href="inspecciones/index.php">Inspeccion de Elementos</a></li>
-                        <li><a href="entradas/index.php">Entrada de Elementos</a></li>
-                        <li><a href="salidas/index.php">Salida de Elementos</a></li>
+                        <li><a href="#">Administrar botiquines</a></li>
+                        <li><a href="elementos/index.php">Administrar elementos</a>
+                        <li><a href="inspeccionBotiquines/index.php">Inspeccion de botiquines</a>
+                        <li><a href="inspecciones/index.php">Inspeccion de elementos</a>
+                        <li><a href="entradas/index.php">Entrada de elementos</a>
+                        <li><a href="salidas/index.php">Salida de elementos</a>
+                        </li>
                     </ul>
                 </nav>
 
@@ -100,7 +102,7 @@ include "../../../db/conexion.php";
         <script src="../../datatables/dataTables.bootstrap.js"></script>
 
         <script>
-            $(document).ready(function () {
+            $(document).ready(function() {
                 let dataTable = $('#lookup').DataTable({
 
                     "language": {
@@ -132,8 +134,8 @@ include "../../../db/conexion.php";
                     "serverSide": true,
                     "ajax": {
                         url: "ajax-grid-data.php", // json datasource
-                        type: "post",  // method  , by default get
-                        error: function () {  // error handling
+                        type: "post", // method  , by default get
+                        error: function() { // error handling
                             $(".lookup-error").html("");
                             $("#lookup").append('<tbody class="employee-grid-error"><tr><th colspan="3">No se encontraron datos en el servidor</th></tr></tbody>');
                             $("#lookup_processing").css("display", "none");
@@ -144,13 +146,13 @@ include "../../../db/conexion.php";
             });
         </script>
 
-    <?php else: ?>
+    <?php else : ?>
 
         <script>
             alert("No has iniciado sesión, por favor inicia a continuación.");
             window.location.href = "../../../php/login.php";
         </script>
-        
+
     <?php endif; ?>
 
 </body>

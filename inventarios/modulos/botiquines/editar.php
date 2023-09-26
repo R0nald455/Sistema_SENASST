@@ -74,34 +74,6 @@ require_once("../../../db/conexion.php");
 
                             <div class="control-group">
                                 <div class="controls">
-                                    <label class="control-label" for="Ubicacion">Ubicacion:
-                                        <input class="form-control" type="text" name="Ubicacion" id="Ubicacion"
-                                            value="<?php echo $row['Ubicacion']; ?>">
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="control-group">
-                                <div class="controls">
-                                    <label class="control-label" for="UbicacionEspecifica">Ubicacion especifica: <input
-                                            name="UbicacionEspecifica" id="UbicacionEspecifica" class="form-control"
-                                            type="text" value="<?php echo $row['UbicacionEspecifica']; ?>"
-                                            required /></label>
-                                </div>
-
-                            </div>
-
-                            <div class="control-group">
-                                <div class="controls">
-                                    <label class="control-label" for="FechaUltima">Fecha de la ultima recarga: <input
-                                            name="FechaUltima" id="FechaUltima" class="form-control" type="date"
-                                            value="<?php echo $row['FechaUltima']; ?>" required /></label>
-                                </div>
-
-                            </div>
-
-                            <div class="control-group">
-                                <div class="controls">
                                     <label class="control-label" for="Ubicacion">Ubicacion: <input name="Ubicacion"
                                             id="Ubicacion" class="form-control" type="text"
                                             value="<?php echo $row['Ubicacion']; ?>" placeholder="Ingrese la ubicacion."
@@ -120,7 +92,7 @@ require_once("../../../db/conexion.php");
 
                             <div class="control-group">
                                 <div class="controls">
-                                    <label class="control-label" for="FechaUltima">Fecha de la ultima recarga: <input
+                                    <label class="control-label" for="FechaUltima">Fecha de la ultima revision: <input
                                             name="FechaUltima" id="FechaUltima" class="form-control" type="date"
                                             value="<?php echo $row['FechaUltima']; ?>" required /></label>
                                 </div>
@@ -129,7 +101,7 @@ require_once("../../../db/conexion.php");
 
                             <div class="control-group">
                                 <div class="controls">
-                                    <label class="control-label" for="FechaRevision">Fecha de la proxima recarga: <input
+                                    <label class="control-label" for="FechaRevision">Fecha de la proxima revision: <input
                                             name="FechaRevision" id="FechaRevision" class="form-control" type="date"
                                             value="<?php echo $row['FechaRevision']; ?>" required /></label>
                                 </div>

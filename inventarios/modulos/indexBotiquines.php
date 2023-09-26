@@ -59,9 +59,19 @@ require_once("../../db/conexion.php");
                         <?php
                         }
                         ?>
-                        <li><a href="botiquines/index.php">Administrar botiquines</a></li>
-                        <li><a href="botiquines/elementos/index.php">Administrar elementos</a>
-                        <li><a href="botiquines/inspecciones/index.php">Inspeccion de elementos</a>
+                        <li><a href="#">Administrar</a>
+                            <ul>
+                                <li><a href="botiquines/index.php">Administrar botiquines</a></li>
+                                <li><a href="botiquines/elementos/index.php">Administrar elementos</a>
+                            </ul>
+                        </li>
+                        <li><a href="#">Inspeccion</a>
+                            <ul>
+                                <li><a href="botiquines/inspeccionBotiquines/index.php">Inspeccion de botiquines</a>
+                                <li><a href="botiquines/inspecciones/index.php">Inspeccion de elementos</a>
+                            </ul>
+                        </li>
+
                         <li><a href="botiquines/entradas/index.php">Entrada de elementos</a>
                         <li><a href="botiquines/salidas/index.php">Salida de elementos</a>
                         </li>
