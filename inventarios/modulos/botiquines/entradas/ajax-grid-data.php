@@ -20,7 +20,7 @@ $columns = array(
 
 // getting total number records without any search
 $sql = "SELECT *";
-$sql.=" FROM entradasBotiquin";
+$sql.=" FROM entradasbotiquin";
 $query=mysqli_query($conexion, $sql) or die("ajax-grid-data.php: get InventoryItems");
 $totalData = mysqli_num_rows($query);
 $totalFiltered = $totalData;  // when there is no search parameter then total number rows = total number filtered rows.
@@ -29,7 +29,7 @@ $totalFiltered = $totalData;  // when there is no search parameter then total nu
 if( !empty($requestData['search']['value']) ) {
 	// if there is a search parameter
 	$sql = "SELECT *";
-	$sql.=" FROM entradasBotiquin";
+	$sql.=" FROM entradasbotiquin";
 	$sql.=" WHERE id_entradas LIKE '".$requestData['search']['value']."%' ";
 	$sql.=" OR id_elementos LIKE '".$requestData['search']['value']."%' ";    
 	$sql.=" OR cantidad LIKE '".$requestData['search']['value']."%' ";
@@ -44,7 +44,7 @@ if( !empty($requestData['search']['value']) ) {
 } else {	
 
 	$sql = "SELECT *";
-	$sql.=" FROM entradasBotiquin";
+	$sql.=" FROM entradasbotiquin";
 	$sql.=" ORDER BY ". $columns[$requestData['order'][0]['column']]."   ".$requestData['order'][0]['dir']." LIMIT ".$requestData['start']." ,".$requestData['length']."   ";
 	$query=mysqli_query($conexion, $sql) or die("ajax-grid-data.php: get PO");
 	
