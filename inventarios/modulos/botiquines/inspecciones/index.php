@@ -1,4 +1,4 @@
-<?php include '../../../../db/conexion.php'; ?>
+<?php include "../../../../db/conexion.php"; ?>
 
 <!DOCTYPE html>
 <html>
@@ -26,10 +26,14 @@
             <nav>
                 <ul>
                     <li><img src="../../../../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></li>
-                    <li><a href="../../indexCamillas.php" id="selected">Inicio</a></li>
-                    <li><a href="../index.php">Administrar camillas</a></li>
-                    <li><a href="#">Inspeccionar Camillas</a></li>
-                    <li><a href="../revisiones/index.php">Camillas con revisiones pendientes</a></li>
+                    <li><a href="../../indexBotiquines.php" id="selected">Inicio</a></li>
+                    <li><a href="../index.php">Administrar botiquines</a></li>
+                    <li><a href="../elementos/index.php">Administrar elementos</a>
+                    <li><a href="../inspeccionBotiquines/index.php">Inspeccion de botiquines</a>
+                    <li><a href="#">Inspeccion de elementos</a>
+                    <li><a href="../entradas/index.php">Entrada de elementos</a>
+                    <li><a href="../salidas/index.php">Salida de elementos</a>
+                    </li>
 
                 </ul>
             </nav>
@@ -43,9 +47,10 @@
     <br>
     <br>
     <br>
-    <br>
     <center>
-        <h1>Inspección de camillas 🚑</h1>
+        <b>
+            <h1>Inspección de Elementos de un Botiquin 💊</h1>
+        </b>
     </center>
     <br>
 
@@ -92,6 +97,7 @@
                             <option value="Agricultura">Agricultura</option>
                             <br>
                             <option value="Unidad de recursos naturales">Unidad de recursos naturales</option>
+
     </div>
     </select>
     <br>

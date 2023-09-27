@@ -11,7 +11,7 @@ require_once("../../db/conexion.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio | Sistema de inventario para extintores</title>
+    <title>Inicio | Sistema de inventario para botiquines y elementos de un botiquin</title>
     <link rel="icon" href="../../img/LogoSena.png">
     <script src="https://kit.fontawesome.com/27e58a102f.js" crosssorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/styles_inventario_extintores.css">
@@ -27,8 +27,9 @@ require_once("../../db/conexion.php");
                 <div class="logo">
                     <img src="../../img/LogoSena.png" alt="">
                 </div>
-                <div class="tittle"><b>Sistema de inventario y inspecciones para extintores</b><br> Centro de Biotecnologia <br>
-                    Agropecuaria </div>
+                <div class="tittle"><b>Sistema de inventario y inspecciones para botiquines y elementos de un
+                        botiquin</b><br> Centro de
+                    Biotecnologia <br> Agropecuaria </div>
             </div>
         </header>
 
@@ -58,11 +59,23 @@ require_once("../../db/conexion.php");
                         <?php
                         }
                         ?>
-                        <li><a href="extintores/index.php">Administrar extintores</a></li>
-                        <li><a href="extintores/inspecciones/index.php">Inspección de
-                                extintores</a></li>
-                        <li><a href="extintores/recarga/index.php">Extintores con revisiones
-                                pendientes</a></li>
+
+                        <li><a href="#">Administrar</a>
+                            <ul>
+                                <li><a href="botiquines/index.php">Administrar botiquines</a></li>
+                                <li><a href="botiquines/elementos/index.php">Administrar elementos</a>
+                            </ul>
+                        </li>
+                        <li><a href="#">Inspeccion</a>
+                            <ul>
+                                <li><a href="botiquines/inspeccionBotiquines/index.php">Inspeccion de botiquines</a>
+                                <li><a href="botiquines/inspecciones/index.php">Inspeccion de elementos</a>
+                            </ul>
+                        </li>
+
+                        <li><a href="botiquines/entradas/index.php">Entrada de elementos</a>
+                        <li><a href="botiquines/salidas/index.php">Salida de elementos</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -93,22 +106,22 @@ require_once("../../db/conexion.php");
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://i.imgur.com/SO9wpwu.jpg" class="d-block w-100" alt="imagen1">
+                    <img src="https://i.imgur.com/TUrasyb.jpg" class="d-block w-100" alt="imagen1">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://i.imgur.com/zSV1f3a.jpg" class="d-block w-100" alt="imagen2">
+                    <img src="https://i.imgur.com/2vHNjWo.jpg" class="d-block w-100" alt="imagen2">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://i.imgur.com/Nr55LIC.jpg" class="d-block w-100" alt="imagen3">
+                    <img src="https://i.imgur.com/z07AMnz.jpg" class="d-block w-100" alt="imagen3">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+                <span class="visually-hidden">Anterior</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
+                <span class="visually-hidden">Siguiente</span>
             </button>
         </div>
 
@@ -116,16 +129,17 @@ require_once("../../db/conexion.php");
 
             <div class="info1-container">
                 <div class="info1-text">
-                    <div class="info1"><b>¿Que puedes hacer con el sistema de inventario para extintores?</b> </div>
-                    <div class="info1__content">El Sistema de inventario para extintores te permitirá mantener un registro
-                        preciso de todos tus extintores, garantizar que estén en condiciones óptimas para su uso y cumplir con
-                        las regulaciones de seguridad. Esto contribuirá a mejorar la preparación para situaciones de emergencia
-                        y a mantener un ambiente seguro para empleados y visitantes. <br>
+                    <div class="info1"><b>¿Que puedes hacer con el sistema de inventario para botiquines?</b> </div>
+                    <div class="info1__content"> Un sistema de inventario para camillas es una herramienta esencial para
+                        garantizar la disponibilidad, la seguridad y la eficiencia en la gestión de camillas en el entorno
+                        del Centro de Biotecnologia Agropecuaria. Al automatizar y sistematizar estas tareas, los
+                        brigadistas en caso de emergencia pueden mejorar la atención al paciente y optimizar la utilización
+                        de recursos.<br>
                     </div>
                 </div>
 
                 <div class="info1-img-container">
-                    <img width="100%" class="info1__image" src="https://i.imgur.com/eOKfrpo.jpg" alt="">
+                    <img class="info1__image" src="https://i.imgur.com/6y0KWpL.png" alt="">
                 </div>
 
             </div>
@@ -133,14 +147,16 @@ require_once("../../db/conexion.php");
             <div class="info2-container">
                 <div class="info2-text">
                     <div class="info2"><b>Objetivo general</b></div>
-                    <div class="info2__content">El objetivo general de un sistema de inventario para extintores es mejorar la
-                        seguridad, la eficiencia y el cumplimiento normativo en relación con los extintores, garantizando que
-                        estén listos y en buen estado para su uso en caso de emergencia. <br>
+                    <div class="info2__content">El objetivo general de un sistema de inventario para camillas es gestionar
+                        de manera eficiente y precisa todas las camillas del CBA, garantizando su
+                        disponibilidad, mantenimiento adecuado y seguimiento integral para mejorar la atención al paciente y
+                        optimizar los recursos disponibles.
+                        <br>
                     </div>
                 </div>
 
                 <div class="info2-img-container">
-                    <img style="width: 100%;" class="info2__image" src="https://i.imgur.com/XMG1mVU.gif" alt="">
+                    <img class="info2__image" src="https://i.imgur.com/0R8xSws.jpg" alt="">
                 </div>
 
             </div>
@@ -151,9 +167,9 @@ require_once("../../db/conexion.php");
 
         <div class="videos-relacionados__container">
 
-            <iframe class="videos-relacionados__item1" width="560" height="315" src="https://www.youtube.com/embed/i6rJQFOKuMI?si=OiEXnTljeCTftJ9w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <iframe class="videos-relacionados__item2" width="560" height="315" src="https://www.youtube.com/embed/UPe2Uyue418?si=Tko13R7mXI2WBd9S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <iframe class="videos-relacionados__item3" width="560" height="315" src="https://www.youtube.com/embed/n8NkEB1T-fw?si=1mJvsv_MQvKoipmi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/XmQlmJtNYKo?si=yMdOyrkkILAlPDaR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0S8LQ3pIqL8?si=OwGN5QlosqEleq-m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hVtFVDuuvGw?si=kPBryP_zjrwENpGC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
 
         <footer>
@@ -170,7 +186,7 @@ require_once("../../db/conexion.php");
 
         <script>
             alert("No has iniciado sesión, por favor inicia a continuación.");
-            window.location.href = "../php/login.php";
+            window.location.href = "../../php/login.php";
         </script>
 
     <?php endif; ?>

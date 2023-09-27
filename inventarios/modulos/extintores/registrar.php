@@ -1,6 +1,5 @@
 <?php
-require_once("../../../db/conexion.php");
-
+include "../../../db/conexion.php";
 
 if (isset($_POST['input'])) {
 

@@ -335,7 +335,7 @@ nav ul li ul li a:hover{
   }
 
   #check__menu:checked ~ nav > ul {
-      height: 370px;
+      height: auto;
       visibility: visible;
       opacity: 1;
   }

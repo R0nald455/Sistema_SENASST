@@ -50,7 +50,7 @@ require_once("../../db/conexion.php");
 							<ul> <b>
 									<li><a onclick="window.location.href='../../inventarios/modulos/indexExtintores.php'">Inventario
 											y inspeccion para extintores</a></li>
-									<li><a onclick="window.location.href='../../elementos/Model/indexBotiquines.php'">Inventario
+									<li><a onclick="window.location.href='../../inventarios/modulos/indexBotiquines.php'">Inventario
 											y inspeccion para botiquines</a></li>
 									<li><a onclick="window.location.href='../../inventarios/modulos/indexCamillas.php'">Inventario
 											y inspeccion para camillas</a></li>
