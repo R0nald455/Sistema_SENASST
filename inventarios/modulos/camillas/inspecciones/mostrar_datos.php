@@ -144,16 +144,16 @@ include 'index.php';
                                                             <center><i class="fa-solid fa-circle-check fa-2xl"
                                                                     style="color: #2bf21c;"></i><br>
                                                             <?php
-                                                            echo "La inspección todavia tiene mas de un mes para vencerse";
+                                                            echo "La inspección todavia esta a mas de un mes";
                                                             ?>
                                                             </center>
                                                             <?php
-                                                        } elseif ($diferencia_dias >= 0) {
+                                                        } elseif ($diferencia_dias >= 1) {
                                                             ?>
                                                             <center><i class="fa-solid fa-circle-exclamation fa-2xl"
                                                                     style="color: #ffd500;"></i><br>
                                                                 <?php
-                                                                echo "La inspección esta un mes de vencerse";
+                                                                echo "La inspección esta a menos de un mes";
                                                                 ?>
                                                             </center>
                                                             <?php
@@ -163,7 +163,7 @@ include 'index.php';
                                                             <center><i class="fa-solid fa-circle-xmark fa-2xl"
                                                                     style="color: #f50000;"></i><br><br>
                                                                 <?php
-                                                                print "La fecha de inspeccion ya se vencio y no se llevo a cabo";
+                                                                print "La fecha de inspeccion ya se vencio y no se ha llevado a cabo";
                                                                 ?>
                                                             </center>
                                                             <?php

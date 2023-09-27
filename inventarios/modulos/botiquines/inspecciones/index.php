@@ -49,7 +49,7 @@
     <br>
     <center>
         <b>
-            <h1>Inspección de Elementos de un Botiquin ❤️‍🩹</h1>
+            <h1>Inspección de Elementos de un Botiquin 💊</h1>
         </b>
     </center>
     <br>

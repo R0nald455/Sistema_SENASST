@@ -74,6 +74,7 @@ include 'index.php';
                                                         // Fecha de vencimiento del objeto en la base de datos (en formato 'Y-m-d')
                                                         $fechaVencimiento = $fila['FechaRevision'];
                                                         // Obtener la fecha actual
+                                                        date_default_timezone_set('America/Bogota');
                                                         $fechaActual = date('Y-m-d');
                                                         // Convierte las fechas a timestamps
                                                         $timestamp_variable = strtotime($fechaVencimiento);

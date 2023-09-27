@@ -47,7 +47,7 @@ include 'index.php';
 
                     if ($result->num_rows > 0) {
                       while ($fila = mysqli_fetch_array($result)) {
-                        ?>
+                    ?>
                         <tr>
                           <td>
                             <?php echo $fila['ExtintorID']; ?>
@@ -65,23 +65,17 @@ include 'index.php';
                               case 'Biblioteca':
 
                                 echo $fila['Ubicacion'];
-                                ?>
-                                <iframe
-                                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d208.29876097118972!2d-74.21726913685644!3d4.695541010889089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnNDQuMCJOIDc0wrAxMycwMS42Ilc!5e1!3m2!1ses-419!2sco!4v1694558172765!5m2!1ses-419!2sco"
-                                  width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-                                  referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                <?php
+                            ?>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d208.29876097118972!2d-74.21726913685644!3d4.695541010889089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnNDQuMCJOIDc0wrAxMycwMS42Ilc!5e1!3m2!1ses-419!2sco!4v1694558172765!5m2!1ses-419!2sco" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                              <?php
                                 break;
 
                               case 'Administracion':
 
                                 echo $fila['Ubicacion'];
-                                ?>
-                                <iframe
-                                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d163.74281803261528!2d-74.21589439980467!3d4.6957436974358595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnNDQuNiJOIDc0wrAxMic1Ny4yIlc!5e1!3m2!1ses-419!2sco!4v1694558624024!5m2!1ses-419!2sco"
-                                  width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-                                  referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                <?php
+                              ?>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d163.74281803261528!2d-74.21589439980467!3d4.6957436974358595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnNDQuNiJOIDc0wrAxMic1Ny4yIlc!5e1!3m2!1ses-419!2sco!4v1694558624024!5m2!1ses-419!2sco" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <?php
                                 break;
 
                               default:
@@ -100,26 +94,34 @@ include 'index.php';
                           <td>
                             <?php echo $fila['ProximaRecarga'];
 
-                            // Fecha de vencimiento del objeto en la base de datos (en formato 'Y-m-d')
                             $fechaVencimiento = $fila['ProximaRecarga'];
+
                             // Obtener la fecha actual
                             date_default_timezone_set('America/Bogota');
                             $fechaActual = date('Y-m-d');
-                            // Calcular la diferencia en segundos entre las fechas
-                            $diferenciaSegundos = strtotime($fechaVencimiento) - strtotime($fechaActual);
-                            // Definir la cantidad de segundos en un mes (aproximadamente)
-                            $segundosEnUnMes = 30 * 24 * 60 * 60;
-                            // Verificar si la diferencia es menor o igual a un mes en segundos
-                            if ($diferenciaSegundos <= $segundosEnUnMes) {
-                              ?> <i class="fa-solid fa-circle-exclamation fa-2xl" style="color: #ffd500;"></i>
-                              <br> <br>
-                              <?php
-                              echo "El objeto esta a menos de un mes de vencerse";
-                            } else {
-                              ?> <i class="fa-solid fa-circle-check fa-2xl" style="color: #2bf21c;"></i>
+                            // Convierte las fechas a timestamps
+                            $timestamp_variable = strtotime($fechaVencimiento);
+                            $timestamp_actual = strtotime($fechaActual);
+                            // Calcula la diferencia en segundos
+                            $diferencia_segundos = $timestamp_variable - $timestamp_actual;
+                            // Calcula la diferencia en días
+                            $diferencia_dias = $diferencia_segundos / (60 * 60 * 24);
+
+                            if ($diferencia_dias > 31) {
+                            ?> <i class="fa-solid fa-circle-check fa-2xl" style="color: #2bf21c;"></i>
                               <br>
-                              <?php
-                              echo "El objeto todavia tiene mas de un mes para vencerse";
+                            <?php
+                              echo "Falta mas de un mes para que el extintor sea revisado";
+                            } elseif ($diferencia_dias >= 1) {
+                            ?> <i class="fa-solid fa-circle-exclamation fa-2xl" style="color: #ffd500;"></i>
+                              <br> <br>
+                            <?php
+                              echo "El extintor esta a menos de un mes de ser revisado.";
+                            } else {
+                            ?> <i class="fa-solid fa-circle-xmark fa-2xl" style="color: #f50000;"></i>
+                              <br>
+                            <?php
+                              print "El extintor necesita una revision de manera urgente.";
                             }
 
                             ?>
@@ -129,14 +131,14 @@ include 'index.php';
                           </td>
 
                         </tr>
-                        <?php
+                      <?php
                       }
                     } else {
                       ?>
                       <tr class="text-cente">
                         <td colspan="16">No existen registros</td>
                       </tr>
-                      <?php
+                    <?php
                     }
                     ?>
                   </tbody>
