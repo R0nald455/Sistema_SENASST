@@ -23,7 +23,7 @@ include "../../../../db/conexion.php";
 					<div class="content">
 						<?php
 						$id = intval($_GET['id_entradas']);
-						$sql = mysqli_query($conexion, "SELECT * FROM entradasBotiquin WHERE id_entradas='$id'");
+						$sql = mysqli_query($conexion, "SELECT * FROM entradasbotiquin WHERE id_entradas='$id'");
 						if (mysqli_num_rows($sql) == 0) {
 							header("Location: index.php");
 						} else {
