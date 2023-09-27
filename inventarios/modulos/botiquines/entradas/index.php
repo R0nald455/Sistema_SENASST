@@ -29,7 +29,7 @@ include "../../../../db/conexion.php";
                 <nav>
                     <ul>
                         <li><img src="../../../../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></li>
-                        <li><a href="../indexBotiquines.php" id="selected">Inicio</a></li>
+                        <li><a href="../../indexBotiquines.php" id="selected">Inicio</a></li>
                         <li><a href="../index.php">Administrar botiquines</a></li>
                         <li><a href="../elementos/index.php">Administrar elementos</a>
                         <li><a href="../inspeccionBotiquines/index.php">Inspeccion de botiquines</a>

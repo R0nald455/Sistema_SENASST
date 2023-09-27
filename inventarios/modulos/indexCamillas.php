@@ -132,7 +132,7 @@ require_once("../../db/conexion.php");
                 </div>
 
                 <div class="info1-img-container">
-                    <img class="info1__image" src="https://i.imgur.com/VxcH9d8.jpg" alt="">
+                    <img style="width:100%;" class="info1__image" src="https://i.imgur.com/VxcH9d8.jpg" alt="">
                 </div>
 
             </div>
@@ -149,7 +149,7 @@ require_once("../../db/conexion.php");
                 </div>
 
                 <div class="info2-img-container">
-                    <img class="info2__image" src="https://i.imgur.com/d2hd0Gv.jpg" alt="">
+                    <img style="width:100%;" class="info2__image" src="https://i.imgur.com/d2hd0Gv.jpg" alt="">
                 </div>
 
             </div>

@@ -61,7 +61,7 @@
     height: 100%;
     display: flex;
     align-items: center;
-    padding: 10px 50px;
+    padding: 10px 20px;
     color: white;
     text-transform: uppercase;
     font-size: 15px;
@@ -252,7 +252,7 @@ nav ul li ul{
     }
   
     #check__menu:checked ~ nav > ul {
-        height: 400px;
+        height: auto;
         visibility: visible;
         padding: 0;
         opacity: 1;

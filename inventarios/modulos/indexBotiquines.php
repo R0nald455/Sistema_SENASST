@@ -59,6 +59,7 @@ require_once("../../db/conexion.php");
                         <?php
                         }
                         ?>
+
                         <li><a href="#">Administrar</a>
                             <ul>
                                 <li><a href="botiquines/index.php">Administrar botiquines</a></li>
@@ -154,7 +155,7 @@ require_once("../../db/conexion.php");
                     </div>
                 </div>
 
-                <div style="height: 500px;" class="info2-img-container">
+                <div class="info2-img-container">
                     <img class="info2__image" src="https://i.imgur.com/0R8xSws.jpg" alt="">
                 </div>
 

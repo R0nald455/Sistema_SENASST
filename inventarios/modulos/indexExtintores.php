@@ -15,13 +15,12 @@ require_once("../../db/conexion.php");
     <link rel="icon" href="../../img/LogoSena.png">
     <script src="https://kit.fontawesome.com/27e58a102f.js" crosssorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/styles_inventario_extintores.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
 
-    <?php if (isset($_SESSION["id"])): ?>
+    <?php if (isset($_SESSION["id"])) : ?>
 
         <header>
             <div class="header__superior">
@@ -49,14 +48,14 @@ require_once("../../db/conexion.php");
 
 
                         if ($rol == 1) {
-                            ?>
+                        ?>
                             <li><a href="../../php/rolFuncionario/indexfuncionario.php" id="selected">Inicio</a></li>
 
-                            <?php
+                        <?php
                         } elseif ($rol == 4) {
-                            ?>
+                        ?>
                             <li><a href="../../php/rolFuncionario/indexadministrador.php" id="selected">Inicio</a></li>
-                            <?php
+                        <?php
                         }
                         ?>
                         <li><a href="extintores/index.php">Administrar extintores</a></li>
@@ -74,8 +73,7 @@ require_once("../../db/conexion.php");
             <a href="https://www.youtube.com/channel/UCt5y885UFplu2okY39TBwCg" target="_blank">
                 <div class="social-media__item"><img src="https://i.imgur.com/y0pAMPe.png" alt=""></div>
             </a>
-            <a href="https://twitter.com/SENAComunica?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-                target="_blank">
+            <a href="https://twitter.com/SENAComunica?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">
                 <div class="social-media__item"><img src="https://i.imgur.com/0RAoGAx.jpg" alt=""></div>
             </a>
             <a href="https://es-la.facebook.com/SENA/" target="_blank">
@@ -89,12 +87,9 @@ require_once("../../db/conexion.php");
 
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -107,62 +102,58 @@ require_once("../../db/conexion.php");
                     <img src="https://i.imgur.com/Nr55LIC.jpg" class="d-block w-100" alt="imagen3">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
 
-        <div class="info-extintor-container">
+        <div class="info-epps-container">
 
             <div class="info1-container">
-                <div class="info1"><b>¿Que puedes hacer con el sistema de inventario para extintores?</b> </div>
-                <div class="info1__content">El Sistema de inventario para extintores te permitirá mantener un registro
-                    preciso de todos tus extintores, garantizar que estén en condiciones óptimas para su uso y cumplir con
-                    las regulaciones de seguridad. Esto contribuirá a mejorar la preparación para situaciones de emergencia
-                    y a mantener un ambiente seguro para empleados y visitantes. <br>
-                    <img class="info1__image" src="https://i.imgur.com/eOKfrpo.jpg" alt="">
+                <div class="info1-text">
+                    <div class="info1"><b>¿Que puedes hacer con el sistema de inventario para extintores?</b> </div>
+                    <div class="info1__content">El Sistema de inventario para extintores te permitirá mantener un registro
+                        preciso de todos tus extintores, garantizar que estén en condiciones óptimas para su uso y cumplir con
+                        las regulaciones de seguridad. Esto contribuirá a mejorar la preparación para situaciones de emergencia
+                        y a mantener un ambiente seguro para empleados y visitantes. <br>
+                    </div>
                 </div>
+
+                <div class="info1-img-container">
+                    <img width="100%" class="info1__image" src="https://i.imgur.com/eOKfrpo.jpg" alt="">
+                </div>
+
             </div>
 
             <div class="info2-container">
-                <div class="info2"><b>Objetivo general</b></div>
-                <div class="info2__content">El objetivo general de un sistema de inventario para extintores es mejorar la
-                    seguridad, la eficiencia y el cumplimiento normativo en relación con los extintores, garantizando que
-                    estén listos y en buen estado para su uso en caso de emergencia. <br>
-                    <img class="info2__image" src="https://i.imgur.com/XMG1mVU.gif" alt="">
+                <div class="info2-text">
+                    <div class="info2"><b>Objetivo general</b></div>
+                    <div class="info2__content">El objetivo general de un sistema de inventario para extintores es mejorar la
+                        seguridad, la eficiencia y el cumplimiento normativo en relación con los extintores, garantizando que
+                        estén listos y en buen estado para su uso en caso de emergencia. <br>
+                    </div>
                 </div>
+
+                <div class="info2-img-container">
+                    <img style="width: 100%;" class="info2__image" src="https://i.imgur.com/XMG1mVU.gif" alt="">
+                </div>
+
             </div>
 
         </div>
-
-
 
         <div class="videos-relacionados">Videos <b>Relacionados</b></div>
 
         <div class="videos-relacionados__container">
 
-            <iframe class="videos-relacionados__item1" width="560" height="315"
-                src="https://www.youtube.com/embed/i6rJQFOKuMI?si=OiEXnTljeCTftJ9w" title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-            <iframe class="videos-relacionados__item2" width="560" height="315"
-                src="https://www.youtube.com/embed/UPe2Uyue418?si=Tko13R7mXI2WBd9S" title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-            <iframe class="videos-relacionados__item3" width="560" height="315"
-                src="https://www.youtube.com/embed/n8NkEB1T-fw?si=1mJvsv_MQvKoipmi" title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
+            <iframe class="videos-relacionados__item1" width="560" height="315" src="https://www.youtube.com/embed/i6rJQFOKuMI?si=OiEXnTljeCTftJ9w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe class="videos-relacionados__item2" width="560" height="315" src="https://www.youtube.com/embed/UPe2Uyue418?si=Tko13R7mXI2WBd9S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe class="videos-relacionados__item3" width="560" height="315" src="https://www.youtube.com/embed/n8NkEB1T-fw?si=1mJvsv_MQvKoipmi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
 
         <footer>
@@ -175,7 +166,7 @@ require_once("../../db/conexion.php");
             Notificaciones judiciales: judicialcundinamarca@sena.edu.co <br>
         </footer>
 
-    <?php else: ?>
+    <?php else : ?>
 
         <script>
             alert("No has iniciado sesión, por favor inicia a continuación.");
@@ -184,12 +175,8 @@ require_once("../../db/conexion.php");
 
     <?php endif; ?>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
 </body>
 
