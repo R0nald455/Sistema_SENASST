@@ -107,6 +107,23 @@ require_once("../../../../db/conexion.php");
         </div>
         <!--/.container-->
 
+        <?php
+        session_start();
+        if (isset($_SESSION['actualizar_extintor']) && $_SESSION['actualizar_extintor']) {
+            echo '<script>
+                                Swal.fire({
+									imageUrl: "https://i.imgur.com/yndEZ6Z.gif",
+									imageHeight: 200,
+									imageAlt: "Extintor confirmacion",
+                                    title: "¡Extintor actualizado exitosamente!",
+                                    text: "Los datos del extintor han sido actualizados.",
+									confirmButtonColor: "#ffc107"
+                                });
+                            </script>';
+            $_SESSION['actualizar_extintor'] = false; // Reinicia la variable de sesión
+        }
+        ?>
+
         <script src="../../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../../../datatables/jquery.dataTables.js"></script>
         <script src="../../../datatables/dataTables.bootstrap.js"></script>

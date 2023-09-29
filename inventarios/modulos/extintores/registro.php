@@ -169,6 +169,22 @@ require_once("../../../db/conexion.php");
 			</div>
 		</div>
 
+		<?php
+        if (isset($_SESSION['registro_extintor']) && $_SESSION['registro_extintor']) {
+            echo '<script>
+                                Swal.fire({
+									imageUrl: "https://i.imgur.com/9YuHOXt.gif",
+									imageHeight: 200,
+									imageAlt: "Extintor confirmacion",
+                                    title: "¡Extintor registrado exitosamente!",
+                                    text: "Todos los datos del extintor han sido registrados en el sistema.",
+									confirmButtonColor: "#12b071"
+                                });
+                            </script>';
+            $_SESSION['registro_extintor'] = false; // Reinicia la variable de sesión
+        }
+        ?>
+
 		<script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 
 	<?php else: ?>

@@ -22,11 +22,11 @@ function addOptions(domElement, array) {
 function cargarCondicion() {
     // Objeto de provincias con pueblos
     var listaCondicion = {
-      fisico: ["Ruido", "Vibraciones", "Temperaturas extremas", "Radiaciones", "Iluminación inadecuada","Vibracion","Presion Atmoserica"],
-      naturales: ["Sismo", "Terremoto", "Vendaval","Inundacion","Derrumbe","Precipitaciones"],
+      fisico: ["Ruido", "Vibraciones", "Temperaturas extremas", "Radiaciones", "Iluminación inadecuada","Presion Atmosferica"],
+      naturales: ["Sismo", "Terremoto", "Vendaval","Inundacion","Incendios","Precipitaciones"],
       quimico: ["Polvos Organicos-Inorganicos", "Gases y vapores", "Material pariculado","Humos","Liquidos","Niebla"],
       biologicos: ["Virus ", "Bacterias","Hongos","Parasitos","Picaduras","Mordeduras","Fluidos"],
-      seguridad: ["Mecanico", "Eletrico", "Locativo","Tecnologico","Accidentes de trasinsito","PUblicos (Robos, Atentados ...)","Trabajo en alturas","Espacios Confinados"],
+      seguridad: ["Mecanico", "Eletrico", "Locativo","Tecnologico","Accidentes de trasinsito","Publicos (Robos, Atentados ...)","Trabajo en alturas","Espacios confinados"],
       biomecanicos: ["Postura", "Esfuerzo","Movimiento Repetitivo","Material Particulado"],
       psicosociales: ["Gestion Organizacional", "Organización del trabajo", "Carateristicas del grupo de trabajo","Interfase de Persona","Jornada de trabajo"]
     }
