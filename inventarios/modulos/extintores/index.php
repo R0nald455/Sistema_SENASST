@@ -17,7 +17,7 @@ require_once("../../../db/conexion.php");
 
 <body>
 
-    <?php if (isset($_SESSION["id"])): ?>
+    <?php if (isset($_SESSION["id"])) : ?>
 
         <!-- Menu de navegacion-->
 
@@ -57,20 +57,16 @@ require_once("../../../db/conexion.php");
                         <div class="panel panel-default">
 
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa-solid fa-fire-extinguisher"
-                                        style="color: #39a801;"></i> Administrador de extintores</h3>
+                                <h3 class="panel-title"><i class="fa-solid fa-fire-extinguisher" style="color: #39a801;"></i> Administrador de extintores</h3>
                             </div>
 
                             <div class="panel-body">
 
                                 <div class="pull-right">
-                                    <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal"
-                                        data-bs-target="#registroModal"><i class="fa-solid fa-plus"></i>Nuevo
+                                    <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#registroModal"><i class="fa-solid fa-plus"></i>Nuevo
                                         extintor</button>
-                                    <a id="button-pdf" href="reportes.php" class="btn btn-sm btn-primary"><i
-                                            class="fa-solid fa-file-pdf"></i> Generar PDF</a>
-                                    <a id="button-alert" href="alertas/config.php" class="btn btn-sm btn-info"><i
-                                            class="fa-solid fa-envelope"></i> Alerta para
+                                    <a id="button-pdf" href="reportes.php" class="btn btn-sm btn-primary"><i class="fa-solid fa-file-pdf"></i> Generar PDF</a>
+                                    <a id="button-alert" href="alertas/config.php" class="btn btn-sm btn-info"><i class="fa-solid fa-envelope"></i> Alerta para
                                         extintores con revisiones/recargas pendientes</a>
                                 </div><br>
                                 <h6><i>"Al alertar te llega un correo electronico con la informacion del extintor"</i></h6>
@@ -108,7 +104,7 @@ require_once("../../../db/conexion.php");
             </div>
         </div>
         <!--/.container-->
-        
+
 
 
         <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
@@ -120,17 +116,37 @@ require_once("../../../db/conexion.php");
         if (isset($_SESSION['email_sent']) && $_SESSION['email_sent']) {
             echo '<script>
                                 Swal.fire({
-                                    icon: "success",
+                                    imageUrl: "https://i.imgur.com/5OvBuOf.gif",
+									imageHeight: 200,
+									imageAlt: "Extintor confirmacion",
                                     title: "¡Correo enviado!",
                                     text: "Se te ha enviado la informacion completa del extintor a revisar.",
+                                    confirmButtonColor: "#0d6efd"
                                 });
                             </script>';
             $_SESSION['email_sent'] = false; // Reinicia la variable de sesión
         }
         ?>
 
+        <?php
+        session_start();
+        if (isset($_SESSION['actualizar_extintor']) && $_SESSION['actualizar_extintor']) {
+            echo '<script>
+                                Swal.fire({
+									imageUrl: "https://i.imgur.com/yndEZ6Z.gif",
+									imageHeight: 200,
+									imageAlt: "Extintor confirmacion",
+                                    title: "¡Extintor actualizado exitosamente!",
+                                    text: "Los datos del extintor han sido actualizados.",
+									confirmButtonColor: "#ffc107"
+                                });
+                            </script>';
+            $_SESSION['actualizar_extintor'] = false; // Reinicia la variable de sesión
+        }
+        ?>
+
         <script>
-            $(document).ready(function () {
+            $(document).ready(function() {
 
                 let dataTable = $('#lookup').DataTable({
 
@@ -163,8 +179,8 @@ require_once("../../../db/conexion.php");
                     "serverSide": true,
                     "ajax": {
                         url: "ajax-grid-data.php", // json datasource
-                        type: "POST",  // method  , by default get
-                        error: function () {  // error handling
+                        type: "POST", // method  , by default get
+                        error: function() { // error handling
                             $(".lookup-error").html("");
                             $("#lookup").append('<tbody class="employee-grid-error"><tr><th colspan="3">No se encontraron datos en el servidor</th></tr></tbody>');
                             $("#lookup_processing").css("display", "none");
@@ -176,7 +192,7 @@ require_once("../../../db/conexion.php");
         </script>
 
 
-    <?php else: ?>
+    <?php else : ?>
 
         <script>
             alert("No has iniciado sesión, por favor inicia a continuación.");

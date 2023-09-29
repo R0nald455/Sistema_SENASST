@@ -36,6 +36,7 @@ function enviarRecordatorio($extintorID, $correo, $mensaje, $imagenBinaria) {
         
         session_start();
         $_SESSION['email_sent'] = true;
+        header('Location:index.php');
     } catch (Exception $e) {
         echo "Error al enviar el correo: {$mail->ErrorInfo}";   
     }

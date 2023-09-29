@@ -20,14 +20,10 @@ if (isset($_POST['input'])) {
 
     $stmt = $conexion->query("INSERT INTO extintores (NumeroDeSerie, TipoDeExtintor, FechaDeFabricacion, FechaDeCompra, Ubicacion, UbicacionEspecifica, UltimaRecarga, ProximaRecarga, Comentarios, ImagenReferencia, FechaDeRegistro) VALUES ('$NumeroDeSerie', '$TipoDeExtintor', '$FechaDeFabricacion', '$FechaDeCompra', '$Ubicacion', '$UbicacionEspecifica', '$UltimaRecarga', '$ProximaRecarga', '$Comentarios', '$ImagenContenido', '$FechaDeRegistro')");
 
-    // $insert = mysqli_query($conexion, "INSERT INTO extintores( NumeroDeSerie, TipoDeExtintor, FechaDeFabricacion, FechaDeCompra, Ubicacion, UbicacionEspecifica, UltimaRecarga, ProximaRecarga, Comentarios, ImagenReferencia, FechaDeRegistro)
-    // 											VALUES('$NumeroDeSerie', '$TipoDeExtintor', '$FechaDeFabricacion', '$FechaDeCompra', '$Ubicacion', '$UbicacionEspecifica', '$UltimaRecarga', '$ProximaRecarga', '$Comentarios', '$ImagenReferencia', '$FechaDeRegistro')") or die(mysqli_error($conexion));
     if ($stmt) {
-        echo '
-        <script>
-            alert("Bien hecho, los datos han sido agregados correctamente.")
-            window.location.href = "index.php";
-        </script>';
+        session_start();
+        $_SESSION['registro_extintor'] = true;
+        header('Location:index.php');
 
     } else {
         echo '
