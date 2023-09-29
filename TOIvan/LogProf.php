@@ -26,16 +26,43 @@ VALUES ('$names', '$condicion', '$mision','$laimagen', '$situacion')";
     // Verificamos si el insert fue exitoso
     if ($resultado) {
 
-      echo '<script>
-          alert("Bien hecho, la tarjeta se ha enviado exitosamente.")
-          window.location.href = "crear.php";
-      </script>';
+    ?>
 
+      <script src="../node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+      <link rel="stylesheet" href="../node_modules/sweetalert2/dist/sweetalert2.min.css">
+
+      <style>
+        .alerta-popper {
+          font-family: "Popper", sans-serif;
+        }
+      </style>
+
+      <script type="text/javascript">
+        Swal.fire({
+          imageUrl: 'https://i.imgur.com/y733h8m.gif',
+          imageHeight: 200,
+          imageAlt: 'SST Confirmacion',
+          title: '<strong>¡Registro exitoso!</strong>',
+          html: '<b>¡La tarjeta de observacion se ha registrado exitosamente!, pronto nuestros funcionarios/brigadistas se encargaran de mitigar el riesgo.</b> ',
+          focusConfirm: false,
+          confirmButtonText: '<a href="crear.php"><button style="text-decoration: none; color: white; background-color: #7066e0; border: none; width: 100px; height: 50px;""">Entendido!</button></a> ',
+          confirmButtonAriaLabel: 'Thumbs up, great!',
+          allowOutsideClick: false,
+          allowEscapeKey: false,
+          allowEnterKey: false,
+          customClass: {
+            container: "alerta-popper"
+          }
+        })
+      </script>
+
+    <?php
 
     } else {
       echo "Error al insertar el registro: " . mysqli_error($conexion);
-      header("location: crear.php");
     }
+
+
 
     // Cerramos la conexión
     mysqli_close($conexion);
