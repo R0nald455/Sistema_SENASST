@@ -8,7 +8,7 @@ require_once("../../db/conexion.php");
 <html lang="es">
 
 <head>
-	<title>Seguridad SENA</title>
+	<title>SENASST</title>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -17,6 +17,7 @@ require_once("../../db/conexion.php");
 	<link rel="stylesheet" href="../../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../../css/style.css">
 	<link rel="stylesheet" href="../../css/footer.css">
+	<link rel="icon" href="../../img/LogoSena.png">
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
