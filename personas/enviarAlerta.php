@@ -51,9 +51,9 @@ try {
     $mail->Body    = $body;
     
     $mail->send();
-    header('Location: alertar.php?mensaje=registrado');
+    echo json_encode('alerto');
 } catch (Exception $e) {
-    header('Location: alertar.php?mensaje=error');
+    echo json_encode('error');
     exit();
 }
 ?>
