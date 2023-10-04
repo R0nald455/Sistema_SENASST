@@ -18,16 +18,20 @@ require_once("../../../db/conexion.php");
 
     <?php if (isset($_SESSION["id"])): ?>
 
-        <div class="container">
-            <div class="row">
-                <div class="span12">
-                    <div class="content">
+		<div style="height: 90%; top: 50px;" class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="labelRegistroModal" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="labelRegistroModal">Registrar Botiquines 🏥</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
 
                         <form enctype="multipart/form-data" name="form1" id="form1" class="form-horizontal row-fluid" action="registrar.php"
                             method="POST">
 
                             <blockquote>
-                                Registrar Botiquines ✅
+                                
                             </blockquote>
 
                             <div class="control-group">
@@ -95,7 +99,7 @@ require_once("../../../db/conexion.php");
 
                             <div class="control-group">
                                 <div class="controls">
-                                    <label class="control-label" for="FechaUltima">Fecha de la ultima recarga: <input
+                                    <label class="control-label" for="FechaUltima">Fecha de la ultima revision: <input
                                             name="FechaUltima" id="FechaUltima" class="form-control" type="date"
                                             required /></label>
                                 </div>
@@ -103,7 +107,7 @@ require_once("../../../db/conexion.php");
 
                             <div class="control-group">
                                 <div class="controls">
-                                    <label class="control-label" for="FechaRevision">Fecha de la proxima recarga: <input
+                                    <label class="control-label" for="FechaRevision">Fecha de la proxima revision: <input
                                             name="FechaRevision" id="FechaRevision" class="form-control" type="date"
                                             required /></label>
                                 </div>
@@ -143,6 +147,23 @@ require_once("../../../db/conexion.php");
             </div>
         </div>
         <!--/.container-->
+
+        <?php
+        session_start();
+        if (isset($_SESSION['registro_botiquin']) && $_SESSION['registro_botiquin']) {
+            echo '<script>
+                                Swal.fire({
+									imageUrl: "https://i.imgur.com/9piRVHS.gif",
+									imageHeight: 200,
+									imageAlt: "Botiquin confirmacion",
+                                    title: "Botiquin registrado exitosamente!",
+                                    text: "Los datos del botiquin han sido registrados.",
+									confirmButtonColor: "#ffc107"
+                                });
+                            </script>';
+            $_SESSION['registro_botiquin'] = false; // Reinicia la variable de sesión
+        }
+        ?>
 
         <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 

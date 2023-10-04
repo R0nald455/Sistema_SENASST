@@ -8,7 +8,11 @@ include "../../../db/conexion.php";
 <html lang="en">
 
 <head>
-    <?php include("head.php"); ?>
+    <?php
+    include("head.php");
+    include('registro.php');
+    ?>
+
 </head>
 
 <body>
@@ -61,7 +65,8 @@ include "../../../db/conexion.php";
 
                             <div class="panel-body">
                                 <div class="pull-right">
-                                    <a href="registro.php" class="btn btn-sm btn-success">Nuevo Botiquin</a>
+                                    <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#registroModal"> <i class="fa-solid fa-plus"></i> Nuevo Botiquin</button>
+                                    <a id="button-pdf" href="reportes.php" class="btn btn-sm btn-primary"><i class="fa-solid fa-file-pdf"></i> Generar PDF</a>
                                 </div><br>
                                 <hr>
 
@@ -96,6 +101,23 @@ include "../../../db/conexion.php";
             </div>
         </div>
         <!--/.container-->
+
+        <?php
+        session_start();
+        if (isset($_SESSION['actualizar_botiquin']) && $_SESSION['actualizar_botiquin']) {
+            echo '<script>
+                                Swal.fire({
+									imageUrl: "https://i.imgur.com/z07AMnz.jpg",
+									imageHeight: 200,
+									imageAlt: "botiquin confirmacion",
+                                    title: "¡Botiquin actualizado exitosamente!",
+                                    text: "Los datos del botiquin han sido actualizados.",
+									confirmButtonColor: "#ffc107"
+                                });
+                            </script>';
+            $_SESSION['actualizar_botiquin'] = false; // Reinicia la variable de sesión
+        }
+        ?>
 
         <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../../datatables/jquery.dataTables.js"></script>

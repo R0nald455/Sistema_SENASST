@@ -54,13 +54,13 @@ include "../../../../db/conexion.php"; ?>
                         <?php include('eliminar.php'); ?>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa-solid fa-kit-medical" style="color: #39a801"></i>
+                                <h3 class="panel-title"><i class="fa-solid fa-capsules" style="color: #39a801;"></i>
                                     Administrador de Elementos de un Botiquin</h3>
                             </div>
 
                             <div class="panel-body">
                                 <div class="pull-right">
-                                    <a href="registro.php" class="btn btn-sm btn-success">Nuevo Elemento</a>
+                                    <a href="registro.php" class="btn btn-sm btn-success"><i class="fa-solid fa-plus"></i> Nuevo Elemento</a>
                                 </div><br>
                                 <hr>
 

@@ -18,11 +18,9 @@ if (isset($_POST['input'])) {
     $stmt = $conexion->query("INSERT INTO botiquines (ImagenReferencia, Nombre, Ubicacion, UbicacionEspecifica, FechaUltima, FechaRevision, Responsable, Comentarios) VALUES ('$ImagenContenido', '$Nombre', '$Ubicacion', '$UbicacionEspecifica', '$FechaUltima', '$FechaRevision', '$Responsable', '$Comentarios')");
 
     if ($stmt) {
-        echo '
-        <script>
-            alert("Bien hecho, los datos han sido agregados correctamente.")
-            window.location.href = "index.php";
-        </script>';
+        session_start();
+        $_SESSION['registro_botiquin'] = true;
+        header('Location:index.php');
 
     } else {
         echo '

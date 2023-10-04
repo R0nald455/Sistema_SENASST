@@ -54,12 +54,12 @@ require_once("../../../../db/conexion.php");
                         <?php include('eliminar.php'); ?>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title" style="color: #f63c3c"><i class="fa-solid fa-down-long" style="color: #c81414;"></i>Salida de elementos del botiquin</h3>
+                                <h3 class="panel-title" style="color: #f63c3c"><i class="fa-solid fa-down-long" style="color: #c81414;"></i> Salida de elementos del botiquin</h3>
                             </div>
 
                             <div class="panel-body">
                                 <div class="pull-right">
-                                    <a href="registro.php" class="btn btn-sm btn-warning">Nueva salida de Elementos</a>
+                                    <a href="registro.php" class="btn btn-sm btn-warning"><i class="fa-solid fa-plus"></i> Nueva salida de Elementos</a>
                                 </div><br>
                                 <hr>
                                 <div class="table-container table-responsive">
