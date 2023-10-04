@@ -55,12 +55,12 @@ include "../../../../db/conexion.php";
                         <?php include('eliminar.php'); ?>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title" style="color:#3fc13f;"><i class="fa-solid fa-up-long" style="color: #49bd1f;"></i></i>Entrada de elementos al botiquin</h3>
+                                <h3 class="panel-title" style="color:#3fc13f;"><i class="fa-solid fa-up-long" style="color: #49bd1f;"></i> Entrada de elementos al botiquin</h3>
                             </div>
 
                             <div class="panel-body">
                                 <div class="pull-right">
-                                    <a href="registro.php" class="btn btn-sm btn-success">Nueva entrada de Elementos</a>
+                                    <a href="registro.php" class="btn btn-sm btn-success"><i class="fa-solid fa-plus"></i> Nueva entrada de Elementos</a>
                                 </div><br>
                                 <hr>
                                 <div class="table-container table-responsive">

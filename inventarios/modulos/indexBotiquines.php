@@ -130,8 +130,8 @@ require_once("../../db/conexion.php");
             <div class="info1-container">
                 <div class="info1-text">
                     <div class="info1"><b>¿Que puedes hacer con el sistema de inventario para botiquines?</b> </div>
-                    <div class="info1__content"> Un sistema de inventario para camillas es una herramienta esencial para
-                        garantizar la disponibilidad, la seguridad y la eficiencia en la gestión de camillas en el entorno
+                    <div class="info1__content"> Un sistema de inventario para botiquines puede llegar a ser una herramienta esencial para
+                        garantizar la disponibilidad, la seguridad y la eficiencia en la gestión de botiquines en el entorno
                         del Centro de Biotecnologia Agropecuaria. Al automatizar y sistematizar estas tareas, los
                         brigadistas en caso de emergencia pueden mejorar la atención al paciente y optimizar la utilización
                         de recursos.<br>
@@ -147,9 +147,9 @@ require_once("../../db/conexion.php");
             <div class="info2-container">
                 <div class="info2-text">
                     <div class="info2"><b>Objetivo general</b></div>
-                    <div class="info2__content">El objetivo general de un sistema de inventario para camillas es gestionar
-                        de manera eficiente y precisa todas las camillas del CBA, garantizando su
-                        disponibilidad, mantenimiento adecuado y seguimiento integral para mejorar la atención al paciente y
+                    <div class="info2__content">El objetivo general de un sistema de inventario para botiquines es gestionar
+                        de manera eficiente y precisa todas los botiquines del CBA, garantizando su
+                        disponibilidad, excatitud en la cantidad de elementos y seguimiento integral para mejorar la atención al paciente y
                         optimizar los recursos disponibles.
                         <br>
                     </div>

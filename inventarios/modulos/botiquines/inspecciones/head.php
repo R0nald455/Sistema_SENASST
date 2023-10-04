@@ -1,6 +1,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Inspección de elementos</title>
+<link rel="icon" href="../../../../img/LogoSena.png">
+<title>Inspección de botiquines</title>
 
 <!-- css table datatables/dataTables -->
 <link rel="stylesheet" href="../../../datatables/dataTables.bootstrap.css" />

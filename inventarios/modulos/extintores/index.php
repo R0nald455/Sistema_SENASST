@@ -48,14 +48,11 @@ require_once("../../../db/conexion.php");
         </div>
         <br>
 
-        <?php include('eliminar.php'); ?>
-
         <div class="container">
             <div class="row">
                 <div class="span12">
                     <div class="content">
                         <div class="panel panel-default">
-
                             <div class="panel-heading">
                                 <h3 class="panel-title"><i class="fa-solid fa-fire-extinguisher" style="color: #39a801;"></i> Administrador de extintores</h3>
                             </div>
@@ -105,11 +102,13 @@ require_once("../../../db/conexion.php");
         </div>
         <!--/.container-->
 
+        <?php include('../../../Footer/footer.php'); ?>
 
 
         <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../../datatables/jquery.dataTables.js"></script>
         <script src="../../datatables/dataTables.bootstrap.js"></script>
+
 
         <?php
         session_start();
@@ -142,6 +141,26 @@ require_once("../../../db/conexion.php");
                                 });
                             </script>';
             $_SESSION['actualizar_extintor'] = false; // Reinicia la variable de sesión
+        }
+        ?>
+
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="js/confirmacion.js"></script>
+
+        <?php include('eliminar.php'); ?>
+
+        <?php
+        session_start();
+        if (isset($_SESSION['eliminar_extintor']) && $_SESSION['eliminar_extintor']) {
+            echo '<script>
+                                Swal.fire({
+                                    icon: "success",
+                                    title: "¡Extintor eliminado exitosamente!",
+                                    text: "El extintor ha sido eliminado del sistema.",
+									confirmButtonColor: "#ffc107"
+                                });
+                            </script>';
+            $_SESSION['eliminar_extintor'] = false; // Reinicia la variable de sesión
         }
         ?>
 
@@ -190,7 +209,6 @@ require_once("../../../db/conexion.php");
                 });
             });
         </script>
-
 
     <?php else : ?>
 
