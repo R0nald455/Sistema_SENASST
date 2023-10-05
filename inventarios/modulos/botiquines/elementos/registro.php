@@ -6,7 +6,8 @@ error_reporting(0);
 <html lang="en">
 
 <head>
-	<?php include("head.php");
+	<?php
+	include("head.php");
 	include "../../../../db/conexion.php"; ?>
 </head>
 
@@ -14,21 +15,27 @@ error_reporting(0);
 
 	<?php if (isset($_SESSION["id"])) : ?>
 
-		<br>
-		<div class="container">
-			<div class="row">
-				<div class="span12">
-					<div class="content">
+		<?php
+		include("registrar.php");
+		?>
+
+
+		<div style="height: 90%; top: 50px;" class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="labelRegistroModal" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="labelRegistroModal">Registrar Elementos del Botiquin 💊</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+
 						<form enctype="multipart/form-data" name="form1" id="form1" class="form-horizontal row-fluid" action="registrar.php" method="POST">
 
-							<blockquote>
-								Registrar Elementos del Botiquin ✅
-							</blockquote>
-
 							<div class="control-group">
-								<div class="controls">
-									<label class="control-label" for="id_botiquin">ID del Botiquin: <input type="text" name="id_botiquin" id="id_botiquin" placeholder="Ingrese el ID del respectivo botiquin al que pertenece." class="form-control" required></label>
-								</div>
+								<label class="control-label" for="id_botiquin">ID del botiquines: </label>
+								<input class="form-control" type="text" id="id_botiquin" placeholder="Buscar botiquin." autocomplete="off">
+								<input type="hidden" id="producto_id" name="producto_id">
+								<div id="ID_Botiquin_Div"></div>
 							</div>
 
 							<div class="control-group">
@@ -46,7 +53,7 @@ error_reporting(0);
 
 							<div class="control-group">
 								<div class="controls">
-									<label class="control-label" for="cantidad">Cantidad: <input name="cantidad" id="cantidad" class="form-control" type="text" placeholder="Ingrese la cantidad de elementos." required /></label>
+									<label class="control-label" for="cantidad">Cantidad: <input name="cantidad" id="cantidad" class="form-control" type="number" placeholder="Ingrese la cantidad de elementos." required /></label>
 								</div>
 							</div>
 
@@ -94,38 +101,29 @@ error_reporting(0);
 								</div>
 							</div>
 
-				            <div class="control-group">
-                                <div class="controls">
-                                    <label class="control-label" for="estado">Estado: <input
-                                            name="estado" id="estado" class="form-control" type="text"  placeholder="Ingrese en que estado se encuentra el elemento."
-                                            required /></label>
-                                </div>
-                            </div>
+							<div class="control-group">
+								<div class="controls">
+									<label class="control-label" for="estado">Estado: <input name="estado" id="estado" class="form-control" type="text" placeholder="Ingrese en que estado se encuentra el elemento." required /></label>
+								</div>
+							</div>
 
-                            <div class="control-group">
-                                <div class="controls">
-                                    <label class="control-label" for="fechaRegistro">Fecha en que se registra el elemento: <input
-                                            name="fechaRegistro" id="fechaRegistro" class="form-control" type="date"
-                                            required /></label>
-                                </div>
-                            </div>
+							<div class="control-group">
+								<div class="controls">
+									<label class="control-label" for="fechaRegistro">Fecha en que se registra el elemento: <input name="fechaRegistro" id="fechaRegistro" class="form-control" type="date" required /></label>
+								</div>
+							</div>
 
-                            <div class="control-group">
-                                <div class="controls">
-                                    <label class="control-label" for="fechaVencimiento">Fecha de vencimiento: <input
-                                            name="fechaVencimiento" id="fechaVencimiento" class="form-control" type="date"
-                                            required /></label>
-                                </div>
-                            </div>
+							<div class="control-group">
+								<div class="controls">
+									<label class="control-label" for="fechaVencimiento">Fecha de vencimiento: <input name="fechaVencimiento" id="fechaVencimiento" class="form-control" type="date" required /></label>
+								</div>
+							</div>
 
-                            <div class="control-group">
-                                <div class="controls">
-                                    <label class="control-label" for="comentarios">Comentarios: <input name="comentarios"
-                                            id="comentarios" class="form-control" type="text"
-                                            placeholder="Ingrese un comentario acerca del estado o observaciones que se le puedan hacer al elemento."
-                                            required /></label>
-                                </div>
-                            </div>
+							<div class="control-group">
+								<div class="controls">
+									<label class="control-label" for="comentarios">Comentarios: <input name="comentarios" id="comentarios" class="form-control" type="text" placeholder="Ingrese un comentario acerca del estado o observaciones que se le puedan hacer al elemento." required /></label>
+								</div>
+							</div>
 
 							<div class="control-group buttons-container">
 								<div class="controls">
@@ -135,18 +133,20 @@ error_reporting(0);
 							</div>
 						</form>
 					</div>
-					<!--/.content-->
 				</div>
-				<!--/.span9-->
 			</div>
 		</div>
-		<!--/.container-->
 
 		<script src="../../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="js/scriptBotiquines.js"></script>
+
 
 	<?php else : ?>
 
-		<h1>No has iniciado sesion.</h1>
+		<script>
+			alert("No has iniciado sesion");
+			window.location.href = "../../../../php/login.php";
+		</script>
 
 	<?php endif; ?>
 </body>

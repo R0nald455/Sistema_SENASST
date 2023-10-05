@@ -3,7 +3,7 @@ include "../../../../db/conexion.php";
 
 if (isset($_POST['input'])) {
 
-    $id_botiquin = $conexion->real_escape_string($_POST['id_botiquin']);
+    $id_botiquin = $conexion->real_escape_string($_POST['producto_id']);
 
     $ImagenReferencia = $_FILES['ImagenReferencia']['tmp_name'];
     $ImagenContenido = addslashes(file_get_contents($ImagenReferencia));

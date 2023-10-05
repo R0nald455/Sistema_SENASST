@@ -74,7 +74,7 @@ while ($row = mysqli_fetch_array($query)) { // preparing an array
 	$nestedData[] = $row["Comentarios"];
 	$nestedData[] = '<td><center>
 	<a href="editar.php?ID=' . $row['ID'] . '" id="linkEditar" title="Editar datos" class="btn btn-sm btn-info editar-link"> <i class="fa-solid fa-pen-to-square" style="color: #f2eded;"></i> </a>
-	<a href="index.php?action=delete&ID=' . $row['ID'] . '"  data-toggle="tooltip" title="Eliminar" class="btn btn-sm btn-danger"> <i class="fa-solid fa-trash-can" style="color: #f2eded;"></i> </a>
+	<a href="index.php?action=delete&ID=' . $row['ID'] . '" onclick="return confirmacion()" data-toggle="tooltip" title="Eliminar" class="btn btn-sm btn-danger"> <i class="fa-solid fa-trash-can" style="color: #f2eded;"></i> </a>
                     </center></td>';
 
 	$data[] = $nestedData;

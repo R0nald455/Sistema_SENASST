@@ -7,7 +7,13 @@ include "../../../../db/conexion.php"; ?>
 <html lang="en">
 
 <head>
-    <?php include("head.php"); ?>
+    <?php
+
+    include("head.php");
+    include('registro.php');
+
+    ?>
+
 </head>
 
 <body>
@@ -60,7 +66,7 @@ include "../../../../db/conexion.php"; ?>
 
                             <div class="panel-body">
                                 <div class="pull-right">
-                                    <a href="registro.php" class="btn btn-sm btn-success"><i class="fa-solid fa-plus"></i> Nuevo Elemento</a>
+                                    <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#registroModal"> <i class="fa-solid fa-plus"></i> Nuevo Elemento</button>
                                 </div><br>
                                 <hr>
 
