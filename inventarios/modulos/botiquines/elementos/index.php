@@ -69,6 +69,7 @@ include "../../../../db/conexion.php"; ?>
                                     <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal"
                                         data-bs-target="#registroModal"> <i class="fa-solid fa-plus"></i> Nuevo
                                         Elemento</button>
+                                        <a id="filtrar-reporte" href="filtrar_reporte.php" class="btn btn-sm btn-primary"><i class="fa-solid fa-file-pdf"></i> Filtrar elementos para generar PDF</a>
                                 </div><br>
                                 <hr>
 

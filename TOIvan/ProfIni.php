@@ -23,7 +23,7 @@ include_once("../db/conexion.php");
 <body>
 
       <div class="imagen-container">
-            <a href="../index.php"><img class="imagen_TO" src="../img/LogoSena.png" alt=""></a>
+            <a><img class="imagen_TO" src="../img/LogoSena.png" alt=""></a>
       </div>
 
 
