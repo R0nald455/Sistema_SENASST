@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
           .then((data) => {
             data.forEach((item) => {
               const suggestion = document.createElement("div");
-              suggestion.textContent = item.Nombre;
+              suggestion.textContent = item.Nombre + " ubicado en " + item.Ubicacion;
               suggestion.addEventListener("click", function () {
-                input.value = item.Nombre;
+                input.value = item.Nombre + " ubicado en " + item.Ubicacion;
                 sugerencias.innerHTML = "";
                 // Aquí puedes hacer algo con el ID, por ejemplo, enviarlo a otro campo oculto
                 document.getElementById("producto_id").value = item.ID; // Asigna el ID al campo oculto

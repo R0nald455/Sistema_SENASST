@@ -5,7 +5,7 @@ include '../../../../db/conexion.php';
 $query = $_GET["q"];
 
 // Consulta SQL para buscar productos que coincidan con la entrada del usuario
-$sql = "SELECT ID, Nombre FROM botiquines WHERE Nombre LIKE '%$query%' LIMIT 10";
+$sql = "SELECT ID, Nombre, Ubicacion FROM botiquines WHERE Nombre LIKE '%$query%' LIMIT 10";
 $resultado = $conexion->query($sql);
 
 $productos = [];

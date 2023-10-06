@@ -18,7 +18,7 @@ include "../../../../db/conexion.php"; ?>
 
 <body>
 
-    <?php if (isset($_SESSION["id"])) : ?>
+    <?php if (isset($_SESSION["id"])): ?>
 
         <!-- Menu de navegacion-->
 
@@ -66,7 +66,9 @@ include "../../../../db/conexion.php"; ?>
 
                             <div class="panel-body">
                                 <div class="pull-right">
-                                    <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#registroModal"> <i class="fa-solid fa-plus"></i> Nuevo Elemento</button>
+                                    <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#registroModal"> <i class="fa-solid fa-plus"></i> Nuevo
+                                        Elemento</button>
                                 </div><br>
                                 <hr>
 
@@ -108,8 +110,43 @@ include "../../../../db/conexion.php"; ?>
         <script src="../../../datatables/jquery.dataTables.js"></script>
         <script src="../../../datatables/dataTables.bootstrap.js"></script>
 
+        <?php
+        session_start();
+        if (isset($_SESSION['actualizar_elemento']) && $_SESSION['actualizar_elemento']) {
+            echo '<script>
+                                Swal.fire({
+									imageUrl: "https://i.imgur.com/Sea0PWX.jpg",
+									imageHeight: 200,
+									imageAlt: "elemento confirmacion",
+                                    title: "Elemento actualizado exitosamente!",
+                                    text: "Los datos del elemento han sido actualizados.",
+									confirmButtonColor: "#ffc107"
+                                });
+                            </script>';
+            $_SESSION['actualizar_elemento'] = false; // Reinicia la variable de sesión
+        }
+        ?>
+
+        <script src="js/confirmacion.js"></script>
+        <?php include('eliminar.php'); ?>
+
+        <?php
+        session_start();
+        if (isset($_SESSION['eliminar_elemento']) && $_SESSION['eliminar_elemento']) {
+            echo '<script>
+                                Swal.fire({
+                                    icon: "success",
+                                    title: "¡Elemento eliminado exitosamente!",
+                                    text: "El elemento ha sido eliminado del sistema.",
+									confirmButtonColor: "#ffc107"
+                                });
+                            </script>';
+            $_SESSION['eliminar_elemento'] = false; // Reinicia la variable de sesión
+        }
+        ?>
+
         <script>
-            $(document).ready(function() {
+            $(document).ready(function () {
                 let dataTable = $('#lookup').DataTable({
 
                     "language": {
@@ -142,7 +179,7 @@ include "../../../../db/conexion.php"; ?>
                     "ajax": {
                         url: "ajax-grid-data.php", // json datasource
                         type: "post", // method  , by default get
-                        error: function() { // error handling
+                        error: function () { // error handling
                             $(".lookup-error").html("");
                             $("#lookup").append('<tbody class="employee-grid-error"><tr><th colspan="3">No se encontraron datos en el servidor</th></tr></tbody>');
                             $("#lookup_processing").css("display", "none");
@@ -153,7 +190,7 @@ include "../../../../db/conexion.php"; ?>
             });
         </script>
 
-    <?php else : ?>
+    <?php else: ?>
 
         <script>
             alert("No has iniciado sesión, por favor inicia a continuación.");

@@ -21,11 +21,9 @@ if (isset($_POST['input'])) {
 					estado, fechaRegistro, fechaVencimiento, comentarios) VALUES ('$id_botiquin', '$ImagenContenido', '$nombre', '$cantidad', '$ubicacion', '$ubicacionEspecifica', '$estado', '$fechaRegistro', '$fechaVencimiento', '$comentarios')");
 
     if ($stmt) {
-        echo '
-        <script>
-            alert("Bien hecho, los datos han sido agregados correctamente.")
-            window.location.href = "index.php";
-        </script>';
+        session_start();
+        $_SESSION['registro_elemento'] = true;
+        header('Location:index.php');
     } else {
         echo '
             <script>

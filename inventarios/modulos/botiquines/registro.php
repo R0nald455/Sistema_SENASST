@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 error_reporting(0);
@@ -10,7 +9,6 @@ require_once("../../../db/conexion.php");
 <head>
     <?php
     include("head.php");
-    include("registrar.php");
     ?>
 </head>
 
@@ -18,20 +16,25 @@ require_once("../../../db/conexion.php");
 
     <?php if (isset($_SESSION["id"])): ?>
 
-		<div style="height: 90%; top: 50px;" class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="labelRegistroModal" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="labelRegistroModal">Registrar Botiquines 🏥</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
+        <?php
+        include("registrar.php");
+        ?>
 
-                        <form enctype="multipart/form-data" name="form1" id="form1" class="form-horizontal row-fluid" action="registrar.php"
-                            method="POST">
+        <div style="height: 90%; top: 50px;" class="modal fade" id="registroModal" tabindex="-1"
+            aria-labelledby="labelRegistroModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="labelRegistroModal">Registrar Botiquines 🏥</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <form enctype="multipart/form-data" name="form1" id="form1" class="form-horizontal row-fluid"
+                            action="registrar.php" method="POST">
 
                             <blockquote>
-                                
+
                             </blockquote>
 
                             <div class="control-group">
@@ -44,7 +47,7 @@ require_once("../../../db/conexion.php");
 
                             <div class="control-group">
                                 <div class="controls">
-                                    <label class="control-label" for="Nombre">Nombre y Tipo: <input type="text"
+                                    <label class="control-label" for="Nombre">Tipo de botiquin: <input type="text"
                                             name="Nombre" id="Nombre" placeholder="Ingrese el nombre y tipo de botiquin."
                                             class="form-control" required></label>
                                 </div>

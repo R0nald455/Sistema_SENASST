@@ -144,7 +144,6 @@ require_once("../../../db/conexion.php");
 
     <?php else: ?>
 
-
         <script>
             alert("No has iniciado sesión, por favor inicia a continuación.");
             window.location.href = "../../../php/login.php";
