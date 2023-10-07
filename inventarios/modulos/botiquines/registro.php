@@ -33,10 +33,6 @@ require_once("../../../db/conexion.php");
                         <form enctype="multipart/form-data" name="form1" id="form1" class="form-horizontal row-fluid"
                             action="registrar.php" method="POST">
 
-                            <blockquote>
-
-                            </blockquote>
-
                             <div class="control-group">
                                 <div class="controls">
                                     <label class="control-label" for="ImagenReferencia">Imagen de referencia: </label>

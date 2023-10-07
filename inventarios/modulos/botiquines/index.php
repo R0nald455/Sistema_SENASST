@@ -189,6 +189,9 @@ include "../../../db/conexion.php";
             });
         </script>
 
+<?php include('../../../Footer/footer.php'); ?>
+
+
     <?php else : ?>
 
         <script>

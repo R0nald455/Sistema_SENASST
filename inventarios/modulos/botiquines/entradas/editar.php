@@ -14,7 +14,7 @@ include "../../../../db/conexion.php";
 
 <body>
 
-	<?php if (isset($_SESSION["id"])) : ?>
+	<?php if (isset($_SESSION["id"])): ?>
 
 		<br>
 		<div class="container">
@@ -30,45 +30,64 @@ include "../../../../db/conexion.php";
 							$row = mysqli_fetch_assoc($sql);
 						}
 						?>
-						<form name="form1" id="form1" class="form-horizontal row-fluid" action="update-edit.php" method="POST">
 
+						<center>
 							<blockquote>
-								Editar entradas 🖋️
+								<h1><b>Editar entradas 🖋️</b></h1>
 							</blockquote>
+							<h3><i>"En este apartado puedes dedicarte a editar los datos previamente registrados."</i>
+							</h3>
+						</center>
+
+						<form name="form1" id="form1" class="form-horizontal row-fluid" action="update-edit.php"
+							method="POST">
 
 							<div class="control-group">
 								<div class="controls">
-									<label class="control-label" for="basicinput">Identificador de la entrada: <input type="text" name="id_entradas" id="id_entradas" disabled value="<?php echo $row['id_entradas']; ?>" placeholder="" class="form-control span8 tip"></label>
+									<label class="control-label" for="basicinput">Identificador de la entrada: <input
+											type="text" name="id_entradas" id="id_entradas" disabled
+											value="<?php echo $row['id_entradas']; ?>" placeholder=""
+											class="form-control span8 tip"></label>
 								</div>
 							</div>
 
 							<div class="control-group">
 								<div class="controls">
-									<label class="control-label" for="basicinput">Identificador de Elemento del Botiquín: <input disabled type="text" name="id_elementos" id="id_elementos" value="<?php echo $row['id_elementos']; ?>" placeholder="" class="form-control span8 tip"></label>
+									<label class="control-label" for="basicinput">Identificador de Elemento del Botiquín:
+										<input disabled type="text" name="id_elementos" id="id_elementos"
+											value="<?php echo $row['id_elementos']; ?>" placeholder=""
+											class="form-control span8 tip"></label>
 								</div>
 							</div>
 
 							<div class="control-group">
 								<div class="controls">
-									<label class="control-label" for="basicinput">Cantidad: <input disabled name="cantidad" id="cantidad" value="<?php echo $row['cantidad']; ?>" class="form-control span8 tip" type="number"></label>
+									<label class="control-label" for="basicinput">Cantidad: <input disabled name="cantidad"
+											id="cantidad" value="<?php echo $row['cantidad']; ?>"
+											class="form-control span8 tip" type="number"></label>
 								</div>
 							</div>
 
 							<div class="control-group">
 								<div class="controls">
-									<label class="control-label" for="basicinput">Comentario: <input type="text" name="comentario" id="comentario" value="<?php echo $row['comentario']; ?>" placeholder="" class="form-control span8 tip" required></label>
+									<label class="control-label" for="basicinput">Comentario: <input type="text"
+											name="comentario" id="comentario" value="<?php echo $row['comentario']; ?>"
+											placeholder="" class="form-control span8 tip" required></label>
 								</div>
 							</div>
 
 							<div class="control-group">
 								<div class="controls">
-									<label class="control-label" for="basicinput">Fecha de entrada: <input name="fechaEntra" id="fechaEntra" value="<?php echo $row['fechaEntra']; ?>" class=" form-control" type="text"></label>
+									<label class="control-label" for="basicinput">Fecha de entrada: <input name="fechaEntra"
+											id="fechaEntra" value="<?php echo $row['fechaEntra']; ?>" class=" form-control"
+											type="text"></label>
 								</div>
 							</div>
 
 							<div class="control-group buttons-container">
 								<div class="controls">
-									<input type="submit" name="update" id="update" value="Actualizar" class="btn btn-sm btn-primary" />
+									<input type="submit" name="update" id="update" value="Actualizar"
+										class="btn btn-sm btn-primary" />
 									<a href="index.php" class="btn btn-sm btn-danger">Cancelar</a>
 								</div>
 							</div>
@@ -83,9 +102,12 @@ include "../../../../db/conexion.php";
 
 		<script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 
-	<?php else : ?>
+	<?php else: ?>
 
-		<h1>No has iniciado sesion.</h1>
+		<script>
+			alert("No has iniciado sesión, por favor inicia a continuación.");
+			window.location.href = "../../../../php/login.php";
+		</script>
 
 	<?php endif; ?>
 

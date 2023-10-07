@@ -3,7 +3,7 @@ include "../../../../db/conexion.php";
 
 if (isset($_POST['input'])) {
 
-    $id_elementos    = mysqli_real_escape_string($conexion, (strip_tags($_POST['id_elementos'], ENT_QUOTES)));
+    $id_elementos    = mysqli_real_escape_string($conexion, (strip_tags($_POST['producto_id'], ENT_QUOTES)));
     $cantidad    = mysqli_real_escape_string($conexion, (strip_tags($_POST['cantidad'], ENT_QUOTES)));
     $comentario      = mysqli_real_escape_string($conexion, (strip_tags($_POST['comentario'], ENT_QUOTES)));
     $fechaEntra = date("Y-m-d H:i:s");
@@ -13,11 +13,9 @@ if (isset($_POST['input'])) {
     $actualizar_cantidad = mysqli_query($conexion, "UPDATE elementosbotiquines SET cantidad = cantidad + $cantidad WHERE id_elementos = $id_elementos") or die(mysqli_error($conexion));
 
     if ($insert && $actualizar_cantidad) {
-        echo '
-        <script>
-            alert("Bien hecho, los datos han sido agregados correctamente.")
-            window.location.href = "index.php";
-        </script>';
+        session_start();
+        $_SESSION['registro_entrada'] = true;
+        header('Location:index.php');
     } else {
         echo '
             <script>

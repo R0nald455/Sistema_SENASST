@@ -34,7 +34,7 @@ error_reporting(0);
 							action="registrar.php" method="POST">
 
 							<div class="control-group">
-								<label class="control-label" for="id_botiquin">ID del botiquines: </label>
+								<label class="control-label" for="id_botiquin">Botiquines: </label>
 								<input class="form-control" type="text" id="id_botiquin" placeholder="Buscar botiquin."
 									autocomplete="off">
 								<input type="hidden" id="producto_id" name="producto_id">
@@ -51,7 +51,7 @@ error_reporting(0);
 
 							<div class="control-group">
 								<div class="controls">
-									<label class="control-label" for="nombre">Nombre y tipo: <input name="nombre"
+									<label class="control-label" for="nombre">Nombre del elemento: <input name="nombre"
 											id="nombre" class="form-control" type="text"
 											placeholder="Ingrese el nombre del elemento." required /></label>
 								</div>

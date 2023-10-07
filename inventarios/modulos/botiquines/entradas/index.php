@@ -14,7 +14,9 @@ include "../../../../db/conexion.php";
 
 <body>
 
-    <?php if (isset($_SESSION["id"])) : ?>
+    <?php if (isset($_SESSION["id"])): ?>
+
+        <?php include("registro.php"); ?>
 
         <div class="container__menu">
             <div class="menu">
@@ -52,15 +54,16 @@ include "../../../../db/conexion.php";
             <div class="row">
                 <div class="span12">
                     <div class="content">
-                        <?php include('eliminar.php'); ?>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title" style="color:#3fc13f;"><i class="fa-solid fa-up-long" style="color: #49bd1f;"></i> Entrada de elementos al botiquin</h3>
+                                <h3 class="panel-title" style="color:#3fc13f;"><i class="fa-solid fa-up-long"
+                                        style="color: #49bd1f;"></i> Entrada de elementos</h3>
                             </div>
-
                             <div class="panel-body">
                                 <div class="pull-right">
-                                    <a href="registro.php" class="btn btn-sm btn-success"><i class="fa-solid fa-plus"></i> Nueva entrada de Elementos</a>
+                                    <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#registroModal"><i class="fa-solid fa-plus"></i> Nueva entrada de
+                                        Elementos</button>
                                 </div><br>
                                 <hr>
                                 <div class="table-container table-responsive">
@@ -93,12 +96,49 @@ include "../../../../db/conexion.php";
             </div>
         </div>
         <!--/.container-->
+
+        <?php
+        session_start();
+        if (isset($_SESSION['actualizar_entrada']) && $_SESSION['actualizar_entrada']) {
+            echo '<script>
+                                Swal.fire({
+									imageUrl: "https://i.imgur.com/RmemS7c.png",
+									imageHeight: 200,
+									imageAlt: "entrada confirmacion",
+                                    title: "¡Entrada actualizada exitosamente!",
+                                    text: "Los datos de la entrada han sido actualizados.",
+									confirmButtonColor: "#ffc107"
+                                });
+                            </script>';
+            $_SESSION['actualizar_entrada'] = false; // Reinicia la variable de sesión
+        }
+        ?>
+
+        <script src="../js/confirmacion.js"></script>
+        <?php include('eliminar.php'); ?>
+
+        <?php
+        session_start();
+        if (isset($_SESSION['eliminar_entrada']) && $_SESSION['eliminar_entrada']) {
+            echo '<script>
+                                Swal.fire({
+                                    icon: "success",
+                                    title: "¡Entrada eliminada exitosamente!",
+                                    text: "La entrada ha sido eliminada del sistema.",
+									confirmButtonColor: "#ffc107"
+                                });
+                            </script>';
+            $_SESSION['eliminar_entrada'] = false; // Reinicia la variable de sesión
+        }
+        ?>
+
+        <script src="../js/scriptElementos.js"></script>
         <script src="../../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../../../datatables/jquery.dataTables.js"></script>
         <script src="../../../datatables/dataTables.bootstrap.js"></script>
 
         <script>
-            $(document).ready(function() {
+            $(document).ready(function () {
                 let dataTable = $('#lookup').DataTable({
 
                     "language": {
@@ -131,7 +171,7 @@ include "../../../../db/conexion.php";
                     "ajax": {
                         url: "ajax-grid-data.php", // json datasource
                         type: "post", // method  , by default get
-                        error: function() { // error handling
+                        error: function () { // error handling
                             $(".lookup-error").html("");
                             $("#lookup").append('<tbody class="employee-grid-error"><tr><th colspan="3">No se encontraron datos en el servidor</th></tr></tbody>');
                             $("#lookup_processing").css("display", "none");
@@ -142,7 +182,10 @@ include "../../../../db/conexion.php";
             });
         </script>
 
-    <?php else : ?>
+        <?php include('../../../../Footer/footer.php'); ?>
+
+
+    <?php else: ?>
 
         <script>
             alert("No has iniciado sesión, por favor inicia a continuación.");

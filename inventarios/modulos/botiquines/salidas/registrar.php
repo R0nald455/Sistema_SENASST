@@ -3,7 +3,7 @@ require_once("../../../../db/conexion.php");
 
 if (isset($_POST['input'])) {
 
-    $id_elementos    = mysqli_real_escape_string($conexion, (strip_tags($_POST['id_elementos'], ENT_QUOTES)));
+    $id_elementos    = mysqli_real_escape_string($conexion, (strip_tags($_POST['producto_id'], ENT_QUOTES)));
     $cantidad    = mysqli_real_escape_string($conexion, (strip_tags($_POST['cantidad'], ENT_QUOTES)));
     $comentario    = mysqli_real_escape_string($conexion, (strip_tags($_POST['comentario'], ENT_QUOTES)));
     $fechaSale = date("Y-m-d H:i:s");
