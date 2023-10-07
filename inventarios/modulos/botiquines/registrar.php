@@ -21,7 +21,6 @@ if (isset($_POST['input'])) {
         session_start();
         $_SESSION['registro_botiquin'] = true;
         header('Location:index.php');
-
     } else {
         echo '
         <script>

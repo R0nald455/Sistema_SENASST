@@ -14,7 +14,10 @@ require_once("../../../../db/conexion.php");
 
 <body>
 
-    <?php if (isset($_SESSION["id"])) : ?>
+<?php if (isset($_SESSION["id"]) && $_SESSION["rol"] == 1 || $_SESSION["rol"] == 4): ?>
+
+        <?php include("registro.php"); ?>
+
         <div class="container__menu">
             <div class="menu">
 
@@ -54,12 +57,15 @@ require_once("../../../../db/conexion.php");
                         <?php include('eliminar.php'); ?>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title" style="color: #f63c3c"><i class="fa-solid fa-down-long" style="color: #c81414;"></i> Salida de elementos del botiquin</h3>
+                                <h3 class="panel-title" style="color: #f63c3c"><i class="fa-solid fa-down-long"
+                                        style="color: #c81414;"></i> Salida de elementos del botiquin</h3>
                             </div>
 
                             <div class="panel-body">
                                 <div class="pull-right">
-                                    <a href="registro.php" class="btn btn-sm btn-warning"><i class="fa-solid fa-plus"></i> Nueva salida de Elementos</a>
+                                    <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal"
+                                        data-bs-target="#registroModal"><i class="fa-solid fa-plus"></i> Nueva salida de
+                                        Elementos</button>
                                 </div><br>
                                 <hr>
                                 <div class="table-container table-responsive">
@@ -92,12 +98,49 @@ require_once("../../../../db/conexion.php");
             <!--/.container-->
         </div>
 
+        <?php
+        session_start();
+        if (isset($_SESSION['actualizar_salida']) && $_SESSION['actualizar_salida']) {
+            echo '<script>
+                                Swal.fire({
+									imageUrl: "https://i.imgur.com/RmemS7c.png",
+									imageHeight: 200,
+									imageAlt: "salida confirmacion",
+                                    title: "¡Salida actualizada exitosamente!",
+                                    text: "Los datos de la salida han sido actualizados.",
+									confirmButtonColor: "#ffc107"
+                                });
+                            </script>';
+            $_SESSION['actualizar_salida'] = false; // Reinicia la variable de sesión
+        }
+        ?>
+
+        <script src="../js/confirmacion.js"></script>
+        <?php include('eliminar.php'); ?>
+
+        <?php
+        session_start();
+        if (isset($_SESSION['eliminar_salida']) && $_SESSION['eliminar_salida']) {
+            echo '<script>
+                                Swal.fire({
+                                    icon: "success",
+                                    title: "¡Salida eliminada exitosamente!",
+                                    text: "El salida ha sido eliminada del sistema.",
+									confirmButtonColor: "#ffc107"
+                                });
+                            </script>';
+            $_SESSION['eliminar_salida'] = false; // Reinicia la variable de sesión
+        }
+        ?>
+
         <script src="../../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../../../datatables/jquery.dataTables.js"></script>
         <script src="../../../datatables/dataTables.bootstrap.js"></script>
 
+        <script src="../js/scriptElementos.js"></script>
+
         <script>
-            $(document).ready(function() {
+            $(document).ready(function () {
                 let dataTable = $('#lookup').DataTable({
 
                     "language": {
@@ -130,7 +173,7 @@ require_once("../../../../db/conexion.php");
                     "ajax": {
                         url: "ajax-grid-data.php", // json datasource
                         type: "post", // method  , by default get
-                        error: function() { // error handling
+                        error: function () { // error handling
                             $(".lookup-error").html("");
                             $("#lookup").append('<tbody class="employee-grid-error"><tr><th colspan="3">No se encontraron datos en el servidor</th></tr></tbody>');
                             $("#lookup_processing").css("display", "none");
@@ -140,7 +183,7 @@ require_once("../../../../db/conexion.php");
                 });
             });
         </script>
-    <?php else : ?>
+    <?php else: ?>
 
         <script>
             alert("No has iniciado sesión, por favor inicia a continuación.");

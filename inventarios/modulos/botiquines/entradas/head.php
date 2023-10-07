@@ -8,7 +8,7 @@
 <link type="text/css" href="../../../../css/bootstrap-responsive.min.css" rel="stylesheet">
 <link rel="stylesheet" href="../../../../css/styles_modulos_inventario.css">
 <link rel="stylesheet" href="../../../../css/header-modulos.css">
-
+<link rel="stylesheet" href="../../../../css/footer.css">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
@@ -20,3 +20,5 @@
 <script src="../../../scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
 
 <script src="https://kit.fontawesome.com/27e58a102f.js" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

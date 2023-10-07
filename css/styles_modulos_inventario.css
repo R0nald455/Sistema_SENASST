@@ -80,14 +80,14 @@ select[class="form-control"]{
     width: 100%;
 }
 
-#ID_Implementos, #ID_Empleado {
+#ID_Implementos, #ID_Empleado, #id_botiquin {
     padding: 10px;
     width: 100%;
     font-size: 16px;
     border-color: rgb(57,168,1);
 }
 
-#ID_Implementos_Div, #ID_Empleado_Div {
+#ID_Implementos_Div, #ID_Empleado_Div, #ID_Botiquin_Div {
     max-height: 200px;
     overflow-y: auto;
     position: absolute;
@@ -97,11 +97,11 @@ select[class="form-control"]{
     color: aliceblue;
 }
 
-#ID_Implementos_Div div, #ID_Empleado_Div div {
+#ID_Implementos_Div div, #ID_Empleado_Div div, #ID_Botiquin_Div div {
     padding: 10px;
     cursor: pointer;
 }
 
-#ID_Implementos_Div div:hover, #ID_Empleado_Div div:hover {
+#ID_Implementos_Div div:hover, #ID_Empleado_Div div:hover, #ID_Botiquin_Div div:hover {
     background-color: green;
 }

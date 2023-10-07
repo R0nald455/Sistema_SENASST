@@ -15,7 +15,7 @@ require_once("../../../db/conexion.php");
 
 <body>
 
-    <?php if (isset($_SESSION["id"])): ?>
+<?php if (isset($_SESSION["id"]) && $_SESSION["rol"] == 1 || $_SESSION["rol"] == 4): ?>
 
         <br>
         <div class="container">
@@ -143,7 +143,6 @@ require_once("../../../db/conexion.php");
         <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 
     <?php else: ?>
-
 
         <script>
             alert("No has iniciado sesión, por favor inicia a continuación.");

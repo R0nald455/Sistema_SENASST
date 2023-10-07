@@ -3,7 +3,7 @@ include "../../../../db/conexion.php";
 
 if (isset($_POST['input'])) {
 
-    $id_botiquin = $conexion->real_escape_string($_POST['id_botiquin']);
+    $id_botiquin = $conexion->real_escape_string($_POST['producto_id']);
 
     $ImagenReferencia = $_FILES['ImagenReferencia']['tmp_name'];
     $ImagenContenido = addslashes(file_get_contents($ImagenReferencia));
@@ -21,11 +21,9 @@ if (isset($_POST['input'])) {
 					estado, fechaRegistro, fechaVencimiento, comentarios) VALUES ('$id_botiquin', '$ImagenContenido', '$nombre', '$cantidad', '$ubicacion', '$ubicacionEspecifica', '$estado', '$fechaRegistro', '$fechaVencimiento', '$comentarios')");
 
     if ($stmt) {
-        echo '
-        <script>
-            alert("Bien hecho, los datos han sido agregados correctamente.")
-            window.location.href = "index.php";
-        </script>';
+        session_start();
+        $_SESSION['registro_elemento'] = true;
+        header('Location:index.php');
     } else {
         echo '
             <script>

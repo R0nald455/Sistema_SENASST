@@ -1,9 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-
 require_once("../../../db/conexion.php");
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +15,7 @@ require_once("../../../db/conexion.php");
 
 <body>
 
-    <?php if (isset($_SESSION["id"])) : ?>
+    <?php if (isset($_SESSION["id"]) && $_SESSION["rol"] == 1 || $_SESSION["rol"] == 4): ?>
 
         <!-- Menu de navegacion-->
 
@@ -54,16 +52,20 @@ require_once("../../../db/conexion.php");
                     <div class="content">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa-solid fa-fire-extinguisher" style="color: #39a801;"></i> Administrador de extintores</h3>
+                                <h3 class="panel-title"><i class="fa-solid fa-fire-extinguisher"
+                                        style="color: #39a801;"></i> Administrador de extintores</h3>
                             </div>
 
                             <div class="panel-body">
 
                                 <div class="pull-right">
-                                    <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#registroModal"><i class="fa-solid fa-plus"></i>Nuevo
+                                    <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#registroModal"><i class="fa-solid fa-plus"></i>Nuevo
                                         extintor</button>
-                                    <a id="button-pdf" href="reportes.php" class="btn btn-sm btn-primary"><i class="fa-solid fa-file-pdf"></i> Generar PDF</a>
-                                    <a id="button-alert" href="alertas/config.php" class="btn btn-sm btn-info"><i class="fa-solid fa-envelope"></i> Alerta para
+                                    <a id="button-pdf" href="reportes.php" class="btn btn-sm btn-primary"><i
+                                            class="fa-solid fa-file-pdf"></i> Generar PDF</a>
+                                    <a id="button-alert" href="alertas/config.php" class="btn btn-sm btn-info"><i
+                                            class="fa-solid fa-envelope"></i> Alerta para
                                         extintores con revisiones/recargas pendientes</a>
                                 </div><br>
                                 <h6><i>"Al alertar te llega un correo electronico con la informacion del extintor"</i></h6>
@@ -165,7 +167,7 @@ require_once("../../../db/conexion.php");
         ?>
 
         <script>
-            $(document).ready(function() {
+            $(document).ready(function () {
 
                 let dataTable = $('#lookup').DataTable({
 
@@ -199,7 +201,7 @@ require_once("../../../db/conexion.php");
                     "ajax": {
                         url: "ajax-grid-data.php", // json datasource
                         type: "POST", // method  , by default get
-                        error: function() { // error handling
+                        error: function () { // error handling
                             $(".lookup-error").html("");
                             $("#lookup").append('<tbody class="employee-grid-error"><tr><th colspan="3">No se encontraron datos en el servidor</th></tr></tbody>');
                             $("#lookup_processing").css("display", "none");
@@ -210,7 +212,7 @@ require_once("../../../db/conexion.php");
             });
         </script>
 
-    <?php else : ?>
+    <?php else: ?>
 
         <script>
             alert("No has iniciado sesión, por favor inicia a continuación.");

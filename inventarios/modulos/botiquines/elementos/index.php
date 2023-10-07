@@ -1,18 +1,25 @@
 <?php
 session_start();
 error_reporting(0);
-include "../../../../db/conexion.php"; ?>
+include "../../../../db/conexion.php";
+?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <?php include("head.php"); ?>
+    <?php
+
+    include("head.php");
+    include('registro.php');
+
+    ?>
+
 </head>
 
 <body>
 
-    <?php if (isset($_SESSION["id"])) : ?>
+<?php if (isset($_SESSION["id"]) && $_SESSION["rol"] == 1 || $_SESSION["rol"] == 4): ?>
 
         <!-- Menu de navegacion-->
 
@@ -60,7 +67,11 @@ include "../../../../db/conexion.php"; ?>
 
                             <div class="panel-body">
                                 <div class="pull-right">
-                                    <a href="registro.php" class="btn btn-sm btn-success"><i class="fa-solid fa-plus"></i> Nuevo Elemento</a>
+                                    <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#registroModal"> <i class="fa-solid fa-plus"></i> Nuevo
+                                        Elemento</button>
+                                    <a id="filtrar-reporte" href="filtrar_reporte.php" class="btn btn-sm btn-primary"><i
+                                            class="fa-solid fa-file-pdf"></i> Filtrar elementos para generar PDF</a>
                                 </div><br>
                                 <hr>
 
@@ -72,7 +83,7 @@ include "../../../../db/conexion.php"; ?>
                                                 <th>ID del elemento</th>
                                                 <th>ID del botiquin</th>
                                                 <th>Imagen de referencia</th>
-                                                <th>Nombre y tipo</th>
+                                                <th>Nombre del elemento</th>
                                                 <th>Cantidad</th>
                                                 <th>Ubicación</th>
                                                 <th>Ubicacion específica</th>
@@ -102,8 +113,43 @@ include "../../../../db/conexion.php"; ?>
         <script src="../../../datatables/jquery.dataTables.js"></script>
         <script src="../../../datatables/dataTables.bootstrap.js"></script>
 
+        <?php
+        session_start();
+        if (isset($_SESSION['actualizar_elemento']) && $_SESSION['actualizar_elemento']) {
+            echo '<script>
+                                Swal.fire({
+									imageUrl: "https://i.imgur.com/Sea0PWX.jpg",
+									imageHeight: 200,
+									imageAlt: "elemento confirmacion",
+                                    title: "Elemento actualizado exitosamente!",
+                                    text: "Los datos del elemento han sido actualizados.",
+									confirmButtonColor: "#ffc107"
+                                });
+                            </script>';
+            $_SESSION['actualizar_elemento'] = false; // Reinicia la variable de sesión
+        }
+        ?>
+
+        <script src="js/confirmacion.js"></script>
+        <?php include('eliminar.php'); ?>
+
+        <?php
+        session_start();
+        if (isset($_SESSION['eliminar_elemento']) && $_SESSION['eliminar_elemento']) {
+            echo '<script>
+                                Swal.fire({
+                                    icon: "success",
+                                    title: "¡Elemento eliminado exitosamente!",
+                                    text: "El elemento ha sido eliminado del sistema.",
+									confirmButtonColor: "#ffc107"
+                                });
+                            </script>';
+            $_SESSION['eliminar_elemento'] = false; // Reinicia la variable de sesión
+        }
+        ?>
+
         <script>
-            $(document).ready(function() {
+            $(document).ready(function () {
                 let dataTable = $('#lookup').DataTable({
 
                     "language": {
@@ -136,7 +182,7 @@ include "../../../../db/conexion.php"; ?>
                     "ajax": {
                         url: "ajax-grid-data.php", // json datasource
                         type: "post", // method  , by default get
-                        error: function() { // error handling
+                        error: function () { // error handling
                             $(".lookup-error").html("");
                             $("#lookup").append('<tbody class="employee-grid-error"><tr><th colspan="3">No se encontraron datos en el servidor</th></tr></tbody>');
                             $("#lookup_processing").css("display", "none");
@@ -147,12 +193,15 @@ include "../../../../db/conexion.php"; ?>
             });
         </script>
 
-    <?php else : ?>
+        <?php include('../../../../Footer/footer.php'); ?>
+
+    <?php else: ?>
 
         <script>
             alert("No has iniciado sesión, por favor inicia a continuación.");
             window.location.href = "../../../../php/login.php";
         </script>
+
     <?php endif; ?>
 
 </body>

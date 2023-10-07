@@ -20,7 +20,7 @@ require_once("../../db/conexion.php");
 
 <body>
 
-    <?php if (isset($_SESSION["id"])) : ?>
+    <?php if (isset($_SESSION["id"]) && $_SESSION["rol"] == 1 || $_SESSION["rol"] == 4) : ?>
 
         <header>
             <div class="header__superior">

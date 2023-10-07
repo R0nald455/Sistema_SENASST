@@ -14,7 +14,7 @@ require_once("../../../db/conexion.php");
 
 <body>
 
-    <?php if (isset($_SESSION["id"])): ?>
+<?php if (isset($_SESSION["id"]) && $_SESSION["rol"] == 1 || $_SESSION["rol"] == 4): ?>
 
         <div style="height: 90%; top: 50px;" class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="labelRegistroModal" aria-hidden="true">
             <div class="modal-dialog">
@@ -233,7 +233,10 @@ require_once("../../../db/conexion.php");
 
     <?php else: ?>
 
-        <h1>No has iniciado sesion.</h1>
-
+        <script>
+            alert("No has iniciado sesión, por favor inicia a continuación.");
+            window.location.href = "../../../php/login.php";
+        </script>
+        
     <?php endif; ?>
 </body>

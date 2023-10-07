@@ -17,7 +17,7 @@ include "../../../db/conexion.php";
 
 <body>
 
-    <?php if (isset($_SESSION["id"])) : ?>
+<?php if (isset($_SESSION["id"]) && $_SESSION["rol"] == 1 || $_SESSION["rol"] == 4): ?>
 
         <!-- Menu de navegacion-->
 
@@ -56,7 +56,6 @@ include "../../../db/conexion.php";
             <div class="row">
                 <div class="span12">
                     <div class="content">
-                        <?php include('eliminar.php'); ?>
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h3 class="panel-title"><i class="fa-solid fa-kit-medical" style="color: #39a801"></i>
@@ -119,9 +118,31 @@ include "../../../db/conexion.php";
         }
         ?>
 
+        <script src="js/confirmacion.js"></script>
+        <?php include('eliminar.php'); ?>
+
+        <?php
+        session_start();
+        if (isset($_SESSION['eliminar_botiquin']) && $_SESSION['eliminar_botiquin']) {
+            echo '<script>
+                                Swal.fire({
+                                    icon: "success",
+                                    title: "¡Botiquin eliminado exitosamente!",
+                                    text: "El botiquin ha sido eliminado del sistema.",
+									confirmButtonColor: "#ffc107"
+                                });
+                            </script>';
+            $_SESSION['eliminar_botiquin'] = false; // Reinicia la variable de sesión
+        }
+        ?>
+
+
+
+
         <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../../datatables/jquery.dataTables.js"></script>
         <script src="../../datatables/dataTables.bootstrap.js"></script>
+
 
         <script>
             $(document).ready(function() {
@@ -167,6 +188,9 @@ include "../../../db/conexion.php";
                 });
             });
         </script>
+
+<?php include('../../../Footer/footer.php'); ?>
+
 
     <?php else : ?>
 
