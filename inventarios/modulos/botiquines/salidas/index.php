@@ -14,7 +14,7 @@ require_once("../../../../db/conexion.php");
 
 <body>
 
-<?php if (isset($_SESSION["id"]) && $_SESSION["rol"] == 1 || $_SESSION["rol"] == 4): ?>
+    <?php if (isset($_SESSION["id"]) && $_SESSION["rol"] == 1 || $_SESSION["rol"] == 4): ?>
 
         <?php include("registro.php"); ?>
 
@@ -183,6 +183,10 @@ require_once("../../../../db/conexion.php");
                 });
             });
         </script>
+
+        <?php include('../../../../Footer/footer.php'); ?>
+
+
     <?php else: ?>
 
         <script>
