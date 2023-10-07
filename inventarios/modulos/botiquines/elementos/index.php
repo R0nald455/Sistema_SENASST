@@ -138,7 +138,9 @@ include "../../../../db/conexion.php";
         if (isset($_SESSION['eliminar_elemento']) && $_SESSION['eliminar_elemento']) {
             echo '<script>
                                 Swal.fire({
-                                    icon: "success",
+                                    imageUrl: "https://i.imgur.com/A9qxNme.jpg",
+									imageHeight: 200,
+									imageAlt: "eliminar confirmacion",  
                                     title: "¡Elemento eliminado exitosamente!",
                                     text: "El elemento ha sido eliminado del sistema.",
 									confirmButtonColor: "#ffc107"

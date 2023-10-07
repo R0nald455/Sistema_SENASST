@@ -31,7 +31,9 @@ if (isset($_POST['update'])) {
     }
 
     if ($update) {
-        echo "<script>alert('Los datos han sido actualizados!'); window.location = 'index.php'</script>";
+        session_start();
+        $_SESSION['actualizar_camilla'] = true;
+        header('Location:index.php');
     } else {
         echo "<script>alert('Error, no se pudo actualizar los datos'); window.location = 'index.php'</script>";
     }

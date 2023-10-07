@@ -92,14 +92,30 @@ require_once("../../../db/conexion.php");
 			</div>
 		</div>
 
+		<?php
+		if (isset($_SESSION['registro_epp']) && $_SESSION['registro_epp']) {
+			echo '<script>
+                                Swal.fire({
+									imageUrl: "https://i.imgur.com/IFvNSnw.gif",
+									imageHeight: 200,
+									imageAlt: "epps confirmacion",
+                                    title: "¡Elemento de proteccion personal registrado exitosamente!",
+                                    text: "Todos los datos del EPP han sido registrados en el sistema.",
+									confirmButtonColor: "#12b071"
+                                });
+                            </script>';
+			$_SESSION['registro_epp'] = false; // Reinicia la variable de sesión
+		}
+		?>
+
 		<script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 
 	<?php else: ?>
 
-        <script>
-            alert("No has iniciado sesión, por favor inicia a continuación.");
-            window.location.href = "../../../php/login.php";
-        </script>
+		<script>
+			alert("No has iniciado sesión, por favor inicia a continuación.");
+			window.location.href = "../../../php/login.php";
+		</script>
 
 	<?php endif; ?>
 </body>

@@ -25,10 +25,9 @@ if (isset($_POST['input'])) {
 
     $stmt = $conexion->query("INSERT INTO camillas (ImagenReferencia, TipoCamilla, Señalizacion, Acceso, EstadoSoporte, CorreasSeguridad, Inmovilizador, Limpieza, InstalacionPared, UbicacionActual, FechaAdquisicion, FechaUltimoMantenimiento, FechaProximoMantenimiento, Observaciones, FechaRegistro) VALUES ('$ImagenContenido', '$TipoCamilla', '$Señalizacion', '$Acceso', '$EstadoSoporte', '$CorreasSeguridad', '$Inmovilizador', '$Limpieza', '$InstalacionPared', '$UbicacionActual', '$FechaAdquisicion', '$FechaUltimoMantenimiento', '$FechaProximoMantenimiento', '$Observaciones', '$FechaRegistro')");
     if ($stmt) {
-        echo '<script>
-                alert("La camilla ha sido ingresada exitosamente.")
-                window.location.href="index.php";
-                </script>';
+        session_start();
+        $_SESSION['registro_camilla'] = true;
+        header('Location:index.php');
     } else {
         echo '<script>
                 alert("Error al ingresar los datos.")

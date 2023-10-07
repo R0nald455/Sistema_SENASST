@@ -83,6 +83,22 @@ require_once("../../../../db/conexion.php");
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 
 
+		<?php
+		if (isset($_SESSION['registro_entrada']) && $_SESSION['registro_entrada']) {
+			echo '<script>
+                                Swal.fire({
+									imageUrl: "https://i.imgur.com/xE8OwWU.jpg",
+									imageHeight: 200,
+									imageAlt: "entrada confirmacion",
+                                    title: "¡Entrada registrada exitosamente!",
+                                    text: "Todos los datos de la entrada han sido registrados en el sistema y las cantidades en del EPP han sido modificadas.",
+									confirmButtonColor: "#12b071"
+                                });
+                            </script>';
+			$_SESSION['registro_entrada'] = false; // Reinicia la variable de sesión
+		}
+		?>
+
 
 	<?php else: ?>
 

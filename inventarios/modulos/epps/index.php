@@ -52,8 +52,6 @@ require_once("../../../db/conexion.php");
                     <div class="content">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <?php include('eliminar.php'); ?>
-
                                 <h3 class="panel-title"><i class="fa-solid fa-screwdriver-wrench"
                                         style="color: #1b1c1d;"></i> Administrador de Elementos de Proteccion Personal</h3>
                             </div>
@@ -102,7 +100,44 @@ require_once("../../../db/conexion.php");
         <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../../datatables/jquery.dataTables.js"></script>
         <script src="../../datatables/dataTables.bootstrap.js"></script>
+
+        <?php
+        session_start();
+        if (isset($_SESSION['actualizar_epp']) && $_SESSION['actualizar_epp']) {
+            echo '<script>
+                                Swal.fire({
+									imageUrl: "https://ik.imagekit.io/smdxc0e2g3/userscontent2-endpoint/images/0016f8ea-4c4b-47c4-aeec-3935fd1c0ee1/d577b255624650344404f3b22776fb52.gif?tr=w-240,rt-0",
+									imageHeight: 200,
+									imageAlt: "EPP confirmacion",
+                                    title: "Elemento de proteccion personal actualizado exitosamente!",
+                                    text: "Los datos del EPP han sido actualizados.",
+									confirmButtonColor: "#ffc107"
+                                });
+                            </script>';
+            $_SESSION['actualizar_epp'] = false; // Reinicia la variable de sesión
+        }
+        ?>
+
+        <script src="js/confirmacion.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <?php include('eliminar.php'); ?>
+
+        <?php
+        session_start();
+        if (isset($_SESSION['eliminar_epp']) && $_SESSION['eliminar_epp']) {
+            echo '<script>
+                                Swal.fire({
+                                    imageUrl: "https://i.imgur.com/A9qxNme.jpg",
+									imageHeight: 200,
+									imageAlt: "eliminar confirmacion",  
+                                    title: "¡Elemento de proteccion personal eliminado exitosamente!",
+                                    text: "El EPP ha sido eliminado del sistema.",
+									confirmButtonColor: "#ffc107"
+                                });
+                            </script>';
+            $_SESSION['eliminar_epp'] = false; // Reinicia la variable de sesión
+        }
+        ?>
 
 
         <script>
@@ -150,6 +185,9 @@ require_once("../../../db/conexion.php");
                 });
             });
         </script>
+
+        <?php include('../../../Footer/footer.php'); ?>
+
 
     <?php else: ?>
 

@@ -138,7 +138,12 @@ if (isset($_POST['add_to_cart'])) {
                 <div class="footer-content">
 
                     <div class="footer-content-about">
-                        <h4>Seguridad y Salud en el Trabajo</h4>
+                        <b><h4>&copy;Servicio Nacional de Aprendizaje SENA - Centro de Biotecnologia Agropecuaria - Regional Cundinamarca <br>
+					Dirección: Km 7 Via Bogota-Mosquera Cundinamarca - Telefono: (1) 5462323 Ext. 17967 <br>
+					Conmutador Nacional (57 1) 5461500 <br>
+					Atención telefónica: lunes a viernes 7:30 a.m. a 4:30 P.M <br>
+					Atención al ciudadano: Bogotá (57 1) 5925555 - Línea gratuita y resto del país 018000 910270 <br>
+					Atención al empresario: Bogotá (57 1) 4049494 - Línea gratuita y resto del país 018000 910682</h4></b> 
                     </div>
                     <div class="footer-div">
                         <div class="social-media">

@@ -13,7 +13,7 @@ require_once("../../../../db/conexion.php");
 
 <body>
 
-<?php if (isset($_SESSION["id"]) && $_SESSION["rol"] == 1 || $_SESSION["rol"] == 4): ?>
+    <?php if (isset($_SESSION["id"]) && $_SESSION["rol"] == 1 || $_SESSION["rol"] == 4): ?>
 
         <!-- Menu de navegacion-->
 
@@ -47,25 +47,10 @@ require_once("../../../../db/conexion.php");
             <div class="row">
                 <div class="span12">
                     <div class="content">
-                        <?php
-                        if (isset($_GET['action']) == 'delete') {
-                            $id_delete = intval($_GET['CamillaID']);
-                            $query = mysqli_query($conexion, "SELECT * FROM camillas WHERE CamillaID='$id_delete'");
-                            if (mysqli_num_rows($query) == 0) {
-                                echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> No se encontraron datos.</div>';
-                            } else {
-                                $delete = mysqli_query($conexion, "DELETE FROM camillas WHERE CamillaID='$id_delete'");
-                                if ($delete) {
-                                    echo '<div class="alert alert-primary alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>  Bien hecho, los datos han sido eliminados correctamente.</div>';
-                                } else {
-                                    echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Error, no se pudo eliminar los datos.</div>';
-                                }
-                            }
-                        }
-                        ?>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa-solid fa-truck-medical"></i> Camillas con revisiones pendientes</h3>
+                                <h3 class="panel-title"><i class="fa-solid fa-truck-medical"></i> Camillas con revisiones
+                                    pendientes</h3>
                             </div>
 
                             <div class="panel-body"><br>
@@ -115,6 +100,43 @@ require_once("../../../../db/conexion.php");
         <script src="../../../datatables/jquery.dataTables.js"></script>
         <script src="../../../datatables/dataTables.bootstrap.js"></script>
 
+        <?php
+        session_start();
+        if (isset($_SESSION['actualizar_camilla']) && $_SESSION['actualizar_camilla']) {
+            echo '<script>
+                                Swal.fire({
+									imageUrl: "https://i.imgur.com/d2hd0Gv.jpg",
+									imageHeight: 200,
+									imageAlt: "Camilla confirmacion",
+                                    title: "Camilla actualizada exitosamente!",
+                                    text: "Los datos de la camilla han sido actualizados.",
+									confirmButtonColor: "#ffc107"
+                                });
+                            </script>';
+            $_SESSION['actualizar_camilla'] = false; // Reinicia la variable de sesión
+        }
+        ?>
+
+        <script src="../js/confirmacion.js"></script>
+        <?php include('eliminar.php'); ?>
+
+        <?php
+        session_start();
+        if (isset($_SESSION['eliminar_camilla']) && $_SESSION['eliminar_camilla']) {
+            echo '<script>
+                                Swal.fire({
+                                    imageUrl: "https://i.imgur.com/A9qxNme.jpg",
+									imageHeight: 200,
+									imageAlt: "eliminar confirmacion",  
+                                    title: "¡Camilla eliminada exitosamente!",
+                                    text: "La camilla ha sido eliminado del sistema.",
+									confirmButtonColor: "#ffc107"
+                                });
+                            </script>';
+            $_SESSION['eliminar_camilla'] = false; // Reinicia la variable de sesión
+        }
+        ?>
+
         <script>
             $(document).ready(function () {
                 let dataTable = $('#lookup').DataTable({
@@ -160,13 +182,15 @@ require_once("../../../../db/conexion.php");
             });
         </script>
 
+        <?php include('../../../../Footer/footer.php'); ?>
+
     <?php else: ?>
 
         <script>
             alert("No has iniciado sesión, por favor inicia a continuación.");
             window.location.href = "../../../../php/login.php";
         </script>
-        
+
     <?php endif; ?>
 
 </body>

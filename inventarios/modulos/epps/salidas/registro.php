@@ -83,12 +83,31 @@ require_once("../../../../db/conexion.php");
 							</div>
 						</div>
 
+
+
 						<script src="js/script.js"></script>
 						<script src="js/scriptEmpleado.js"></script>
 
 						<script src="../../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 						<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 						<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+						
+						<?php
+						if (isset($_SESSION['registro_salida']) && $_SESSION['registro_salida']) {
+							echo '<script>
+                                Swal.fire({
+									imageUrl: "https://i.imgur.com/ERQE4SE.gif",
+									imageHeight: 200,
+									imageAlt: "salida confirmacion",
+                                    title: "¡Salida registrada exitosamente!",
+                                    text: "Todos los datos de la salida han sido registrados en el sistema y las cantidades en del EPP han sido modificadas.",
+									confirmButtonColor: "#12b071"
+                                });
+                            </script>';
+							$_SESSION['registro_salida'] = false; // Reinicia la variable de sesión
+						}
+						?>
 
 					<?php else: ?>
 

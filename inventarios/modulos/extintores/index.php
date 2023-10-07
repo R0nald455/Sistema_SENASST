@@ -156,7 +156,9 @@ require_once("../../../db/conexion.php");
         if (isset($_SESSION['eliminar_extintor']) && $_SESSION['eliminar_extintor']) {
             echo '<script>
                                 Swal.fire({
-                                    icon: "success",
+                                    imageUrl: "https://i.imgur.com/A9qxNme.jpg",
+									imageHeight: 200,
+									imageAlt: "eliminar confirmacion",  
                                     title: "¡Extintor eliminado exitosamente!",
                                     text: "El extintor ha sido eliminado del sistema.",
 									confirmButtonColor: "#ffc107"

@@ -13,7 +13,9 @@ if(isset($_POST['update'])){
 				$sql = mysqli_query($conexion, "UPDATE tblimplementos SET cantidad = cantidad + $cantidad WHERE id_implementos = '$id_implementos'");
 
 				if($update && $sql){
-					echo "<script>alert('Los datos han sido actualizados!'); window.location = 'index.php'</script>";
+					session_start();
+					$_SESSION['actualizar_entrada'] = true;
+					header('Location: index.php');
 				}else{
 					echo "<script>alert('Error, no se pudo actualizar los datos'); window.location = 'index.php'</script>";
 				}

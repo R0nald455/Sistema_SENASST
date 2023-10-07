@@ -16,10 +16,9 @@ if (isset($_POST['input'])) {
     $insert = mysqli_query($conexion, "INSERT INTO tblimplementos(ImagenReferencia, Nombre, Descripcion, Categoria, Cantidad, Ubicacion, Fecha)
 															VALUES('$ImagenContenido', '$nombre', '$descripcion', '$categoria', '$cantidad', '$ubicacion', '$fecha')") or die(mysqli_error($conexion));
     if ($insert) {
-        echo '<script>
-        alert("Bien hecho, los datos han sido agregados correctamente.")
-        window.location.href = "index.php";
-    </script>';
+        session_start();
+        $_SESSION['registro_epp'] = true;
+        header('Location:index.php');
     } else {
         echo '<script>
         alert("Error, no se pudieron ingresar los datos");

@@ -14,10 +14,9 @@ if (isset($_POST['input'])) {
     $actualizar_cantidad = mysqli_query($conexion, "UPDATE tblimplementos SET cantidad = cantidad + $cantidad WHERE ID_Implementos = $id_implementos") or die(mysqli_error($conexion));
 
     if ($insert && $actualizar_cantidad) {
-        echo '<script>
-        alert("Bien hecho, los datos han sido agregados correctamente.")
-        window.location.href = "index.php";
-    </script>';
+        session_start();
+        $_SESSION['registro_entrada'] = true;
+        header('Location:index.php');
     } else {
         echo '<script>
         alert("Error, no se pudieron ingresar los datos");

@@ -8,15 +8,16 @@ require_once("../../../db/conexion.php");
 
 <head>
     <?php include("head.php"); ?>
-    <?php include("registrar.php"); ?>
-
 </head>
 
 <body>
 
-<?php if (isset($_SESSION["id"]) && $_SESSION["rol"] == 1 || $_SESSION["rol"] == 4): ?>
+    <?php if (isset($_SESSION["id"]) && $_SESSION["rol"] == 1 || $_SESSION["rol"] == 4): ?>
 
-        <div style="height: 90%; top: 50px;" class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="labelRegistroModal" aria-hidden="true">
+        <?php include("registrar.php"); ?>
+
+        <div style="height: 90%; top: 50px;" class="modal fade" id="registroModal" tabindex="-1"
+            aria-labelledby="labelRegistroModal" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -229,6 +230,22 @@ require_once("../../../db/conexion.php");
             </div>
         </div>
 
+        <?php
+        if (isset($_SESSION['registro_camilla']) && $_SESSION['registro_camilla']) {
+            echo '<script>
+                                Swal.fire({
+									imageUrl: "https://i.imgur.com/VxcH9d8.jpg",
+									imageHeight: 200,
+									imageAlt: "camilla confirmacion",
+                                    title: "¡Camilla registrada exitosamente!",
+                                    text: "Todos los datos de la camilla han sido registrados en el sistema.",
+									confirmButtonColor: "#12b071"
+                                });
+                            </script>';
+            $_SESSION['registro_camilla'] = false; // Reinicia la variable de sesión
+        }
+        ?>
+
         <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 
     <?php else: ?>
@@ -237,6 +254,6 @@ require_once("../../../db/conexion.php");
             alert("No has iniciado sesión, por favor inicia a continuación.");
             window.location.href = "../../../php/login.php";
         </script>
-        
+
     <?php endif; ?>
 </body>
