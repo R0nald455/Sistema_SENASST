@@ -44,7 +44,7 @@ require_once("../../../../db/conexion.php");
                             
                             <div class="control-group">
                                 <div class="controls">
-                                    <label class="control-label" for="basicinput">Identificador de la camilla: <input type="text" name="CamillaID" id="CamillaID" value="<?php echo $row['CamillaID']; ?>" placeholder="" class="form-control" disabled readonly="readonly"></label>
+                                    <label class="control-label" for="basicinput">Identificador de la camilla: <input type="text" name="CamillaID" id="CamillaID" value="<?php echo $row['CamillaID']; ?>" placeholder="" class="form-control" readonly="readonly"></label>
                                 </div>
                             </div>
 

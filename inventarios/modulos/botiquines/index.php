@@ -126,7 +126,9 @@ include "../../../db/conexion.php";
         if (isset($_SESSION['eliminar_botiquin']) && $_SESSION['eliminar_botiquin']) {
             echo '<script>
                                 Swal.fire({
-                                    icon: "success",
+                                    imageUrl: "https://i.imgur.com/A9qxNme.jpg",
+									imageHeight: 200,
+									imageAlt: "eliminar confirmacion",  
                                     title: "¡Botiquin eliminado exitosamente!",
                                     text: "El botiquin ha sido eliminado del sistema.",
 									confirmButtonColor: "#ffc107"

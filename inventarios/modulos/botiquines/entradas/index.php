@@ -17,8 +17,6 @@ include "../../../../db/conexion.php";
 
 <?php if (isset($_SESSION["id"]) && $_SESSION["rol"] == 1 || $_SESSION["rol"] == 4): ?>
 
-        <?php include("registro.php"); ?>
-
         <div class="container__menu">
             <div class="menu">
 
@@ -50,7 +48,9 @@ include "../../../../db/conexion.php";
                 </div>
             </div>
         </div>
-        <br>
+
+        <?php include("registro.php"); ?>
+
         <div class="container">
             <div class="row">
                 <div class="span12">
@@ -123,9 +123,11 @@ include "../../../../db/conexion.php";
         if (isset($_SESSION['eliminar_entrada']) && $_SESSION['eliminar_entrada']) {
             echo '<script>
                                 Swal.fire({
-                                    icon: "success",
+                                    imageUrl: "https://i.imgur.com/A9qxNme.jpg",
+									imageHeight: 200,
+									imageAlt: "eliminar confirmacion",  
                                     title: "¡Entrada eliminada exitosamente!",
-                                    text: "La entrada ha sido eliminada del sistema.",
+                                    text: "La entrada ha sido eliminada del sistema, recuerda actualizar las cantidades en administrar elementos en caso de ser necesario.",
 									confirmButtonColor: "#ffc107"
                                 });
                             </script>';

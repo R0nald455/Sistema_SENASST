@@ -16,7 +16,7 @@ require_once("../../../../db/conexion.php");
 
 <body>
 
-<?php if (isset($_SESSION["id"]) && $_SESSION["rol"] == 1 || $_SESSION["rol"] == 4): ?>
+    <?php if (isset($_SESSION["id"]) && $_SESSION["rol"] == 1 || $_SESSION["rol"] == 4): ?>
 
         <div class="container__menu">
             <div class="menu">
@@ -58,8 +58,8 @@ require_once("../../../../db/conexion.php");
                             <div class="panel-body">
                                 <div class="pull-right">
                                     <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal"
-                                    data-bs-target="#registroModal"><i class="fa-solid fa-plus"></i>Nueva
-                                    entrada</button>
+                                        data-bs-target="#registroModal"><i class="fa-solid fa-plus"></i>Nueva
+                                        entrada</button>
                                 </div><br>
                                 <hr>
                                 <div class="table-container table-responsive">
@@ -96,6 +96,44 @@ require_once("../../../../db/conexion.php");
         <script src="../../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../../../datatables/jquery.dataTables.js"></script>
         <script src="../../../datatables/dataTables.bootstrap.js"></script>
+
+        <?php
+        session_start();
+        if (isset($_SESSION['actualizar_entrada']) && $_SESSION['actualizar_entrada']) {
+            echo '<script>
+                                Swal.fire({
+									imageUrl: "https://i.imgur.com/RmemS7c.png",
+									imageHeight: 200,
+									imageAlt: "entrada confirmacion",
+                                    title: "Entrada actualizada exitosamente!",
+                                    text: "Los datos de la entrada han sido actualizados.",
+									confirmButtonColor: "#ffc107"
+                                });
+                            </script>';
+            $_SESSION['actualizar_entrada'] = false; // Reinicia la variable de sesión
+        }
+        ?>
+
+        <script src="../js/confirmacion.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <?php include('eliminar.php'); ?>
+
+        <?php
+        session_start();
+        if (isset($_SESSION['eliminar_entrada']) && $_SESSION['eliminar_entrada']) {
+            echo '<script>
+                                Swal.fire({
+									imageUrl: "https://i.imgur.com/A9qxNme.jpg",
+									imageHeight: 200,
+									imageAlt: "entrada confirmacion",  
+                                    title: "¡Entrada eliminada exitosamente!",
+                                    text: "La entrada ha sido eliminada del sistema, recuerda actualizar la cantidades en administrar EPPS en caso de ser necesario.",
+									confirmButtonColor: "#ffc107"
+                                });
+                            </script>';
+            $_SESSION['eliminar_entrada'] = false; // Reinicia la variable de sesión
+        }
+        ?>
 
         <script>
             $(document).ready(function () {
@@ -141,6 +179,9 @@ require_once("../../../../db/conexion.php");
                 });
             });
         </script>
+
+        <?php include('../../../../Footer/footer.php'); ?>
+
 
     <?php else: ?>
 

@@ -123,9 +123,11 @@ require_once("../../../../db/conexion.php");
         if (isset($_SESSION['eliminar_salida']) && $_SESSION['eliminar_salida']) {
             echo '<script>
                                 Swal.fire({
-                                    icon: "success",
+                                    imageUrl: "https://i.imgur.com/A9qxNme.jpg",
+									imageHeight: 200,
+									imageAlt: "eliminar confirmacion", 
                                     title: "¡Salida eliminada exitosamente!",
-                                    text: "El salida ha sido eliminada del sistema.",
+                                    text: "El salida ha sido eliminada del sistema, recuerda actualizar las cantidades en administrar elementos en caso de ser necesario.",
 									confirmButtonColor: "#ffc107"
                                 });
                             </script>';
@@ -185,7 +187,6 @@ require_once("../../../../db/conexion.php");
         </script>
 
         <?php include('../../../../Footer/footer.php'); ?>
-
 
     <?php else: ?>
 
