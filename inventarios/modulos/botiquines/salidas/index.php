@@ -14,7 +14,7 @@ require_once("../../../../db/conexion.php");
 
 <body>
 
-    <?php if (isset($_SESSION["id"])): ?>
+<?php if (isset($_SESSION["id"]) && $_SESSION["rol"] == 1 || $_SESSION["rol"] == 4): ?>
 
         <?php include("registro.php"); ?>
 
@@ -97,6 +97,41 @@ require_once("../../../../db/conexion.php");
             </div>
             <!--/.container-->
         </div>
+
+        <?php
+        session_start();
+        if (isset($_SESSION['actualizar_salida']) && $_SESSION['actualizar_salida']) {
+            echo '<script>
+                                Swal.fire({
+									imageUrl: "https://i.imgur.com/RmemS7c.png",
+									imageHeight: 200,
+									imageAlt: "salida confirmacion",
+                                    title: "¡Salida actualizada exitosamente!",
+                                    text: "Los datos de la salida han sido actualizados.",
+									confirmButtonColor: "#ffc107"
+                                });
+                            </script>';
+            $_SESSION['actualizar_salida'] = false; // Reinicia la variable de sesión
+        }
+        ?>
+
+        <script src="../js/confirmacion.js"></script>
+        <?php include('eliminar.php'); ?>
+
+        <?php
+        session_start();
+        if (isset($_SESSION['eliminar_salida']) && $_SESSION['eliminar_salida']) {
+            echo '<script>
+                                Swal.fire({
+                                    icon: "success",
+                                    title: "¡Salida eliminada exitosamente!",
+                                    text: "El salida ha sido eliminada del sistema.",
+									confirmButtonColor: "#ffc107"
+                                });
+                            </script>';
+            $_SESSION['eliminar_salida'] = false; // Reinicia la variable de sesión
+        }
+        ?>
 
         <script src="../../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../../../datatables/jquery.dataTables.js"></script>

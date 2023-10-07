@@ -1,7 +1,8 @@
 <?php
 session_start();
 error_reporting(0);
-include "../../../../db/conexion.php"; ?>
+include "../../../../db/conexion.php"; 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +15,7 @@ include "../../../../db/conexion.php"; ?>
 
 <body>
 
-	<?php if (isset($_SESSION["id"])) : ?>
+<?php if (isset($_SESSION["id"]) && $_SESSION["rol"] == 1 || $_SESSION["rol"] == 4): ?>
 
 		<br>
 		<div class="container">

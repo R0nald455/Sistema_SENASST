@@ -1,4 +1,7 @@
-<?php include '../../../../db/conexion.php';
+<?php 
+session_start();
+error_reporting(0);
+include '../../../../db/conexion.php';
 include 'index.php';
 ?>
 
@@ -10,6 +13,8 @@ include 'index.php';
 </head>
 
 <body>
+
+<?php if (isset($_SESSION["id"]) && $_SESSION["rol"] == 1 || $_SESSION["rol"] == 4): ?>
 
     <header>
         <br>
@@ -208,6 +213,16 @@ include 'index.php';
     <?php
     include("../../../../Footer/footer.php");
     ?>
+
+<?php else: ?>
+
+<script>
+    alert("No has iniciado sesión, por favor inicia a continuación.");
+    window.location.href = "../../../../php/login.php";
+</script>
+
+<?php endif; ?>
+
 </body>
 
 </html>

@@ -13,11 +13,9 @@ if (isset($_POST['input'])) {
     $actualizar_cantidad = mysqli_query($conexion, "UPDATE elementosbotiquines SET cantidad = cantidad - $cantidad WHERE id_elementos = $id_elementos") or die(mysqli_error($conexion));
 
     if ($insert && $actualizar_cantidad) {
-        echo '
-        <script>
-            alert("Bien hecho, los datos han sido agregados correctamente.")
-            window.location.href = "index.php";
-        </script>';
+        session_start();
+        $_SESSION['registro_salida'] = true;
+        header('Location:index.php');
     } else {
         echo '
             <script>

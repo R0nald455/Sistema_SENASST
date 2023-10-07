@@ -14,7 +14,7 @@ include "../../../../db/conexion.php";
 
 <body>
 
-	<?php if (isset($_SESSION["id"])): ?>
+	<?php if (isset($_SESSION["id"]) && $_SESSION["rol"] == 1 || $_SESSION["rol"] == 4): ?>
 
 		<br>
 		<div class="container">
@@ -45,7 +45,7 @@ include "../../../../db/conexion.php";
 							<div class="control-group">
 								<div class="controls">
 									<label class="control-label" for="basicinput">Identificador de la entrada: <input
-											type="text" name="id_entradas" id="id_entradas" disabled
+											type="text" name="id_entradas" id="id_entradas" readonly
 											value="<?php echo $row['id_entradas']; ?>" placeholder=""
 											class="form-control span8 tip"></label>
 								</div>
@@ -54,7 +54,7 @@ include "../../../../db/conexion.php";
 							<div class="control-group">
 								<div class="controls">
 									<label class="control-label" for="basicinput">Identificador de Elemento del Botiquín:
-										<input disabled type="text" name="id_elementos" id="id_elementos"
+										<input readonly type="text" name="id_elementos" id="id_elementos"
 											value="<?php echo $row['id_elementos']; ?>" placeholder=""
 											class="form-control span8 tip"></label>
 								</div>
@@ -62,7 +62,7 @@ include "../../../../db/conexion.php";
 
 							<div class="control-group">
 								<div class="controls">
-									<label class="control-label" for="basicinput">Cantidad: <input disabled name="cantidad"
+									<label class="control-label" for="basicinput">Cantidad: <input readonly name="cantidad"
 											id="cantidad" value="<?php echo $row['cantidad']; ?>"
 											class="form-control span8 tip" type="number"></label>
 								</div>
@@ -72,15 +72,15 @@ include "../../../../db/conexion.php";
 								<div class="controls">
 									<label class="control-label" for="basicinput">Comentario: <input type="text"
 											name="comentario" id="comentario" value="<?php echo $row['comentario']; ?>"
-											placeholder="" class="form-control span8 tip" required></label>
+											placeholder="" class="form-control span8 tip"></label>
 								</div>
 							</div>
 
 							<div class="control-group">
 								<div class="controls">
-									<label class="control-label" for="basicinput">Fecha de entrada: <input name="fechaEntra"
+									<label class="control-label" for="fechaEntra">Fecha de entrada: <input name="fechaEntra"
 											id="fechaEntra" value="<?php echo $row['fechaEntra']; ?>" class=" form-control"
-											type="text"></label>
+											type="date" required /></label>
 								</div>
 							</div>
 

@@ -11,7 +11,7 @@ require_once("../../../../db/conexion.php");
 </head>
 
 <body>
-	<?php if (isset($_SESSION["id"])): ?>
+	<?php if (isset($_SESSION["id"]) && $_SESSION["rol"] == 1 || $_SESSION["rol"] == 4): ?>
 
 		<div class="container">
 			<div class="row">
@@ -20,8 +20,8 @@ require_once("../../../../db/conexion.php");
 
 						<?php include('registrar.php'); ?>
 
-						<div style="height: 90%; top: 50px;" class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="labelRegistroModal"
-							aria-hidden="true">
+						<div style="height: 90%; top: 50px;" class="modal fade" id="registroModal" tabindex="-1"
+							aria-labelledby="labelRegistroModal" aria-hidden="true">
 							<div class="modal-dialog">
 								<div class="modal-content">
 									<div class="modal-header">

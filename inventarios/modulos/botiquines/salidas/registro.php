@@ -11,7 +11,7 @@ require_once("../../../../db/conexion.php");
 </head>
 
 <body>
-	<?php if (isset($_SESSION["id"])): ?>
+<?php if (isset($_SESSION["id"]) && $_SESSION["rol"] == 1 || $_SESSION["rol"] == 4): ?>
 
 		<div style="height: 90%; top: 50px;" class="modal fade" id="registroModal" tabindex="-1"
 			aria-labelledby="labelRegistroModal" aria-hidden="true">
@@ -63,6 +63,23 @@ require_once("../../../../db/conexion.php");
 				</div>
 			</div>
 		</div>
+
+		<?php
+		session_start();
+		if (isset($_SESSION['registro_salida']) && $_SESSION['registro_salida']) {
+			echo '<script>
+                                Swal.fire({
+									imageUrl: "https://i.imgur.com/ERQE4SE.gif",
+									imageHeight: 200,
+									imageAlt: "salida confirmacion",
+                                    title: "!Salida registrada exitosamente!",
+                                    text: "Los datos de la salida han sido registrados y la cantidad del elemento ha sido modificada.",
+									confirmButtonColor: "#ffc107"
+                                });
+                            </script>';
+			$_SESSION['registro_salida'] = false; // Reinicia la variable de sesión
+		}
+		?>
 
 		<script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 
