@@ -135,7 +135,7 @@
 	<section id="soporte">
 		<div id="container-soporte">
 			<div id="titulo-container">
-				<h2 class="titulo-soporte">Ayuda y Soporte</h2>
+				<h2 class="titulo-soporte">Buzon de Comentarios, Reclamos o Sugerencias</h2>
 				<img src="img/soporte.jpg" alt="ImagenSoporte">
 			</div>
 
