@@ -312,30 +312,30 @@ include 'index.php';
                                                             if ($diferencia_dias > 30) {
                                                                 ?><br>
                                                                 <i class="fa-solid fa-circle-check fa-2xl"
-                                                                        style="color: #2bf21c; margin: 30px;"></i><br>
-                                                                    <?php
-                                                                    echo "La inspección todavia esta a mas de un mes";
-                                                                    ?>
-                                                            
+                                                                    style="color: #2bf21c; margin: 30px;"></i><br>
+                                                                <?php
+                                                                echo "La inspección todavia esta a mas de un mes";
+                                                                ?>
+
                                                                 <?php
                                                             } elseif ($diferencia_dias >= 1) {
                                                                 ?><br>
                                                                 <i class="fa-solid fa-circle-exclamation fa-2xl"
-                                                                        style="color: #ffd500; margin: 30px;"></i><br>
-                                                                    <?php
-                                                                    echo "La inspección esta a menos de un mes";
-                                                                    ?>
-                                                                
+                                                                    style="color: #ffd500; margin: 30px;"></i><br>
+                                                                <?php
+                                                                echo "La inspección esta a menos de un mes";
+                                                                ?>
+
                                                                 <?php
 
                                                             } else {
                                                                 ?><br>
                                                                 <i class="fa-solid fa-circle-xmark fa-2xl"
-                                                                        style="color: #f50000; margin: 30px;"></i><br>
-                                                                    <?php
-                                                                    print "La fecha de inspeccion ya se vencio y no se ha llevado a cabo";
-                                                                    ?>
-                                                                
+                                                                    style="color: #f50000; margin: 30px;"></i><br>
+                                                                <?php
+                                                                print "La fecha de inspeccion ya se vencio y no se ha llevado a cabo";
+                                                                ?>
+
                                                                 <?php
                                                             }
 

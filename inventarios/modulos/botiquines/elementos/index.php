@@ -19,7 +19,7 @@ include "../../../../db/conexion.php";
 
 <body>
 
-<?php if (isset($_SESSION["id"]) && $_SESSION["rol"] == 1 || $_SESSION["rol"] == 4): ?>
+    <?php if (isset($_SESSION["id"]) && $_SESSION["rol"] == 1 || $_SESSION["rol"] == 4): ?>
 
         <!-- Menu de navegacion-->
 
@@ -72,6 +72,9 @@ include "../../../../db/conexion.php";
                                         Elemento</button>
                                     <a id="filtrar-reporte" href="filtrar_reporte.php" class="btn btn-sm btn-primary"><i
                                             class="fa-solid fa-file-pdf"></i> Filtrar elementos para generar PDF</a>
+                                    <a id="button-alert" href="alertas/config.php" class="btn btn-sm btn-info"><i
+                                            class="fa-solid fa-envelope"></i> Alerta para
+                                        elementos caducados</a>
                                 </div><br>
                                 <hr>
 
@@ -112,6 +115,20 @@ include "../../../../db/conexion.php";
         <script src="../../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../../../datatables/jquery.dataTables.js"></script>
         <script src="../../../datatables/dataTables.bootstrap.js"></script>
+
+        <?php
+        session_start();
+        if (isset($_SESSION['email_sent']) && $_SESSION['email_sent']) {
+            echo '<script>
+                                Swal.fire({
+                                    icon: "success",
+                                    title: "¡Correo enviado!",
+                                    text: "Se te ha enviado la informacion completa de la camilla a revisar.",
+                                });
+                            </script>';
+            $_SESSION['email_sent'] = false; // Reinicia la variable de sesión
+        }
+        ?>
 
         <?php
         session_start();

@@ -1,6 +1,6 @@
 <?php
 
-include('../../../../db/conexion.php');
+include('../../../../../db/conexion.php');
 
 $smtpHost = 'smtp.gmail.com';
 $smtpUsername = 'cbasst1957@gmail.com';
@@ -10,10 +10,10 @@ $smtpSecurity = 'tls';
 
 require 'functions.php';
 
-$camillasNecesarias = obtenerCamillasNecesarias();
+$elementosNecesarios = obtenerElementosNecesarios();
 
-if ($camillasNecesarias) {
-    foreach ($camillasNecesarias as $camilla) {
+if ($elementosNecesarios) {
+    foreach ($elementosNecesarios as $elemento) {
 
         $mensaje = "
 
@@ -36,24 +36,32 @@ if ($camillasNecesarias) {
             </header>
         
             <div style='width: 100%; height: 400px;' class='imgContainerBienvenida'>
-                <img style='width: 100%; height: 100%;' src='https://i.imgur.com/VxcH9d8.jpg' alt=''>
+                <img style='width: 100%; height: 100%;' src='https://i.imgur.com/Sea0PWX.jpg' alt=''>
             </div>
         
             <div style='text-align: center; margin: 10px; color: rgb(57, 168, 1);' class='containerTitulo'>
-                <h1>La siguiente camilla necesita ser revisada <b style='color: #b81414;'>!URGENTEMENTE¡</b></h1>
+                <h1>El siguiente elemento necesita ser remplazado <b style='color: #b81414;'>!URGENTEMENTE¡</b> porque se ha caducado.</h1>
             </div>
         
             <div style='width: 100%; padding: 20px;' class='containerContenido'>
-                <h2 style='margin: 5px; color: rgb(57, 168, 1);' >Tipo de camilla:</h2>
-                <p  style='margin: 5px; font-size:20px;'>" . $camilla['TipoCamilla'] . "</p>
+                <h2 style='margin: 5px; color: rgb(57, 168, 1);' >ID de elemento:</h2>
+                <p  style='margin: 5px; font-size:20px;'>" . $elemento['id_elementos'] . "</p>
+                <h2 style='margin: 5px; color: rgb(57, 168, 1);' >ID del botiquin al que pertenece:</h2>
+                <p  style='margin: 5px; font-size:20px;'>" . $elemento['id_botiquin'] . "</p>
+                <h2 style='margin: 5px; color: rgb(57, 168, 1);' >Nombre:</h2>
+                <p  style='margin: 5px; font-size:20px;'>" . $elemento['nombre'] . "</p>
+                <h2 style='margin: 5px; color: rgb(57, 168, 1);' >Cantidad:</h2>
+                <p  style='margin: 5px; font-size:20px;'>" . $elemento['cantidad'] . "</p>
                 <h2 style='margin: 5px; color: rgb(57, 168, 1);' >Ubicacion:</h2>
-                <p  style='margin: 5px; font-size:20px;'>" . $camilla['UbicacionActual'] . "</p>
-                <h2 style='margin: 5px; color: rgb(57, 168, 1);' >Fecha de adquisicion:</h2>
-                <p  style='margin: 5px; font-size:20px;'>" . $camilla['FechaAdquisicion'] . "</p>
-                <h2 style='margin: 5px; color: rgb(57, 168, 1);' >Fecha en que se le hizo mantenimiento por ultima vez:</h2>
-                <p  style='margin: 5px; font-size:20px;'>" . $camilla['FechaUltimoMantenimiento'] . "</p>
-                <h2 style='margin: 5px; color: rgb(57, 168, 1);' >Con las siguientes observaciones:</h2>
-                <p  style='margin: 5px; font-size:20px;'>" . $camilla['Observaciones'] . "</p>
+                <p  style='margin: 5px; font-size:20px;'>" . $elemento['ubicacion'] . ", ". $elemento['ubicacionEspecifica'] ."</p>
+                <h2 style='margin: 5px; color: rgb(57, 168, 1);' >Estado:</h2>
+                <p  style='margin: 5px; font-size:20px;'>" . $elemento['estado'] . "</p>
+                <h2 style='margin: 5px; color: rgb(57, 168, 1);' >Fecha de registro:</h2>
+                <p  style='margin: 5px; font-size:20px;'>" . $elemento['fechaRegistro'] . "</p>
+                <h2 style='margin: 5px; color: rgb(57, 168, 1);' >Fecha de vencimiento:</h2>
+                <p  style='margin: 5px; font-size:20px;'>" . $elemento['fechaVencimiento'] . "</p>
+                <h2 style='margin: 5px; color: rgb(57, 168, 1);' >Comentarios:</h2>
+                <p  style='margin: 5px; font-size:20px;'>" . $elemento['comentarios'] . "</p>
             </div>
         
             <footer style='background-color: rgb(57, 168, 1); padding: 10px; color: #ffffff; text-align: center; font-size: 10px;'>
@@ -72,19 +80,19 @@ if ($camillasNecesarias) {
         
         </html>
         ";
+        
+                $mensaje .= "<img src='cid:imagen' />";
 
-        $mensaje .= "<img src='cid:imagen' />";
+        $imagenBinaria = $elemento['ImagenReferencia'];
 
-        $imagenBinaria = $camilla['ImagenReferencia'];
-
-        enviarRecordatorio($camilla['camillaID'], 'cbasst1957@gmail.com', $mensaje, $imagenBinaria);
+        enviarRecordatorio($elemento['id_elementos'], 'cbasst1957@gmail.com', $mensaje, $imagenBinaria);
         header('Location: ../index.php');
 
     }
 
 } else {
     echo '<script type="text/javascript">
-    alert("No se encuentran camillas con revisiones pendientes.");
+    alert("No se encuentran elementos con revisiones pendientes.");
     window.location.href="../index.php"
     </script>';
 }
