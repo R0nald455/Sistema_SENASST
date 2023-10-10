@@ -92,7 +92,7 @@ if ($elementosNecesarios) {
 
 } else {
     echo '<script type="text/javascript">
-    alert("No se encuentran elementos con revisiones pendientes.");
+    alert("No se encuentran elementos caducados en este momento.");
     window.location.href="../index.php"
     </script>';
 }

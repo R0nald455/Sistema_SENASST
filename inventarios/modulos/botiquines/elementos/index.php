@@ -121,9 +121,11 @@ include "../../../../db/conexion.php";
         if (isset($_SESSION['email_sent']) && $_SESSION['email_sent']) {
             echo '<script>
                                 Swal.fire({
-                                    icon: "success",
+                                    imageUrl: "https://i.imgur.com/5OvBuOf.gif",
+									imageHeight: 200,
+									imageAlt: "Extintor confirmacion",
                                     title: "¡Correo enviado!",
-                                    text: "Se te ha enviado la informacion completa de la camilla a revisar.",
+                                    text: "Se te ha enviado la informacion completa del elemento a remplazar.",
                                 });
                             </script>';
             $_SESSION['email_sent'] = false; // Reinicia la variable de sesión

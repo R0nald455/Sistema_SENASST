@@ -10,10 +10,13 @@ $smtpSecurity = 'tls';
 
 require 'functions.php';
 
+
+
 $extintoresNecesarios = obtenerExtintoresNecesarios();
 
 if ($extintoresNecesarios) {
     foreach ($extintoresNecesarios as $extintor) {
+
         $mensaje = "
 
 <!DOCTYPE html>
@@ -80,7 +83,7 @@ if ($extintoresNecesarios) {
 
         $imagenBinaria = $extintor['ImagenReferencia'];
 
-        enviarRecordatorio($extintor['ExtintorID'], 'cbasst1957@gmail.com', $mensaje, $imagenBinaria);
+        enviarRecordatorio($extintor['ExtintorID'], $mensaje, $imagenBinaria);
         header('Location: ../index.php');
 
     }
