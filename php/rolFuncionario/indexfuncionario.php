@@ -12,7 +12,8 @@ require_once("../../db/conexion.php");
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	<link rel="stylesheet" href="../../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../../css/style.css">
 	<link rel="stylesheet" href="../../css/footer.css">
@@ -24,7 +25,7 @@ require_once("../../db/conexion.php");
 
 <body>
 
-	<?php if (isset($_SESSION["id"])) : ?>
+	<?php if (isset($_SESSION["id"]) && $_SESSION["rol"] == 1): ?>
 
 
 		<!-- Menu de navegacion-->
@@ -142,13 +143,15 @@ require_once("../../db/conexion.php");
 					</div>
 					<div class="wow fadeInUp col-md-4 col-sm-6">
 						<div class="trainer-thumb">
-							<button class="UbicarBrigadista"><a onclick="window.location.href='../../personas/alertar.php'">Alerta a un
+							<button class="UbicarBrigadista"><a
+									onclick="window.location.href='../../personas/alertar.php'">Alerta a un
 									Brigadista</a></button>
 						</div>
 					</div>
 					<div class="wow fadeInUp col-md-4 col-sm-6">
 						<div class="trainer-thumb">
-							<img src="../../img/capacitacion.jpg" id="imagenCapacitacion" class="img-responsive" alt="Brigadista">
+							<img src="../../img/capacitacion.jpg" id="imagenCapacitacion" class="img-responsive"
+								alt="Brigadista">
 							<div class="trainer-overlay">
 								<div class="trainer-des">
 									<h2>Capacitados</h2>
@@ -228,7 +231,7 @@ require_once("../../db/conexion.php");
 		include("../../Footer/footer.php");
 		?>
 
-	<?php else : ?>
+	<?php else: ?>
 
 		<script>
 			alert("No has iniciado sesión, por favor inicia a continuación.");
