@@ -91,7 +91,7 @@ if( $validar == null || $validar == ""){
 
 <script>
     alert("No has iniciado sesión, por favor inicia a continuación.");
-    window.location.href = "../../../php/login.php";
+    window.location.href = "../../php/login.php";
 </script>
 
 <?php endif; ?>

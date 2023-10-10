@@ -127,8 +127,9 @@ require_once("../../../db/conexion.php");
         if (isset($_SESSION['email_sent']) && $_SESSION['email_sent']) {
             echo '<script>
                                 Swal.fire({
-                                    icon: "success",
-                                    title: "¡Correo enviado!",
+                                    imageUrl: "https://i.imgur.com/5OvBuOf.gif",
+									imageHeight: 200,
+									imageAlt: "Extintor confirmacion",                                    title: "¡Correo enviado!",
                                     text: "Se te ha enviado la informacion completa de la camilla a revisar.",
                                 });
                             </script>';

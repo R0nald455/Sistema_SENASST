@@ -33,19 +33,22 @@ include 'index.php';
                       <tr>
                         <th>Extintor ID</th>
                         <th>Numero de Serie</th>
+                        <th>Imagen de referencia</th>
                         <th>Tipo de Extintor</th>
+                        <th>Fecha de fabricacion</th>
+                        <th>Fecha de compra</th>
                         <th>Ubicacion</th>
                         <th>Ubicación Específica</th>
                         <th>Última Recarga</th>
                         <th>Proxima Recarga</th>
                         <th>Comentarios</th>
-
+                        <th>Fecha de registro</th>
                       </tr>
                     </thead>
                     <tbody>
                       <?php
                       $divSeleccionado = $_POST['divSeleccionado'];
-                      $sql = "SELECT ExtintorID, NumeroDeSerie, TipoDeExtintor, Ubicacion, UbicacionEspecifica, UltimaRecarga, ProximaRecarga, Comentarios FROM extintores WHERE Ubicacion = '$divSeleccionado'";
+                      $sql = "SELECT ExtintorID, NumeroDeSerie, ImagenReferencia, TipoDeExtintor, FechaDeFabricacion, FechaDeCompra, Ubicacion, UbicacionEspecifica, UltimaRecarga, ProximaRecarga, Comentarios, FechaDeRegistro FROM extintores WHERE Ubicacion = '$divSeleccionado'";
                       $result = $conexion->query($sql);
 
                       if ($result->num_rows > 0) {
@@ -59,7 +62,16 @@ include 'index.php';
                               <?php echo $fila['NumeroDeSerie']; ?>
                             </td>
                             <td>
+                              <?php echo '<img src="data:imag/png;base64,' . base64_encode($fila['ImagenReferencia']) . '" alt="Imagen" style="width: 150px; height:150px;" >'; ?>
+                            </td>
+                            <td>
                               <?php echo $fila['TipoDeExtintor']; ?>
+                            </td>
+                            <td>
+                              <?php echo $fila['FechaDeFabricacion']; ?>
+                            </td>
+                            <td>
+                              <?php echo $fila['FechaDeCompra']; ?>
                             </td>
                             <td>
                               <?php
@@ -70,20 +82,185 @@ include 'index.php';
                                   echo $fila['Ubicacion'];
                                   ?>
                                   <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d208.29876097118972!2d-74.21726913685644!3d4.695541010889089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnNDQuMCJOIDc0wrAxMycwMS42Ilc!5e1!3m2!1ses-419!2sco!4v1694558172765!5m2!1ses-419!2sco"
-                                    width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d208.29876097118972!2d-74.21726913685644!3d4.695541010889089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnNDQuMCJOIDc0wrAxMycwMS42Ilc!5e1!3m2!1ses-419!2sco!4v1694558172765!5m2!1ses-419!2sco"
+                                      width="200" height="200" style="border:0;" allowfullscreen=""
+                                      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                   <?php
                                   break;
 
-                                case 'Administracion':
+                              case 'Administracion':
 
                                   echo $fila['Ubicacion'];
                                   ?>
                                   <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d163.74281803261528!2d-74.21589439980467!3d4.6957436974358595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnNDQuNiJOIDc0wrAxMic1Ny4yIlc!5e1!3m2!1ses-419!2sco!4v1694558624024!5m2!1ses-419!2sco"
-                                    width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d163.74281803261528!2d-74.21589439980467!3d4.6957436974358595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnNDQuNiJOIDc0wrAxMic1Ny4yIlc!5e1!3m2!1ses-419!2sco!4v1694558624024!5m2!1ses-419!2sco"
+                                      width="200" height="200" style="border:0;" allowfullscreen=""
+                                      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                  <?php
+                                  break;
+
+                              case 'Auditorio':
+
+                                  echo $fila['Ubicacion'];
+                                  ?>
+                                  <iframe
+                                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d222.8575109850331!2d-74.2161493701108!3d4.695292375472226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnNDMuMSJOIDc0wrAxMic1OC4wIlc!5e1!3m2!1ses-419!2sco!4v1696883263212!5m2!1ses-419!2sco"
+                                      width="200" height="200" style="border:0;" allowfullscreen=""
+                                      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                  <?php
+                                  break;
+
+                              case 'Bloque A':
+
+                                  echo $fila['Ubicacion'];
+                                  ?>
+                                  <iframe
+                                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d222.85759235124345!2d-74.21651802235279!3d4.695037670459534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnNDIuNCJOIDc0wrAxMic1OS4yIlc!5e1!3m2!1ses-419!2sco!4v1696883345733!5m2!1ses-419!2sco"
+                                      width="200" height="200" style="border:0;" allowfullscreen=""
+                                      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                  <?php
+                                  break;
+
+                              case 'Bloque B':
+
+                                  echo $fila['Ubicacion'];
+                                  ?>
+                                  <iframe
+                                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d177.65799897876116!2d-74.21675026588541!3d4.694654270139489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnNDEuMCJOIDc0wrAxMycwMC4wIlc!5e1!3m2!1ses-419!2sco!4v1696883393088!5m2!1ses-419!2sco"
+                                      width="200" height="200" style="border:0;" allowfullscreen=""
+                                      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                  <?php
+                                  break;
+
+                              case 'Bloque C':
+
+                                  echo $fila['Ubicacion'];
+                                  ?>
+                                  <iframe
+                                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d224.0308537002606!2d-74.2173047332015!3d4.695215374235334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnNDIuNyJOIDc0wrAxMycwMi4xIlc!5e1!3m2!1ses-419!2sco!4v1696883456369!5m2!1ses-419!2sco"
+                                      width="200" height="200" style="border:0;" allowfullscreen=""
+                                      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                  <?php
+                                  break;
+
+                              case 'Administracion educativa':
+
+                                  echo $fila['Ubicacion'];
+                                  ?>
+                                  <iframe
+                                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d224.03075192023644!2d-74.21712518961515!3d4.695532298996547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnNDQuMyJOIDc0wrAxMycwMS41Ilc!5e1!3m2!1ses-419!2sco!4v1696883620432!5m2!1ses-419!2sco"
+                                      width="200" height="200" style="border:0;" allowfullscreen=""
+                                      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                  <?php
+                                  break;
+
+                              case 'Emprendimiento':
+
+                                  echo $fila['Ubicacion'];
+                                  ?>
+                                  <iframe
+                                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d222.8574361796667!2d-74.21711962113284!3d4.695526530560012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnNDQuMiJOIDc0wrAxMycwMS43Ilc!5e1!3m2!1ses-419!2sco!4v1696883657351!5m2!1ses-419!2sco"
+                                      width="200" height="200" style="border:0;" allowfullscreen=""
+                                      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                  <?php
+                                  break;
+
+                              case 'Gastronomia':
+
+                                  echo $fila['Ubicacion'];
+                                  ?>
+                                  <iframe
+                                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d270.0473892626156!2d-74.21663300446035!3d4.695484803321365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnNDMuOCJOIDc0wrAxMycwMC4yIlc!5e1!3m2!1ses-419!2sco!4v1696883706037!5m2!1ses-419!2sco"
+                                      width="200" height="200" style="border:0;" allowfullscreen=""
+                                      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                  <?php
+                                  break;
+
+                              case 'Estar de instructores':
+
+                                  echo $fila['Ubicacion'];
+                                  ?>
+                                  <iframe
+                                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d224.0308738912438!2d-74.21689697671734!3d4.695152500593446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnNDIuNiJOIDc0wrAxMycwMC44Ilc!5e1!3m2!1ses-419!2sco!4v1696883937021!5m2!1ses-419!2sco"
+                                      width="200" height="200" style="border:0;" allowfullscreen=""
+                                      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                  <?php
+                                  break;
+
+                              case 'Centro de convivencia':
+
+                                  echo $fila['Ubicacion'];
+                                  ?>
+                                  <iframe
+                                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d354.07832393982744!2d-74.21552594377927!3d4.695014982657119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnNDEuOCJOIDc0wrAxMic1NS4zIlc!5e1!3m2!1ses-419!2sco!4v1696884028409!5m2!1ses-419!2sco"
+                                      width="200" height="200" style="border:0;" allowfullscreen=""
+                                      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                  <?php
+                                  break;
+
+                              case 'Maquinaria agricola':
+
+                                  echo $fila['Ubicacion'];
+                                  ?>
+                                  <iframe
+                                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d446.8871432801036!2d-74.21490838814825!3d4.694755950628813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnNDEuMSJOIDc0wrAxMic1Mi44Ilc!5e1!3m2!1ses-419!2sco!4v1696884085782!5m2!1ses-419!2sco"
+                                      width="200" height="200" style="border:0;" allowfullscreen=""
+                                      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                  <?php
+                                  break;
+
+                              case 'Agroindustria':
+
+                                  echo $fila['Ubicacion'];
+                                  ?>
+                                  <iframe
+                                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d278.1135341249122!2d-74.2149187271546!3d4.6945397001635385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnNDAuNCJOIDc0wrAxMic1My42Ilc!5e1!3m2!1ses-419!2sco!4v1696884235574!5m2!1ses-419!2sco"
+                                      width="200" height="200" style="border:0;" allowfullscreen=""
+                                      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                  <?php
+                                  break;
+
+                              case 'Ganaderia':
+
+                                  echo $fila['Ubicacion'];
+                                  ?>
+                                  <iframe
+                                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d444.0768705629032!2d-74.21910315570054!3d4.691418550547906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnMjkuMiJOIDc0wrAxMycwOC4yIlc!5e1!3m2!1ses-419!2sco!4v1696884296691!5m2!1ses-419!2sco"
+                                      width="200" height="200" style="border:0;" allowfullscreen=""
+                                      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                  <?php
+                                  break;
+
+                              case 'Especies menores y mayores':
+
+                                  echo $fila['Ubicacion'];
+                                  ?>
+                                  <iframe
+                                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d446.88827919967775!2d-74.22038646539737!3d4.692982209009309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnMzUuMiJOIDc0wrAxMycxMi4yIlc!5e1!3m2!1ses-419!2sco!4v1696884734757!5m2!1ses-419!2sco"
+                                      width="200" height="200" style="border:0;" allowfullscreen=""
+                                      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                  <?php
+                                  break;
+
+                              case 'Agricultura':
+
+                                  echo $fila['Ubicacion'];
+                                  ?>
+                                  <iframe
+                                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d354.385173715179!2d-74.21821953540987!3d4.692987395977778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnMzUuMCJOIDc0wrAxMycwNS4xIlc!5e1!3m2!1ses-419!2sco!4v1696884635279!5m2!1ses-419!2sco"
+                                      width="600" height="450" style="border:0;" allowfullscreen=""
+                                      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                  <?php
+                                  break;
+
+                              case 'Unidad de recursos naturales':
+
+                                  echo $fila['Ubicacion'];
+                                  ?>
+                                  <iframe
+                                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d563.0559216028942!2d-74.21912658554216!3d4.693242512734214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnMzUuOSJOIDc0wrAxMycwOC41Ilc!5e1!3m2!1ses-419!2sco!4v1696884672299!5m2!1ses-419!2sco"
+                                      width="200" height="200" style="border:0;" allowfullscreen=""
+                                      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                   <?php
                                   break;
 
@@ -100,9 +277,9 @@ include 'index.php';
                             <td>
                               <?php echo $fila['UltimaRecarga']; ?>
                             </td>
-                            <td>
+                            <td style="text-align: center;">
                               <?php echo $fila['ProximaRecarga'];
-
+              
                               $fechaVencimiento = $fila['ProximaRecarga'];
 
                               // Obtener la fecha actual
@@ -117,17 +294,17 @@ include 'index.php';
                               $diferencia_dias = $diferencia_segundos / (60 * 60 * 24);
 
                               if ($diferencia_dias > 31) {
-                                ?> <i class="fa-solid fa-circle-check fa-2xl" style="color: #2bf21c;"></i>
+                                ?><br> <i class="fa-solid fa-circle-check fa-2xl" style="color: #2bf21c; margin: 30px;"></i>
                                 <br>
                                 <?php
                                 echo "Falta mas de un mes para que el extintor sea revisado";
                               } elseif ($diferencia_dias >= 1) {
-                                ?> <i class="fa-solid fa-circle-exclamation fa-2xl" style="color: #ffd500;"></i>
-                                <br> <br>
+                                ?><br> <i class="fa-solid fa-circle-exclamation fa-2xl" style="color: #ffd500; margin: 30px;"></i>
+                                <br>
                                 <?php
                                 echo "El extintor esta a menos de un mes de ser revisado.";
                               } else {
-                                ?> <i class="fa-solid fa-circle-xmark fa-2xl" style="color: #f50000;"></i>
+                                ?><br> <i class="fa-solid fa-circle-xmark fa-2xl" style="color: #f50000; margin: 30px;"></i>
                                 <br>
                                 <?php
                                 print "El extintor necesita una revision de manera urgente.";
@@ -138,7 +315,9 @@ include 'index.php';
                             <td>
                               <?php echo $fila['Comentarios']; ?>
                             </td>
-
+                            <td>
+                              <?php echo $fila['FechaDeRegistro']; ?>
+                            </td>
                           </tr>
                           <?php
                         }
