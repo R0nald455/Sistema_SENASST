@@ -7,10 +7,15 @@ require '../../../../phpmailer/SMTP.php';
 require '../../../../phpmailer/Exception.php';
 
 // Enviar recordatorio por correo electrónico
-function enviarRecordatorio($camillaID, $correo, $mensaje, $imagenBinaria) {
+function enviarRecordatorio($camillaID, $mensaje, $imagenBinaria) {
     global $smtpHost, $smtpUsername, $smtpPassword, $smtpPort, $smtpSecurity;
 
     $mail = new PHPMailer(true);
+
+    require '../../../../db/conexion.php';
+
+    $correos = mysqli_query($conexion, "SELECT correo FROM user WHERE rol = 1 or rol = 4");
+
     try {
         $mail->SMTPDebug = 0;                                      //Enable verbose debug output
         $mail->isSMTP();
@@ -22,10 +27,15 @@ function enviarRecordatorio($camillaID, $correo, $mensaje, $imagenBinaria) {
         $mail->SMTPSecure = $smtpSecurity;
 
         $mail->setFrom($smtpUsername, 'Sistema de Recordatorios');
-        $mail->addAddress($correo);
+
+        if(mysqli_num_rows($correos) > 0){
+            while($listaCorreos = mysqli_fetch_assoc($correos)){
+                $mail->addAddress($listaCorreos['correo']);
+            }
+        }
 
         $mail->isHTML(true);
-        $mail->Subject = 'Recordatorio revision/mantenimiento de camillas';
+        $mail->Subject = 'Recordatorio Revision/Mantenimiento de Camillas';
         $mail->Body = $mensaje;
 
         $mail->CharSet='UTF-8';

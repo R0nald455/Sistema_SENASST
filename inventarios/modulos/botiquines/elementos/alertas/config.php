@@ -85,7 +85,7 @@ if ($elementosNecesarios) {
 
         $imagenBinaria = $elemento['ImagenReferencia'];
 
-        enviarRecordatorio($elemento['id_elementos'], 'cbasst1957@gmail.com', $mensaje, $imagenBinaria);
+        enviarRecordatorio($elemento['id_elementos'], $mensaje, $imagenBinaria);
         header('Location: ../index.php');
 
     }

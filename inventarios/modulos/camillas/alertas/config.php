@@ -77,7 +77,7 @@ if ($camillasNecesarias) {
 
         $imagenBinaria = $camilla['ImagenReferencia'];
 
-        enviarRecordatorio($camilla['camillaID'], 'cbasst1957@gmail.com', $mensaje, $imagenBinaria);
+        enviarRecordatorio($camilla['camillaID'], $mensaje, $imagenBinaria);
         header('Location: ../index.php');
 
     }
