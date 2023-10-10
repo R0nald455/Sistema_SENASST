@@ -15,33 +15,106 @@ $query = mysqli_query($conexion, $sql);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="CSS/style1.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Inventario CRUD</title>
 </head>
 
 
 <body>
 
-    <?php if (isset($_SESSION["id"])): ?>
+    <?php if (isset($_SESSION["id"]) && $_SESSION["rol"] == 1 || $_SESSION["rol"] == 4): ?>
 
-        <header>
+        <!-- Menu de navegacion-->
 
-            <?php
+        <div class="container__menu">
 
-            $rol = $_SESSION["rol"];
+            <div class="menu">
 
-            if ($rol == 1) {
-                ?>
-                <a href="../php/rolFuncionario/indexfuncionario.php"><img src="Imagen/LogoSena.png" alt="logosena"></a>
+                <input type="checkbox" id="check__menu">
+                <label for="check__menu" class="lbl-menu">
+                    <span id="spn1"></span>
+                    <span id="spn2"></span>
+                    <span id="spn3"></span>
+                </label>
 
-                <?php
-            } elseif ($rol == 4) {
-                ?>
-                <a href="../php/rolFuncionario/indexadministrador.php"><img src="Imagen/LogoSena.png" alt="logosena"></a>
-                <?php
-            }
-            ?>
-            <h1>QR</h1>
-        </header>
+                <img id="logoResponsive" src="../img/LogoSenaBlanco.png" width="50px" alt="logoSena">
+
+
+                <nav>
+                    <ul>
+                        <li><img src="../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></li>
+
+                        <?php
+
+                        $rol = $_SESSION["rol"];
+
+                        if ($rol == 1) {
+                            ?>
+                            <li><a href="../php/rolFuncionario/indexfuncionario.php" id="selected">Inicio</a></li>
+                            <?php
+                        } elseif ($rol == 4) {
+                            ?>
+                            <li><a href="../php/rolFuncionario/indexadministrador.php" id="selected">Inicio</a></li>
+                            <?php
+                        }
+                        ?>
+                        <li><a onclick="window.location.href='../reglamento/index.php'">Reglamento</a></li>
+                        <li><a href="#">Inspecciones</a>
+                            <ul> <b>
+                                    <li><a onclick="window.location.href='../inventarios/modulos/indexExtintores.php'">Inventario
+                                            y inspeccion para extintores</a></li>
+                                    <li><a onclick="window.location.href='../inventarios/modulos/indexBotiquines.php'">Inventario
+                                            y inspeccion para botiquines</a></li>
+                                    <li><a onclick="window.location.href='../inventarios/modulos/indexCamillas.php'">Inventario
+                                            y inspeccion para camillas</a></li>
+                            </ul> </b>
+                        </li>
+                        <li><a href="#">Inventarios</a>
+                            <ul> <b>
+                                    <li><a onclick="window.location.href='../inventariosCristian/index.php'">Inventario
+                                            Dotacion</a></li>
+                                    <li><a onclick="window.location.href='../dotacionSamuel/views/usuarios/index.php'">Inventario
+                                            Dotacion Especial</a></li>
+                                    <li><a onclick="window.location.href='../inventarios/modulos/indexEpps.php'">Inventario
+                                            para EPP's</a></li>
+                            </ul></b>
+                        </li>
+                        <?php
+                        if ($rol == 1) {
+                            ?>
+                            <li><a href="#">Administrativos</a>
+                                <ul> <b>
+                                        <li><a onclick="window.location.href='../personas/indexbrigad.php'">Administrar
+                                                Brigadistas</a></li>
+                                        <li><a onclick="window.location.href='../QR/indexCrud.php'">Administrar Salon</a>
+                                        <li><a onclick="window.location.href='../normasad/index.php'">Administrar Normas</a>
+                                        </li>
+                                </ul> </b>
+                            </li>
+                            <?php
+                        } elseif ($rol == 4) {
+                            ?>
+                            <li><a href="#">Administrativos</a>
+                                <ul> <b>
+                                        <li><a onclick="window.location.href='../administrador/View/user.php'">Administrar
+                                                usuarios</a></li>
+                                        <li><a onclick="window.location.href='../contenidos/index.php'">Administrar
+                                                Contenidos</a></li>
+                                        <li><a onclick="window.location.href='../personas/indexbrigad.php'">Administrar
+                                                Brigadistas</a></li>
+                                        <li><a onclick="window.location.href='../QR/indexCrud.php'">Administrar Salon</a></li>
+                                </ul> </b>
+                            </li>
+                            <?php
+                        }
+                        ?>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <br><br><br><br>
+
         <main>
             <center>
                 <div class="users-form">

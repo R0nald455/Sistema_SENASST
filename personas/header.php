@@ -23,9 +23,6 @@
             ?>
             <ul class="nav-list">
                 <li class="nav-item">
-                    <a href="indexbrigad.php" class="nav-link ">Inicio</a>
-                </li>
-                <li class="nav-item">
                     <a href="indexbrigad.php" class="nav-link active">Brigadistas</a>
                 </li>
 

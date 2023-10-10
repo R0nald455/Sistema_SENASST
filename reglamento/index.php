@@ -15,7 +15,6 @@ require_once("../db/conexion.php");
   <title>Reglamento del aprendiz </title>
   <link href="../css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/header.css">
-  <link rel="stylesheet" href="../footer/footer.php">
   <link rel="stylesheet" href="../css/style_reglamento.css">
 
 </head>
@@ -160,8 +159,9 @@ require_once("../db/conexion.php");
       </div>
     </div>
   </div>
+
   <?php
-  include("../footer/footer.php");
+  include("../Footer/footer.php");
   ?>
 
 </body>

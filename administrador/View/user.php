@@ -38,7 +38,8 @@ require_once("../../db/conexion.php");
       <nav>
         <ul>
           <li><img src="../../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></li>
-          <li><a onclick="window.location.href='../../php/rolFuncionario/indexadministrador.php'" id="selected">Inicio</a></li>
+          <li><a onclick="window.location.href='../../php/rolFuncionario/indexadministrador.php'" id="selected">Inicio</a>
+          </li>
           <li><a onclick="window.location.href='../../reglamento/index.php'">Reglamento</a></li>
           <li><a href="#">Inspecciones</a>
             <ul> <b>
