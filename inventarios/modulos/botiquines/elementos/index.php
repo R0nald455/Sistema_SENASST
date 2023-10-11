@@ -76,6 +76,10 @@ include "../../../../db/conexion.php";
                                             class="fa-solid fa-envelope"></i> Alerta para
                                         elementos caducados</a>
                                 </div><br>
+
+                                <h6><i>"Al alertar te llega un correo electronico con la informacion del elemento caducado"</i></h6>
+
+
                                 <hr>
 
                                 <div class="table-container table-responsive">

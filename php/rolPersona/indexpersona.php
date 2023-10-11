@@ -49,7 +49,6 @@ require_once("../../db/conexion.php");
 
 						<li><a onclick="window.location.href='../../NormasJason/index.php'">Normas</a></li>
 						<li><a onclick="window.location.href='../../senaletica/index.php'">Señaletica</a></li>
-						<li><a onclick="window.location.href='../../quiz/index.php'">quiz</a></li>
 						<li><a onclick="window.location.href='../../QR/Modelo3DD/BloqueD.html'">Ver 3D</a></li>
 						<li><a id="cerrar-sesion"><span class="material-symbols-outlined">logout</span></a></li>
 					</ul>

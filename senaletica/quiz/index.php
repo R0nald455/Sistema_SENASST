@@ -57,6 +57,8 @@
 </head>
 <body>
 
+<a href="../index.php"><img style="width: 100px;" src="../../img/logoSena.png" alt=""></a>
+
 <h1>Quiz Señaletica</h1>
 
 <?php

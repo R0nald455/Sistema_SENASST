@@ -521,7 +521,7 @@ $falsa3 = $fila['falsa3'];
                 </label>
                 <nav>
                     <ul>
-                        <li><a href="../php/rolPersona/indexpersona.php" id="selected">Inicio</a></li>
+                        <li><a href="../senaletica/index.php" id="selected"><img style="width: 50px;" src="../img/logoSenaBlanco.png" alt=""></a></li>
                         </li>
                     </ul>
                 </nav>
