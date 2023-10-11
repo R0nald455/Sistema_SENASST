@@ -106,7 +106,8 @@
                 <ul>
                     <li><img src="../img/LogoSenaBlanco.png" width="50px" alt="logoSena"></li>
                     <li><a href="../php/rolPersona/indexpersona.php" id="selected">Inicio</a></li>
-                    <li><a href="quiz/index.php">Quiz</a></li>
+                    <li><a href="quiz/index.php">Quiz señaletica</a></li>
+                    <li><a href="../quiz/index.php">Quiz SST</a></li>
                 </ul>
             </nav>
 

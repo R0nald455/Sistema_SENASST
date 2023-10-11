@@ -72,7 +72,11 @@ require_once("../../../db/conexion.php");
                                     <a id="button-alert" href="alertas/config.php" class="btn btn-sm btn-info"><i
                                             class="fa-solid fa-envelope"></i> Alerta para
                                         camillas con revisiones/recargas pendientes</a>
+                                    
                                 </div><br>
+
+                                <h6><i>"Al alertar te llega un correo electronico con la informacion de la camilla"</i></h6>
+
                                 <hr>
 
                                 <div class="table-container table-responsive">
