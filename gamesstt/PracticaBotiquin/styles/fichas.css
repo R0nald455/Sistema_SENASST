@@ -1,0 +1,629 @@
+.boti{
+    display: none;
+    margin: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    background-image: url(../img/tipoA/esparadrapo.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.alcohol{
+    display: none;
+    margin: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    background-image: url(../img/tipoA/alcohol.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.bajalenguas{
+    display: none;
+    margin: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    background-image: url(../img/tipoA/Bajalenguas.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.gasas{
+    display: none;
+    margin: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    background-image: url(../img/tipoA/gasaslimpias.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.guanteslatex{
+    display: none;
+    margin: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    background-image: url(../img/tipoA/Guanteslatex.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.solucionsalina{
+    display: none;
+    margin: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    background-image: url(../img/tipoA/solucionsalina.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.termometro{
+    display: none;
+    margin: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    background-image: url(../img/tipoA/termometro.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.vanda2x5{
+    display: none;
+    margin: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    background-image: url(../img/tipoA/vandaelastica2x5.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.vanda3x5{
+    display: none;
+    margin: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    background-image: url(../img/tipoA/vandaelastica3x5.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.vanda5x5{
+    display: none;
+    margin: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    background-image: url(../img/tipoA/vandaelastica5x5.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.vendaalgodon3x5{
+    display: none;
+    margin: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    background-image: url(../img/tipoA/vendaalgodon3x5.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.yodopovidona{
+    display: none;
+    margin: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    background-image: url(../img/tipoA/yodopovidona.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.yodopovidona{
+    display: none;
+    margin: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    background-image: url(../img/tipoA/yodopovidona.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.careta{
+    display: none;
+    margin: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    background-image: url(../img/mezclar/careta.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.careta{
+    display: none;
+    margin: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    background-image: url(../img/mezclar/careta.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.casco{
+    display: none;
+    margin: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    background-image: url(../img/mezclar/casco.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.chaleco{
+    display: none;
+    margin: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    background-image: url(../img/mezclar/chaleco.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.extintor{
+    display: none;
+    margin: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    background-image: url(../img/mezclar/extintor.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.gafas{
+    display: none;
+    margin: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    background-image: url(../img/mezclar/gafas.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.guantesPro{
+    display: none;
+    margin: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    background-image: url(../img/mezclar/guantesdeproteccion.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.asa{
+    display: none;
+    margin: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    background-image: url(../img/tipoB/asa.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.compresas{
+    display: none;
+    margin: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    background-image: url(../img/tipoB/compresas.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.pilas{
+    display: none;
+    margin: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    background-image: url(../img/tipoB/pilas.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.tijeras{
+    display: none;
+    margin: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    background-image: url(../img/tipoB/tijeras.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.vaso{
+    display: none;
+    margin: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    background-image: url(../img/tipoB/vaso.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.linterna{
+    display: none;
+    margin: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    background-image: url(../img/tipoB/linterna.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+
+
+@media screen and (max-width: 1900px) {
+
+    .boti{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoA/esparadrapo.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .alcohol{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoA/alcohol.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .bajalenguas{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoA/Bajalenguas.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .gasas{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoA/gasaslimpias.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .guanteslatex{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoA/Guanteslatex.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .solucionsalina{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoA/solucionsalina.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .termometro{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoA/termometro.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .vanda2x5{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoA/vandaelastica2x5.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .vanda3x5{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoA/vandaelastica3x5.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .vanda5x5{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoA/vandaelastica5x5.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .vendaalgodon3x5{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoA/vendaalgodon3x5.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .yodopovidona{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoA/yodopovidona.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .yodopovidona{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoA/yodopovidona.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .careta{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/mezclar/careta.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .careta{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/mezclar/careta.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .casco{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/mezclar/casco.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .chaleco{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/mezclar/chaleco.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .extintor{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/mezclar/extintor.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .gafas{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/mezclar/gafas.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .guantesPro{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/mezclar/guantesdeproteccion.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .asa{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoB/asa.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .compresas{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoB/compresas.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .pilas{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoB/pilas.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .tijeras{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoB/tijeras.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .vaso{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoB/vaso.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .linterna{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoB/linterna.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+}

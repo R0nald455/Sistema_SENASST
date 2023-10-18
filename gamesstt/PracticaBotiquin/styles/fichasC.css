@@ -1,0 +1,947 @@
+.aceta{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/acetaminofen500.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.alcohol{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/alcohol.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.asa100{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/asa100.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.bajalenguas{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/bajalenguas.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.collarcervical{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/collarcervical.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.collarcerviniño{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/collarcervicalniño.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.compresa{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/compresa.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.esparadrapo{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/esparadrapo.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.fonendoscopio{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/fonendoscopio.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.gasaesteril{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/gasaesteril.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.gasaslimpias{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/gasaslimpias.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.guanteslatex{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/Guanteslatex.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.hidroxidoaluminio{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/hidroxidoaluminio.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.inmovilizadores{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/inmovilizadores.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.jabonquirur{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/jabonquirurgico.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.linterna{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/linterna.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.mascaracp{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/mascararcp.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.pilas{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/pilas.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.solucionsalina{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/solucionsalina.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.tablaespinal{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/tablaespinal.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.tensiometro{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/tensiometro.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.termometro{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/termometro.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.tijeras{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/tijeras.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.vendaelastica2x5{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/vandaelastica2x5.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.vendaelastica3x5{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/vandaelastica3x5.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.vendaelastica5x5{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/vandaelastica5x5.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.vaso{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/vaso.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.vendaalgodon5x5{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/tipoC/vendaalgodon5x5.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+
+/* Imágenes para mezclar con las correctas */
+
+
+.careta{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/mezclar/careta.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.casco{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/mezclar/casco.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.chaleco{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/mezclar/chaleco.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.extintor{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/mezclar/extintor.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.gafas{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/mezclar/gafas.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.guantesPro{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/mezclar/guantesdeproteccion.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.botas{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/mezclar/botas.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.tapaoidos{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/mezclar/tapaoidos.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.riesgoelectrico{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/mezclar/riesgoelectrico.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.señalropaprotec{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/mezclar/señalropaprotectora.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.primerosauxilios{
+    display: none;
+    margin: auto;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    background-image: url(../img/mezclar/primerosauxilios.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+
+
+@media screen and (max-width: 1900px) {
+    .aceta{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/acetaminofen500.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .alcohol{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/alcohol.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .asa100{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/asa100.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .bajalenguas{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/bajalenguas.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .collarcervical{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/collarcervical.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .collarcerviniño{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/collarcervicalniño.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .compresa{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/compresa.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .esparadrapo{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/esparadrapo.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .fonendoscopio{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/fonendoscopio.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .gasaesteril{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/gasaesteril.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .gasaslimpias{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/gasaslimpias.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .guanteslatex{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/Guanteslatex.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .hidroxidoaluminio{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/hidroxidoaluminio.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .inmovilizadores{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/inmovilizadores.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .jabonquirur{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/jabonquirurgico.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .linterna{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/linterna.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .mascaracp{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/mascararcp.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .pilas{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/pilas.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .solucionsalina{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/solucionsalina.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .tablaespinal{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/tablaespinal.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .tensiometro{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/tensiometro.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .termometro{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/termometro.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .tijeras{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/tijeras.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .vendaelastica2x5{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/vandaelastica2x5.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .vendaelastica3x5{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/vandaelastica3x5.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .vendaelastica5x5{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/vandaelastica5x5.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .vaso{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/vaso.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .vendaalgodon5x5{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/tipoC/vendaalgodon5x5.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    
+    /* Imágenes para mezclar con las correctas */
+    
+    
+    .careta{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/mezclar/careta.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .casco{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/mezclar/casco.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .chaleco{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/mezclar/chaleco.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .extintor{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/mezclar/extintor.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .gafas{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/mezclar/gafas.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .guantesPro{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/mezclar/guantesdeproteccion.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .botas{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/mezclar/botas.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .tapaoidos{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/mezclar/tapaoidos.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .riesgoelectrico{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/mezclar/riesgoelectrico.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .señalropaprotec{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/mezclar/señalropaprotectora.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+    
+    .primerosauxilios{
+        display: none;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        background-image: url(../img/mezclar/primerosauxilios.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.495);
+    }
+}

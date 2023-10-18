@@ -18,8 +18,56 @@ if($ubicacion=="otro"){
 
 $email = "cbasst1957@gmail.com";
 $asunto = "Alerta incidente reportado en ".$ubicacionreal;
-$mensaje = "<h1>Alerta incidente reportado en ".$ubicacionreal."</h1>";
-$body ="<br>Mensaje: " . $mensaje;
+$mensaje = "Alerta incidente reportado en ".$ubicacionreal;
+$body = "
+
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+</head>
+
+<body>
+
+<div style='width: 100%; height: auto; display: flex; flex-direction: column; align-items: center;' class='correo'>
+<div style='height: auto;' class='containerCorreo'>
+    <header style='width: 100%; height: auto; background-color: rgb(57, 168, 1); display: flex;'>
+        <div style='width: 50px; margin-left: 10px;' class='imgContainerCorreo'>
+            <a href='https://cbaproy20.com/SenaSST/'><img style='width: 50px; margin-top: 10px;' id='logoCorreo' src='https://i.imgur.com/foNHcE4.png' alt=''></a>
+        </div>
+    </header>
+
+    <div style='width: 100%; height: 400px;' class='imgContainerBienvenida'>
+        <img style='width: 100%; height: 100%;' src='https://i.imgur.com/77Vr36q.jpg' alt=''>
+    </div>
+
+    <div style='text-align: center; margin: 10px; color: rgb(57, 168, 1);' class='containerTitulo'>
+        <h1>INCIDENTE REPORTADO</h1>
+    </div>
+
+    <div style='width: 100%; padding: 20px;' class='containerContenido'>
+        <h1  style='margin: 5px; font-size:20px;'>" . $mensaje . "</h1>
+    </div>
+
+    <footer style='background-color: rgb(57, 168, 1); padding: 10px; color: #ffffff; text-align: center; font-size: 10px;'>
+        <p> ©Servicio Nacional de Aprendizaje SENA - Centro de Biotecnologia Agropecuaria - Regional
+            Cundinamarca
+            Dirección: Km 7 Via Bogota-Mosquera Cundinamarca - Telefono: (1) 5462323 Ext. 17967
+            Conmutador Nacional (57 1) 5461500
+            Atención telefónica: lunes a viernes 7:30 a.m. a 4:30 P.M
+            Atención al ciudadano: Bogotá (57 1) 5925555 - Línea gratuita y resto del país 018000 910270
+            Atención al empresario: Bogotá (57 1) 4049494 - Línea gratuita y resto del país 018000 910682</p>
+
+    </footer>
+
+</div>
+</div>
+
+</html>
+
+";
 $select_products = mysqli_query($conexion, "SELECT * FROM `products`");
 
 

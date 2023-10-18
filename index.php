@@ -34,10 +34,10 @@
 				<ul>
 					<li><img src="img/LogoSenaBlanco.png" width="50px" alt="logoSena"></li>
 					<li><a href="#overview" id="selected">Inicio</a></li>
-					<li><a href="#trainer">Brigadistas</a></li>
-					<li><a href="reglamento/index.php">Reglamento</a></li>
-					<li><a href="#newsletter">Reportar</a></li>
+					<li><a href="#trainer">Alertar brigadistas</a></li>
+					<li><a href="#newsletter">Reportar riesgo</a></li>
 					<li><a href="#simuladores">Simuladores</a></li>
+					<li><a href="reglamento/index.php">Reglamento</a></li>
 					<li><a href="#testimonial">Noticias</a></li>
 				</ul>
 			</nav>
@@ -200,7 +200,7 @@
 				<div class=" col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10">
 					<h2>!Descubre nuestros simuladores!</h2>
 					<h4>Juega y diviértete</h4>
-					<a href="https://cbagamesst.online/gamesst/index.php">
+					<a href="gamesstt/index.php">
 						<button class="botonReportar" href=""><b>Juega</b></button>
 					</a>
 				</div>

@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(0deg,
+        rgba(0, 0, 0, 0.767),
+        rgba(0, 0, 0, 0.767)), 
+        url(../images/importancia-de-botiqui.jpg);
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.principal-container {
+    position: relative;
+    width: 100%;
+    /* width: 1850px; */
+    height: 910px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 50px rgb(0, 0, 0);
+    border: 3px solid black;
+}
+
+.cont-dere {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    float: right;
+    width: 50%;
+    height: 100%;
+    /* border-radius: 20px; */
+    /* border: #000000 solid 1px; */
+}
+
+#btn-salir {
+    position: absolute;
+    top: 10px;
+    width: 140px;
+    height: 50px;
+    right: 10px;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.339),
+        rgba(0, 0, 0, 0.511)),
+        url(../img/Exit-0caf738c.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-salir:hover {
+    width: 145px;
+    height: 55px;
+    transition: 150ms;
+}
+
+.cont-elementos {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 79%;
+    margin-top: 50px;
+    padding: 50px;
+    justify-content: center;
+}
+
+.ElementoCuadro {
+    position: relative;
+    width: 8em;
+    height: 8em;
+    border-radius: 20px;
+    box-shadow: 2px 2px 20px #f2f1f0;
+}
+
+.cont-izqui {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    float: left;
+}
+
+.cont-izqui h1 {
+    position: absolute;
+    top: 80px;
+    font-size: 50px;
+    color: orange;
+}
+
+.cont-izqui h2 {
+    position: absolute;
+    top: 10px;
+    color: white;
+}
+
+.cont-retroali {
+    position: absolute;
+    width: 45%;
+    height: 250px;
+    top: 180px;
+    background-color: rgba(0, 0, 0, 0.685);
+    border-radius: 30px;
+    text-align: center;
+    padding: 20px;
+    font-size: 22px;
+    box-shadow: 2px 2px 20px #f2f1f0;
+}
+
+.cont-izqui-abajo {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    float: left;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+}
+
+.cont-abajo-dentro {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cont-generar-elements {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    top: 600px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.726);
+    box-shadow: 2px 2px 20px #f2f1f0;
+}
+
+input {
+    width: 20%;
+    height: 70px;
+    top: 600px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(28, 27, 27);
+    color: white;
+    box-shadow: 2px 2px 20px #f2f1f0;
+}
+
+input:hover {
+    background-color: gray;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+#btn-n {
+    display: none;
+}
+
+
+@media screen and (max-width: 1900px) {
+
+    /* Estilos para pantallas con un ancho máximo de 768px */
+    .cont-elementos {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+        margin-top: 50px;
+    }
+
+    .ElementoCuadro {
+        position: relative;
+        width: 8em;
+        height: 8em;
+        border-radius: 20px;
+        box-shadow: 2px 2px 20px #f2f1f0;
+    }
+
+}
+
+@media screen and (max-width: 1508px) {
+
+    /* Estilos para pantallas con un ancho máximo de 768px */
+    .cont-elementos {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+        margin-top: 50px;
+    }
+
+    .ElementoCuadro {
+        position: relative;
+        width: 6em;
+        height: 6em;
+        border-radius: 20px;
+        box-shadow: 2px 2px 20px #f2f1f0;
+    }
+
+}
+
+@media screen and (max-width: 994px) {
+
+    .ElementoCuadro {
+        position: relative;
+        width: 4em;
+        height: 4em;
+        border-radius: 20px;
+        box-shadow: 2px 2px 20px #f2f1f0;
+    }
+}
+
+
+@media screen and (max-width: 482px) {
+    .ElementoCuadro {
+        position: relative;
+        width: 2em;
+        height: 2em;
+        box-shadow: 2px 2px 20px #f2f1f0;
+    }
+}
