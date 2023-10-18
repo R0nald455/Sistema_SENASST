@@ -1,0 +1,125 @@
+* {
+
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Contenedor del encabezado */
+
+body{
+
+    background-color: black;
+
+}
+
+
+header{
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 90%;
+    height: 150px;
+    z-index: 100;
+}
+
+.container-logo {
+    width: 100%;
+    margin-top: -120px;
+}
+
+
+.logo-sena {
+    margin: auto;
+    background-image: url(../imagenes/logo.png);
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+}
+.contenedor {
+    width: 98%;
+    margin: auto;
+}
+header .contenedor {
+    display: table;
+}
+/* Texto de simulador de riegos */
+
+
+#text{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;    
+    height: 100%;
+    margin: auto;
+}
+
+
+#text h1 {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+    height: 70px;
+    color: white;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 60px;
+}
+
+#text hr{
+    margin: auto;
+    width: 80%;    
+    margin-top: 30px;
+
+}
+
+@media (max-width:682px){
+
+    #text h1 {
+        font-size: 55px;
+    }
+
+}
+
+
+@media (max-width:628px){
+
+    #text h1 {
+        font-size: 50px;
+    }
+    
+}
+
+@media (max-width:568px){
+
+    #text h1 {
+        font-size: 40px;
+    }
+    
+}
+
+@media (max-width:455px){
+
+    #text h1 {
+        font-size: 30px;
+    }
+    
+}
+
+
+
+@media (max-width:562px){
+
+    .container-logo {
+        width: 100%;
+        margin-top: -20px;
+    }
+}
+
+
+
+

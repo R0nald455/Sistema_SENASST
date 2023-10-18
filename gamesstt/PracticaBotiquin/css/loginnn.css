@@ -1,0 +1,70 @@
+.login-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.604), 
+    rgba(0, 0, 0, 0.604)),
+    url(../images/fondo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  margin: auto;
+}
+
+.img-logo{
+  width: 300px;
+  height: 300px;
+  margin-top: 140px;
+  background-image: url(../images/logosena.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.login__header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+
+.login__header h1{
+  margin: auto;
+}
+
+
+.login__header h1 {
+  color: #ffffff;
+  font-size: 1.5em;
+}
+
+.login__button {
+  background-color: #39a900;
+  border: 3px solid #b2df28;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+  max-width: 300px;
+  padding: 15px;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login__button:hover{
+  background-color: #254a12;
+  border: 3px solid #556c0f;
+}
+
+.login__button:disabled {
+  background-color: #eee;
+  border: 2px solid #969595;
+  color: #aaa;
+  cursor: auto;
+}

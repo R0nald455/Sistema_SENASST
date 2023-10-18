@@ -1,0 +1,216 @@
+body{
+    background-color: #192110b9;
+}
+
+input{
+    background-color:#eaf3d8;
+    border: none;
+}
+
+input[type="file"]{
+    background-color: rgba(255, 255, 255, 0);
+}
+
+input[type="submit"]{
+    background-color: #68872A;
+}
+
+input[type="submit"]:hover{
+    background-color: #40521c;
+    cursor: pointer;
+    transition: 100ms;
+}
+
+select{
+    background-color: #cceb8e;
+}
+p{
+    color: white;
+}
+
+.enviar-atras{
+    position: absolute;
+    background-image: url("../img/hacia-atras.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    left: -200px;
+}
+
+
+.principal{
+    position: relative;
+    background-color: #363835;
+    width: 1320px;
+    height: 1126px;
+    top: 20px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.fieldset-prueba{
+    position: relative;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    margin: 0px;
+    border-top: none;
+    height: 190px;
+    font-size: 20px;
+    background-color: rgba(3, 3, 3, 0.139);
+    box-shadow: 0px 0px 10px black;
+
+}
+
+.cont-pruebas{
+    position: relative;
+    width: 100%;
+    background-color: #6e7e68;
+}
+
+#pPrueba{
+    position: absolute;
+    font-size: 18px;
+    top: 10px;
+    margin-left: 20px; 
+}
+
+#inputPrueba{
+    position: absolute;
+    left: 110px;
+    top: 23px;
+    width: 50px;
+    height: 25px;
+    text-align: center;
+}
+
+#pFecha{
+    position: absolute;
+    font-size: 18px;
+    right: 10em;
+    top: 11px;
+}
+
+#inputFecha{
+    position: absolute;
+    right: 30px;
+    top: 25px;
+    height: 25px;
+}
+
+#pTema{
+    position: absolute;
+    font-size: 18px;
+    top: 54px;
+    margin-left: 20px;
+}
+
+#inputTema{
+    position: absolute;
+    left: 110px;
+    top: 65px;
+    width: 620px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+}
+
+#pPreguntas{
+    position: absolute;
+    font-size: 18px;
+    top: 57px;
+    right: 152px;
+}
+
+#inputPreguntas{
+    position: absolute;
+    right: 89px;
+    top: 70px;
+    width: 50px;
+    height: 25px;
+    text-align: center;
+}
+
+#pComplejidad{
+    position: absolute;
+    font-size: 18px;
+    left: 110px;
+    top: 115px;
+}
+
+#selectComplejidad{
+    position: absolute;
+    left: 10px;
+    left: 220px;
+    top: 130px;
+    height: 25px;
+    width: 80px;
+    border-radius: 10px;
+}
+
+#pDificultad{
+    position: absolute;
+    font-size: 18px;
+    left: 410px;
+    top: 115px;
+}
+
+#selectDificultad{
+    position: absolute;
+    left: 500px;
+    top: 130px;
+    height: 25px;
+    width: 80px;
+    border-radius: 10px;
+}
+
+#pTiempo{
+    position: absolute;
+    font-size: 18px;
+    left: 710px;
+    top: 115px;
+}
+
+#inputTiempo{
+    position: absolute;
+    left: 780px;
+    top: 128px;
+    height: 25px;
+    width: 80px;
+}
+
+#pPuntos{
+    position: absolute;
+    font-size: 18px;
+    left: 990px;
+    top: 115px;
+}
+
+#inputPuntos{
+    position: absolute;
+    left: 1050px;
+    top: 126px;
+    height: 25px;
+    width: 40px;
+    text-align: center;
+}
+
+#btn-prueba{
+    position: absolute;
+    top: 130px;
+    right: 30px;
+    width: 100px;
+    height: 28px;
+    border: none;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
