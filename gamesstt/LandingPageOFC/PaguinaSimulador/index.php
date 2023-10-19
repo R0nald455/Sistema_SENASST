@@ -14,8 +14,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/fontello.css">
     <link rel="stylesheet" href="css/indexxs.css">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/articulos.css">
+    <link rel="stylesheet" href="css/meny.css">
+    <link rel="stylesheet" href="css/articulosss.css">
 
     <!-- Fuentes  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,19 +27,9 @@
 </head>
 <body>
 
-<!-- encabezado -->
+
 <header>
-    <div class="contenedor">
-         <input type="checkbox" id="barra-menu">
-        <label class="icon-menu" for="barra-menu"></label> 
-            <nav class="menu">
-            <h3 style="color: yellowgreen;"><strong>Aprendiz:</strong> <?php echo $_SESSION["nombre"] ?></h3>
-            <a href="../index.php">Inicio</a>
-            <a href="">Creadores</a>
-            <a href="">Contactos</a> 
-            <a href="../../conexion/cerrar_sesion.php" style="text-decoration: none; color: white;" >Salir</a>
-          </nav>
-    </div>
+
 </header>
 
 <div class="container-logo">  
@@ -59,10 +49,12 @@
 
 
 <!-- texto simulador de riesgos -->
-<section id="text">
-        <h1> Simulador de Riesgos </h1>
-        <hr>
-</section>
+  <section id="text">
+
+      <h1> Simulador de Riesgos </h1>
+
+      <hr>
+  </section>
 
  <!-- Articulos -->
 
@@ -91,7 +83,7 @@
       </div>
 
       <div class="card-footer">
-        <a onclick="MM_openBrWindow('https://www.cbagamesst.online/gamesst/LandingPageOFC/PaguinaSimulador/paginas/sistemas.php','','width=800,height=600');"><button type="button">Comenzar</button></a> 
+        <a href="../PaguinaSimulador/paginas/sistemas.php"><button type="button">Comenzar</button></a> 
         <a href="../paginaPruebasAprendiz/indexInicioPreg.php"><button type="button">Pruebas</button></a> 
       </div>
 
@@ -105,7 +97,7 @@
       </div>
 
       <div class="card-footer">
-        <a onclick="MM_openBrWindow('https://www.cbagamesst.online/gamesst/LandingPageOFC/PaguinaSimulador/paginas/auditorio.php','','width=800,height=600');"><button type="button">Comenzar</button></a> 
+        <a href="../PaguinaSimulador/paginas/auditorio.php"><button type="button">Comenzar</button></a> 
         <a href="../paginaPruebasAprendiz/indexInicioAuditorio.php"><button type="button">Pruebas</button></a> 
       </div>
 
@@ -119,7 +111,7 @@
       </div>
 
       <div class="card-footer">
-        <!-- <a onclick="MM_openBrWindow('https://www.cbagamesst.online/gamesst/LandingPageOFC/PaguinaSimulador/paginas/cafeteria.php','','width=800,height=600');"><button type="button">Comenzar</button></a>  -->
+        <a href="../PaguinaSimulador/paginas/cafeteria.php"><button type="button">Comenzar</button></a> 
         <a href="../paginaPruebasAprendiz/indexInicioCafeteria.php"><button type="button">Pruebas</button></a> 
       </div>
 
@@ -133,7 +125,7 @@
       </div>
 
       <div class="card-footer">
-      <!-- <a onclick="MM_openBrWindow('https://www.cbagamesst.online/gamesst/LandingPageOFC/PaguinaSimulador/paginas/biblioteca.php','','width=800,height=600');"><button type="button">Comenzar</button></a>  -->
+      <a href="../PaguinaSimulador/paginas/biblioteca.php"><button type="button">Comenzar</button></a> 
       <a href="../paginaPruebasAprendiz/indexInicioBiblioteca.php"><button type="button">Pruebas</button></a> 
     </div>
 

@@ -53,7 +53,6 @@ if (empty($_SESSION["idSe"])){
             <section class="cont-menu">
                 <header>
                     <div class="btn-menu">
-                        <a href="#">¿Cómo usar?</a>
                         <a href="../conexion/cerrar_sesion.php" style="text-decoration: none; color: greenyellow;">Salir</a>
                     </div>
                 </header>

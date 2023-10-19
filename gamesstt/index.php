@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/estiloInis.css">
-    <link rel="stylesheet" href="./styles/indexii.css">
+    <link rel="stylesheet" href="./styles/indexiii.css">
     <title>Inicio</title>
 </head>
 <body>

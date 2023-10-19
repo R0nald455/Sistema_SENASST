@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cont-prin{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+    margin: auto;   
+    justify-content: center;
+}
+
+.cont-all{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 0px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.767),
+        rgba(0, 0, 0, 0.767)
+       )
+    ,url(https://i.imgur.com/fPLMC2A.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: contain;
+    background-position: center;
+}
+
+
+
+#logo{
+    background-image: url(../images/logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 400px;
+    height: 400px;
+    margin-top: 10px;
+    margin-bottom: 130px;
+}
+
+
+.cont-text{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.btn-log-reg{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+}
+
+
+h1{ 
+    margin: 0;
+    padding: 0;
+    font-size: 4.3em;
+    margin-top: -20px;
+    color: greenyellow;
+    font-family: 'Libre Baskerville', serif;
+    text-shadow: 0.1em 0.1em rgb(26, 25, 25);
+}
+
+input{
+    margin: auto;
+    margin-top: -20px;
+    width: 300px;
+    height: 80px;
+    color: rgb(192, 184, 184);
+    font-size: 2em;
+    border-radius: 30px;
+    background-color: rgb(1, 23, 1);
+    border: none;
+    margin: 5px;
+}
+
+input:hover{
+    background-color: rgb(1, 52, 1);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 683px) {
+    .btn-log-reg{
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    input{
+        margin: auto;
+        margin-top: -20px;
+        width: 300px;
+        height: 80px;
+        color: rgb(192, 184, 184);
+        font-size: 2em;
+        border-radius: 30px;
+        background-color: rgb(1, 23, 1);
+        border: none;
+        margin: 5px;
+    }
+
+    h1{ 
+        font-size: 3em;
+    }
+    
+    #logo{
+        background-image: url(../images/logo.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 300px;
+        height: 300px;
+        margin-top: 10px;
+        margin-bottom: 130px;
+    }
+
+}
