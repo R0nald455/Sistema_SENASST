@@ -59,8 +59,6 @@ if (empty($_SESSION["idInst"])){
                 <h3 style="color: rgb(166, 255, 0);"><strong style="color: white;">Instructor:</strong>
                     <?php echo $_SESSION["nombreIns"] ?></h3>
                 <a href="../LandingPageOFC/PaguinaSimulador/indexInstructor.php">Test simuladores</a>
-                <a href="#">¿Cómo usar?</a>
-                <a href="#">Creadores</a>
                 <a href="../conexion/cerrar_sesion.php" style="text-decoration: none; color: red;">Salir</a>
             </div>
         </header>

@@ -1,0 +1,43 @@
+
+.cont-int{
+    display: flex;  
+    flex-wrap: wrap;
+    width: 100%;
+    height: 80px;
+    margin: auto;
+    margin-top: 50px;
+    align-items: center;
+    margin-bottom: 10px;
+}   
+
+.cont-2{
+    margin: auto;
+    width: 100%;
+    text-align: center;  
+}
+
+a{
+    max-width: 50%;
+    margin: 10px;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: rgb(36, 36, 36);
+    transition: .1s;
+}
+
+/* Ocultar barra de menu hasta 810px */
+
+@media (min-width:810px){
+
+    .cont-int{
+        margin-bottom: 40px;
+    }   
+
+}
+
+
+

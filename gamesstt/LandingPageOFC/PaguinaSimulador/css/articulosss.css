@@ -1,0 +1,145 @@
+
+.container-cajas {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    height: 100%;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    
+    .card {
+      width: 400px;
+      height: 250px;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+      url(../imagenes/cazador_caidas.jpg) center no-repeat;
+      background-size: cover;
+      color: #fff;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+      transition: all 0.4s;
+      margin: auto;
+      margin-top: 20px;
+    }
+    
+    .card2 {
+      width: 400px;
+      height: 250px;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+      url(../imagenes/sistemas1.jpg) center no-repeat;
+      background-size: cover;
+      color: #fff;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+      transition: all 0.4s;
+      margin: auto;
+      margin-top: 20px;
+    }
+
+    .card3 {
+      width: 400px;
+      height: 250px;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+      url(../imagenes/auditorio.jpg) center no-repeat;
+      background-size: cover;
+      color: #fff;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+      transition: all 0.4s;
+      margin: auto;
+      margin-top: 20px;
+    }
+
+    .card4 {
+      width: 400px;
+      height: 250px;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+      url(../paginas/img-riesgos/Cafeteria.jpg) center no-repeat;
+      background-size: cover;
+      color: #fff;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+      transition: all 0.4s;
+      margin: auto;
+      margin-top: 20px;
+    }
+
+    .card5 {
+      width: 400px;
+      height: 250px;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+      url(../paginas/img-riesgos/BIBLIOTECA.jpg) center no-repeat;
+      background-size: cover;
+      color: #fff;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+      transition: all 0.4s;
+      margin: auto;
+      margin-top: 20px;
+    }
+
+    .card:hover {
+      width: 400px;
+      height: 270px;
+      opacity: 0.5;
+    }
+
+    .card-header {
+      margin-bottom: 40px;
+    }
+    
+    .card-header h3 {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 30px;
+      color: rgb(255, 106, 0);
+      margin: 30px;
+      border-bottom: 3px groove white;
+      padding: 10px;
+    }
+    
+    .card-header h1 {
+      font-family: "Josefin Sans", sans-serif;
+      margin-top: 35px;
+      font-size: 50px;
+      font-weight: 300;
+    }
+    
+    .card-header hr {
+      margin: auto;
+      width: 80%;
+    }
+    
+    .card-footer button {
+      width: 150px;
+      padding: 10px;
+      background-color: rgb(255, 106, 0);
+      color: white;
+      font-family: "Montserrat", sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 2px solid rgb(255, 106, 0);
+      border-radius: 50px;
+      outline: none;
+      cursor: pointer;
+    }
+    
+    @media (max-width: 1200px) {
+      .container {
+        height: 100%;
+      }
+    
+      .cards-wrapper {
+        flex-wrap: wrap;
+      }
+
+    }
+    
